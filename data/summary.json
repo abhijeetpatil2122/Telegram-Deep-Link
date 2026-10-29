@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T16:59:34.037Z",
+  "generatedAt": "2026-10-29T17:04:03.305Z",
   "sources": {
     "officialDocs": {
       "url": "https://core.telegram.org/api/links",
@@ -22,7 +22,8 @@
     "androidCandidates": 96,
     "runtimeSupportedLinks": 4,
     "userConfirmedWorkingRuntimeLinks": 4,
-    "rejectedStandaloneTgSchemeForms": 4,
+    "publicationInventoryEntries": 279,
+    "implementationDerivedEntries": 96,
     "androidCandidatesNotExactMatches": 93,
     "androidCandidatesWithRelatedOfficialTemplates": 76,
     "androidCandidatesWithoutDocumentationMatch": 17,
@@ -55,5 +56,5 @@
     },
     "likelyInternalOrContextualCandidates": 12
   },
-  "note": "These are extracted templates and implementation candidates, not a guarantee of every runtime-supported route. Review Android-only candidates before publishing."
+  "note": "Inventory includes official templates and every extracted Android source candidate. Implementation-derived entries may be partial, internal, contextual, version-dependent, or unverified; inclusion is not a guarantee of runtime support."
 }
