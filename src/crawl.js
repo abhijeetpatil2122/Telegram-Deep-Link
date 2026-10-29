@@ -22,6 +22,8 @@ async function fetchText(url) {
 
 function clean(value) {
   return value.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&')
+    // Some rendered HTML pages contain escaped code wrappers inside examples.
+    .replace(/<\/?code>/gi, '')
     .replace(/\\\x60/g, '\x60').replace(/\s+/g, ' ').trim()
     .replace(/^[\x60'"“”]+|[\x60'"“”]+$/g, '');
 }
