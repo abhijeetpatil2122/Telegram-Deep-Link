@@ -2536,11 +2536,11 @@
       }
     ],
     "reviewStatus": "needs_review",
-    "candidateType": "full-uri",
-    "category": "deep-link",
-    "classification": "needs-manual-review",
+    "candidateType": "internal-url-rewrite",
+    "category": "internal-url-rewrite",
+    "classification": "likely-internal-or-contextual",
     "classificationMethod": "heuristic-v1",
-    "reviewNote": "Looks like a URI example or partial URI; confirm required parameters and whether it is a documented public format.",
+    "reviewNote": "This value is used as an internal URL rewrite target while parsing another link; it is not a public deep-link template.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
     "documentationRelation": "android-only-candidate",
@@ -2709,8 +2709,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://addemoji?set=<slug>"
+    ]
   },
   {
     "id": "a0cce5b02e9d",
@@ -2750,8 +2752,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://addlist?slug=<slug>"
+    ]
   },
   {
     "id": "4cbd536cdf89",
@@ -2791,8 +2795,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://addstickers?set=<slug>"
+    ]
   },
   {
     "id": "0ddab864cd0a",
@@ -2832,8 +2838,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://addtheme?slug=<name>"
+    ]
   },
   {
     "id": "602e830f546c",
@@ -2873,8 +2881,17 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://bg?color=<hex_color>",
+      "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>",
+      "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
+      "tg://bg?gradient=<top_color>-<bottom_color>&rotation=<rotation>",
+      "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
+      "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
+      "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
+      "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>"
+    ]
   },
   {
     "id": "4b60bcb52083",
@@ -2914,8 +2931,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://call?slug=<slug>"
+    ]
   },
   {
     "id": "cd8405b195b7",
@@ -2996,8 +3015,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://confirmphone?phone=<phone>&hash=<hash>"
+    ]
   },
   {
     "id": "b0b5fc4e38a7",
@@ -3037,8 +3058,12 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://contact?token=<token>",
+      "tg://contacts",
+      "tg://contacts/<section>"
+    ]
   },
   {
     "id": "b76d88f1b032",
@@ -3078,8 +3103,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://invoice?slug=<slug>"
+    ]
   },
   {
     "id": "3fde547df57c",
@@ -3119,8 +3146,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://join?invite=<hash>"
+    ]
   },
   {
     "id": "2d43a3dce6b9",
@@ -3160,8 +3189,11 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://login?code=",
+      "tg://login?token=<base64encodedtoken>"
+    ]
   },
   {
     "id": "f94533cf1c60",
@@ -3201,8 +3233,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://message?slug=<slug>"
+    ]
   },
   {
     "id": "599006234734",
@@ -3242,8 +3276,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://msg_url?url=<url>&text=<text>"
+    ]
   },
   {
     "id": "eb32b472451c",
@@ -3283,8 +3319,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://nft?slug=<slug>"
+    ]
   },
   {
     "id": "4f0f8aadefe7",
@@ -3365,8 +3403,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://passport?params"
+    ]
   },
   {
     "id": "73ff02e4f8d3",
@@ -3406,8 +3446,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://premium_offer?ref=<referrer>"
+    ]
   },
   {
     "id": "5d72c4201b81",
@@ -3447,8 +3489,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://privatepost?channel=<channel>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>"
+    ]
   },
   {
     "id": "c1d23fb64f03",
@@ -3488,8 +3532,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://proxy?server=<server>&port=<port>&secret=<secret>"
+    ]
   },
   {
     "id": "a30a98ba927f",
@@ -3529,8 +3575,17 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://resolve?domain=<bot_username>&appname=<short_name>&startapp=<start_parameter>&mode=<mode>",
+      "tg://resolve?domain=<bot_username>&game=<short_name>",
+      "tg://resolve?domain=<bot_username>&ref=<referrer>",
+      "tg://resolve?domain=<bot_username>&start={prefix}<referrer>",
+      "tg://resolve?domain=<bot_username>&start=<parameter>",
+      "tg://resolve?domain=<bot_username>&startapp&mode=<mode>",
+      "tg://resolve?domain=<bot_username>&startapp=<start_parameter>&mode=<mode>",
+      "tg://resolve?domain=<bot_username>&startattach"
+    ]
   },
   {
     "id": "c3ed4b9449aa",
@@ -3734,8 +3789,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://setlanguage?lang=<slug>"
+    ]
   },
   {
     "id": "83f7cc2c90b8",
@@ -3775,8 +3832,13 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://settings",
+      "tg://settings/<path>",
+      "tg://settings/stars",
+      "tg://settings/ton"
+    ]
   },
   {
     "id": "2be3b2de8d17",
@@ -3857,8 +3919,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://socks?server=<server>&port=<port>&user=<user>&pass=<pass>"
+    ]
   },
   {
     "id": "1b813fc3c084",
@@ -3898,8 +3962,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://stargift_auction?slug=<slug>"
+    ]
   },
   {
     "id": "a159d44b2efa",
@@ -3939,8 +4005,11 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://stars",
+      "tg://stars_topup?balance=<star_count>&purpose=<purpose>"
+    ]
   },
   {
     "id": "c9fd23516fcd",
@@ -3980,8 +4049,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://stars_topup?balance=<star_count>&purpose=<purpose>"
+    ]
   },
   {
     "id": "c8d8d1e6e945",
@@ -4021,8 +4092,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://ton"
+    ]
   },
   {
     "id": "b484e3f49f91",
