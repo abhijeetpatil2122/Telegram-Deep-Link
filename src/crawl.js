@@ -119,6 +119,60 @@ function parseMarkdown(markdown) {
   return [...entries.values()].sort((a, b) => a.section.localeCompare(b.section) || a.template.localeCompare(b.template));
 }
 
+function classifyCandidate(candidate, excerpt, extraction) {
+  const value = candidate.toLowerCase();
+  const context = excerpt.toLowerCase();
+  let candidateType = 'handler-token';
+  let category = 'other';
+  let classification = 'needs-manual-review';
+  let reviewNote = 'Heuristic classification only; inspect the surrounding source and confirm how Telegram parses this value.';
+
+  if (/^https?:\\/\\/(?:www\\.)?(?:t\\.me|telegram\\.me|telegram\\.dog)\\//i.test(candidate)
+      || /^tg:(?:\\/\\/)?/i.test(candidate)
+      || /^tonsite:\\/\\//i.test(candidate)) {
+    candidateType = 'full-uri';
+    category = value.startsWith('tonsite:') ? 'ton-sites' : 'deep-link';
+    reviewNote = 'Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.';
+  } else if (/^\\?(?:enablelogs|disablelogs|sendlogs|login_email)\\b/i.test(candidate)) {
+    candidateType = 'query-fragment';
+    category = /logs/i.test(candidate) ? 'diagnostics' : 'authentication';
+    classification = 'likely-internal-or-contextual';
+    reviewNote = 'This is a query fragment found in URL-handling code, not a standalone deep-link template; do not publish as a general link without stronger evidence.';
+  } else if (candidate.startsWith('?')) {
+    candidateType = 'query-fragment';
+    category = 'query-parameters';
+    reviewNote = 'Query fragment only; it needs a valid base URL and may be an option handled by a particular route.';
+  } else if (/^(?:addstickers|addemoji|addtheme|addstyle|bg|call|contact|invoice|login|joinchat|proxy|socks|setlanguage|giftcode|boost|story|privatepost|resolve|settings)\\//i.test(candidate)) {
+    candidateType = 'path-prefix';
+    category = /^(?:addstickers|addemoji)/i.test(candidate) ? 'stickers-and-emoji'
+      : /^(?:addtheme|addstyle|bg)\\//i.test(candidate) ? 'themes-and-backgrounds'
+      : /^(?:invoice|giftcode|boost)\\//i.test(candidate) ? 'payments-and-gifts'
+      : /^(?:call|joinchat)\\//i.test(candidate) ? 'calls-and-invites'
+      : /^(?:settings|setlanguage)\\//i.test(candidate) ? 'settings-and-language'
+      : /^(?:login)\\//i.test(candidate) ? 'authentication'
+      : 'chat-and-navigation';
+    reviewNote = 'Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.';
+  } else if (/^\\/(?:[a-z0-9_-]+)?(?:\\?|$)/i.test(candidate)) {
+    candidateType = 'path-fragment';
+    category = 'path-fragments';
+    reviewNote = 'Relative path fragment only; inspect the URL construction and caller before treating it as a deep link.';
+  } else if (/^(?:settings|contacts?|new_dialog|login_email|restore_purchases|importstickers|scanqr|msg_url|privatepost|resolve|proxy|socks|call|nft|invoice|gift|auth|search|confirmphone|setlanguage)\\b/i.test(candidate)) {
+    candidateType = 'handler-token';
+    category = /^(?:login|auth|confirmphone)/i.test(candidate) ? 'authentication'
+      : /^(?:invoice|gift|restore_purchases)/i.test(candidate) ? 'payments-and-gifts'
+      : /^(?:settings|contacts?)/i.test(candidate) ? 'settings-and-navigation'
+      : 'handler-route';
+    reviewNote = 'This appears to be a route/handler token rather than a complete URI; verify how the client combines it with a scheme, host, path, and parameters.';
+  } else if (/\\b(?:sendlogs|disablelogs|enablelogs|login_email)\\b/i.test(context)) {
+    candidateType = 'contextual-token';
+    category = 'diagnostics-or-authentication';
+    classification = 'likely-internal-or-contextual';
+    reviewNote = 'Found in a diagnostic/authentication branch; likely not a general-purpose public deep-link template.';
+  }
+
+  return { candidateType, category, classification, classificationMethod: 'heuristic-v1', reviewNote };
+}
+
 function scanJava(source) {
   const lines = source.split(/\r?\n/), candidates = new Map();
   const direct = /(?:https?:\/\/)?(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)\/[A-Za-z0-9_+./?=&%{}<>:-]+|tg:(?:\/\/)?[A-Za-z0-9_+./?=&%{}<>:-]+|tonsite:\/\/[A-Za-z0-9_+./?=&%{}<>:-]+/gi;
@@ -133,6 +187,7 @@ function scanJava(source) {
       id: idFor('android\n' + candidate), candidate, source: 'android_launch_activity',
       sourceUrl: JAVA_PAGE_URL, line: lineNumber, excerpt: excerpt.trim().slice(0, 320), extraction,
       reviewStatus: 'needs_review',
+      ...classifyCandidate(candidate, excerpt, extraction),
       note: 'Implementation-derived candidate; verify route behavior and required parameters before publishing.'
     });
   }
@@ -208,7 +263,10 @@ async function main() {
     counts: {
       documentedTemplates: documented.length,
       androidCandidates: candidates.length,
-      androidCandidatesNotExactMatches: candidates.filter(item => !item.alreadyInDocs).length
+      androidCandidatesNotExactMatches: candidates.filter(item => !item.alreadyInDocs).length,
+      androidCandidateTypes: Object.fromEntries([...new Set(candidates.map(item => item.candidateType))].sort().map(type => [type, candidates.filter(item => item.candidateType === type).length])),
+      androidCandidateCategories: Object.fromEntries([...new Set(candidates.map(item => item.category))].sort().map(category => [category, candidates.filter(item => item.category === category).length])),
+      likelyInternalOrContextualCandidates: candidates.filter(item => item.classification === 'likely-internal-or-contextual').length
     },
     note: 'These are extracted templates and implementation candidates, not a guarantee of every runtime-supported route. Review Android-only candidates before publishing.'
   };
