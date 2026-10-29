@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T16:43:09.965Z",
+  "generatedAt": "2026-10-29T16:43:37.758Z",
   "sources": {
     "officialDocs": {
       "url": "https://core.telegram.org/api/links",
@@ -21,6 +21,8 @@
     "documentedTemplates": 179,
     "androidCandidates": 96,
     "androidCandidatesNotExactMatches": 93,
+    "androidCandidatesWithRelatedOfficialTemplates": 40,
+    "androidCandidatesWithoutDocumentationMatch": 53,
     "androidCandidateTypes": {
       "full-uri": 73,
       "handler-token": 11,

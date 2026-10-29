@@ -36,7 +36,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "This is a query fragment found in URL-handling code, not a standalone deep-link template; do not publish as a general link without stronger evidence.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "2921ca26d64c",
@@ -75,7 +77,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "This is a query fragment found in URL-handling code, not a standalone deep-link template; do not publish as a general link without stronger evidence.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "744017ab43be",
@@ -114,7 +118,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "This is a query fragment found in URL-handling code, not a standalone deep-link template; do not publish as a general link without stronger evidence.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "952fadecd436",
@@ -153,7 +159,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "t.me/addemoji/<slug>"
+    ]
   },
   {
     "id": "71861cc87966",
@@ -192,7 +202,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "t.me/addstickers/<slug>"
+    ]
   },
   {
     "id": "48938635b806",
@@ -231,7 +245,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "t.me/addtheme/<name>"
+    ]
   },
   {
     "id": "93414be0bd25",
@@ -270,7 +288,18 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "t.me/bg/<hex_color>",
+      "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>",
+      "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
+      "t.me/bg/<slug>?intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
+      "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
+      "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
+      "t.me/bg/<slug>?intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
+      "t.me/bg/<slug>?mode=<mode>"
+    ]
   },
   {
     "id": "bb2f09b2f733",
@@ -309,7 +338,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "t.me/call/<slug>"
+    ]
   },
   {
     "id": "d22d7b0de8fe",
@@ -348,7 +381,12 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "This appears to be a route/handler token rather than a complete URI; verify how the client combines it with a scheme, host, path, and parameters.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "t.me/confirmphone?phone=<phone>&hash=<hash>",
+      "tg://confirmphone?phone=<phone>&hash=<hash>"
+    ]
   },
   {
     "id": "93ce1cfe6c00",
@@ -387,7 +425,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "t.me/contact/<token>"
+    ]
   },
   {
     "id": "87f403f0b5d5",
@@ -426,7 +468,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "t.me/invoice/<slug>"
+    ]
   },
   {
     "id": "22f11ac82e99",
@@ -465,7 +511,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "This appears to be a route/handler token rather than a complete URI; verify how the client combines it with a scheme, host, path, and parameters.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "27752083d826",
@@ -504,7 +552,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "t.me/login/"
+    ]
   },
   {
     "id": "485e40cca97b",
@@ -543,7 +595,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "This appears to be a route/handler token rather than a complete URI; verify how the client combines it with a scheme, host, path, and parameters.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "c7b860ca3ff5",
@@ -582,7 +636,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "This appears to be a route/handler token rather than a complete URI; verify how the client combines it with a scheme, host, path, and parameters.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "t.me/nft/<slug>"
+    ]
   },
   {
     "id": "d37fda317c8e",
@@ -621,7 +679,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "t.me/setlanguage/<slug>"
+    ]
   },
   {
     "id": "7569ea1818b5",
@@ -660,7 +722,12 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Heuristic classification only; inspect the surrounding source and confirm how Telegram parses this value.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "t.me/share/url?url=<url>&text=<text>",
+      "t.me/share/url/?url=<url>&text=<text>"
+    ]
   },
   {
     "id": "91aea6da80b7",
@@ -699,7 +766,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Heuristic classification only; inspect the surrounding source and confirm how Telegram parses this value.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "27ba9128ad84",
@@ -738,7 +807,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Heuristic classification only; inspect the surrounding source and confirm how Telegram parses this value.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "43cf585c4d7b",
@@ -777,7 +848,18 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Heuristic classification only; inspect the surrounding source and confirm how Telegram parses this value.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "http://t.me/path?query",
+      "https://t.me/oauth?startapp=<token>",
+      "https://t.me/path?query",
+      "t.me/+<hash>",
+      "t.me/+<phone_number>?attach=<bot_username>",
+      "t.me/+<phone_number>?attach=<bot_username>&startattach=<start_parameter>",
+      "t.me/+<phone_number>?text=<draft_text>&profile",
+      "t.me/<bot_username>?game=<short_name>"
+    ]
   },
   {
     "id": "571aff809586",
@@ -816,7 +898,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Heuristic classification only; inspect the surrounding source and confirm how Telegram parses this value.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "t.me/contact/<token>"
+    ]
   },
   {
     "id": "20478882b4b7",
@@ -855,7 +941,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Heuristic classification only; inspect the surrounding source and confirm how Telegram parses this value.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "7c22d7851dc9",
@@ -894,7 +982,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Heuristic classification only; inspect the surrounding source and confirm how Telegram parses this value.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "ebf1a7ef1bc9",
@@ -933,7 +1023,18 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://addemoji?set=<slug>",
+      "tg://addlist?slug=<slug>",
+      "tg://addstickers?set=<slug>",
+      "tg://addstyle?slug=<slug>",
+      "tg://addtheme?slug=<name>",
+      "tg://bg?color=<hex_color>",
+      "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>",
+      "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>"
+    ]
   },
   {
     "id": "4803b816ce0b",
@@ -972,7 +1073,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "b31ffbc10da1",
@@ -1011,7 +1114,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://addemoji?set=<slug>"
+    ]
   },
   {
     "id": "e888548cd0b9",
@@ -1050,7 +1157,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://addlist?slug=<slug>"
+    ]
   },
   {
     "id": "3e46ce234360",
@@ -1089,7 +1200,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://addstickers?set=<slug>"
+    ]
   },
   {
     "id": "d8adec56fe0b",
@@ -1128,7 +1243,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://addtheme?slug=<name>"
+    ]
   },
   {
     "id": "ed2ed9448582",
@@ -1167,7 +1286,18 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://bg?color=<hex_color>",
+      "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>",
+      "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
+      "tg://bg?gradient=<top_color>-<bottom_color>&rotation=<rotation>",
+      "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
+      "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
+      "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
+      "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>"
+    ]
   },
   {
     "id": "c06715ac7df2",
@@ -1206,7 +1336,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://call?slug=<slug>"
+    ]
   },
   {
     "id": "18aed25ba7c0",
@@ -1245,7 +1379,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "7da3c5dae517",
@@ -1284,7 +1420,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://confirmphone?phone=<phone>&hash=<hash>"
+    ]
   },
   {
     "id": "757a4f3d3954",
@@ -1323,7 +1463,13 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://contact?token=<token>",
+      "tg://contacts",
+      "tg://contacts/<section>"
+    ]
   },
   {
     "id": "b1286c2b682a",
@@ -1362,7 +1508,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://contact?token=<token>"
+    ]
   },
   {
     "id": "16774efad547",
@@ -1401,7 +1551,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://invoice?slug=<slug>"
+    ]
   },
   {
     "id": "dfffe945e33f",
@@ -1440,7 +1594,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://join?invite=<hash>"
+    ]
   },
   {
     "id": "39b61083db7b",
@@ -1479,7 +1637,12 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://login?code=",
+      "tg://login?token=<base64encodedtoken>"
+    ]
   },
   {
     "id": "e2786f57bb1c",
@@ -1518,7 +1681,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://login?token=<base64encodedtoken>"
+    ]
   },
   {
     "id": "f959c4bf6f1f",
@@ -1557,7 +1724,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://message?slug=<slug>"
+    ]
   },
   {
     "id": "aa8b2966cc2b",
@@ -1596,7 +1767,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://msg_url?url=<url>&text=<text>"
+    ]
   },
   {
     "id": "11480f5b0b07",
@@ -1635,7 +1810,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://nft?slug=<slug>"
+    ]
   },
   {
     "id": "45dc50e34a68",
@@ -1674,7 +1853,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "e2e8d7f88b0d",
@@ -1713,7 +1894,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://passport?params"
+    ]
   },
   {
     "id": "7016553c1131",
@@ -1752,7 +1937,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://premium_offer?ref=<referrer>"
+    ]
   },
   {
     "id": "88fad0b18ebb",
@@ -1791,7 +1980,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://privatepost?channel=<channel>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>"
+    ]
   },
   {
     "id": "fdc2599da7da",
@@ -1830,7 +2023,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://proxy?server=<server>&port=<port>&secret=<secret>"
+    ]
   },
   {
     "id": "bd08f2985f64",
@@ -1869,7 +2066,18 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://resolve?domain=<bot_username>&appname=<short_name>&startapp=<start_parameter>&mode=<mode>",
+      "tg://resolve?domain=<bot_username>&game=<short_name>",
+      "tg://resolve?domain=<bot_username>&ref=<referrer>",
+      "tg://resolve?domain=<bot_username>&start={prefix}<referrer>",
+      "tg://resolve?domain=<bot_username>&start=<parameter>",
+      "tg://resolve?domain=<bot_username>&startapp&mode=<mode>",
+      "tg://resolve?domain=<bot_username>&startapp=<start_parameter>&mode=<mode>",
+      "tg://resolve?domain=<bot_username>&startattach"
+    ]
   },
   {
     "id": "5f7a5ce4957b",
@@ -1908,7 +2116,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "691f5947a757",
@@ -1947,7 +2157,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "83e9e882c0e4",
@@ -1986,7 +2198,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "f226ee0cc2ed",
@@ -2025,7 +2239,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://setlanguage?lang=<slug>"
+    ]
   },
   {
     "id": "65e3927db500",
@@ -2064,7 +2282,14 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": true
+    "alreadyInDocs": true,
+    "documentationRelation": "exact-match",
+    "relatedDocumentedTemplates": [
+      "tg://settings",
+      "tg://settings/<path>",
+      "tg://settings/stars",
+      "tg://settings/ton"
+    ]
   },
   {
     "id": "43ef578ace92",
@@ -2103,7 +2328,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "bdbf6ee33600",
@@ -2142,7 +2369,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://socks?server=<server>&port=<port>&user=<user>&pass=<pass>"
+    ]
   },
   {
     "id": "170726bf1ca8",
@@ -2181,7 +2412,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://stargift_auction?slug=<slug>"
+    ]
   },
   {
     "id": "2a1734fbd8a5",
@@ -2220,7 +2455,12 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": true
+    "alreadyInDocs": true,
+    "documentationRelation": "exact-match",
+    "relatedDocumentedTemplates": [
+      "tg://stars",
+      "tg://stars_topup?balance=<star_count>&purpose=<purpose>"
+    ]
   },
   {
     "id": "f6f6c8dd52e5",
@@ -2259,7 +2499,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://stars_topup?balance=<star_count>&purpose=<purpose>"
+    ]
   },
   {
     "id": "c2fedb2686f5",
@@ -2298,7 +2542,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "6a6a6333e2d0",
@@ -2337,7 +2583,11 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": true
+    "alreadyInDocs": true,
+    "documentationRelation": "exact-match",
+    "relatedDocumentedTemplates": [
+      "tg://ton"
+    ]
   },
   {
     "id": "e2517e1e9366",
@@ -2376,7 +2626,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "315f8df9f53b",
@@ -2415,7 +2667,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "db1a8e8e639b",
@@ -2454,7 +2708,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "a0cce5b02e9d",
@@ -2493,7 +2749,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "4cbd536cdf89",
@@ -2532,7 +2790,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "0ddab864cd0a",
@@ -2571,7 +2831,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "602e830f546c",
@@ -2610,7 +2872,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "4b60bcb52083",
@@ -2649,7 +2913,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "cd8405b195b7",
@@ -2688,7 +2954,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "c4f12dc5c0ca",
@@ -2727,7 +2995,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "b0b5fc4e38a7",
@@ -2766,7 +3036,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "b76d88f1b032",
@@ -2805,7 +3077,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "3fde547df57c",
@@ -2844,7 +3118,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "2d43a3dce6b9",
@@ -2883,7 +3159,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "f94533cf1c60",
@@ -2922,7 +3200,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "599006234734",
@@ -2961,7 +3241,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "eb32b472451c",
@@ -3000,7 +3282,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "4f0f8aadefe7",
@@ -3039,7 +3323,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "b8c82197ccd6",
@@ -3078,7 +3364,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "73ff02e4f8d3",
@@ -3117,7 +3405,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "5d72c4201b81",
@@ -3156,7 +3446,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "c1d23fb64f03",
@@ -3195,7 +3487,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "a30a98ba927f",
@@ -3234,7 +3528,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "c3ed4b9449aa",
@@ -3273,7 +3569,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "46358f716910",
@@ -3312,7 +3610,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "c9e129d6100f",
@@ -3351,7 +3651,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "dccd5844b0df",
@@ -3390,7 +3692,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "93dc770416a3",
@@ -3429,7 +3733,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "83f7cc2c90b8",
@@ -3468,7 +3774,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "2be3b2de8d17",
@@ -3507,7 +3815,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "c36ab00d2b71",
@@ -3546,7 +3856,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "1b813fc3c084",
@@ -3585,7 +3897,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "a159d44b2efa",
@@ -3624,7 +3938,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "c9fd23516fcd",
@@ -3663,7 +3979,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "c8d8d1e6e945",
@@ -3702,7 +4020,9 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   },
   {
     "id": "b484e3f49f91",
@@ -3741,6 +4061,8 @@
     "classificationMethod": "heuristic-v1",
     "reviewNote": "Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": false,
+    "documentationRelation": "android-only-candidate",
+    "relatedDocumentedTemplates": []
   }
 ]
