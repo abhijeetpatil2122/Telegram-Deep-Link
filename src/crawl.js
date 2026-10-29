@@ -127,13 +127,13 @@ function classifyCandidate(candidate, excerpt, extraction) {
   let classification = 'needs-manual-review';
   let reviewNote = 'Heuristic classification only; inspect the surrounding source and confirm how Telegram parses this value.';
 
-  if (/^https?:\\/\\/(?:www\\.)?(?:t\\.me|telegram\\.me|telegram\\.dog)\\//i.test(candidate)
-      || /^tg:(?:\\/\\/)?/i.test(candidate)
-      || /^tonsite:\\/\\//i.test(candidate)) {
+  if (/^https?:\/\/(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)\//i.test(candidate)
+      || /^tg:(?:\/\/)?/i.test(candidate)
+      || /^tonsite:\/\//i.test(candidate)) {
     candidateType = 'full-uri';
     category = value.startsWith('tonsite:') ? 'ton-sites' : 'deep-link';
     reviewNote = 'Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.';
-  } else if (/^\\?(?:enablelogs|disablelogs|sendlogs|login_email)\\b/i.test(candidate)) {
+  } else if (/^\?(?:enablelogs|disablelogs|sendlogs|login_email)\b/i.test(candidate)) {
     candidateType = 'query-fragment';
     category = /logs/i.test(candidate) ? 'diagnostics' : 'authentication';
     classification = 'likely-internal-or-contextual';
@@ -142,28 +142,28 @@ function classifyCandidate(candidate, excerpt, extraction) {
     candidateType = 'query-fragment';
     category = 'query-parameters';
     reviewNote = 'Query fragment only; it needs a valid base URL and may be an option handled by a particular route.';
-  } else if (/^(?:addstickers|addemoji|addtheme|addstyle|bg|call|contact|invoice|login|joinchat|proxy|socks|setlanguage|giftcode|boost|story|privatepost|resolve|settings)\\//i.test(candidate)) {
+  } else if (/^(?:addstickers|addemoji|addtheme|addstyle|bg|call|contact|invoice|login|joinchat|proxy|socks|setlanguage|giftcode|boost|story|privatepost|resolve|settings)\//i.test(candidate)) {
     candidateType = 'path-prefix';
     category = /^(?:addstickers|addemoji)/i.test(candidate) ? 'stickers-and-emoji'
-      : /^(?:addtheme|addstyle|bg)\\//i.test(candidate) ? 'themes-and-backgrounds'
-      : /^(?:invoice|giftcode|boost)\\//i.test(candidate) ? 'payments-and-gifts'
-      : /^(?:call|joinchat)\\//i.test(candidate) ? 'calls-and-invites'
-      : /^(?:settings|setlanguage)\\//i.test(candidate) ? 'settings-and-language'
-      : /^(?:login)\\//i.test(candidate) ? 'authentication'
+      : /^(?:addtheme|addstyle|bg)\//i.test(candidate) ? 'themes-and-backgrounds'
+      : /^(?:invoice|giftcode|boost)\//i.test(candidate) ? 'payments-and-gifts'
+      : /^(?:call|joinchat)\//i.test(candidate) ? 'calls-and-invites'
+      : /^(?:settings|setlanguage)\//i.test(candidate) ? 'settings-and-language'
+      : /^(?:login)\//i.test(candidate) ? 'authentication'
       : 'chat-and-navigation';
     reviewNote = 'Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.';
-  } else if (/^\\/(?:[a-z0-9_-]+)?(?:\\?|$)/i.test(candidate)) {
+  } else if (/^\/(?:[a-z0-9_-]+)?(?:\?|$)/i.test(candidate)) {
     candidateType = 'path-fragment';
     category = 'path-fragments';
     reviewNote = 'Relative path fragment only; inspect the URL construction and caller before treating it as a deep link.';
-  } else if (/^(?:settings|contacts?|new_dialog|login_email|restore_purchases|importstickers|scanqr|msg_url|privatepost|resolve|proxy|socks|call|nft|invoice|gift|auth|search|confirmphone|setlanguage)\\b/i.test(candidate)) {
+  } else if (/^(?:settings|contacts?|new_dialog|login_email|restore_purchases|importstickers|scanqr|msg_url|privatepost|resolve|proxy|socks|call|nft|invoice|gift|auth|search|confirmphone|setlanguage)\b/i.test(candidate)) {
     candidateType = 'handler-token';
     category = /^(?:login|auth|confirmphone)/i.test(candidate) ? 'authentication'
       : /^(?:invoice|gift|restore_purchases)/i.test(candidate) ? 'payments-and-gifts'
       : /^(?:settings|contacts?)/i.test(candidate) ? 'settings-and-navigation'
       : 'handler-route';
     reviewNote = 'This appears to be a route/handler token rather than a complete URI; verify how the client combines it with a scheme, host, path, and parameters.';
-  } else if (/\\b(?:sendlogs|disablelogs|enablelogs|login_email)\\b/i.test(context)) {
+  } else if (/\b(?:sendlogs|disablelogs|enablelogs|login_email)\b/i.test(context)) {
     candidateType = 'contextual-token';
     category = 'diagnostics-or-authentication';
     classification = 'likely-internal-or-contextual';
