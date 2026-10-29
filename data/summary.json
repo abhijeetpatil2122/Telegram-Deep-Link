@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-10-29T16:25:01.533Z",
+  "sources": {
+    "officialDocs": {
+      "url": "https://core.telegram.org/api/links",
+      "finalUrl": "https://core.telegram.org/api/links",
+      "sha256": "32fe908126f6771f0923c0483121be4f14df32b9f79747aad0156ac41a740a1b",
+      "etag": null,
+      "lastModified": null
+    },
+    "androidSource": {
+      "url": "https://raw.githubusercontent.com/DrKLO/Telegram/master/TMessagesProj/src/main/java/org/telegram/ui/LaunchActivity.java",
+      "displayUrl": "https://github.com/DrKLO/Telegram/blob/master/TMessagesProj/src/main/java/org/telegram/ui/LaunchActivity.java",
+      "finalUrl": "https://raw.githubusercontent.com/DrKLO/Telegram/master/TMessagesProj/src/main/java/org/telegram/ui/LaunchActivity.java",
+      "sha256": "d5dfceadf5179aefc4f2f7dfb90b16568ad95a329adfa34af2adc61e484d0180",
+      "etag": "W/\"c2cc9d26ad9551f676e7710f02cbc5795d78c0e7718113a1b2d472caaed87671\"",
+      "lastModified": null
+    }
+  },
+  "counts": {
+    "documentedTemplates": 179,
+    "androidCandidates": 96,
+    "androidCandidatesNotExactMatches": 90
+  },
+  "note": "These are extracted templates and implementation candidates, not a guarantee of every runtime-supported route. Review Android-only candidates before publishing."
+}
