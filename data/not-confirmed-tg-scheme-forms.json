@@ -1,0 +1,18 @@
+[
+  {
+    "template": "tg://enablelogs",
+    "observedFragment": "?enablelogs"
+  },
+  {
+    "template": "tg://disablelogs",
+    "observedFragment": "?disablelogs"
+  },
+  {
+    "template": "tg://sendlogs",
+    "observedFragment": "?sendlogs"
+  },
+  {
+    "template": "tg://login_email",
+    "observedFragment": "login_email"
+  }
+]

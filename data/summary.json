@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T16:51:53.621Z",
+  "generatedAt": "2026-10-29T16:59:21.497Z",
   "sources": {
     "officialDocs": {
       "url": "https://core.telegram.org/api/links",
@@ -20,6 +20,9 @@
   "counts": {
     "documentedTemplates": 179,
     "androidCandidates": 96,
+    "runtimeSupportedLinks": 4,
+    "userConfirmedWorkingRuntimeLinks": 4,
+    "rejectedStandaloneTgSchemeForms": 4,
     "androidCandidatesNotExactMatches": 93,
     "androidCandidatesWithRelatedOfficialTemplates": 76,
     "androidCandidatesWithoutDocumentationMatch": 17,
@@ -36,20 +39,21 @@
       "authentication": 3,
       "calls-and-invites": 1,
       "chat-and-navigation": 2,
-      "client-action-route": 8,
+      "client-action-route": 6,
       "collectibles-and-gifts": 3,
-      "deep-link": 64,
+      "deep-link": 62,
       "diagnostics": 3,
       "internal-intent-action": 1,
       "internal-url-rewrite": 1,
       "link-host-alias": 3,
       "other": 1,
       "payments-and-gifts": 1,
+      "runtime-supported-action": 4,
       "settings-and-language": 1,
       "stickers-and-emoji": 2,
       "themes-and-backgrounds": 2
     },
-    "likelyInternalOrContextualCandidates": 14
+    "likelyInternalOrContextualCandidates": 12
   },
   "note": "These are extracted templates and implementation candidates, not a guarantee of every runtime-supported route. Review Android-only candidates before publishing."
 }

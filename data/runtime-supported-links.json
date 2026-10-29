@@ -1,0 +1,79 @@
+[
+  {
+    "template": "tg://addcontact?name=<name>&phone=<phone>",
+    "route": "tg://addcontact",
+    "purpose": "Open the add-contact flow with a name and phone number.",
+    "parameters": [
+      {
+        "name": "name",
+        "required": false,
+        "description": "Contact display name."
+      },
+      {
+        "name": "phone",
+        "required": false,
+        "description": "Phone number to add."
+      }
+    ],
+    "sourceNeedle": "url.startsWith(\"tg://addcontact\")",
+    "sourceLineHint": 2696,
+    "verification": "user-confirmed-working",
+    "caveat": "The source reads name and phone query parameters; phone values containing + should be URL-encoded correctly.",
+    "source": "android_launch_activity",
+    "sourceUrl": "https://github.com/DrKLO/Telegram/blob/master/TMessagesProj/src/main/java/org/telegram/ui/LaunchActivity.java",
+    "sourceLine": 2696,
+    "officialDocumentationStatus": "not-confirmed-as-official-template",
+    "note": "Separate from data/documented-links.json. User-confirmed runtime behavior plus an explicit Android handler; not a claim of official public documentation."
+  },
+  {
+    "template": "tg://send_gift?to=<username-or-user_id>",
+    "route": "tg://send_gift",
+    "purpose": "Open the gift flow for a recipient.",
+    "parameters": [
+      {
+        "name": "to",
+        "required": false,
+        "description": "Recipient username (with or without @) or numeric user ID. If omitted, Telegram opens recipient selection."
+      }
+    ],
+    "sourceNeedle": "url.startsWith(\"tg://send_gift\")",
+    "sourceLineHint": 2739,
+    "verification": "user-confirmed-working",
+    "caveat": "Recipient resolution and gift availability depend on the Telegram account and recipient.",
+    "source": "android_launch_activity",
+    "sourceUrl": "https://github.com/DrKLO/Telegram/blob/master/TMessagesProj/src/main/java/org/telegram/ui/LaunchActivity.java",
+    "sourceLine": 2739,
+    "officialDocumentationStatus": "not-confirmed-as-official-template",
+    "note": "Separate from data/documented-links.json. User-confirmed runtime behavior plus an explicit Android handler; not a claim of official public documentation."
+  },
+  {
+    "template": "tg://calllog",
+    "route": "tg://calllog",
+    "purpose": "Open the call log.",
+    "parameters": [],
+    "sourceNeedle": "url.startsWith(\"tg://calllog\")",
+    "sourceLineHint": 2652,
+    "verification": "user-confirmed-working",
+    "caveat": "Client action; not listed as an official public template in the documentation snapshot.",
+    "source": "android_launch_activity",
+    "sourceUrl": "https://github.com/DrKLO/Telegram/blob/master/TMessagesProj/src/main/java/org/telegram/ui/LaunchActivity.java",
+    "sourceLine": 2652,
+    "officialDocumentationStatus": "not-confirmed-as-official-template",
+    "note": "Separate from data/documented-links.json. User-confirmed runtime behavior plus an explicit Android handler; not a claim of official public documentation."
+  },
+  {
+    "template": "tg://scanqr",
+    "route": "tg://scanqr",
+    "purpose": "Open the QR-scanning flow.",
+    "parameters": [],
+    "sourceNeedle": "url.startsWith(\"tg://scanqr\")",
+    "sourceLineHint": 2694,
+    "verification": "user-confirmed-working",
+    "caveat": "Requires the client/device to be able to use the camera and the relevant UI.",
+    "source": "android_launch_activity",
+    "sourceUrl": "https://github.com/DrKLO/Telegram/blob/master/TMessagesProj/src/main/java/org/telegram/ui/LaunchActivity.java",
+    "sourceLine": 2694,
+    "officialDocumentationStatus": "not-confirmed-as-official-template",
+    "note": "Separate from data/documented-links.json. User-confirmed runtime behavior plus an explicit Android handler; not a claim of official public documentation."
+  }
+]
