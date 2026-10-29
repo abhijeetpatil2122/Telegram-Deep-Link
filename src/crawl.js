@@ -254,6 +254,24 @@ async function main() {
   }
   const documentedKeys = new Set(documented.map(item => item.template.toLowerCase()));
   const candidates = android.map(item => ({ ...item, alreadyInDocs: documentedKeys.has(item.candidate.toLowerCase()) }));
+  const incompleteCandidateMetadata = candidates.filter(item =>
+    !item.candidateType || !item.category || !item.classification || !item.classificationMethod || !item.reviewNote
+  );
+  if (incompleteCandidateMetadata.length) {
+    throw new Error('Android candidate classification metadata is incomplete for ' + incompleteCandidateMetadata.length + ' entries.');
+  }
+  const expectedReviewLabels = new Map([
+    ['?disablelogs', 'likely-internal-or-contextual'],
+    ['?enablelogs', 'likely-internal-or-contextual'],
+    ['?sendlogs', 'likely-internal-or-contextual']
+  ]);
+  const missingReviewLabels = [...expectedReviewLabels].filter(([candidate, classification]) =>
+    !candidates.some(item => item.candidate.toLowerCase() === candidate && item.classification === classification)
+  );
+  if (missingReviewLabels.length) {
+    throw new Error('Expected diagnostic fragments were not classified for review: ' +
+      missingReviewLabels.map(([candidate]) => candidate).join(', '));
+  }
   const summary = {
     generatedAt: new Date().toISOString(),
     sources: {
