@@ -127,12 +127,29 @@ function classifyCandidate(candidate, excerpt, extraction) {
   let classification = 'needs-manual-review';
   let reviewNote = 'Heuristic classification only; inspect the surrounding source and confirm how Telegram parses this value.';
 
-  if (/^https?:\/\/(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)\//i.test(candidate)
-      || /^tg:(?:\/\/)?/i.test(candidate)
+  if (/^tg:\/\/(?:[a-z0-9_]+)?$/i.test(candidate) || /^tg:(?!\/\/)[a-z0-9_]+$/i.test(candidate)) {
+    candidateType = 'scheme-prefix';
+    category = 'deep-link';
+    reviewNote = 'This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.';
+    if (/telegram\.org/i.test(candidate) && /replace\(/i.test(context)) {
+      category = 'internal-url-rewrite';
+      classification = 'likely-internal-or-contextual';
+      reviewNote = 'This value is used as an internal URL rewrite target while parsing another link; it is not a public deep-link template.';
+    }
+  } else if (/^(?:t\.me|telegram\.me|telegram\.dog)$/i.test(candidate)) {
+    candidateType = 'host-token';
+    category = 'link-host-alias';
+    reviewNote = 'Host alias used by the URL parser, not a standalone link template.';
+  } else if (/^tg:\/\/[a-z0-9_]+\?[^=]+=$/i.test(candidate)) {
+    candidateType = 'uri-query-prefix';
+    category = 'deep-link';
+    reviewNote = 'Partial URI with a query parameter name but no value. Use the surrounding parser and official documentation to recover the complete parameter schema.';
+  } else if (/^https?:\/\/(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)\//i.test(candidate)
+      || /^tg:\/\//i.test(candidate)
       || /^tonsite:\/\//i.test(candidate)) {
     candidateType = 'full-uri';
     category = value.startsWith('tonsite:') ? 'ton-sites' : 'deep-link';
-    reviewNote = 'Looks like a complete URI; confirm whether it is a documented public format or an implementation-specific route.';
+    reviewNote = 'Looks like a URI example or partial URI; confirm required parameters and whether it is a documented public format.';
   } else if (/^\?(?:enablelogs|disablelogs|sendlogs|login_email)\b/i.test(candidate)) {
     candidateType = 'query-fragment';
     category = /logs/i.test(candidate) ? 'diagnostics' : 'authentication';
@@ -142,11 +159,12 @@ function classifyCandidate(candidate, excerpt, extraction) {
     candidateType = 'query-fragment';
     category = 'query-parameters';
     reviewNote = 'Query fragment only; it needs a valid base URL and may be an option handled by a particular route.';
-  } else if (/^(?:addstickers|addemoji|addtheme|addstyle|bg|call|contact|invoice|login|joinchat|proxy|socks|setlanguage|giftcode|boost|story|privatepost|resolve|settings)\//i.test(candidate)) {
+  } else if (/^(?:addstickers|addemoji|addtheme|addstyle|bg|call|contact|invoice|login|joinchat|proxy|socks|setlanguage|giftcode|boost|story|privatepost|resolve|settings|nft|msg|share|stargift_auction|stargift_preview)\//i.test(candidate)) {
     candidateType = 'path-prefix';
     category = /^(?:addstickers|addemoji)/i.test(candidate) ? 'stickers-and-emoji'
       : /^(?:addtheme|addstyle|bg)\//i.test(candidate) ? 'themes-and-backgrounds'
       : /^(?:invoice|giftcode|boost)\//i.test(candidate) ? 'payments-and-gifts'
+      : /^(?:stargift_auction|stargift_preview|nft)\//i.test(candidate) ? 'collectibles-and-gifts'
       : /^(?:call|joinchat)\//i.test(candidate) ? 'calls-and-invites'
       : /^(?:settings|setlanguage)\//i.test(candidate) ? 'settings-and-language'
       : /^(?:login)\//i.test(candidate) ? 'authentication'
@@ -161,8 +179,14 @@ function classifyCandidate(candidate, excerpt, extraction) {
     category = /^(?:login|auth|confirmphone)/i.test(candidate) ? 'authentication'
       : /^(?:invoice|gift|restore_purchases)/i.test(candidate) ? 'payments-and-gifts'
       : /^(?:settings|contacts?)/i.test(candidate) ? 'settings-and-navigation'
+      : /^(?:new_dialog)/i.test(candidate) ? 'internal-intent-action'
       : 'handler-route';
-    reviewNote = 'This appears to be a route/handler token rather than a complete URI; verify how the client combines it with a scheme, host, path, and parameters.';
+    if (/^new_dialog$/i.test(candidate)) {
+      classification = 'likely-internal-or-contextual';
+      reviewNote = 'Android Intent action used to open the new-dialog UI, not a Telegram public deep-link route.';
+    } else {
+      reviewNote = 'This appears to be a route/handler token rather than a complete URI; verify how the client combines it with a scheme, host, path, and parameters.';
+    }
   } else if (/\b(?:sendlogs|disablelogs|enablelogs|login_email)\b/i.test(context)) {
     candidateType = 'contextual-token';
     category = 'diagnostics-or-authentication';
