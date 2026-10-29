@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DOC_URL = 'https://corefork.telegram.org/api/links.md';
+const DOC_HTML_URL = 'https://core.telegram.org/api/links';
 const JAVA_URL = 'https://raw.githubusercontent.com/DrKLO/Telegram/master/TMessagesProj/src/main/java/org/telegram/ui/LaunchActivity.java';
 const JAVA_PAGE_URL = 'https://github.com/DrKLO/Telegram/blob/master/TMessagesProj/src/main/java/org/telegram/ui/LaunchActivity.java';
 const USER_AGENT = 'Telegram-Deep-Link-Crawler/0.1 (+https://github.com/abhijeetpatil2122/Telegram-Deep-Link)';
@@ -32,6 +33,33 @@ function isLink(value) {
     || /\btg:(?:\/\/)?[a-z0-9_+.-]+/i.test(v)
     || /\btonsite:\/\//i.test(v)
     || /(?:^|\s)\w[\w.-]*\.ton(?:\/|\?|$)/i.test(v);
+}
+
+
+function decodeHtml(value) {
+  return value
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&lt;/gi, '<').replace(/&gt;/gi, '>')
+    .replace(/&amp;/gi, '&').replace(/&quot;/gi, '"')
+    .replace(/&#39;|&apos;/gi, "'")
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)));
+}
+
+function htmlToMarkdown(html) {
+  let value = html
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(/<(script|style|noscript|svg)\b[^>]*>[\s\S]*?<\/\1>/gi, ' ')
+    .replace(/<h([1-6])\b[^>]*>([\s\S]*?)<\/h\1>/gi, (_, level, body) =>
+      '\n' + '#'.repeat(Number(level)) + ' ' + decodeHtml(body.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()) + '\n')
+    .replace(/<pre\b[^>]*>([\s\S]*?)<\/pre>/gi, (_, body) =>
+      '\n\n' + String.fromCharCode(96).repeat(3) + '\n' + decodeHtml(body.replace(/<[^>]+>/g, '')) + '\n' + String.fromCharCode(96).repeat(3) + '\n\n')
+    .replace(/<code\b[^>]*>([\s\S]*?)<\/code>/gi, (_, body) =>
+      String.fromCharCode(96) + decodeHtml(body.replace(/<[^>]+>/g, '')) + String.fromCharCode(96))
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<\/(p|div|li|tr|section|article|ul|ol|table)>/gi, '\n')
+    .replace(/<[^>]+>/g, ' ');
+  return decodeHtml(value).replace(/[ \t]+/g, ' ').replace(/\n[ \t]+/g, '\n').replace(/\n{3,}/g, '\n\n').trim();
 }
 
 function parseMarkdown(markdown) {
@@ -119,10 +147,23 @@ async function writeJson(path, value) {
 }
 
 async function main() {
-  console.log('Fetching official Markdown:', DOC_URL);
-  const docs = await fetchText(DOC_URL);
-  if (!/^\s*#/m.test(docs.text) || docs.text.length < 1000) {
-    throw new Error('The Markdown endpoint returned unexpected content. Refusing to write an unreliable inventory.');
+  console.log('Fetching official deep-link documentation:', DOC_URL);
+  let docs;
+  try {
+    docs = await fetchText(DOC_URL);
+    if (!/^\s*#/m.test(docs.text) || docs.text.length < 1000 || /<html[\s>]/i.test(docs.text)) {
+      throw new Error('The Markdown endpoint did not return Markdown.');
+    }
+  } catch (primaryError) {
+    console.warn('Markdown source unavailable or invalid; falling back to official HTML:', primaryError.message);
+    const html = await fetchText(DOC_HTML_URL);
+    if (!/<(?:html|article|main|h[1-6])\b/i.test(html.text) || html.text.length < 1000) {
+      throw new Error('The official documentation HTML response was not recognizable.');
+    }
+    docs = { ...html, text: htmlToMarkdown(html.text) };
+    if (!/^\s*#/m.test(docs.text) || docs.text.length < 1000) {
+      throw new Error('Could not extract usable documentation content from the official HTML page.');
+    }
   }
   console.log('Fetching Android source:', JAVA_URL);
   const java = await fetchText(JAVA_URL);
