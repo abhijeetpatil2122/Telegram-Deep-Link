@@ -132,6 +132,11 @@ function classifyCandidate(candidate, excerpt, extraction) {
     category = 'internal-url-rewrite';
     classification = 'likely-internal-or-contextual';
     reviewNote = 'This value is used as an internal URL rewrite target while parsing another link; it is not a public deep-link template.';
+  } else if (/^tg:\/\/(?:calllog|scanqr|search|openmessage)$/i.test(candidate) || /^tg:(?:calllog|scanqr|search|openmessage)$/i.test(candidate)) {
+    candidateType = 'scheme-prefix';
+    category = 'client-action-route';
+    classification = 'likely-internal-or-contextual';
+    reviewNote = 'Android handles this as a direct client action or compatibility route. The source match does not establish a documented, stable public link format; keep it out of the confirmed-template inventory unless independently verified.';
   } else if (/^tg:\/\/(?:[a-z0-9_]+)?$/i.test(candidate) || /^tg:(?!\/\/)[a-z0-9_]+$/i.test(candidate)) {
     candidateType = 'scheme-prefix';
     category = 'deep-link';
@@ -150,11 +155,12 @@ function classifyCandidate(candidate, excerpt, extraction) {
     candidateType = 'full-uri';
     category = value.startsWith('tonsite:') ? 'ton-sites' : 'deep-link';
     reviewNote = 'Looks like a URI example or partial URI; confirm required parameters and whether it is a documented public format.';
-  } else if (/^\?(?:enablelogs|disablelogs|sendlogs|login_email)\b/i.test(candidate)) {
-    candidateType = 'query-fragment';
+  } else if (/^(?:\?(?:enablelogs|disablelogs|sendlogs)\b|login_email$)/i.test(candidate)) {
+    candidateType = candidate.startsWith('?') ? 'query-fragment' : 'handler-token';
     category = /logs/i.test(candidate) ? 'diagnostics' : 'authentication';
     classification = 'likely-internal-or-contextual';
-    reviewNote = 'This is a query fragment found in URL-handling code, not a standalone deep-link template; do not publish as a general link without stronger evidence.';
+    reviewNote = 'This token appears in a diagnostic/authentication settings branch, not as a complete documented deep-link template. Do not publish it as a standalone link.';
+
   } else if (candidate.startsWith('?')) {
     candidateType = 'query-fragment';
     category = 'query-parameters';
@@ -282,10 +288,22 @@ async function main() {
   const candidates = android.map(item => {
     const alreadyInDocs = documentedKeys.has(item.candidate.toLowerCase());
     const normalizedCandidate = item.candidate.replace(/^tg:(?!\/\/)/i, 'tg://').toLowerCase();
+    // These are implementation aliases, not proof of equivalent public syntax.
+    // Store related official examples as review hints while preserving the raw candidate.
+    const aliasRelatedPatterns = [
+      [/^(?:telegram\\.me|telegram\\.dog)$/i, /^(?:t\\.me|tg:\/\/)/i],
+      [/^tg:\/\/(?:search)$/i, /^tg:\/\/chats\/search(?:$|[?])/i],
+      [/^tg:(?:\/\/)?share$/i, /^(?:t\\.me\/share|tg:\/\/msg_url)(?:[/?]|$)/i],
+      [/^stargift_auction\/$/i, /^(?:t\\.me\/auction\/|tg:\/\/stargift_auction\?slug=)/i],
+      [/^tg:(?:\/\/)?webproxy$/i, /^tg:\/\/(?:proxy|socks)\?/i]
+    ];
+    const aliasPatterns = aliasRelatedPatterns.filter(([candidatePattern]) => candidatePattern.test(item.candidate))
+      .map(([, templatePattern]) => templatePattern);
     const relatedDocumentedTemplates = documented
       .filter(doc => {
         const template = doc.template.toLowerCase();
-        return template.includes(item.candidate.toLowerCase()) || template.includes(normalizedCandidate);
+        return template.includes(item.candidate.toLowerCase()) || template.includes(normalizedCandidate)
+          || aliasPatterns.some(pattern => pattern.test(template));
       })
       .map(doc => doc.template)
       .slice(0, 8);
