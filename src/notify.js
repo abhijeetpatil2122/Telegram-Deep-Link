@@ -17,6 +17,10 @@ function escapeHtml(value) {
   return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+async function sendTelegram(message) {
+  await sendTelegram(message);
+}
+
 async function main() {
   if (!TOKEN) {
     console.log('Telegram notification skipped: configure the TELEGRAM_BOT_TOKEN repository secret to enable channel updates.');
@@ -27,7 +31,16 @@ async function main() {
   try {
     previous = JSON.parse(execFileSync('git', ['show', 'HEAD:' + INVENTORY_PATH], { encoding: 'utf8' }));
   } catch {
-    console.log('Publication inventory baseline created. No initial bulk notification will be sent.');
+    const summary = JSON.parse(await readFile('data/summary.json', 'utf8'));
+    const counts = summary.counts;
+    const baselineMessage = [
+      '<b>Telegram Deep-Link Inventory is now being tracked</b>', '',
+      'Baseline: <b>' + counts.documentedTemplates + '</b> official documented templates, <b>' + counts.androidCandidates + '</b> Android source candidates, and <b>' + counts.userConfirmedWorkingRuntimeLinks + '</b> maintainer-reported runtime-tested routes.', '',
+      'Android candidates are included even when undocumented. Some are internal, partial, contextual, client/version-dependent, or unverified. Inclusion does not guarantee a link works or is publicly supported.', '',
+      '<a href="' + REPO_URL + '/blob/main/data/publication-inventory.json">Open full inventory</a> · <a href="' + REPO_URL + '/blob/main/data/summary.json">Summary</a>'
+    ].join('\\n');
+    await sendTelegram(baselineMessage);
+    console.log('Initial Telegram inventory baseline notification sent.');
     return;
   }
   const before = new Map(previous.map(item => [item.id, item]));
