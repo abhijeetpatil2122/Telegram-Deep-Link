@@ -4,8 +4,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const DOC_URL = 'https://corefork.telegram.org/api/links.md';
-const DOC_HTML_URL = 'https://core.telegram.org/api/links';
+const DOC_URL = 'https://core.telegram.org/api/links';
 const JAVA_URL = 'https://raw.githubusercontent.com/DrKLO/Telegram/master/TMessagesProj/src/main/java/org/telegram/ui/LaunchActivity.java';
 const JAVA_PAGE_URL = 'https://github.com/DrKLO/Telegram/blob/master/TMessagesProj/src/main/java/org/telegram/ui/LaunchActivity.java';
 const USER_AGENT = 'Telegram-Deep-Link-Crawler/0.1 (+https://github.com/abhijeetpatil2122/Telegram-Deep-Link)';
@@ -147,23 +146,14 @@ async function writeJson(path, value) {
 }
 
 async function main() {
-  console.log('Fetching official deep-link documentation:', DOC_URL);
-  let docs;
-  try {
-    docs = await fetchText(DOC_URL);
-    if (!/^\s*#/m.test(docs.text) || docs.text.length < 1000 || /<html[\s>]/i.test(docs.text)) {
-      throw new Error('The Markdown endpoint did not return Markdown.');
-    }
-  } catch (primaryError) {
-    console.warn('Markdown source unavailable or invalid; falling back to official HTML:', primaryError.message);
-    const html = await fetchText(DOC_HTML_URL);
-    if (!/<(?:html|article|main|h[1-6])\b/i.test(html.text) || html.text.length < 1000) {
-      throw new Error('The official documentation HTML response was not recognizable.');
-    }
-    docs = { ...html, text: htmlToMarkdown(html.text) };
-    if (!/^\s*#/m.test(docs.text) || docs.text.length < 1000) {
-      throw new Error('Could not extract usable documentation content from the official HTML page.');
-    }
+  console.log('Fetching official website documentation:', DOC_URL);
+  const html = await fetchText(DOC_URL);
+  if (!/<(?:html|article|main|h[1-6])\b/i.test(html.text) || html.text.length < 1000) {
+    throw new Error('The official deep-link website did not return recognizable HTML.');
+  }
+  const docs = { ...html, text: htmlToMarkdown(html.text) };
+  if (!/^\s*#/m.test(docs.text) || docs.text.length < 1000) {
+    throw new Error('Could not extract usable deep-link documentation from the official website HTML.');
   }
   console.log('Fetching Android source:', JAVA_URL);
   const java = await fetchText(JAVA_URL);
