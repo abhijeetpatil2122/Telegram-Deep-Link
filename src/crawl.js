@@ -173,6 +173,30 @@ async function main() {
   }
 
   const documented = parseMarkdown(docs.text), android = scanJava(java.text);
+  const malformed = documented.filter(item =>
+    /<\/?code>/i.test(item.template)
+    || /(?:t\.me|telegram\.me|telegram\.dog)\/\s+(?:\?|\/|$)/i.test(item.template)
+    || /\btg:\s+\//i.test(item.template)
+  );
+  if (malformed.length) {
+    throw new Error('Malformed templates detected in official HTML extraction: ' +
+      malformed.slice(0, 5).map(item => item.template).join(' | '));
+  }
+  const requiredTemplates = [
+    't.me/<username>?text=<draft_text>&profile',
+    'tg://resolve?domain=<username>&text=<draft_text>&profile',
+    't.me/<username>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>',
+    'tg://settings',
+    't.me/<username>?direct',
+    'tg://join?invite=<hash>'
+  ];
+  const missingTemplates = requiredTemplates.filter(template =>
+    !documented.some(item => item.template === template)
+  );
+  if (missingTemplates.length) {
+    throw new Error('Official HTML extraction is missing expected documented examples: ' +
+      missingTemplates.join(' | '));
+  }
   const documentedKeys = new Set(documented.map(item => item.template.toLowerCase()));
   const candidates = android.map(item => ({ ...item, alreadyInDocs: documentedKeys.has(item.candidate.toLowerCase()) }));
   const summary = {
