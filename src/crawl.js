@@ -292,10 +292,11 @@ async function main() {
     // Store related official examples as review hints while preserving the raw candidate.
     const aliasRelatedPatterns = [
       [/^(?:telegram\.me|telegram\.dog)$/i, /^(?:t\.me|tg:\/\/)/i],
-      [/^tg:\/\/search$/i, /^tg:\/\/chats\/search(?:$|[?])/i],
+      [/^tg:(?:\/\/)?search$/i, /^tg:\/\/chats\/search(?:$|[?])/i],
       [/^tg:(?:\/\/)?share$/i, /^(?:t\.me\/share|tg:\/\/msg_url)(?:[/?]|$)/i],
       [/^stargift_auction\/$/i, /^(?:t\.me\/auction\/|tg:\/\/stargift_auction\?slug=)/i],
-      [/^tg:(?:\/\/)?webproxy$/i, /^tg:\/\/(?:proxy|socks)\?/i]
+      [/^tg:(?:\/\/)?webproxy$/i, /^tg:\/\/(?:proxy|socks)\?/i],
+      [/^tg:secureid$/i, /^tg:\/\/passport(?:\?|$)/i]
     ];
     const aliasPatterns = aliasRelatedPatterns.filter(([candidatePattern]) => candidatePattern.test(item.candidate))
       .map(([, templatePattern]) => templatePattern);
