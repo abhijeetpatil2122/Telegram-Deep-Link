@@ -34,7 +34,7 @@
     "category": "diagnostics",
     "classification": "likely-internal-or-contextual",
     "classificationMethod": "heuristic-v1",
-    "reviewNote": "This is a query fragment found in URL-handling code, not a standalone deep-link template; do not publish as a general link without stronger evidence.",
+    "reviewNote": "This token appears in a diagnostic/authentication settings branch, not as a complete documented deep-link template. Do not publish it as a standalone link.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
     "documentationRelation": "android-only-candidate",
@@ -75,7 +75,7 @@
     "category": "diagnostics",
     "classification": "likely-internal-or-contextual",
     "classificationMethod": "heuristic-v1",
-    "reviewNote": "This is a query fragment found in URL-handling code, not a standalone deep-link template; do not publish as a general link without stronger evidence.",
+    "reviewNote": "This token appears in a diagnostic/authentication settings branch, not as a complete documented deep-link template. Do not publish it as a standalone link.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
     "documentationRelation": "android-only-candidate",
@@ -116,7 +116,7 @@
     "category": "diagnostics",
     "classification": "likely-internal-or-contextual",
     "classificationMethod": "heuristic-v1",
-    "reviewNote": "This is a query fragment found in URL-handling code, not a standalone deep-link template; do not publish as a general link without stronger evidence.",
+    "reviewNote": "This token appears in a diagnostic/authentication settings branch, not as a complete documented deep-link template. Do not publish it as a standalone link.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
     "documentationRelation": "android-only-candidate",
@@ -507,9 +507,9 @@
     "reviewStatus": "needs_review",
     "candidateType": "handler-token",
     "category": "authentication",
-    "classification": "needs-manual-review",
+    "classification": "likely-internal-or-contextual",
     "classificationMethod": "heuristic-v1",
-    "reviewNote": "This appears to be a route/handler token rather than a complete URI; verify how the client combines it with a scheme, host, path, and parameters.",
+    "reviewNote": "This token appears in a diagnostic/authentication settings branch, not as a complete documented deep-link template. Do not publish it as a standalone link.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
     "documentationRelation": "android-only-candidate",
@@ -767,8 +767,10 @@
     "reviewNote": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://stargift_auction?slug=<slug>"
+    ]
   },
   {
     "id": "27ba9128ad84",
@@ -1374,10 +1376,10 @@
     ],
     "reviewStatus": "needs_review",
     "candidateType": "scheme-prefix",
-    "category": "deep-link",
-    "classification": "needs-manual-review",
+    "category": "client-action-route",
+    "classification": "likely-internal-or-contextual",
     "classificationMethod": "heuristic-v1",
-    "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+    "reviewNote": "Android handles this as a direct client action or compatibility route. The source match does not establish a documented, stable public link format; keep it out of the confirmed-template inventory unless independently verified.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
     "documentationRelation": "android-only-candidate",
@@ -1848,10 +1850,10 @@
     ],
     "reviewStatus": "needs_review",
     "candidateType": "scheme-prefix",
-    "category": "deep-link",
-    "classification": "needs-manual-review",
+    "category": "client-action-route",
+    "classification": "likely-internal-or-contextual",
     "classificationMethod": "heuristic-v1",
-    "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+    "reviewNote": "Android handles this as a direct client action or compatibility route. The source match does not establish a documented, stable public link format; keep it out of the confirmed-template inventory unless independently verified.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
     "documentationRelation": "android-only-candidate",
@@ -2111,10 +2113,10 @@
     ],
     "reviewStatus": "needs_review",
     "candidateType": "scheme-prefix",
-    "category": "deep-link",
-    "classification": "needs-manual-review",
+    "category": "client-action-route",
+    "classification": "likely-internal-or-contextual",
     "classificationMethod": "heuristic-v1",
-    "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+    "reviewNote": "Android handles this as a direct client action or compatibility route. The source match does not establish a documented, stable public link format; keep it out of the confirmed-template inventory unless independently verified.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
     "documentationRelation": "android-only-candidate",
@@ -2152,14 +2154,16 @@
     ],
     "reviewStatus": "needs_review",
     "candidateType": "scheme-prefix",
-    "category": "deep-link",
-    "classification": "needs-manual-review",
+    "category": "client-action-route",
+    "classification": "likely-internal-or-contextual",
     "classificationMethod": "heuristic-v1",
-    "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+    "reviewNote": "Android handles this as a direct client action or compatibility route. The source match does not establish a documented, stable public link format; keep it out of the confirmed-template inventory unless independently verified.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://chats/search"
+    ]
   },
   {
     "id": "83e9e882c0e4",
@@ -2329,8 +2333,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://msg_url?url=<url>&text=<text>"
+    ]
   },
   {
     "id": "bdbf6ee33600",
@@ -2627,8 +2633,11 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://proxy?server=<server>&port=<port>&secret=<secret>",
+      "tg://socks?server=<server>&port=<port>&user=<user>&pass=<pass>"
+    ]
   },
   {
     "id": "315f8df9f53b",
@@ -2968,10 +2977,10 @@
     ],
     "reviewStatus": "needs_review",
     "candidateType": "scheme-prefix",
-    "category": "deep-link",
-    "classification": "needs-manual-review",
+    "category": "client-action-route",
+    "classification": "likely-internal-or-contextual",
     "classificationMethod": "heuristic-v1",
-    "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+    "reviewNote": "Android handles this as a direct client action or compatibility route. The source match does not establish a documented, stable public link format; keep it out of the confirmed-template inventory unless independently verified.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
     "documentationRelation": "android-only-candidate",
@@ -3356,10 +3365,10 @@
     ],
     "reviewStatus": "needs_review",
     "candidateType": "scheme-prefix",
-    "category": "deep-link",
-    "classification": "needs-manual-review",
+    "category": "client-action-route",
+    "classification": "likely-internal-or-contextual",
     "classificationMethod": "heuristic-v1",
-    "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+    "reviewNote": "Android handles this as a direct client action or compatibility route. The source match does not establish a documented, stable public link format; keep it out of the confirmed-template inventory unless independently verified.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
     "documentationRelation": "android-only-candidate",
@@ -3619,10 +3628,10 @@
     ],
     "reviewStatus": "needs_review",
     "candidateType": "scheme-prefix",
-    "category": "deep-link",
-    "classification": "needs-manual-review",
+    "category": "client-action-route",
+    "classification": "likely-internal-or-contextual",
     "classificationMethod": "heuristic-v1",
-    "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+    "reviewNote": "Android handles this as a direct client action or compatibility route. The source match does not establish a documented, stable public link format; keep it out of the confirmed-template inventory unless independently verified.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
     "documentationRelation": "android-only-candidate",
@@ -3660,10 +3669,10 @@
     ],
     "reviewStatus": "needs_review",
     "candidateType": "scheme-prefix",
-    "category": "deep-link",
-    "classification": "needs-manual-review",
+    "category": "client-action-route",
+    "classification": "likely-internal-or-contextual",
     "classificationMethod": "heuristic-v1",
-    "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+    "reviewNote": "Android handles this as a direct client action or compatibility route. The source match does not establish a documented, stable public link format; keep it out of the confirmed-template inventory unless independently verified.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
     "documentationRelation": "android-only-candidate",
@@ -3878,8 +3887,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://msg_url?url=<url>&text=<text>"
+    ]
   },
   {
     "id": "c36ab00d2b71",
@@ -4135,7 +4146,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://proxy?server=<server>&port=<port>&secret=<secret>",
+      "tg://socks?server=<server>&port=<port>&user=<user>&pass=<pass>"
+    ]
   }
 ]
