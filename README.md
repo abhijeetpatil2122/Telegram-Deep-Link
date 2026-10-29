@@ -31,7 +31,7 @@ This is useful context for our project because it describes the fallback behavio
 
 ## Android candidate review
 
-Android-derived entries now receive heuristic fields (`candidateType`, `category`, `classification`, `classificationMethod`, and `reviewNote`) to make manual review easier. These labels are not proof that a route is supported or public. In particular, query fragments such as `?disablelogs` and handler tokens such as `new_dialog` must not be published as complete deep links without confirming their calling context. All Android-derived entries remain marked `needs_review`.
+Android-derived entries now receive heuristic fields (`candidateType`, `category`, `classification`, `classificationMethod`, and `reviewNote`) plus a short `sourceContext` window around the matching source line. This lets reviewers see the nearby path parsing or handler logic without manually opening the source file. These labels are not proof that a route is supported or public. In particular, query fragments such as `?disablelogs` and handler tokens such as `new_dialog` must not be published as complete deep links without confirming their calling context. All Android-derived entries remain marked `needs_review`.
 
 ## Run locally
 
