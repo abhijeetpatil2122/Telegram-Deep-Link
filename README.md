@@ -19,6 +19,20 @@ The official website is the baseline. Its HTML is converted into a lightweight M
 - Runs manually, on pushes to `main`, and on a daily GitHub Actions schedule.
 - Commits generated inventory files to `data/` when they change.
 
+## Deep-link fallback: `help.getDeepLinkInfo`
+
+Telegram's `help.getDeepLinkInfo` is an MTProto method, not a configuration setting and not itself a deep-link template. Official clients use it when they encounter an unsupported `tg:` link: the client sends the link's **path component** (not the full URL) and Telegram may return a message explaining the link or that an app update is required. The method is user-only; bots cannot invoke it.
+
+- [Official method reference](https://core.telegram.org/method/help.getDeepLinkInfo)
+- [Official deep-link behavior and examples](https://core.telegram.org/api/links#unsupported-links)
+- [Official `help.DeepLinkInfo` result type](https://core.telegram.org/type/help.DeepLinkInfo)
+
+This is useful context for our project because it describes the fallback behavior for unknown `tg:` schemes. It should be documented as protocol behavior, not added to the URL-template inventory as though it were a link pattern. We can later add a separate protocol-notes inventory if we decide to track methods and client-handling rules alongside templates.
+
+## Android candidate review
+
+Android-derived entries now receive heuristic fields (`candidateType`, `category`, `classification`, `classificationMethod`, and `reviewNote`) to make manual review easier. These labels are not proof that a route is supported or public. In particular, query fragments such as `?disablelogs` and handler tokens such as `new_dialog` must not be published as complete deep links without confirming their calling context. All Android-derived entries remain marked `needs_review`.
+
 ## Run locally
 
 Requires Node.js 20 or newer.
