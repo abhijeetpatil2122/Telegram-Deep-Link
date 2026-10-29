@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-29T16:30:00.944Z",
+  "generatedAt": "2026-10-29T16:30:34.927Z",
   "sources": {
     "officialDocs": {
       "url": "https://core.telegram.org/api/links",
       "finalUrl": "https://core.telegram.org/api/links",
-      "sha256": "b965ff2298a057ec28f6f286b330f9087a443f86af00c6631984e62e9f19c69e",
+      "sha256": "0f371b2e5f5e2b454ba822939e245ab08ab480b4462ebc85995cbc9bd63b24c5",
       "etag": null,
       "lastModified": null
     },
@@ -18,9 +18,9 @@
     }
   },
   "counts": {
-    "documentedTemplates": 177,
+    "documentedTemplates": 182,
     "androidCandidates": 96,
-    "androidCandidatesNotExactMatches": 90
+    "androidCandidatesNotExactMatches": 96
   },
   "note": "These are extracted templates and implementation candidates, not a guarantee of every runtime-supported route. Review Android-only candidates before publishing."
 }

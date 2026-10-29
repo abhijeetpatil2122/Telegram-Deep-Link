@@ -249,7 +249,7 @@
     "extraction": "literal-uri",
     "reviewStatus": "needs_review",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": true
+    "alreadyInDocs": false
   },
   {
     "id": "20478882b4b7",
@@ -417,7 +417,7 @@
     "extraction": "literal-uri",
     "reviewStatus": "needs_review",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": true
+    "alreadyInDocs": false
   },
   {
     "id": "16774efad547",
@@ -465,7 +465,7 @@
     "extraction": "literal-uri",
     "reviewStatus": "needs_review",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": true
+    "alreadyInDocs": false
   },
   {
     "id": "f959c4bf6f1f",
@@ -633,7 +633,7 @@
     "extraction": "literal-uri",
     "reviewStatus": "needs_review",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": true
+    "alreadyInDocs": false
   },
   {
     "id": "43ef578ace92",
@@ -681,7 +681,7 @@
     "extraction": "literal-uri",
     "reviewStatus": "needs_review",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": true
+    "alreadyInDocs": false
   },
   {
     "id": "f6f6c8dd52e5",
@@ -717,7 +717,7 @@
     "extraction": "literal-uri",
     "reviewStatus": "needs_review",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": true
+    "alreadyInDocs": false
   },
   {
     "id": "e2517e1e9366",
