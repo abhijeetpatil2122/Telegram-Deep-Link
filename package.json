@@ -9,7 +9,7 @@
   },
   "scripts": {
     "crawl": "node src/crawl.js",
-    "check": "node --check src/crawl.js",
+    "check": "node --check src/crawl.js && node --check src/notify.js",
     "notify": "node src/notify.js"
   }
 }
