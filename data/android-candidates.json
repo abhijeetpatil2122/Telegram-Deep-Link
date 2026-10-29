@@ -769,6 +769,7 @@
     "alreadyInDocs": false,
     "documentationRelation": "related-official-template",
     "relatedDocumentedTemplates": [
+      "t.me/auction/<slug>",
       "tg://stargift_auction?slug=<slug>"
     ]
   },
@@ -944,8 +945,17 @@
     "reviewNote": "Host alias used by the URL parser, not a standalone link template.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "t.me/+<hash>",
+      "t.me/+<phone_number>?attach=<bot_username>",
+      "t.me/+<phone_number>?attach=<bot_username>&startattach=<start_parameter>",
+      "t.me/+<phone_number>?text=<draft_text>&profile",
+      "t.me/<bot_username>?game=<short_name>",
+      "t.me/<bot_username>?ref=<referrer>",
+      "t.me/<bot_username>?start={prefix}<referrer>",
+      "t.me/<bot_username>?start=<parameter>"
+    ]
   },
   {
     "id": "7c22d7851dc9",
@@ -985,8 +995,17 @@
     "reviewNote": "Host alias used by the URL parser, not a standalone link template.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "t.me/+<hash>",
+      "t.me/+<phone_number>?attach=<bot_username>",
+      "t.me/+<phone_number>?attach=<bot_username>&startattach=<start_parameter>",
+      "t.me/+<phone_number>?text=<draft_text>&profile",
+      "t.me/<bot_username>?game=<short_name>",
+      "t.me/<bot_username>?ref=<referrer>",
+      "t.me/<bot_username>?start={prefix}<referrer>",
+      "t.me/<bot_username>?start=<parameter>"
+    ]
   },
   {
     "id": "ebf1a7ef1bc9",
@@ -2335,6 +2354,9 @@
     "alreadyInDocs": false,
     "documentationRelation": "related-official-template",
     "relatedDocumentedTemplates": [
+      "t.me/share?url=<url>&text=<text>",
+      "t.me/share/url?url=<url>&text=<text>",
+      "t.me/share/url/?url=<url>&text=<text>",
       "tg://msg_url?url=<url>&text=<text>"
     ]
   },
@@ -3889,6 +3911,9 @@
     "alreadyInDocs": false,
     "documentationRelation": "related-official-template",
     "relatedDocumentedTemplates": [
+      "t.me/share?url=<url>&text=<text>",
+      "t.me/share/url?url=<url>&text=<text>",
+      "t.me/share/url/?url=<url>&text=<text>",
       "tg://msg_url?url=<url>&text=<text>"
     ]
   },
