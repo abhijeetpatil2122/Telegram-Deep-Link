@@ -1,7 +1,7 @@
-import { readFile } from 'node:fs/promises';
-import { execFileSync } from 'node:child_process';
+import { readFile, writeFile } from 'node:fs/promises';
 
 const INVENTORY_PATH = 'data/publication-inventory.json';
+const STATE_PATH = 'data/notification-state.json';
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const CHAT_ID = process.env.TELEGRAM_CHANNEL_ID || '@TDeepLink';
 const REPO_URL = 'https://github.com/abhijeetpatil2122/Telegram-Deep-Link';
@@ -15,6 +15,18 @@ function stableView(item) {
 
 function escapeHtml(value) {
   return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+async function writeNotificationState(items) {
+  const inventory = items.map(item => ({
+    id: item.id, template: item.template, kind: item.kind,
+    status: item.status, classification: item.classification, note: item.note,
+    sourceContext: item.sourceContext?.map(line => ({ text: line.text })) || null
+  }));
+  await writeFile(STATE_PATH, JSON.stringify({
+    notifiedAt: new Date().toISOString(),
+    inventory
+  }, null, 2) + String.fromCharCode(10), 'utf8');
 }
 
 async function sendTelegram(message) {
@@ -35,7 +47,8 @@ async function main() {
   const current = JSON.parse(await readFile(INVENTORY_PATH, 'utf8'));
   let previous;
   try {
-    previous = JSON.parse(execFileSync('git', ['show', 'HEAD:' + INVENTORY_PATH], { encoding: 'utf8' }));
+    const state = JSON.parse(await readFile(STATE_PATH, 'utf8'));
+    previous = state.inventory;
   } catch {
     const summary = JSON.parse(await readFile('data/summary.json', 'utf8'));
     const counts = summary.counts;
@@ -46,6 +59,7 @@ async function main() {
       '<a href="' + REPO_URL + '/blob/main/data/publication-inventory.json">Open full inventory</a> · <a href="' + REPO_URL + '/blob/main/data/summary.json">Summary</a>'
     ].join(String.fromCharCode(10));
     await sendTelegram(baselineMessage);
+    await writeNotificationState(current);
     console.log('Initial Telegram inventory baseline notification sent.');
     return;
   }
@@ -76,13 +90,8 @@ async function main() {
   if (total > entries.length) sections.push('', '…and ' + (total - entries.length) + ' more inventory changes.');
   sections.push('', '<a href="' + REPO_URL + '/blob/main/data/publication-inventory.json">Open full inventory</a> · <a href="' + REPO_URL + '/blob/main/data/summary.json">Summary</a>');
   const message = sections.join(String.fromCharCode(10));
-  const response = await fetch('https://api.telegram.org/bot' + TOKEN + '/sendMessage', {
-    method: 'POST', headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ chat_id: CHAT_ID, text: message, parse_mode: 'HTML', disable_web_page_preview: true }),
-    signal: AbortSignal.timeout(30000)
-  });
-  const result = await response.json();
-  if (!response.ok || !result.ok) throw new Error('Telegram notification failed: ' + (result.description || response.status));
+  await sendTelegram(message);
+  await writeNotificationState(current);
   console.log('Telegram inventory notification sent. New=' + added.length + ', changed=' + changed.length + ', removed=' + removed.length + '.');
 }
 
