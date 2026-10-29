@@ -45,6 +45,14 @@ function decodeHtml(value) {
     .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)));
 }
 
+function stripCodeHtml(body) {
+  // The official page uses angle-bracket placeholders such as <username> inside
+  // code examples. Protect those before removing actual HTML tags.
+  const placeholders = 'username|bot_username|short_name|start_parameter|start_param|phone_number|channel|id|thread_id|media_timestamp|task_id|option_id|story_id|invite_hash|hash|slug|url|text|domain|phone|post|token|mode|path|query|server|port|secret|user|pass|name|color|hex_color1|hex_color2|hex_color3|hex_color4|top_color|bottom_color|intensity|rotation|purpose|star_count|unix|format|code|parameter|prefix|peer|appname|startapp|startattach|attach|choose';
+  const protectedBody = body.replace(new RegExp('<(' + placeholders + ')>', 'gi'), '&lt;$1&gt;');
+  return decodeHtml(protectedBody.replace(/<[^>]+>/g, ''));
+}
+
 function htmlToMarkdown(html) {
   let value = html
     .replace(/<!--[\s\S]*?-->/g, '')
@@ -52,9 +60,9 @@ function htmlToMarkdown(html) {
     .replace(/<h([1-6])\b[^>]*>([\s\S]*?)<\/h\1>/gi, (_, level, body) =>
       '\n' + '#'.repeat(Number(level)) + ' ' + decodeHtml(body.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()) + '\n')
     .replace(/<pre\b[^>]*>([\s\S]*?)<\/pre>/gi, (_, body) =>
-      '\n\n' + String.fromCharCode(96).repeat(3) + '\n' + decodeHtml(body.replace(/<[^>]+>/g, '')) + '\n' + String.fromCharCode(96).repeat(3) + '\n\n')
+      '\n\n' + String.fromCharCode(96).repeat(3) + '\n' + stripCodeHtml(body) + '\n' + String.fromCharCode(96).repeat(3) + '\n\n')
     .replace(/<code\b[^>]*>([\s\S]*?)<\/code>/gi, (_, body) =>
-      String.fromCharCode(96) + decodeHtml(body.replace(/<[^>]+>/g, '')) + String.fromCharCode(96))
+      String.fromCharCode(96) + stripCodeHtml(body) + String.fromCharCode(96))
     .replace(/<br\s*\/?>/gi, '\n')
     .replace(/<\/(p|div|li|tr|section|article|ul|ol|table)>/gi, '\n')
     .replace(/<[^>]+>/g, ' ');
