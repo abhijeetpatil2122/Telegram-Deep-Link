@@ -3697,8 +3697,10 @@
     "reviewNote": "Android handles this as a direct client action or compatibility route. The source match does not establish a documented, stable public link format; keep it out of the confirmed-template inventory unless independently verified.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://chats/search"
+    ]
   },
   {
     "id": "c9e129d6100f",
@@ -3738,8 +3740,10 @@
     "reviewNote": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
     "alreadyInDocs": false,
-    "documentationRelation": "android-only-candidate",
-    "relatedDocumentedTemplates": []
+    "documentationRelation": "related-official-template",
+    "relatedDocumentedTemplates": [
+      "tg://passport?params"
+    ]
   },
   {
     "id": "dccd5844b0df",
