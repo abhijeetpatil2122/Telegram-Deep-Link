@@ -49,7 +49,7 @@ The crawler preserves the raw observation instead of inventing a complete URL. F
 
 Channel notifications summarize newly discovered, changed, and removed inventory entries. The message explains that implementation-derived links can be internal, partial, contextual, client/version-dependent, or unverified. Being listed is not a guarantee that a link works in every Telegram client or is intended for public use.
 
-To enable notifications, add the repository Actions secret `TELEGRAM_BOT_TOKEN` for a bot that can post to `@TDeepLink`. Optionally set the Actions variable `TELEGRAM_CHANNEL_ID` to a channel username or numeric chat ID. The initial inventory creates a baseline without sending a bulk post; subsequent inventory changes trigger notifications.
+To enable notifications, add the repository Actions secret `TELEGRAM_BOT_TOKEN` for a bot that can post to `@TDeepLink`. Optionally set the Actions variable `TELEGRAM_CHANNEL_ID` to a channel username or numeric chat ID. The first run with notification credentials sends one compact baseline notice; subsequent inventory changes trigger delta notifications. Notification state advances only after Telegram confirms a successful send.
 
 ## Android candidate review
 
