@@ -29,6 +29,19 @@ Telegram's `help.getDeepLinkInfo` is an MTProto method, not a configuration sett
 
 This is useful context for our project because it describes the fallback behavior for unknown `tg:` schemes. It should be documented as protocol behavior, not added to the URL-template inventory as though it were a link pattern. We can later add a separate protocol-notes inventory if we decide to track methods and client-handling rules alongside templates.
 
+## Runtime-supported links beyond the official docs
+
+The official template inventory and implementation-derived links are intentionally separate. The crawler writes `data/runtime-supported-links.json` for routes that have an explicit handler in the Telegram Android client and have been reported working by the project maintainer:
+
+- `tg://addcontact?name=<name>&phone=<phone>` — optional `name` and `phone` query parameters.
+- `tg://send_gift?to=<username-or-user_id>` — optional recipient; without `to`, the client opens recipient selection.
+- `tg://calllog` — opens the call log.
+- `tg://scanqr` — opens the QR-scanning flow.
+
+These are implementation-supported, maintainer-reported working routes, **not claims that Telegram lists them as official public deep-link templates**. Their source line and handler evidence are regenerated on each crawl. The crawler validates that all four handlers still exist before writing the runtime inventory.
+
+The crawler also writes `data/not-confirmed-tg-scheme-forms.json` for `tg://enablelogs`, `tg://disablelogs`, `tg://sendlogs`, and `tg://login_email`. The Android source only contains the corresponding strings as query fragments or a settings-related token, not as matching standalone `tg://` dispatch handlers. Do not publish those four forms as working links unless separate runtime testing establishes otherwise.
+
 ## Android candidate review
 
 Android-derived entries now receive heuristic fields (`candidateType`, `category`, `classification`, `classificationMethod`, and `reviewNote`) plus a short `sourceContext` window around the matching source line. This lets reviewers see the nearby path parsing or handler logic without manually opening the source file. Each candidate also includes `documentationRelation` and up to eight `relatedDocumentedTemplates`, so reviewers can distinguish exact matches, related documented patterns, and Android-only discoveries. These matches are substring-based hints, not proof that a route is supported or public. In particular, query fragments such as `?disablelogs` and handler tokens such as `new_dialog` must not be published as complete deep links without confirming their calling context. All Android-derived entries remain marked `needs_review`.
