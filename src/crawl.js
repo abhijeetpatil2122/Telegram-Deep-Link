@@ -127,7 +127,12 @@ function classifyCandidate(candidate, excerpt, extraction) {
   let classification = 'needs-manual-review';
   let reviewNote = 'Heuristic classification only; inspect the surrounding source and confirm how Telegram parses this value.';
 
-  if (/^tg:\/\/telegram\.org$/i.test(candidate) && /replace\(/i.test(context)) {
+  if (/^tg:\/\/(?:addcontact|send_gift|calllog|scanqr)$/i.test(candidate)) {
+    candidateType = 'scheme-prefix';
+    category = 'runtime-supported-action';
+    classification = 'user-confirmed-working';
+    reviewNote = 'The user reports this tg:// route works in Telegram. Android source also contains a matching explicit handler; this is implementation evidence, not an official documentation claim.';
+  } else if (/^tg:\/\/telegram\.org$/i.test(candidate) && /replace\(/i.test(context)) {
     candidateType = 'internal-url-rewrite';
     category = 'internal-url-rewrite';
     classification = 'likely-internal-or-contextual';
@@ -243,6 +248,79 @@ async function writeJson(path, value) {
   await writeFile(target, JSON.stringify(value, null, 2) + '\n', 'utf8');
 }
 
+const USER_CONFIRMED_RUNTIME_ROUTES = [
+  {
+    template: 'tg://addcontact?name=<name>&phone=<phone>',
+    route: 'tg://addcontact',
+    purpose: 'Open the add-contact flow with a name and phone number.',
+    parameters: [
+      { name: 'name', required: false, description: 'Contact display name.' },
+      { name: 'phone', required: false, description: 'Phone number to add.' }
+    ],
+    sourceNeedle: 'url.startsWith("tg://addcontact")',
+    sourceLineHint: 2696,
+    verification: 'user-confirmed-working',
+    caveat: 'The source reads name and phone query parameters; phone values containing + should be URL-encoded correctly.'
+  },
+  {
+    template: 'tg://send_gift?to=<username-or-user_id>',
+    route: 'tg://send_gift',
+    purpose: 'Open the gift flow for a recipient.',
+    parameters: [
+      { name: 'to', required: false, description: 'Recipient username (with or without @) or numeric user ID. If omitted, Telegram opens recipient selection.' }
+    ],
+    sourceNeedle: 'url.startsWith("tg://send_gift")',
+    sourceLineHint: 2739,
+    verification: 'user-confirmed-working',
+    caveat: 'Recipient resolution and gift availability depend on the Telegram account and recipient.'
+  },
+  {
+    template: 'tg://calllog',
+    route: 'tg://calllog',
+    purpose: 'Open the call log.',
+    parameters: [],
+    sourceNeedle: 'url.startsWith("tg://calllog")',
+    sourceLineHint: 2652,
+    verification: 'user-confirmed-working',
+    caveat: 'Client action; not listed as an official public template in the documentation snapshot.'
+  },
+  {
+    template: 'tg://scanqr',
+    route: 'tg://scanqr',
+    purpose: 'Open the QR-scanning flow.',
+    parameters: [],
+    sourceNeedle: 'url.startsWith("tg://scanqr")',
+    sourceLineHint: 2694,
+    verification: 'user-confirmed-working',
+    caveat: 'Requires the client/device to be able to use the camera and the relevant UI.'
+  }
+];
+
+const NOT_CONFIRMED_TG_SCHEME_FORMS = [
+  { template: 'tg://enablelogs', observedFragment: '?enablelogs' },
+  { template: 'tg://disablelogs', observedFragment: '?disablelogs' },
+  { template: 'tg://sendlogs', observedFragment: '?sendlogs' },
+  { template: 'tg://login_email', observedFragment: 'login_email' }
+];
+
+function buildRuntimeLinks(androidSource) {
+  const lines = androidSource.split(/\r?\n/);
+  return USER_CONFIRMED_RUNTIME_ROUTES.map(route => {
+    const sourceLine = lines.findIndex(line => line.includes(route.sourceNeedle));
+    if (sourceLine < 0) {
+      throw new Error('Expected Android route handler was not found: ' + route.route);
+    }
+    return {
+      ...route,
+      source: 'android_launch_activity',
+      sourceUrl: JAVA_PAGE_URL,
+      sourceLine: sourceLine + 1,
+      officialDocumentationStatus: 'not-confirmed-as-official-template',
+      note: 'Separate from data/documented-links.json. User-confirmed runtime behavior plus an explicit Android handler; not a claim of official public documentation.'
+    };
+  });
+}
+
 async function main() {
   console.log('Fetching official website documentation:', DOC_URL);
   const html = await fetchText(DOC_URL);
@@ -260,6 +338,14 @@ async function main() {
   }
 
   const documented = parseMarkdown(docs.text), android = scanJava(java.text);
+  const runtimeLinks = buildRuntimeLinks(java.text);
+  const missingExpectedWrongForms = NOT_CONFIRMED_TG_SCHEME_FORMS.filter(item =>
+    !java.text.includes(item.observedFragment)
+  );
+  if (missingExpectedWrongForms.length) {
+    throw new Error('Expected non-template diagnostic fragments were not found in Android source: ' +
+      missingExpectedWrongForms.map(item => item.observedFragment).join(', '));
+  }
   const malformed = documented.filter(item =>
     /<\/?code>/i.test(item.template)
     || /(?:t\.me|telegram\.me|telegram\.dog)\/\s+(?:\?|\/|$)/i.test(item.template)
@@ -347,6 +433,9 @@ async function main() {
     counts: {
       documentedTemplates: documented.length,
       androidCandidates: candidates.length,
+      runtimeSupportedLinks: runtimeLinks.length,
+      userConfirmedWorkingRuntimeLinks: runtimeLinks.filter(item => item.verification === 'user-confirmed-working').length,
+      rejectedStandaloneTgSchemeForms: NOT_CONFIRMED_TG_SCHEME_FORMS.length,
       androidCandidatesNotExactMatches: candidates.filter(item => !item.alreadyInDocs).length,
       androidCandidatesWithRelatedOfficialTemplates: candidates.filter(item => item.documentationRelation === 'related-official-template').length,
       androidCandidatesWithoutDocumentationMatch: candidates.filter(item => item.documentationRelation === 'android-only-candidate').length,
@@ -358,6 +447,8 @@ async function main() {
   };
   await writeJson('data/documented-links.json', documented);
   await writeJson('data/android-candidates.json', candidates);
+  await writeJson('data/runtime-supported-links.json', runtimeLinks);
+  await writeJson('data/not-confirmed-tg-scheme-forms.json', NOT_CONFIRMED_TG_SCHEME_FORMS);
   await writeJson('data/summary.json', summary);
   console.log(JSON.stringify(summary.counts, null, 2));
 }
