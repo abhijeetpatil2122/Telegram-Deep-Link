@@ -255,11 +255,26 @@ async function main() {
       missingTemplates.join(' | '));
   }
   const documentedKeys = new Set(documented.map(item => item.template.toLowerCase()));
-  const candidates = android.map(item => ({ ...item, alreadyInDocs: documentedKeys.has(item.candidate.toLowerCase()) }));
+  const candidates = android.map(item => {
+    const alreadyInDocs = documentedKeys.has(item.candidate.toLowerCase());
+    const relatedDocumentedTemplates = documented
+      .filter(doc => doc.template.toLowerCase().includes(item.candidate.toLowerCase()))
+      .map(doc => doc.template)
+      .slice(0, 8);
+    return {
+      ...item,
+      alreadyInDocs,
+      documentationRelation: alreadyInDocs ? 'exact-match'
+        : relatedDocumentedTemplates.length ? 'related-official-template' : 'android-only-candidate',
+      relatedDocumentedTemplates
+    };
+  });
   const incompleteCandidateMetadata = candidates.filter(item =>
     !item.candidateType || !item.category || !item.classification || !item.classificationMethod ||
     !item.reviewNote || !Array.isArray(item.sourceContext) || item.sourceContext.length < 3 ||
-    !item.sourceContext.some(contextLine => contextLine.line === item.line)
+    !item.sourceContext.some(contextLine => contextLine.line === item.line) ||
+    !['exact-match', 'related-official-template', 'android-only-candidate'].includes(item.documentationRelation) ||
+    !Array.isArray(item.relatedDocumentedTemplates)
   );
   if (incompleteCandidateMetadata.length) {
     throw new Error('Android candidate classification metadata is incomplete for ' + incompleteCandidateMetadata.length + ' entries.');
@@ -286,6 +301,8 @@ async function main() {
       documentedTemplates: documented.length,
       androidCandidates: candidates.length,
       androidCandidatesNotExactMatches: candidates.filter(item => !item.alreadyInDocs).length,
+      androidCandidatesWithRelatedOfficialTemplates: candidates.filter(item => item.documentationRelation === 'related-official-template').length,
+      androidCandidatesWithoutDocumentationMatch: candidates.filter(item => item.documentationRelation === 'android-only-candidate').length,
       androidCandidateTypes: Object.fromEntries([...new Set(candidates.map(item => item.candidateType))].sort().map(type => [type, candidates.filter(item => item.candidateType === type).length])),
       androidCandidateCategories: Object.fromEntries([...new Set(candidates.map(item => item.category))].sort().map(category => [category, candidates.filter(item => item.category === category).length])),
       likelyInternalOrContextualCandidates: candidates.filter(item => item.classification === 'likely-internal-or-contextual').length
