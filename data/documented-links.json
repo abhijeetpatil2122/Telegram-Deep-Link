@@ -1,1288 +1,12 @@
 [
   {
-    "id": "d2c95ca988ff",
-    "template": "<code>https://t.me/oauth?startapp=<token>",
-    "section": "Deep links",
-    "subsection": "OAuth links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 880,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "638cc45163c3",
-    "template": "<code>t.me/+<hash>",
-    "section": "Deep links",
-    "subsection": "Chat invite links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 294,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "384b1d9aebbe",
-    "template": "<code>t.me/+<phone_number>?text=<draft_text>&profile",
-    "section": "Deep links",
-    "subsection": "Phone number links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 252,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "03b5a68d7c05",
-    "template": "<code>t.me/<bot_username>?game=<short_name>",
-    "section": "Deep links",
-    "subsection": "Game links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1472,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "182a814a3322",
-    "template": "<code>t.me/<bot_username>?ref=<referrer>",
-    "section": "Deep links",
-    "subsection": "Referral links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2894,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "0a12c624124c",
-    "template": "<code>t.me/<bot_username>?start=<parameter>",
-    "section": "Deep links",
-    "subsection": "Bot links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1331,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "40e73fec20ff",
-    "template": "<code>t.me/<bot_username>?startapp&mode=<mode>",
-    "section": "Deep links",
-    "subsection": "Main Mini App links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2548,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "d6df433af38c",
-    "template": "<code>t.me/<bot_username>?startattach",
-    "section": "Deep links",
-    "subsection": "Open in current chat",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2648,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "1224c9dfefd6",
-    "template": "<code>t.me/<bot_username>?startattach&choose=users+bots+groups+channels",
-    "section": "Deep links",
-    "subsection": "Open in any chat",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2734,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "27d5e6dc0679",
-    "template": "<code>t.me/<bot_username>?startchannel&admin=<permissions>",
-    "section": "Deep links",
-    "subsection": "Group/channel bot links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1411,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "f33baa0fb6c0",
-    "template": "<code>t.me/<bot_username>?startgroup=<parameter>&admin=<permissions>",
-    "section": "Deep links",
-    "subsection": "Group/channel bot links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1395,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "96a7677160f4",
-    "template": "<code>t.me/<bot_username>/<short_name>?startapp=<start_parameter>&mode=<mode>",
-    "section": "Deep links",
-    "subsection": "Direct mini app links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2593,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "e71ee4d07beb",
-    "template": "<code>t.me/<username>?album=<album_id>",
-    "section": "Deep links",
-    "subsection": "Story album links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 720,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "30edacb9312b",
-    "template": "<code>t.me/<username>?attach=<bot_username>",
-    "section": "Deep links",
-    "subsection": "Open in specific chat",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2682,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "3ad67d22b428",
-    "template": "<code>t.me/<username>?collection=<collection_id>",
-    "section": "Deep links",
-    "subsection": "Gift collection links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2831,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "ef899323395d",
-    "template": "<code>t.me/<username>?direct",
-    "section": "Deep links",
-    "subsection": "Monoforum links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 188,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "418e7805f193",
-    "template": "<code>t.me/<username>?text=<draft_text>&profile",
-    "section": "Deep links",
-    "subsection": "Public username links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 144,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "1fbb2ce21281",
-    "template": "<code>t.me/<username>?videochat",
-    "section": "Deep links",
-    "subsection": "Video chat/Livestream links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 535,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "25768e1bd322",
-    "template": "<code>t.me/<username>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
-    "section": "Deep links",
-    "subsection": "Message links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 357,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "0a3881547697",
-    "template": "<code>t.me/<username>/s/<story_id>",
-    "section": "Deep links",
-    "subsection": "Story links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 659,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "0781478de597",
-    "template": "<code>t.me/<username>/s/live",
-    "section": "Deep links",
-    "subsection": "Live story links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 692,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "8e245a32b37d",
-    "template": "<code>t.me/addemoji/<slug>",
-    "section": "Deep links",
-    "subsection": "Custom emoji stickerset links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 631,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "774347170b7a",
-    "template": "<code>t.me/addlist/<slug>",
-    "section": "Deep links",
-    "subsection": "Chat folder links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 329,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "11e11499c109",
-    "template": "<code>t.me/addstickers/<slug>",
-    "section": "Deep links",
-    "subsection": "Stickerset links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 601,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "d72ef190bb6c",
-    "template": "<code>t.me/addstyle/<slug>",
-    "section": "Deep links",
-    "subsection": "AI compose tone links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1019,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "066bc6440657",
-    "template": "<code>t.me/addtheme/<name>",
-    "section": "Deep links",
-    "subsection": "Theme links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 989,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "0313a659df0c",
-    "template": "<code>t.me/auction/<slug>",
-    "section": "Deep links",
-    "subsection": "Auction links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2864,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "92af37ab7098",
-    "template": "<code>t.me/bg/<hex_color>",
-    "section": "Deep links",
-    "subsection": "Solid fill wallpapers",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1083,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "26ee4acb696f",
-    "template": "<code>t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>",
-    "section": "Deep links",
-    "subsection": "Free-form gradient fill wallpapers",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1147,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "1d17bba112f0",
-    "template": "<code>t.me/bg/<slug>?intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
-    "section": "Deep links",
-    "subsection": "Solid pattern wallpapers",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1189,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "927ec46dfdcb",
-    "template": "<code>t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
-    "section": "Deep links",
-    "subsection": "Free-form gradient pattern wallpapers",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1277,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "f6d9a2f11fa0",
-    "template": "<code>t.me/bg/<slug>?intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
-    "section": "Deep links",
-    "subsection": "Gradient pattern wallpapers",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1229,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "cd983cd31c36",
-    "template": "<code>t.me/bg/<slug>?mode=<mode>",
-    "section": "Deep links",
-    "subsection": "Image wallpapers",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1051,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "2e83c8d947a1",
-    "template": "<code>t.me/bg/<top_color>-<bottom_color>?rotation=<rotation>",
-    "section": "Deep links",
-    "subsection": "Gradient fill wallpapers",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1111,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "1f6179d23649",
-    "template": "<code>t.me/boost?c=<id>",
-    "section": "Deep links",
-    "subsection": "Boost links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 834,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "53d2d6a78d6b",
-    "template": "<code>t.me/boost/<username>",
-    "section": "Deep links",
-    "subsection": "Boost links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 826,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "75a0d8f83353",
-    "template": "<code>t.me/c/<channel>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
-    "section": "Deep links",
-    "subsection": "Message links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 365,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "643a3ce3fe38",
-    "template": "<code>t.me/call/<slug>",
-    "section": "Deep links",
-    "subsection": "Conference links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 573,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "23606d9c03aa",
-    "template": "<code>t.me/confirmphone?phone=<phone>&hash=<hash>",
-    "section": "Deep links",
-    "subsection": "Phone confirmation links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2419,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "7b401394e9a1",
-    "template": "<code>t.me/contact/<token>",
-    "section": "Deep links",
-    "subsection": "Temporary profile links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 224,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "a138702cc941",
-    "template": "<code>t.me/giftcode/<slug>",
-    "section": "Deep links",
-    "subsection": "Premium giftcode links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2502,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "4c2a60e34043",
-    "template": "<code>t.me/invoice/<slug>",
-    "section": "Deep links",
-    "subsection": "Invoice links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2348,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "cbc999af4b3c",
-    "template": "<code>t.me/joinchat/<hash>",
-    "section": "Deep links",
-    "subsection": "Chat invite links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 301,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "722f33a3303c",
-    "template": "<code>t.me/login/<code>",
-    "section": "Deep links",
-    "subsection": "Login code link",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2320,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "e57e4fd82b95",
-    "template": "<code>t.me/m/<slug>",
-    "section": "Deep links",
-    "subsection": "Business chat links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 503,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "f665435a55ec",
-    "template": "<code>t.me/newbot/<manager_bot_username>/<suggested_bot_username>?name=<suggested_bot_name>",
-    "section": "Deep links",
-    "subsection": "Managed bot creation request links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 783,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "21223e3eeea2",
-    "template": "<code>t.me/nft/<slug>",
-    "section": "Deep links",
-    "subsection": "Collectible gift link",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2803,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "3e15d9ca1b7b",
-    "template": "<code>t.me/proxy?server=<server>&port=<port>&secret=<secret>",
-    "section": "Deep links",
-    "subsection": "MTProxy links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 913,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "e91eb5432f5c",
-    "template": "<code>t.me/setlanguage/<slug>",
-    "section": "Deep links",
-    "subsection": "Language pack links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2377,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "82f6c9d05983",
-    "template": "<code>t.me/share?url=<url>&text=<text>",
-    "section": "Deep links",
-    "subsection": "Share links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 458,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "0d158fbd1e69",
-    "template": "<code>t.me/socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
-    "section": "Deep links",
-    "subsection": "SOCKS5 proxy links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 949,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "1ddab16427cd",
-    "template": "<code>tg://addemoji?set=<slug>",
-    "section": "Deep links",
-    "subsection": "Custom emoji stickerset links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 638,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "9fa5172ef921",
-    "template": "<code>tg://addlist?slug=<slug>",
-    "section": "Deep links",
-    "subsection": "Chat folder links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 336,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "f6c4f00a7cb5",
-    "template": "<code>tg://addstickers?set=<slug>",
-    "section": "Deep links",
-    "subsection": "Stickerset links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 609,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "b48de4ec1e53",
-    "template": "<code>tg://addstyle?slug=<slug>",
-    "section": "Deep links",
-    "subsection": "AI compose tone links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1026,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "b1689bfdea51",
-    "template": "<code>tg://addtheme?slug=<name>",
-    "section": "Deep links",
-    "subsection": "Theme links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 996,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "2b8589fe1859",
-    "template": "<code>tg://bg?color=<hex_color>",
-    "section": "Deep links",
-    "subsection": "Solid fill wallpapers",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1090,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "bc37912291b9",
-    "template": "<code>tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>",
-    "section": "Deep links",
-    "subsection": "Free-form gradient fill wallpapers",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1155,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "f17768ce052c",
-    "template": "<code>tg://bg?gradient=<top_color>-<bottom_color>&rotation=<rotation>",
-    "section": "Deep links",
-    "subsection": "Gradient fill wallpapers",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1118,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "444f215e96a1",
-    "template": "<code>tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
-    "section": "Deep links",
-    "subsection": "Solid pattern wallpapers",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1196,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "4b8aed1ed419",
-    "template": "<code>tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
-    "section": "Deep links",
-    "subsection": "Free-form gradient pattern wallpapers",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1285,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "23d8618ab710",
-    "template": "<code>tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
-    "section": "Deep links",
-    "subsection": "Gradient pattern wallpapers",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1236,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "279dcdca6a47",
-    "template": "<code>tg://bg?slug=<slug>&mode=<mode>",
-    "section": "Deep links",
-    "subsection": "Image wallpapers",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1058,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "d198c2f31158",
-    "template": "<code>tg://boost?channel=<id>",
-    "section": "Deep links",
-    "subsection": "Boost links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 849,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "6d28f33dcbab",
-    "template": "<code>tg://boost?domain=<username>",
-    "section": "Deep links",
-    "subsection": "Boost links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 842,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "ddb0955fcbe9",
-    "template": "<code>tg://call?slug=<slug>",
-    "section": "Deep links",
-    "subsection": "Conference links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 580,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "78dc0ceae72a",
-    "template": "<code>tg://chats/edit",
-    "section": "Deep links",
-    "subsection": "Chat list links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2295,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "470391943958",
-    "template": "<code>tg://confirmphone?phone=<phone>&hash=<hash>",
-    "section": "Deep links",
-    "subsection": "Phone confirmation links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2426,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "ee9bcec8b14d",
-    "template": "<code>tg://contact?token=<token>",
-    "section": "Deep links",
-    "subsection": "Temporary profile links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 231,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "8e4c31a464ad",
-    "template": "<code>tg://contacts",
-    "section": "Deep links",
-    "subsection": "Contacts links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2236,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "dc652a83aa0e",
-    "template": "<code>tg://emoji?id=<id>",
-    "section": "Deep links",
-    "subsection": "Emoji links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2951,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "8b7ba407a61f",
-    "template": "<code>tg://giftcode?slug=<slug>",
-    "section": "Deep links",
-    "subsection": "Premium giftcode links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2495,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "27bd2dfae7ea",
-    "template": "<code>tg://invoice?slug=<slug>",
-    "section": "Deep links",
-    "subsection": "Invoice links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2356,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "66d21b7c5af8",
-    "template": "<code>tg://join?invite=<hash>",
-    "section": "Deep links",
-    "subsection": "Chat invite links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 308,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "032803bb7946",
-    "template": "<code>tg://login?code=<code>",
-    "section": "Deep links",
-    "subsection": "Login code link",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2327,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "f452c943826a",
-    "template": "<code>tg://login?token=<base64encodedtoken>",
-    "section": "Deep links",
-    "subsection": "QR code login links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2523,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "5069c8c4c2d2",
-    "template": "<code>tg://message?slug=<slug>",
-    "section": "Deep links",
-    "subsection": "Business chat links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 510,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "16463d59c1a2",
-    "template": "<code>tg://msg_url?url=<url>&text=<text>",
-    "section": "Deep links",
-    "subsection": "Share links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 468,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "e75563fc0502",
-    "template": "<code>tg://new",
-    "section": "Deep links",
-    "subsection": "New chat links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2270,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "ce1abc7dcf40",
-    "template": "<code>tg://newbot?manager=<manager_bot_username>&username=<suggested_bot_username>&name=<suggested_bot_name>",
-    "section": "Deep links",
-    "subsection": "Managed bot creation request links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 791,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "4df72cfba3ed",
-    "template": "<code>tg://nft?slug=<slug>",
-    "section": "Deep links",
-    "subsection": "Collectible gift link",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2810,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "09ab6115b70b",
-    "template": "<code>tg://oauth?token=<token>",
-    "section": "Deep links",
-    "subsection": "OAuth links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 887,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "4ffb7ef47a35",
-    "template": "<code>tg://passport?params",
-    "section": "Deep links",
-    "subsection": "Telegram Passport links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2405,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "19797cd9120a",
-    "template": "<code>tg://post",
-    "section": "Deep links",
-    "subsection": "Post story links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 753,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "3917683de61d",
-    "template": "<code>tg://premium_multigift?ref=<referrer>",
-    "section": "Deep links",
-    "subsection": "Premium multigift links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2453,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "8ebe83281751",
-    "template": "<code>tg://premium_offer?ref=<referrer>",
-    "section": "Deep links",
-    "subsection": "Premium referrer links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2474,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "e315aba88409",
-    "template": "<code>tg://privatepost?channel=<channel>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
-    "section": "Deep links",
-    "subsection": "Message links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 380,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "fe180b30997e",
-    "template": "<code>tg://proxy?server=<server>&port=<port>&secret=<secret>",
-    "section": "Deep links",
-    "subsection": "MTProxy links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 920,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "58ec1e1a0dfa",
-    "template": "<code>tg://resolve?domain=<bot_username>&appname=<short_name>&startapp=<start_parameter>&mode=<mode>",
-    "section": "Deep links",
-    "subsection": "Direct mini app links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2600,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "2957fd15099d",
-    "template": "<code>tg://resolve?domain=<bot_username>&game=<short_name>",
-    "section": "Deep links",
-    "subsection": "Game links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1479,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "c0fb608b7781",
-    "template": "<code>tg://resolve?domain=<bot_username>&ref=<referrer>",
-    "section": "Deep links",
-    "subsection": "Referral links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2902,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "b2bf899e4d7a",
-    "template": "<code>tg://resolve?domain=<bot_username>&start=<parameter>",
-    "section": "Deep links",
-    "subsection": "Bot links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1338,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "3c75d76aecde",
-    "template": "<code>tg://resolve?domain=<bot_username>&startapp&mode=<mode>",
-    "section": "Deep links",
-    "subsection": "Main Mini App links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2558,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "7b907f4dca05",
-    "template": "<code>tg://resolve?domain=<bot_username>&startattach",
-    "section": "Deep links",
-    "subsection": "Open in current chat",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2656,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "a92670e2e666",
-    "template": "<code>tg://resolve?domain=<bot_username>&startattach&choose=users+bots+groups+channels",
-    "section": "Deep links",
-    "subsection": "Open in any chat",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2742,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "c55d274c28a5",
-    "template": "<code>tg://resolve?domain=<bot_username>&startchannel&admin=<permissions>",
-    "section": "Deep links",
-    "subsection": "Group/channel bot links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1418,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "50feb6f6b87a",
-    "template": "<code>tg://resolve?domain=<bot_username>&startgroup=<parameter>&admin=<permissions>",
-    "section": "Deep links",
-    "subsection": "Group/channel bot links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1403,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "4bba390e40ff",
-    "template": "<code>tg://resolve?domain=<username>&album=<album_id>",
-    "section": "Deep links",
-    "subsection": "Story album links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 728,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "071b85b5b4d4",
-    "template": "<code>tg://resolve?domain=<username>&attach=<bot_username>",
-    "section": "Deep links",
-    "subsection": "Open in specific chat",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2692,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "0a6e644b71fc",
-    "template": "<code>tg://resolve?domain=<username>&collection=<collection_id>",
-    "section": "Deep links",
-    "subsection": "Gift collection links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2839,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "cf9a6f5d5729",
-    "template": "<code>tg://resolve?domain=<username>&direct",
-    "section": "Deep links",
-    "subsection": "Monoforum links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 195,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "e9a4e7b93726",
-    "template": "<code>tg://resolve?domain=<username>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
-    "section": "Deep links",
-    "subsection": "Message links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 373,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "c0b6bdb0cf79",
-    "template": "<code>tg://resolve?domain=<username>&story=<story_id>",
-    "section": "Deep links",
-    "subsection": "Story links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 666,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "0734c20bd552",
-    "template": "<code>tg://resolve?domain=<username>&story=live",
-    "section": "Deep links",
-    "subsection": "Live story links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 699,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "2cb32d0ded76",
-    "template": "<code>tg://resolve?domain=<username>&text=<draft_text>&profile",
-    "section": "Deep links",
-    "subsection": "Public username links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 151,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "109079b4ac7e",
-    "template": "<code>tg://resolve?domain=<username>&videochat",
-    "section": "Deep links",
-    "subsection": "Video chat/Livestream links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 547,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "7c89a4d8f5b6",
-    "template": "<code>tg://resolve?phone=<phone_number>&text=<draft_text>&profile",
-    "section": "Deep links",
-    "subsection": "Phone number links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 259,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "c070876ece42",
-    "template": "<code>tg://setlanguage?lang=<slug>",
-    "section": "Deep links",
-    "subsection": "Language pack links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2384,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "4b09297adf4b",
-    "template": "<code>tg://settings",
-    "section": "Deep links",
-    "subsection": "Settings links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1504,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "10225774016f",
-    "template": "<code>tg://socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
-    "section": "Deep links",
-    "subsection": "SOCKS5 proxy links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 956,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "ba3d486fd6cb",
-    "template": "<code>tg://stargift_auction?slug=<slug>",
-    "section": "Deep links",
-    "subsection": "Auction links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2871,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "bf40847d2342",
-    "template": "<code>tg://stars",
-    "section": "Deep links",
-    "subsection": "My stars links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2212,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "5779db59b353",
-    "template": "<code>tg://stars_topup?balance=<star_count>&purpose=<purpose>",
-    "section": "Deep links",
-    "subsection": "Stars topup link",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2774,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "bc4034962ad7",
-    "template": "<code>tg://time?unix=<unix>&format=<format>",
-    "section": "Deep links",
-    "subsection": "Timestamp links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2972,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "5bee2163205c",
-    "template": "<code>tg://ton",
-    "section": "Deep links",
-    "subsection": "My Grams links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2225,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "3ce803971ba3",
-    "template": "<code>tg://user?id=<id>",
-    "section": "Deep links",
-    "subsection": "ID links",
-    "source": "official_docs",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2930,
-    "extraction": "fenced-code",
-    "reviewStatus": "documented"
-  },
-  {
-    "id": "f6ef17b94efc",
-    "template": "<code>tonsite://somesite.domain/path?query#hash",
+    "id": "5202297dae77",
+    "template": "getting-started.ton/path?query#hash",
     "section": "Deep links",
     "subsection": "TON Sites",
     "source": "official_docs",
     "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 108,
+    "line": 115,
     "extraction": "fenced-code",
     "reviewStatus": "documented"
   },
@@ -1298,6 +22,17 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "919c1de73a75",
+    "template": "https://t.me/oauth?startapp=<token>",
+    "section": "Deep links",
+    "subsection": "OAuth links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 880,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "92f04eebe59c",
     "template": "https://t.me/path?query",
     "section": "Deep links",
@@ -1306,6 +41,17 @@
     "sourceUrl": "https://core.telegram.org/api/links",
     "line": 34,
     "extraction": "inline-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "5cf55963db85",
+    "template": "t.me/+<hash>",
+    "section": "Deep links",
+    "subsection": "Chat invite links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 294,
+    "extraction": "fenced-code",
     "reviewStatus": "documented"
   },
   {
@@ -1331,6 +77,39 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "79d406d6a4d2",
+    "template": "t.me/+<phone_number>?text=<draft_text>&profile",
+    "section": "Deep links",
+    "subsection": "Phone number links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 252,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "22568c3c92be",
+    "template": "t.me/<bot_username>?game=<short_name>",
+    "section": "Deep links",
+    "subsection": "Game links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1472,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "5c68ad9e8243",
+    "template": "t.me/<bot_username>?ref=<referrer>",
+    "section": "Deep links",
+    "subsection": "Referral links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2894,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "ceaa96c1c1f2",
     "template": "t.me/<bot_username>?start={prefix}<referrer>",
     "section": "Deep links",
@@ -1342,6 +121,28 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "1585ab84daea",
+    "template": "t.me/<bot_username>?start=<parameter>",
+    "section": "Deep links",
+    "subsection": "Bot links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1331,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "856d798d7d1c",
+    "template": "t.me/<bot_username>?startapp&mode=<mode>",
+    "section": "Deep links",
+    "subsection": "Main Mini App links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2548,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "4a686fb46636",
     "template": "t.me/<bot_username>?startapp=<start_parameter>&mode=<mode>",
     "section": "Deep links",
@@ -1349,6 +150,28 @@
     "source": "official_docs",
     "sourceUrl": "https://core.telegram.org/api/links",
     "line": 2548,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "08b27398129c",
+    "template": "t.me/<bot_username>?startattach",
+    "section": "Deep links",
+    "subsection": "Open in current chat",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2648,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "7f9f15d92c47",
+    "template": "t.me/<bot_username>?startattach&choose=users+bots+groups+channels",
+    "section": "Deep links",
+    "subsection": "Open in any chat",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2734,
     "extraction": "fenced-code",
     "reviewStatus": "documented"
   },
@@ -1375,6 +198,17 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "536f9d6b01f4",
+    "template": "t.me/<bot_username>?startchannel&admin=<permissions>",
+    "section": "Deep links",
+    "subsection": "Group/channel bot links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1411,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "c20aaa50f491",
     "template": "t.me/<bot_username>?startgroup&admin=<permissions>",
     "section": "Deep links",
@@ -1382,6 +216,50 @@
     "source": "official_docs",
     "sourceUrl": "https://core.telegram.org/api/links",
     "line": 1395,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "2e1317d6ff24",
+    "template": "t.me/<bot_username>?startgroup=<parameter>&admin=<permissions>",
+    "section": "Deep links",
+    "subsection": "Group/channel bot links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1395,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "5b085af2a8bd",
+    "template": "t.me/<bot_username>/<short_name>?startapp=<start_parameter>&mode=<mode>",
+    "section": "Deep links",
+    "subsection": "Direct mini app links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2593,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "9a620492761e",
+    "template": "t.me/<username>?album=<album_id>",
+    "section": "Deep links",
+    "subsection": "Story album links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 720,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "24ea36ea9f64",
+    "template": "t.me/<username>?attach=<bot_username>",
+    "section": "Deep links",
+    "subsection": "Open in specific chat",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2682,
     "extraction": "fenced-code",
     "reviewStatus": "documented"
   },
@@ -1408,6 +286,28 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "17ea2042db1a",
+    "template": "t.me/<username>?collection=<collection_id>",
+    "section": "Deep links",
+    "subsection": "Gift collection links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2831,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "1fc9ad2e8e01",
+    "template": "t.me/<username>?direct",
+    "section": "Deep links",
+    "subsection": "Monoforum links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 188,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "02264d3dfedb",
     "template": "t.me/<username>?livestream",
     "section": "Deep links",
@@ -1421,6 +321,28 @@
   {
     "id": "bf8b1cfab0ec",
     "template": "t.me/<username>?livestream=<invite_hash>",
+    "section": "Deep links",
+    "subsection": "Video chat/Livestream links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 535,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "db6d488abb0c",
+    "template": "t.me/<username>?text=<draft_text>&profile",
+    "section": "Deep links",
+    "subsection": "Public username links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 144,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "03ea690fa201",
+    "template": "t.me/<username>?videochat",
     "section": "Deep links",
     "subsection": "Video chat/Livestream links",
     "source": "official_docs",
@@ -1474,6 +396,17 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "4934aab6f2bc",
+    "template": "t.me/<username>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+    "section": "Deep links",
+    "subsection": "Message links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 357,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "592d54c9d9b1",
     "template": "t.me/<username>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
     "section": "Deep links",
@@ -1507,6 +440,28 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "e88b90306a91",
+    "template": "t.me/<username>/s/<story_id>",
+    "section": "Deep links",
+    "subsection": "Story links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 659,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "88ec9d932780",
+    "template": "t.me/<username>/s/live",
+    "section": "Deep links",
+    "subsection": "Live story links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 692,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "127945625e18",
     "template": "t.me/$<slug>",
     "section": "Deep links",
@@ -1529,6 +484,83 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "2c8a8321a976",
+    "template": "t.me/addlist/<slug>",
+    "section": "Deep links",
+    "subsection": "Chat folder links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 329,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "16ebe25bf764",
+    "template": "t.me/addstickers/<slug>",
+    "section": "Deep links",
+    "subsection": "Stickerset links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 601,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "ab46c3dcc309",
+    "template": "t.me/addstyle/<slug>",
+    "section": "Deep links",
+    "subsection": "AI compose tone links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1019,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "7cfb910ed25e",
+    "template": "t.me/addtheme/<name>",
+    "section": "Deep links",
+    "subsection": "Theme links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 989,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "81a1ef5e1476",
+    "template": "t.me/auction/<slug>",
+    "section": "Deep links",
+    "subsection": "Auction links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2864,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "9594ffe5c293",
+    "template": "t.me/bg/<hex_color>",
+    "section": "Deep links",
+    "subsection": "Solid fill wallpapers",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1083,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "a4ae8b13d356",
+    "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>",
+    "section": "Deep links",
+    "subsection": "Free-form gradient fill wallpapers",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1147,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "2344c61d1f7c",
     "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
     "section": "Deep links",
@@ -1540,6 +572,28 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "42dcb5c4dd45",
+    "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
+    "section": "Deep links",
+    "subsection": "Solid pattern wallpapers",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1189,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "3d59f06f08b0",
+    "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
+    "section": "Deep links",
+    "subsection": "Free-form gradient pattern wallpapers",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1277,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "084e3b4aaf98",
     "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
     "section": "Deep links",
@@ -1547,6 +601,72 @@
     "source": "official_docs",
     "sourceUrl": "https://core.telegram.org/api/links",
     "line": 1277,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "f6da890e8cfd",
+    "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
+    "section": "Deep links",
+    "subsection": "Gradient pattern wallpapers",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1229,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "1ead8d8f6d0e",
+    "template": "t.me/bg/<slug>?mode=<mode>",
+    "section": "Deep links",
+    "subsection": "Image wallpapers",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1051,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "2f09c77f3ea7",
+    "template": "t.me/bg/<top_color>-<bottom_color>?rotation=<rotation>",
+    "section": "Deep links",
+    "subsection": "Gradient fill wallpapers",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1111,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "f4fd828312b0",
+    "template": "t.me/boost?c=<id>",
+    "section": "Deep links",
+    "subsection": "Boost links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 834,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "343bd70d395c",
+    "template": "t.me/boost/<username>",
+    "section": "Deep links",
+    "subsection": "Boost links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 826,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "3ce905b62744",
+    "template": "t.me/c/<channel>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+    "section": "Deep links",
+    "subsection": "Message links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 365,
     "extraction": "fenced-code",
     "reviewStatus": "documented"
   },
@@ -1573,6 +693,94 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "9d70b755d3ea",
+    "template": "t.me/call/<slug>",
+    "section": "Deep links",
+    "subsection": "Conference links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 573,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "d55e09fbed19",
+    "template": "t.me/confirmphone?phone=<phone>&hash=<hash>",
+    "section": "Deep links",
+    "subsection": "Phone confirmation links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2419,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "54c4405b6715",
+    "template": "t.me/contact/<token>",
+    "section": "Deep links",
+    "subsection": "Temporary profile links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 224,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "c55230c5b412",
+    "template": "t.me/giftcode/<slug>",
+    "section": "Deep links",
+    "subsection": "Premium giftcode links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2502,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "3c49da4d3f52",
+    "template": "t.me/invoice/<slug>",
+    "section": "Deep links",
+    "subsection": "Invoice links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2348,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "7f08ea3b1aa2",
+    "template": "t.me/joinchat/<hash>",
+    "section": "Deep links",
+    "subsection": "Chat invite links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 301,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "34d9aff66d85",
+    "template": "t.me/login/",
+    "section": "Deep links",
+    "subsection": "Login code link",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2320,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "ad116f777c55",
+    "template": "t.me/m/<slug>",
+    "section": "Deep links",
+    "subsection": "Business chat links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 503,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "18845a5f031e",
     "template": "t.me/msg/url?url=<url>&text=<text>",
     "section": "Deep links",
@@ -1595,6 +803,28 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "9c3f6ceacb15",
+    "template": "t.me/newbot/<manager_bot_username>/<suggested_bot_username>?name=<suggested_bot_name>",
+    "section": "Deep links",
+    "subsection": "Managed bot creation request links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 783,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "c0032a5e0ffa",
+    "template": "t.me/nft/<slug>",
+    "section": "Deep links",
+    "subsection": "Collectible gift link",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2803,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "406075f40b65",
     "template": "t.me/path?query",
     "section": "Deep links",
@@ -1603,6 +833,39 @@
     "sourceUrl": "https://core.telegram.org/api/links",
     "line": 30,
     "extraction": "inline-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "e6c733013251",
+    "template": "t.me/proxy?server=<server>&port=<port>&secret=<secret>",
+    "section": "Deep links",
+    "subsection": "MTProxy links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 913,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "660a6f11b397",
+    "template": "t.me/setlanguage/<slug>",
+    "section": "Deep links",
+    "subsection": "Language pack links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2377,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "bd39b97c7a0d",
+    "template": "t.me/share?url=<url>&text=<text>",
+    "section": "Deep links",
+    "subsection": "Share links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 458,
+    "extraction": "fenced-code",
     "reviewStatus": "documented"
   },
   {
@@ -1628,6 +891,17 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "0795881ea2be",
+    "template": "t.me/socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
+    "section": "Deep links",
+    "subsection": "SOCKS5 proxy links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 949,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "8cb0e78c729b",
     "template": "tg://addemoji?set=<slug>",
     "section": "Deep links",
@@ -1635,6 +909,72 @@
     "source": "official_docs",
     "sourceUrl": "https://core.telegram.org/api/links",
     "line": 609,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "6bcbfb98a793",
+    "template": "tg://addlist?slug=<slug>",
+    "section": "Deep links",
+    "subsection": "Chat folder links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 336,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "5bb72e127d12",
+    "template": "tg://addstickers?set=<slug>",
+    "section": "Deep links",
+    "subsection": "Stickerset links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 609,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "3c2596ba4165",
+    "template": "tg://addstyle?slug=<slug>",
+    "section": "Deep links",
+    "subsection": "AI compose tone links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1026,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "1310d27fba78",
+    "template": "tg://addtheme?slug=<name>",
+    "section": "Deep links",
+    "subsection": "Theme links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 996,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "c7446b068937",
+    "template": "tg://bg?color=<hex_color>",
+    "section": "Deep links",
+    "subsection": "Solid fill wallpapers",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1090,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "f097923c9459",
+    "template": "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>",
+    "section": "Deep links",
+    "subsection": "Free-form gradient fill wallpapers",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1155,
     "extraction": "fenced-code",
     "reviewStatus": "documented"
   },
@@ -1650,6 +990,39 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "08f46d528722",
+    "template": "tg://bg?gradient=<top_color>-<bottom_color>&rotation=<rotation>",
+    "section": "Deep links",
+    "subsection": "Gradient fill wallpapers",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1118,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "7858425e1cf8",
+    "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
+    "section": "Deep links",
+    "subsection": "Solid pattern wallpapers",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1196,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "9e70149a6fe2",
+    "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
+    "section": "Deep links",
+    "subsection": "Free-form gradient pattern wallpapers",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1285,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "f83a61f34fb8",
     "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
     "section": "Deep links",
@@ -1661,14 +1034,69 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "91cc9865d834",
+    "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
+    "section": "Deep links",
+    "subsection": "Gradient pattern wallpapers",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1236,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "c8c4ba7213a9",
+    "template": "tg://bg?slug=<slug>&mode=<mode>",
+    "section": "Deep links",
+    "subsection": "Image wallpapers",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1058,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "5e9ea5cf4f34",
+    "template": "tg://boost?channel=<id>",
+    "section": "Deep links",
+    "subsection": "Boost links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 849,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "925a35819baa",
+    "template": "tg://boost?domain=<username>",
+    "section": "Deep links",
+    "subsection": "Boost links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 842,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "e2168b3e6428",
+    "template": "tg://call?slug=<slug>",
+    "section": "Deep links",
+    "subsection": "Conference links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 580,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "6f45a0fca512",
     "template": "tg://chats/edit",
     "section": "Deep links",
     "subsection": "Chat list links",
     "source": "official_docs",
     "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2305,
-    "extraction": "inline-code",
+    "line": 2295,
+    "extraction": "fenced-code",
     "reviewStatus": "documented"
   },
   {
@@ -1694,6 +1122,39 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "0824b30ab7b3",
+    "template": "tg://confirmphone?phone=<phone>&hash=<hash>",
+    "section": "Deep links",
+    "subsection": "Phone confirmation links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2426,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "7462a61ae983",
+    "template": "tg://contact?token=<token>",
+    "section": "Deep links",
+    "subsection": "Temporary profile links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 231,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "2542b7cc9922",
+    "template": "tg://contacts",
+    "section": "Deep links",
+    "subsection": "Contacts links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2236,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "a0e8343de842",
     "template": "tg://contacts/<section>",
     "section": "Deep links",
@@ -1701,6 +1162,94 @@
     "source": "official_docs",
     "sourceUrl": "https://core.telegram.org/api/links",
     "line": 2236,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "d2797d094702",
+    "template": "tg://emoji?id=<id>",
+    "section": "Deep links",
+    "subsection": "Emoji links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2951,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "457abc6ee0ec",
+    "template": "tg://giftcode?slug=<slug>",
+    "section": "Deep links",
+    "subsection": "Premium giftcode links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2495,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "cc02a873741c",
+    "template": "tg://invoice?slug=<slug>",
+    "section": "Deep links",
+    "subsection": "Invoice links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2356,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "d5735df47727",
+    "template": "tg://join?invite=<hash>",
+    "section": "Deep links",
+    "subsection": "Chat invite links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 308,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "8adcd10218bc",
+    "template": "tg://login?code=",
+    "section": "Deep links",
+    "subsection": "Login code link",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2327,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "54ead15de17e",
+    "template": "tg://login?token=<base64encodedtoken>",
+    "section": "Deep links",
+    "subsection": "QR code login links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2523,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "b761e21b676c",
+    "template": "tg://message?slug=<slug>",
+    "section": "Deep links",
+    "subsection": "Business chat links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 510,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "6948da8d3f64",
+    "template": "tg://msg_url?url=<url>&text=<text>",
+    "section": "Deep links",
+    "subsection": "Share links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 468,
     "extraction": "fenced-code",
     "reviewStatus": "documented"
   },
@@ -1722,8 +1271,8 @@
     "subsection": "New chat links",
     "source": "official_docs",
     "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2280,
-    "extraction": "inline-code",
+    "line": 2270,
+    "extraction": "fenced-code",
     "reviewStatus": "documented"
   },
   {
@@ -1749,6 +1298,50 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "34796fe8e133",
+    "template": "tg://newbot?manager=<manager_bot_username>&username=<suggested_bot_username>&name=<suggested_bot_name>",
+    "section": "Deep links",
+    "subsection": "Managed bot creation request links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 791,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "942d6411364d",
+    "template": "tg://nft?slug=<slug>",
+    "section": "Deep links",
+    "subsection": "Collectible gift link",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2810,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "7fb60d345974",
+    "template": "tg://oauth?token=<token>",
+    "section": "Deep links",
+    "subsection": "OAuth links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 887,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "4b3bf4a91594",
+    "template": "tg://passport?params",
+    "section": "Deep links",
+    "subsection": "Telegram Passport links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2405,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "0d3e496c571f",
     "template": "tg://path?query",
     "section": "Deep links",
@@ -1760,6 +1353,17 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "0608df0ce8f9",
+    "template": "tg://post",
+    "section": "Deep links",
+    "subsection": "Post story links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 753,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "8d8d7774c4e8",
     "template": "tg://post/<content_type>",
     "section": "Deep links",
@@ -1767,6 +1371,83 @@
     "source": "official_docs",
     "sourceUrl": "https://core.telegram.org/api/links",
     "line": 753,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "0a9feb4b1e0a",
+    "template": "tg://premium_multigift?ref=<referrer>",
+    "section": "Deep links",
+    "subsection": "Premium multigift links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2453,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "d5066708d4dd",
+    "template": "tg://premium_offer?ref=<referrer>",
+    "section": "Deep links",
+    "subsection": "Premium referrer links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2474,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "0a15c8627cf6",
+    "template": "tg://privatepost?channel=<channel>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+    "section": "Deep links",
+    "subsection": "Message links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 380,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "80d764ae9a17",
+    "template": "tg://proxy?server=<server>&port=<port>&secret=<secret>",
+    "section": "Deep links",
+    "subsection": "MTProxy links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 920,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "b6c28fea681b",
+    "template": "tg://resolve?domain=<bot_username>&appname=<short_name>&startapp=<start_parameter>&mode=<mode>",
+    "section": "Deep links",
+    "subsection": "Direct mini app links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2600,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "f3bed5c7550b",
+    "template": "tg://resolve?domain=<bot_username>&game=<short_name>",
+    "section": "Deep links",
+    "subsection": "Game links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1479,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "81b7f478605f",
+    "template": "tg://resolve?domain=<bot_username>&ref=<referrer>",
+    "section": "Deep links",
+    "subsection": "Referral links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2902,
     "extraction": "fenced-code",
     "reviewStatus": "documented"
   },
@@ -1782,6 +1463,28 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "eae3b5faadba",
+    "template": "tg://resolve?domain=<bot_username>&start=<parameter>",
+    "section": "Deep links",
+    "subsection": "Bot links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1338,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "0ee09bb6ebe2",
+    "template": "tg://resolve?domain=<bot_username>&startapp&mode=<mode>",
+    "section": "Deep links",
+    "subsection": "Main Mini App links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2558,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "ffab54be3374",
     "template": "tg://resolve?domain=<bot_username>&startapp=<start_parameter>&mode=<mode>",
     "section": "Deep links",
@@ -1789,6 +1492,28 @@
     "source": "official_docs",
     "sourceUrl": "https://core.telegram.org/api/links",
     "line": 2558,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "922ca7b36940",
+    "template": "tg://resolve?domain=<bot_username>&startattach",
+    "section": "Deep links",
+    "subsection": "Open in current chat",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2656,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "b138ffa7bbbc",
+    "template": "tg://resolve?domain=<bot_username>&startattach&choose=users+bots+groups+channels",
+    "section": "Deep links",
+    "subsection": "Open in any chat",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2742,
     "extraction": "fenced-code",
     "reviewStatus": "documented"
   },
@@ -1815,6 +1540,17 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "2edd7b299570",
+    "template": "tg://resolve?domain=<bot_username>&startchannel&admin=<permissions>",
+    "section": "Deep links",
+    "subsection": "Group/channel bot links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1418,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "7ab708dfeb25",
     "template": "tg://resolve?domain=<bot_username>&startgroup&admin=<permissions>",
     "section": "Deep links",
@@ -1826,6 +1562,39 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "cfca24e03aa0",
+    "template": "tg://resolve?domain=<bot_username>&startgroup=<parameter>&admin=<permissions>",
+    "section": "Deep links",
+    "subsection": "Group/channel bot links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1403,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "ca274779b939",
+    "template": "tg://resolve?domain=<username>&album=<album_id>",
+    "section": "Deep links",
+    "subsection": "Story album links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 728,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "1fba0bbce725",
+    "template": "tg://resolve?domain=<username>&attach=<bot_username>",
+    "section": "Deep links",
+    "subsection": "Open in specific chat",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2692,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "36719fa7c434",
     "template": "tg://resolve?domain=<username>&attach=<bot_username>&startattach=<start_parameter>",
     "section": "Deep links",
@@ -1833,6 +1602,28 @@
     "source": "official_docs",
     "sourceUrl": "https://core.telegram.org/api/links",
     "line": 2692,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "2609bb965491",
+    "template": "tg://resolve?domain=<username>&collection=<collection_id>",
+    "section": "Deep links",
+    "subsection": "Gift collection links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2839,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "8b0ecb2a48e4",
+    "template": "tg://resolve?domain=<username>&direct",
+    "section": "Deep links",
+    "subsection": "Monoforum links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 195,
     "extraction": "fenced-code",
     "reviewStatus": "documented"
   },
@@ -1850,6 +1641,61 @@
   {
     "id": "2539210bc37e",
     "template": "tg://resolve?domain=<username>&livestream=<invite_hash>",
+    "section": "Deep links",
+    "subsection": "Video chat/Livestream links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 547,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "1d3d5caa1d1e",
+    "template": "tg://resolve?domain=<username>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+    "section": "Deep links",
+    "subsection": "Message links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 373,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "bb5283766a24",
+    "template": "tg://resolve?domain=<username>&story=<story_id>",
+    "section": "Deep links",
+    "subsection": "Story links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 666,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "b965fd2b0aa5",
+    "template": "tg://resolve?domain=<username>&story=live",
+    "section": "Deep links",
+    "subsection": "Live story links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 699,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "aa94715bd7b6",
+    "template": "tg://resolve?domain=<username>&text=<draft_text>&profile",
+    "section": "Deep links",
+    "subsection": "Public username links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 151,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "a5f6b2416a94",
+    "template": "tg://resolve?domain=<username>&videochat",
     "section": "Deep links",
     "subsection": "Video chat/Livestream links",
     "source": "official_docs",
@@ -1936,6 +1782,39 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "2d72bd5d3011",
+    "template": "tg://resolve?phone=<phone_number>&text=<draft_text>&profile",
+    "section": "Deep links",
+    "subsection": "Phone number links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 259,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "4ab12eebd4b1",
+    "template": "tg://setlanguage?lang=<slug>",
+    "section": "Deep links",
+    "subsection": "Language pack links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2384,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "11fd425404c1",
+    "template": "tg://settings",
+    "section": "Deep links",
+    "subsection": "Settings links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 1504,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "0e04c0f44f4c",
     "template": "tg://settings/<path>",
     "section": "Deep links",
@@ -1969,6 +1848,83 @@
     "reviewStatus": "documented"
   },
   {
+    "id": "9b54de96a743",
+    "template": "tg://socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
+    "section": "Deep links",
+    "subsection": "SOCKS5 proxy links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 956,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "714a0bec7895",
+    "template": "tg://stargift_auction?slug=<slug>",
+    "section": "Deep links",
+    "subsection": "Auction links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2871,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "41fa3d5f3cb0",
+    "template": "tg://stars",
+    "section": "Deep links",
+    "subsection": "My stars links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2212,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "5d54094d1a2e",
+    "template": "tg://stars_topup?balance=<star_count>&purpose=<purpose>",
+    "section": "Deep links",
+    "subsection": "Stars topup link",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2774,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "1a93c3853ecc",
+    "template": "tg://time?unix=<unix>&format=<format>",
+    "section": "Deep links",
+    "subsection": "Timestamp links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2972,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "9d1020c0d185",
+    "template": "tg://ton",
+    "section": "Deep links",
+    "subsection": "My Grams links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2225,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "a234ca883ec1",
+    "template": "tg://user?id=<id>",
+    "section": "Deep links",
+    "subsection": "ID links",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 2930,
+    "extraction": "fenced-code",
+    "reviewStatus": "documented"
+  },
+  {
     "id": "20c20f1ea0bc",
     "template": "tg:path?query",
     "section": "Deep links",
@@ -1999,6 +1955,17 @@
     "sourceUrl": "https://core.telegram.org/api/links",
     "line": 113,
     "extraction": "inline-code",
+    "reviewStatus": "documented"
+  },
+  {
+    "id": "691c6e3c1662",
+    "template": "tonsite://somesite.domain/path?query#hash",
+    "section": "Deep links",
+    "subsection": "TON Sites",
+    "source": "official_docs",
+    "sourceUrl": "https://core.telegram.org/api/links",
+    "line": 108,
+    "extraction": "fenced-code",
     "reviewStatus": "documented"
   }
 ]

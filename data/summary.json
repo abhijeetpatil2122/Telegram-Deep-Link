@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T16:30:34.927Z",
+  "generatedAt": "2026-10-29T16:31:04.554Z",
   "sources": {
     "officialDocs": {
       "url": "https://core.telegram.org/api/links",
@@ -18,9 +18,9 @@
     }
   },
   "counts": {
-    "documentedTemplates": 182,
+    "documentedTemplates": 179,
     "androidCandidates": 96,
-    "androidCandidatesNotExactMatches": 96
+    "androidCandidatesNotExactMatches": 93
   },
   "note": "These are extracted templates and implementation candidates, not a guarantee of every runtime-supported route. Review Android-only candidates before publishing."
 }

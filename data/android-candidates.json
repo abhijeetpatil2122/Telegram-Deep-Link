@@ -633,7 +633,7 @@
     "extraction": "literal-uri",
     "reviewStatus": "needs_review",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": true
   },
   {
     "id": "43ef578ace92",
@@ -681,7 +681,7 @@
     "extraction": "literal-uri",
     "reviewStatus": "needs_review",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": true
   },
   {
     "id": "f6f6c8dd52e5",
@@ -717,7 +717,7 @@
     "extraction": "literal-uri",
     "reviewStatus": "needs_review",
     "note": "Implementation-derived candidate; verify route behavior and required parameters before publishing.",
-    "alreadyInDocs": false
+    "alreadyInDocs": true
   },
   {
     "id": "e2517e1e9366",
