@@ -39,16 +39,28 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore: refresh deep-link inventory"
-          # Rebase onto the latest main in case a source/docs commit landed
-          # while the crawl was running. Retry push races rather than losing
-          # a valid inventory refresh.
+          # A user commit may land while the crawl is running. Rebase if safe;
+          # if generated data conflicts, reset to latest main and regenerate it.
           for attempt in 1 2 3; do
             git fetch origin main
-            git rebase origin/main
-            if git push origin HEAD:main; then
-              exit 0
+            if git rebase origin/main; then
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+              echo "Push attempt ${attempt} raced with another update; retrying."
+            else
+              echo "Inventory conflicted with newer main; regenerating from latest main."
+              git rebase --abort || true
+              git reset --hard origin/main
+              npm run check
+              npm run crawl
+              git add data/
+              if git diff --cached --quiet -- data/; then
+                echo "Latest main already contains the current inventory."
+                exit 0
+              fi
+              git commit -m "chore: refresh deep-link inventory"
             fi
-            echo "Push attempt ${attempt} failed; retrying after fetching main."
           done
           echo "Unable to push inventory after 3 attempts."
           exit 1
