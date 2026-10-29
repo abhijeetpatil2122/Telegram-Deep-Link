@@ -127,15 +127,15 @@ function classifyCandidate(candidate, excerpt, extraction) {
   let classification = 'needs-manual-review';
   let reviewNote = 'Heuristic classification only; inspect the surrounding source and confirm how Telegram parses this value.';
 
-  if (/^tg:\/\/(?:[a-z0-9_]+)?$/i.test(candidate) || /^tg:(?!\/\/)[a-z0-9_]+$/i.test(candidate)) {
+  if (/^tg:\/\/telegram\.org$/i.test(candidate) && /replace\(/i.test(context)) {
+    candidateType = 'internal-url-rewrite';
+    category = 'internal-url-rewrite';
+    classification = 'likely-internal-or-contextual';
+    reviewNote = 'This value is used as an internal URL rewrite target while parsing another link; it is not a public deep-link template.';
+  } else if (/^tg:\/\/(?:[a-z0-9_]+)?$/i.test(candidate) || /^tg:(?!\/\/)[a-z0-9_]+$/i.test(candidate)) {
     candidateType = 'scheme-prefix';
     category = 'deep-link';
     reviewNote = 'This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.';
-    if (/telegram\.org/i.test(candidate) && /replace\(/i.test(context)) {
-      category = 'internal-url-rewrite';
-      classification = 'likely-internal-or-contextual';
-      reviewNote = 'This value is used as an internal URL rewrite target while parsing another link; it is not a public deep-link template.';
-    }
   } else if (/^(?:t\.me|telegram\.me|telegram\.dog)$/i.test(candidate)) {
     candidateType = 'host-token';
     category = 'link-host-alias';
@@ -281,8 +281,12 @@ async function main() {
   const documentedKeys = new Set(documented.map(item => item.template.toLowerCase()));
   const candidates = android.map(item => {
     const alreadyInDocs = documentedKeys.has(item.candidate.toLowerCase());
+    const normalizedCandidate = item.candidate.replace(/^tg:(?!\/\/)/i, 'tg://').toLowerCase();
     const relatedDocumentedTemplates = documented
-      .filter(doc => doc.template.toLowerCase().includes(item.candidate.toLowerCase()))
+      .filter(doc => {
+        const template = doc.template.toLowerCase();
+        return template.includes(item.candidate.toLowerCase()) || template.includes(normalizedCandidate);
+      })
       .map(doc => doc.template)
       .slice(0, 8);
     return {
