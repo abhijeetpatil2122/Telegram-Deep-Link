@@ -7,17 +7,18 @@ Crawler for collecting Telegram deep-link templates for the **@TDeepLink** chann
 1. **Primary:** [Official Telegram deep-link documentation](https://core.telegram.org/api/links) — fetched from the direct HTML webpage, not the machine-readable `.md` endpoint.
 2. **Secondary:** [Telegram Android `LaunchActivity.java`](https://github.com/DrKLO/Telegram/blob/master/TMessagesProj/src/main/java/org/telegram/ui/LaunchActivity.java)
 
-The official website is the baseline. Its HTML is converted into a lightweight Markdown-like representation for extraction. Android source is scanned for additional implementation-handled routes and parameters; those candidates are marked for review rather than treated as official documentation.
+The official website is the baseline. Its HTML is converted into a lightweight Markdown-like representation for extraction. Android source is scanned for additional implementation-handled routes, parameters, partial fragments, and handler tokens. All extracted candidates are retained in the combined publication inventory, with source and confidence labels so implementation evidence is not mistaken for official documentation.
 
 ## What the crawler does
 
 - Fetches and validates the direct official documentation webpage.
 - Extracts link templates from code spans, fenced examples, and documented settings paths.
 - Scans Android source for literal URI patterns and URL-handler strings.
-- Keeps official documentation entries separate from Android-only candidates.
+- Keeps official documentation entries separate from Android-only candidates while also generating one combined publication inventory.
 - Stores source URLs, line numbers, hashes, and review status.
 - Runs manually, on pushes to `main`, and on a daily GitHub Actions schedule.
 - Commits generated inventory files to `data/` when they change.
+- Sends a Telegram channel notification when the inventory gains, changes, or removes entries (when notification credentials are configured).
 
 ## Deep-link fallback: `help.getDeepLinkInfo`
 
@@ -31,16 +32,24 @@ This is useful context for our project because it describes the fallback behavio
 
 ## Runtime-supported links beyond the official docs
 
-The official template inventory and implementation-derived links are intentionally separate. The crawler writes `data/runtime-supported-links.json` for routes that have an explicit handler in the Telegram Android client and have been reported working by the project maintainer:
+The official template inventory and implementation-derived links are tracked separately, but the combined `data/publication-inventory.json` includes both. The crawler currently records these maintainer-reported working routes when their explicit Android handlers are present:
 
 - `tg://addcontact?name=<name>&phone=<phone>` — optional `name` and `phone` query parameters.
 - `tg://send_gift?to=<username-or-user_id>` — optional recipient; without `to`, the client opens recipient selection.
 - `tg://calllog` — opens the call log.
 - `tg://scanqr` — opens the QR-scanning flow.
 
-These are implementation-supported, maintainer-reported working routes, **not claims that Telegram lists them as official public deep-link templates**. Their source line and handler evidence are regenerated on each crawl. The crawler validates that all four handlers still exist before writing the runtime inventory.
+These are implementation-supported, maintainer-reported working routes, not claims that Telegram lists them as official public deep-link templates.
 
-The crawler also writes `data/not-confirmed-tg-scheme-forms.json` for `tg://enablelogs`, `tg://disablelogs`, `tg://sendlogs`, and `tg://login_email`. The Android source only contains the corresponding strings as query fragments or a settings-related token, not as matching standalone `tg://` dispatch handlers. Do not publish those four forms as working links unless separate runtime testing establishes otherwise.
+## Publication inventory and notification policy
+
+`data/publication-inventory.json` combines the official documentation entries with every candidate extracted from Android `LaunchActivity.java`, plus the runtime-confirmed route metadata. Candidates are not silently excluded just because they are undocumented or appear internal.
+
+The crawler preserves the raw observation instead of inventing a complete URL. For example, `?enablelogs`, `?disablelogs`, and `?sendlogs` are query fragments observed in Android's settings-related handling; they are **not** automatically rewritten as `tg://enablelogs`, `tg://disablelogs`, or `tg://sendlogs`. Similarly, a handler token such as `login_email` remains a token unless the source establishes a complete URL format.
+
+Channel notifications summarize newly discovered, changed, and removed inventory entries. The message explains that implementation-derived links can be internal, partial, contextual, client/version-dependent, or unverified. Being listed is not a guarantee that a link works in every Telegram client or is intended for public use.
+
+To enable notifications, add the repository Actions secret `TELEGRAM_BOT_TOKEN` for a bot that can post to `@TDeepLink`. Optionally set the Actions variable `TELEGRAM_CHANNEL_ID` to a channel username or numeric chat ID. The initial inventory creates a baseline without sending a bulk post; subsequent inventory changes trigger notifications.
 
 ## Android candidate review
 
@@ -61,4 +70,4 @@ Outputs are generated under `data/`:
 - `android-candidates.json` — source-derived candidates; review before publication.
 - `summary.json` — source hashes and extraction counts.
 
-The crawler does not invent concrete usernames, IDs, tokens, invite hashes, or other required values. Android-only candidates need review before publishing. Telegram channel publishing is not enabled yet; extraction quality should be reviewed first.
+The crawler does not invent concrete usernames, IDs, tokens, invite hashes, or other required values. Android-only candidates are included with explicit source and uncertainty labels. Telegram notifications require the repository secret described above.
