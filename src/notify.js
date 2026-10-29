@@ -18,7 +18,13 @@ function escapeHtml(value) {
 }
 
 async function sendTelegram(message) {
-  await sendTelegram(message);
+  const response = await fetch('https://api.telegram.org/bot' + TOKEN + '/sendMessage', {
+    method: 'POST', headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ chat_id: CHAT_ID, text: message, parse_mode: 'HTML', disable_web_page_preview: true }),
+    signal: AbortSignal.timeout(30000)
+  });
+  const result = await response.json();
+  if (!response.ok || !result.ok) throw new Error('Telegram notification failed: ' + (result.description || response.status));
 }
 
 async function main() {
