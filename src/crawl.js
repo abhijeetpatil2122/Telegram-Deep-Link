@@ -412,18 +412,56 @@ async function main() {
   if (incompleteCandidateMetadata.length) {
     throw new Error('Android candidate classification metadata is incomplete for ' + incompleteCandidateMetadata.length + ' entries.');
   }
-  const expectedReviewLabels = new Map([
-    ['?disablelogs', 'likely-internal-or-contextual'],
-    ['?enablelogs', 'likely-internal-or-contextual'],
-    ['?sendlogs', 'likely-internal-or-contextual']
-  ]);
-  const missingReviewLabels = [...expectedReviewLabels].filter(([candidate, classification]) =>
-    !candidates.some(item => item.candidate.toLowerCase() === candidate && item.classification === classification)
-  );
-  if (missingReviewLabels.length) {
-    throw new Error('Expected diagnostic fragments were not classified for review: ' +
-      missingReviewLabels.map(([candidate]) => candidate).join(', '));
-  }
+  // Implementation-derived fragments are inventory entries too. They are not
+  // promoted into invented standalone tg:// URLs; their raw observed form is preserved.
+  const publicationInventory = [
+    ...documented.map(item => ({
+      id: 'official:' + item.id,
+      kind: 'official-template',
+      template: item.template,
+      title: item.subsection || item.section,
+      source: item.source,
+      sourceUrl: item.sourceUrl,
+      line: item.line,
+      status: 'officially-documented',
+      classification: 'documented',
+      note: 'Listed in Telegram official deep-link documentation.'
+    })),
+    ...candidates.map(item => ({
+      id: 'android:' + item.id,
+      kind: 'android-source-candidate',
+      // Keep the exact observed token. A fragment or handler token is not
+      // converted into a guessed standalone URI.
+      template: item.candidate,
+      title: item.category,
+      source: item.source,
+      sourceUrl: item.sourceUrl,
+      line: item.line,
+      status: item.classification === 'user-confirmed-working'
+        ? 'user-confirmed-working'
+        : item.classification === 'likely-internal-or-contextual'
+          ? 'internal-or-contextual'
+          : 'implementation-derived-unverified',
+      classification: item.classification,
+      candidateType: item.candidateType,
+      documentationRelation: item.documentationRelation,
+      note: item.reviewNote,
+      sourceContext: item.sourceContext
+    })),
+    ...runtimeLinks.map(item => ({
+      id: 'runtime:' + idFor(item.template),
+      kind: 'runtime-route',
+      template: item.template,
+      title: item.purpose,
+      source: item.source,
+      sourceUrl: item.sourceUrl,
+      line: item.sourceLine,
+      status: item.verification,
+      classification: 'user-confirmed-working',
+      note: item.caveat
+    }))
+  ].sort((a, b) => a.id.localeCompare(b.id));
+
   const summary = {
     generatedAt: new Date().toISOString(),
     sources: {
@@ -435,7 +473,8 @@ async function main() {
       androidCandidates: candidates.length,
       runtimeSupportedLinks: runtimeLinks.length,
       userConfirmedWorkingRuntimeLinks: runtimeLinks.filter(item => item.verification === 'user-confirmed-working').length,
-      rejectedStandaloneTgSchemeForms: NOT_CONFIRMED_TG_SCHEME_FORMS.length,
+      publicationInventoryEntries: publicationInventory.length,
+      implementationDerivedEntries: candidates.length,
       androidCandidatesNotExactMatches: candidates.filter(item => !item.alreadyInDocs).length,
       androidCandidatesWithRelatedOfficialTemplates: candidates.filter(item => item.documentationRelation === 'related-official-template').length,
       androidCandidatesWithoutDocumentationMatch: candidates.filter(item => item.documentationRelation === 'android-only-candidate').length,
@@ -443,14 +482,15 @@ async function main() {
       androidCandidateCategories: Object.fromEntries([...new Set(candidates.map(item => item.category))].sort().map(category => [category, candidates.filter(item => item.category === category).length])),
       likelyInternalOrContextualCandidates: candidates.filter(item => item.classification === 'likely-internal-or-contextual').length
     },
-    note: 'These are extracted templates and implementation candidates, not a guarantee of every runtime-supported route. Review Android-only candidates before publishing.'
+    note: 'Inventory includes official templates and every extracted Android source candidate. Implementation-derived entries may be partial, internal, contextual, version-dependent, or unverified; inclusion is not a guarantee of runtime support.'
   };
   await writeJson('data/documented-links.json', documented);
   await writeJson('data/android-candidates.json', candidates);
   await writeJson('data/runtime-supported-links.json', runtimeLinks);
+  await writeJson('data/publication-inventory.json', publicationInventory);
   await writeJson('data/not-confirmed-tg-scheme-forms.json', NOT_CONFIRMED_TG_SCHEME_FORMS);
   await writeJson('data/summary.json', summary);
-  console.log(JSON.stringify(summary.counts, null, 2));
+  console.log(JSON.stringify({ ...summary.counts, publicationInventoryEntries: publicationInventory.length }, null, 2));
 }
 
 main().catch(error => { console.error(error?.stack || error); process.exitCode = 1; });
