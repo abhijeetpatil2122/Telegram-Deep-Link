@@ -7,6 +7,28 @@
     "line": 2634,
     "excerpt": "} else if (url.contains(\"?disablelogs\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 2632,
+        "text": "} else if (url.contains(\"?sendlogs\")) {"
+      },
+      {
+        "line": 2633,
+        "text": "open_settings = 8;"
+      },
+      {
+        "line": 2634,
+        "text": "} else if (url.contains(\"?disablelogs\")) {"
+      },
+      {
+        "line": 2635,
+        "text": "open_settings = 9;"
+      },
+      {
+        "line": 2636,
+        "text": "} else if (url.contains(\"premium_sms\")) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "query-fragment",
     "category": "diagnostics",
@@ -24,6 +46,28 @@
     "line": 2630,
     "excerpt": "} else if (url.contains(\"?enablelogs\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 2628,
+        "text": "} else if (url.contains(\"privacy\")) {"
+      },
+      {
+        "line": 2629,
+        "text": "open_settings = 12;"
+      },
+      {
+        "line": 2630,
+        "text": "} else if (url.contains(\"?enablelogs\")) {"
+      },
+      {
+        "line": 2631,
+        "text": "open_settings = 7;"
+      },
+      {
+        "line": 2632,
+        "text": "} else if (url.contains(\"?sendlogs\")) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "query-fragment",
     "category": "diagnostics",
@@ -41,6 +85,28 @@
     "line": 2632,
     "excerpt": "} else if (url.contains(\"?sendlogs\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 2630,
+        "text": "} else if (url.contains(\"?enablelogs\")) {"
+      },
+      {
+        "line": 2631,
+        "text": "open_settings = 7;"
+      },
+      {
+        "line": 2632,
+        "text": "} else if (url.contains(\"?sendlogs\")) {"
+      },
+      {
+        "line": 2633,
+        "text": "open_settings = 8;"
+      },
+      {
+        "line": 2634,
+        "text": "} else if (url.contains(\"?disablelogs\")) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "query-fragment",
     "category": "diagnostics",
@@ -58,6 +124,28 @@
     "line": 2101,
     "excerpt": "} else if (path.startsWith(\"addemoji/\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 2099,
+        "text": "} else if (path.startsWith(\"call/\")) {"
+      },
+      {
+        "line": 2100,
+        "text": "conferenceSlug = path.replace(\"call/\", \"\");"
+      },
+      {
+        "line": 2101,
+        "text": "} else if (path.startsWith(\"addemoji/\")) {"
+      },
+      {
+        "line": 2102,
+        "text": "emoji = path.replace(\"addemoji/\", \"\");"
+      },
+      {
+        "line": 2103,
+        "text": "} else if (path.startsWith(\"msg/\") || path.startsWith(\"share/\")) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "path-prefix",
     "category": "stickers-and-emoji",
@@ -75,6 +163,28 @@
     "line": 2091,
     "excerpt": "} else if (path.startsWith(\"addstickers/\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 2089,
+        "text": "}"
+      },
+      {
+        "line": 2090,
+        "text": "text = data.getQueryParameter(\"text\");"
+      },
+      {
+        "line": 2091,
+        "text": "} else if (path.startsWith(\"addstickers/\")) {"
+      },
+      {
+        "line": 2092,
+        "text": "sticker = path.replace(\"addstickers/\", \"\");"
+      },
+      {
+        "line": 2093,
+        "text": "} else if (path.startsWith(\"auction/\")) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "path-prefix",
     "category": "stickers-and-emoji",
@@ -92,6 +202,28 @@
     "line": 2126,
     "excerpt": "} else if (path.startsWith(\"addtheme/\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 2124,
+        "text": "} else if (path.startsWith(\"setlanguage/\")) {"
+      },
+      {
+        "line": 2125,
+        "text": "lang = path.substring(12);"
+      },
+      {
+        "line": 2126,
+        "text": "} else if (path.startsWith(\"addtheme/\")) {"
+      },
+      {
+        "line": 2127,
+        "text": "theme = path.substring(9);"
+      },
+      {
+        "line": 2128,
+        "text": "} else if (path.equalsIgnoreCase(\"boost\") || path.startsWith(\"boost/\")) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "path-prefix",
     "category": "themes-and-backgrounds",
@@ -109,6 +241,28 @@
     "line": 1990,
     "excerpt": "} else if (path.startsWith(\"bg/\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 1988,
+        "text": "} else if (path.startsWith(\"nft/\")) {"
+      },
+      {
+        "line": 1989,
+        "text": "uniqueGiftSlug = path.substring(path.indexOf('/') + 1);"
+      },
+      {
+        "line": 1990,
+        "text": "} else if (path.startsWith(\"bg/\")) {"
+      },
+      {
+        "line": 1991,
+        "text": "wallPaper = new TLRPC.TL_wallPaper();"
+      },
+      {
+        "line": 1992,
+        "text": "wallPaper.settings = new TLRPC.TL_wallPaperSettings();"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "path-prefix",
     "category": "themes-and-backgrounds",
@@ -126,6 +280,28 @@
     "line": 2099,
     "excerpt": "} else if (path.startsWith(\"call/\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 2097,
+        "text": "} else if (path.startsWith(\"stargift_preview/\")) {"
+      },
+      {
+        "line": 2098,
+        "text": "stargiftPreviewSlug = path.replace(\"stargift_preview/\", \"\");"
+      },
+      {
+        "line": 2099,
+        "text": "} else if (path.startsWith(\"call/\")) {"
+      },
+      {
+        "line": 2100,
+        "text": "conferenceSlug = path.replace(\"call/\", \"\");"
+      },
+      {
+        "line": 2101,
+        "text": "} else if (path.startsWith(\"addemoji/\")) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "path-prefix",
     "category": "calls-and-invites",
@@ -143,6 +319,28 @@
     "line": 2121,
     "excerpt": "} else if (path.startsWith(\"confirmphone\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 2119,
+        "text": "message = message.substring(0, message.length() - 1);"
+      },
+      {
+        "line": 2120,
+        "text": "}"
+      },
+      {
+        "line": 2121,
+        "text": "} else if (path.startsWith(\"confirmphone\")) {"
+      },
+      {
+        "line": 2122,
+        "text": "phone = data.getQueryParameter(\"phone\");"
+      },
+      {
+        "line": 2123,
+        "text": "phoneHash = data.getQueryParameter(\"hash\");"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "handler-token",
     "category": "authentication",
@@ -160,6 +358,28 @@
     "line": 2169,
     "excerpt": "} else if (path.startsWith(\"contact/\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 2167,
+        "text": "}"
+      },
+      {
+        "line": 2168,
+        "text": "optionId = PollAttachedMediaPack.getOptionIdQueryParameter(data, \"option\");"
+      },
+      {
+        "line": 2169,
+        "text": "} else if (path.startsWith(\"contact/\")) {"
+      },
+      {
+        "line": 2170,
+        "text": "contactToken = path.substring(8);"
+      },
+      {
+        "line": 2171,
+        "text": "noPaidMessagesToken = data.getQueryParameter(\"free\");"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "path-prefix",
     "category": "chat-and-navigation",
@@ -177,6 +397,28 @@
     "line": 1986,
     "excerpt": "} else if (path.startsWith(\"invoice/\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 1984,
+        "text": "if (path.startsWith(\"$\")) {"
+      },
+      {
+        "line": 1985,
+        "text": "inputInvoiceSlug = path.substring(1);"
+      },
+      {
+        "line": 1986,
+        "text": "} else if (path.startsWith(\"invoice/\")) {"
+      },
+      {
+        "line": 1987,
+        "text": "inputInvoiceSlug = path.substring(path.indexOf('/') + 1);"
+      },
+      {
+        "line": 1988,
+        "text": "} else if (path.startsWith(\"nft/\")) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "path-prefix",
     "category": "payments-and-gifts",
@@ -194,6 +436,28 @@
     "line": 2638,
     "excerpt": "} else if (url.contains(\"login_email\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 2636,
+        "text": "} else if (url.contains(\"premium_sms\")) {"
+      },
+      {
+        "line": 2637,
+        "text": "open_settings = 13;"
+      },
+      {
+        "line": 2638,
+        "text": "} else if (url.contains(\"login_email\")) {"
+      },
+      {
+        "line": 2639,
+        "text": "open_settings = 15;"
+      },
+      {
+        "line": 2640,
+        "text": "} else {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "handler-token",
     "category": "authentication",
@@ -211,6 +475,28 @@
     "line": 2076,
     "excerpt": "} else if (path.startsWith(\"login/\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 2074,
+        "text": "}"
+      },
+      {
+        "line": 2075,
+        "text": "}"
+      },
+      {
+        "line": 2076,
+        "text": "} else if (path.startsWith(\"login/\")) {"
+      },
+      {
+        "line": 2077,
+        "text": "int intCode = Utilities.parseInt(path.replace(\"login/\", \"\"));"
+      },
+      {
+        "line": 2078,
+        "text": "if (intCode != 0) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "path-prefix",
     "category": "authentication",
@@ -228,6 +514,28 @@
     "line": 2897,
     "excerpt": "} else if (intent.getAction().equals(\"new_dialog\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 2895,
+        "text": "} else if (intent.getAction().equals(\"org.telegram.messenger.OPEN_ACCOUNT\")) {"
+      },
+      {
+        "line": 2896,
+        "text": "open_settings = 1;"
+      },
+      {
+        "line": 2897,
+        "text": "} else if (intent.getAction().equals(\"new_dialog\")) {"
+      },
+      {
+        "line": 2898,
+        "text": "open_new_dialog = 1;"
+      },
+      {
+        "line": 2899,
+        "text": "} else if (intent.getAction().startsWith(\"com.tmessages.openchat\")) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "handler-token",
     "category": "handler-route",
@@ -245,6 +553,28 @@
     "line": 1988,
     "excerpt": "} else if (path.startsWith(\"nft/\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 1986,
+        "text": "} else if (path.startsWith(\"invoice/\")) {"
+      },
+      {
+        "line": 1987,
+        "text": "inputInvoiceSlug = path.substring(path.indexOf('/') + 1);"
+      },
+      {
+        "line": 1988,
+        "text": "} else if (path.startsWith(\"nft/\")) {"
+      },
+      {
+        "line": 1989,
+        "text": "uniqueGiftSlug = path.substring(path.indexOf('/') + 1);"
+      },
+      {
+        "line": 1990,
+        "text": "} else if (path.startsWith(\"bg/\")) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "handler-token",
     "category": "handler-route",
@@ -262,6 +592,28 @@
     "line": 2124,
     "excerpt": "} else if (path.startsWith(\"setlanguage/\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 2122,
+        "text": "phone = data.getQueryParameter(\"phone\");"
+      },
+      {
+        "line": 2123,
+        "text": "phoneHash = data.getQueryParameter(\"hash\");"
+      },
+      {
+        "line": 2124,
+        "text": "} else if (path.startsWith(\"setlanguage/\")) {"
+      },
+      {
+        "line": 2125,
+        "text": "lang = path.substring(12);"
+      },
+      {
+        "line": 2126,
+        "text": "} else if (path.startsWith(\"addtheme/\")) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "path-prefix",
     "category": "settings-and-language",
@@ -279,6 +631,28 @@
     "line": 2103,
     "excerpt": "} else if (path.startsWith(\"msg/\") || path.startsWith(\"share/\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 2101,
+        "text": "} else if (path.startsWith(\"addemoji/\")) {"
+      },
+      {
+        "line": 2102,
+        "text": "emoji = path.replace(\"addemoji/\", \"\");"
+      },
+      {
+        "line": 2103,
+        "text": "} else if (path.startsWith(\"msg/\") || path.startsWith(\"share/\")) {"
+      },
+      {
+        "line": 2104,
+        "text": "message = data.getQueryParameter(\"url\");"
+      },
+      {
+        "line": 2105,
+        "text": "if (message == null) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "handler-token",
     "category": "other",
@@ -296,6 +670,28 @@
     "line": 2095,
     "excerpt": "} else if (path.startsWith(\"stargift_auction/\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 2093,
+        "text": "} else if (path.startsWith(\"auction/\")) {"
+      },
+      {
+        "line": 2094,
+        "text": "auctionSlug = path.replace(\"auction/\", \"\");"
+      },
+      {
+        "line": 2095,
+        "text": "} else if (path.startsWith(\"stargift_auction/\")) {"
+      },
+      {
+        "line": 2096,
+        "text": "auctionSlug = path.replace(\"stargift_auction/\", \"\");"
+      },
+      {
+        "line": 2097,
+        "text": "} else if (path.startsWith(\"stargift_preview/\")) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "handler-token",
     "category": "other",
@@ -313,6 +709,28 @@
     "line": 2097,
     "excerpt": "} else if (path.startsWith(\"stargift_preview/\")) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 2095,
+        "text": "} else if (path.startsWith(\"stargift_auction/\")) {"
+      },
+      {
+        "line": 2096,
+        "text": "auctionSlug = path.replace(\"stargift_auction/\", \"\");"
+      },
+      {
+        "line": 2097,
+        "text": "} else if (path.startsWith(\"stargift_preview/\")) {"
+      },
+      {
+        "line": 2098,
+        "text": "stargiftPreviewSlug = path.replace(\"stargift_preview/\", \"\");"
+      },
+      {
+        "line": 2099,
+        "text": "} else if (path.startsWith(\"call/\")) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "handler-token",
     "category": "other",
@@ -330,6 +748,28 @@
     "line": 1977,
     "excerpt": "if (host.equals(\"telegram.me\") || host.equals(\"t.me\") || host.equals(\"telegram.dog\") || isPrefix) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 1975,
+        "text": "Matcher prefixMatcher = PREFIX_T_ME_PATTERN.matcher(host);"
+      },
+      {
+        "line": 1976,
+        "text": "boolean isPrefix = prefixMatcher.find();"
+      },
+      {
+        "line": 1977,
+        "text": "if (host.equals(\"telegram.me\") || host.equals(\"t.me\") || host.equals(\"telegram.dog\") || isPrefix) {"
+      },
+      {
+        "line": 1978,
+        "text": "if (isPrefix) {"
+      },
+      {
+        "line": 1979,
+        "text": "data = Uri.parse(\"https://t.me/\" + prefixMatcher.group(1) + (TextUtils.isEmpty(data.getPath()) ? \"\" : data.getPath()) + (TextUtils.isEmpty(data.getQuery()) ? \"\" : \"?\" + data.getQuery()));"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "handler-token",
     "category": "other",
@@ -347,6 +787,28 @@
     "line": 3970,
     "excerpt": "/** t.me/contact/…?free=… (tg://contact?token=…&free=…): the user of the contact token, then the free token. */",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 3968,
+        "text": "}"
+      },
+      {
+        "line": 3969,
+        "text": ""
+      },
+      {
+        "line": 3970,
+        "text": "/** t.me/contact/…?free=… (tg://contact?token=…&free=…): the user of the contact token, then the free token. */"
+      },
+      {
+        "line": 3971,
+        "text": "private void openNoPaidMessagesContactLink(final int account, final String contactToken, final String token, final Browser.Progress progress) {"
+      },
+      {
+        "line": 3972,
+        "text": "if (progress != null) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "handler-token",
     "category": "other",
@@ -364,6 +826,28 @@
     "line": 1977,
     "excerpt": "if (host.equals(\"telegram.me\") || host.equals(\"t.me\") || host.equals(\"telegram.dog\") || isPrefix) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 1975,
+        "text": "Matcher prefixMatcher = PREFIX_T_ME_PATTERN.matcher(host);"
+      },
+      {
+        "line": 1976,
+        "text": "boolean isPrefix = prefixMatcher.find();"
+      },
+      {
+        "line": 1977,
+        "text": "if (host.equals(\"telegram.me\") || host.equals(\"t.me\") || host.equals(\"telegram.dog\") || isPrefix) {"
+      },
+      {
+        "line": 1978,
+        "text": "if (isPrefix) {"
+      },
+      {
+        "line": 1979,
+        "text": "data = Uri.parse(\"https://t.me/\" + prefixMatcher.group(1) + (TextUtils.isEmpty(data.getPath()) ? \"\" : data.getPath()) + (TextUtils.isEmpty(data.getQuery()) ? \"\" : \"?\" + data.getQuery()));"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "handler-token",
     "category": "other",
@@ -381,6 +865,28 @@
     "line": 1977,
     "excerpt": "if (host.equals(\"telegram.me\") || host.equals(\"t.me\") || host.equals(\"telegram.dog\") || isPrefix) {",
     "extraction": "url-handler-string",
+    "sourceContext": [
+      {
+        "line": 1975,
+        "text": "Matcher prefixMatcher = PREFIX_T_ME_PATTERN.matcher(host);"
+      },
+      {
+        "line": 1976,
+        "text": "boolean isPrefix = prefixMatcher.find();"
+      },
+      {
+        "line": 1977,
+        "text": "if (host.equals(\"telegram.me\") || host.equals(\"t.me\") || host.equals(\"telegram.dog\") || isPrefix) {"
+      },
+      {
+        "line": 1978,
+        "text": "if (isPrefix) {"
+      },
+      {
+        "line": 1979,
+        "text": "data = Uri.parse(\"https://t.me/\" + prefixMatcher.group(1) + (TextUtils.isEmpty(data.getPath()) ? \"\" : data.getPath()) + (TextUtils.isEmpty(data.getQuery()) ? \"\" : \"?\" + data.getQuery()));"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "handler-token",
     "category": "other",
@@ -398,6 +904,28 @@
     "line": 2805,
     "excerpt": "unsupportedUrl = url.replace(\"tg://\", \"\").replace(\"tg:\", \"\");",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2803,
+        "text": "return pushOpened;"
+      },
+      {
+        "line": 2804,
+        "text": "} else {"
+      },
+      {
+        "line": 2805,
+        "text": "unsupportedUrl = url.replace(\"tg://\", \"\").replace(\"tg:\", \"\");"
+      },
+      {
+        "line": 2806,
+        "text": "int index;"
+      },
+      {
+        "line": 2807,
+        "text": "if ((index = unsupportedUrl.indexOf('?')) >= 0) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -415,6 +943,28 @@
     "line": 2696,
     "excerpt": "} else if ((url.startsWith(\"tg:addcontact\") || url.startsWith(\"tg://addcontact\"))) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2694,
+        "text": "} else if ((url.startsWith(\"tg:scanqr\") || url.startsWith(\"tg://scanqr\"))) {"
+      },
+      {
+        "line": 2695,
+        "text": "scanQr = true;"
+      },
+      {
+        "line": 2696,
+        "text": "} else if ((url.startsWith(\"tg:addcontact\") || url.startsWith(\"tg://addcontact\"))) {"
+      },
+      {
+        "line": 2697,
+        "text": "url = url.replace(\"tg:addcontact\", \"tg://telegram.org\").replace(\"tg://addcontact\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2698,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -432,6 +982,28 @@
     "line": 2518,
     "excerpt": "} else if (url.startsWith(\"tg:addemoji\") || url.startsWith(\"tg://addemoji\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2516,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2517,
+        "text": "sticker = data.getQueryParameter(\"set\");"
+      },
+      {
+        "line": 2518,
+        "text": "} else if (url.startsWith(\"tg:addemoji\") || url.startsWith(\"tg://addemoji\")) {"
+      },
+      {
+        "line": 2519,
+        "text": "url = url.replace(\"tg:addemoji\", \"tg://telegram.org\").replace(\"tg://addemoji\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2520,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -449,6 +1021,28 @@
     "line": 2707,
     "excerpt": "} else if (url.startsWith(\"tg:addlist\") || url.startsWith(\"tg://addlist\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2705,
+        "text": "}"
+      },
+      {
+        "line": 2706,
+        "text": "newContact = true;"
+      },
+      {
+        "line": 2707,
+        "text": "} else if (url.startsWith(\"tg:addlist\") || url.startsWith(\"tg://addlist\")) {"
+      },
+      {
+        "line": 2708,
+        "text": "url = url.replace(\"tg:addlist\", \"tg://telegram.org\").replace(\"tg://addlist\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2709,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -466,6 +1060,28 @@
     "line": 2514,
     "excerpt": "} else if (url.startsWith(\"tg:addstickers\") || url.startsWith(\"tg://addstickers\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2512,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2513,
+        "text": "group = data.getQueryParameter(\"invite\");"
+      },
+      {
+        "line": 2514,
+        "text": "} else if (url.startsWith(\"tg:addstickers\") || url.startsWith(\"tg://addstickers\")) {"
+      },
+      {
+        "line": 2515,
+        "text": "url = url.replace(\"tg:addstickers\", \"tg://telegram.org\").replace(\"tg://addstickers\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2516,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -483,6 +1099,28 @@
     "line": 2609,
     "excerpt": "} else if (url.startsWith(\"tg:addtheme\") || url.startsWith(\"tg://addtheme\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2607,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2608,
+        "text": "lang = data.getQueryParameter(\"lang\");"
+      },
+      {
+        "line": 2609,
+        "text": "} else if (url.startsWith(\"tg:addtheme\") || url.startsWith(\"tg://addtheme\")) {"
+      },
+      {
+        "line": 2610,
+        "text": "url = url.replace(\"tg:addtheme\", \"tg://telegram.org\").replace(\"tg://addtheme\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2611,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -500,6 +1138,28 @@
     "line": 2426,
     "excerpt": "} else if (url.startsWith(\"tg:bg\") || url.startsWith(\"tg://bg\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2424,
+        "text": "commentId = null;"
+      },
+      {
+        "line": 2425,
+        "text": "}"
+      },
+      {
+        "line": 2426,
+        "text": "} else if (url.startsWith(\"tg:bg\") || url.startsWith(\"tg://bg\")) {"
+      },
+      {
+        "line": 2427,
+        "text": "url = url.replace(\"tg:bg\", \"tg://telegram.org\").replace(\"tg://bg\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2428,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -517,6 +1177,28 @@
     "line": 2654,
     "excerpt": "} else if ((url.startsWith(\"tg:call\") || url.startsWith(\"tg://call\"))) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2652,
+        "text": "} else if ((url.startsWith(\"tg:calllog\") || url.startsWith(\"tg://calllog\"))) {"
+      },
+      {
+        "line": 2653,
+        "text": "showCallLog = true;"
+      },
+      {
+        "line": 2654,
+        "text": "} else if ((url.startsWith(\"tg:call\") || url.startsWith(\"tg://call\"))) {"
+      },
+      {
+        "line": 2655,
+        "text": "if (UserConfig.getInstance(currentAccount).isClientActivated()) {"
+      },
+      {
+        "line": 2656,
+        "text": "final String extraForceCall = \"extra_force_call\";"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -534,6 +1216,28 @@
     "line": 2652,
     "excerpt": "} else if ((url.startsWith(\"tg:calllog\") || url.startsWith(\"tg://calllog\"))) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2650,
+        "text": "searchQuery = \"\";"
+      },
+      {
+        "line": 2651,
+        "text": "}"
+      },
+      {
+        "line": 2652,
+        "text": "} else if ((url.startsWith(\"tg:calllog\") || url.startsWith(\"tg://calllog\"))) {"
+      },
+      {
+        "line": 2653,
+        "text": "showCallLog = true;"
+      },
+      {
+        "line": 2654,
+        "text": "} else if ((url.startsWith(\"tg:call\") || url.startsWith(\"tg://call\"))) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -551,6 +1255,28 @@
     "line": 2542,
     "excerpt": "} else if (url.startsWith(\"tg:confirmphone\") || url.startsWith(\"tg://confirmphone\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2540,
+        "text": "message = message.substring(0, message.length() - 1);"
+      },
+      {
+        "line": 2541,
+        "text": "}"
+      },
+      {
+        "line": 2542,
+        "text": "} else if (url.startsWith(\"tg:confirmphone\") || url.startsWith(\"tg://confirmphone\")) {"
+      },
+      {
+        "line": 2543,
+        "text": "url = url.replace(\"tg:confirmphone\", \"tg://telegram.org\").replace(\"tg://confirmphone\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2544,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -568,6 +1294,28 @@
     "line": 2398,
     "excerpt": "} else if (url.startsWith(\"tg:contact\") || url.startsWith(\"tg://contact\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2396,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2397,
+        "text": "uniqueGiftSlug = data.getQueryParameter(\"slug\");"
+      },
+      {
+        "line": 2398,
+        "text": "} else if (url.startsWith(\"tg:contact\") || url.startsWith(\"tg://contact\")) {"
+      },
+      {
+        "line": 2399,
+        "text": "url = url.replace(\"tg:contact\", \"tg://contact\");"
+      },
+      {
+        "line": 2400,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -585,6 +1333,28 @@
     "line": 3970,
     "excerpt": "/** t.me/contact/…?free=… (tg://contact?token=…&free=…): the user of the contact token, then the free token. */",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 3968,
+        "text": "}"
+      },
+      {
+        "line": 3969,
+        "text": ""
+      },
+      {
+        "line": 3970,
+        "text": "/** t.me/contact/…?free=… (tg://contact?token=…&free=…): the user of the contact token, then the free token. */"
+      },
+      {
+        "line": 3971,
+        "text": "private void openNoPaidMessagesContactLink(final int account, final String contactToken, final String token, final Browser.Progress progress) {"
+      },
+      {
+        "line": 3972,
+        "text": "if (progress != null) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -602,6 +1372,28 @@
     "line": 2386,
     "excerpt": "} else if (url.startsWith(\"tg:invoice\") || url.startsWith(\"tg://invoice\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2384,
+        "text": "}"
+      },
+      {
+        "line": 2385,
+        "text": "}"
+      },
+      {
+        "line": 2386,
+        "text": "} else if (url.startsWith(\"tg:invoice\") || url.startsWith(\"tg://invoice\")) {"
+      },
+      {
+        "line": 2387,
+        "text": "url = url.replace(\"tg:invoice\", \"tg://invoice\");"
+      },
+      {
+        "line": 2388,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -619,6 +1411,28 @@
     "line": 2510,
     "excerpt": "} else if (url.startsWith(\"tg:join\") || url.startsWith(\"tg://join\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2508,
+        "text": "}"
+      },
+      {
+        "line": 2509,
+        "text": "}"
+      },
+      {
+        "line": 2510,
+        "text": "} else if (url.startsWith(\"tg:join\") || url.startsWith(\"tg://join\")) {"
+      },
+      {
+        "line": 2511,
+        "text": "url = url.replace(\"tg:join\", \"tg://telegram.org\").replace(\"tg://join\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2512,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -636,6 +1450,28 @@
     "line": 2548,
     "excerpt": "} else if (url.startsWith(\"tg:login\") || url.startsWith(\"tg://login\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2546,
+        "text": "phone = data.getQueryParameter(\"phone\");"
+      },
+      {
+        "line": 2547,
+        "text": "phoneHash = data.getQueryParameter(\"hash\");"
+      },
+      {
+        "line": 2548,
+        "text": "} else if (url.startsWith(\"tg:login\") || url.startsWith(\"tg://login\")) {"
+      },
+      {
+        "line": 2549,
+        "text": "url = url.replace(\"tg:login\", \"tg://telegram.org\").replace(\"tg://login\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2550,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -653,6 +1489,28 @@
     "line": 3240,
     "excerpt": "byte[] token = Base64.decode(code.substring(\"tg://login?token=\".length()), Base64.URL_SAFE);",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 3238,
+        "text": "progressDialog.setCanCancel(false);"
+      },
+      {
+        "line": 3239,
+        "text": "progressDialog.show();"
+      },
+      {
+        "line": 3240,
+        "text": "byte[] token = Base64.decode(code.substring(\"tg://login?token=\".length()), Base64.URL_SAFE);"
+      },
+      {
+        "line": 3241,
+        "text": "TLRPC.TL_auth_acceptLoginToken req = new TLRPC.TL_auth_acceptLoginToken();"
+      },
+      {
+        "line": 3242,
+        "text": "req.token = token;"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -670,6 +1528,28 @@
     "line": 2711,
     "excerpt": "} else if (url.startsWith(\"tg:message\") || url.startsWith(\"tg://message\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2709,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2710,
+        "text": "folderSlug = data.getQueryParameter(\"slug\");"
+      },
+      {
+        "line": 2711,
+        "text": "} else if (url.startsWith(\"tg:message\") || url.startsWith(\"tg://message\")) {"
+      },
+      {
+        "line": 2712,
+        "text": "url = url.replace(\"tg:message\", \"tg://telegram.org\").replace(\"tg://message\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2713,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -687,6 +1567,28 @@
     "line": 2522,
     "excerpt": "} else if (url.startsWith(\"tg:msg\") || url.startsWith(\"tg://msg\") || url.startsWith(\"tg://share\") || url.startsWith(\"tg:share\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2520,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2521,
+        "text": "emoji = data.getQueryParameter(\"set\");"
+      },
+      {
+        "line": 2522,
+        "text": "} else if (url.startsWith(\"tg:msg\") || url.startsWith(\"tg://msg\") || url.startsWith(\"tg://share\") || url.startsWith(\"tg:share\")) {"
+      },
+      {
+        "line": 2523,
+        "text": "url = url.replace(\"tg:msg\", \"tg://telegram.org\").replace(\"tg://msg\", \"tg://telegram.org\").replace(\"tg://share\", \"tg://telegram.org\").replace(\"tg:share\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2524,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -704,6 +1606,28 @@
     "line": 2394,
     "excerpt": "} else if (url.startsWith(\"tg:nft\") || url.startsWith(\"tg://nft\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2392,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2393,
+        "text": "auctionSlug = data.getQueryParameter(\"slug\");"
+      },
+      {
+        "line": 2394,
+        "text": "} else if (url.startsWith(\"tg:nft\") || url.startsWith(\"tg://nft\")) {"
+      },
+      {
+        "line": 2395,
+        "text": "url = url.replace(\"tg:nft\", \"tg://nft\");"
+      },
+      {
+        "line": 2396,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -721,6 +1645,28 @@
     "line": 2556,
     "excerpt": "} else if (url.startsWith(\"tg:openmessage\") || url.startsWith(\"tg://openmessage\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2554,
+        "text": "code = \"\" + intCode;"
+      },
+      {
+        "line": 2555,
+        "text": "}"
+      },
+      {
+        "line": 2556,
+        "text": "} else if (url.startsWith(\"tg:openmessage\") || url.startsWith(\"tg://openmessage\")) {"
+      },
+      {
+        "line": 2557,
+        "text": "url = url.replace(\"tg:openmessage\", \"tg://telegram.org\").replace(\"tg://openmessage\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2558,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -738,6 +1684,28 @@
     "line": 2591,
     "excerpt": "} else if (url.startsWith(\"tg:passport\") || url.startsWith(\"tg://passport\") || url.startsWith(\"tg:secureid\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2589,
+        "text": "} catch (NumberFormatException ignore) {}"
+      },
+      {
+        "line": 2590,
+        "text": "}"
+      },
+      {
+        "line": 2591,
+        "text": "} else if (url.startsWith(\"tg:passport\") || url.startsWith(\"tg://passport\") || url.startsWith(\"tg:secureid\")) {"
+      },
+      {
+        "line": 2592,
+        "text": "url = url.replace(\"tg:passport\", \"tg://telegram.org\").replace(\"tg://passport\", \"tg://telegram.org\").replace(\"tg:secureid\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2593,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -755,6 +1723,28 @@
     "line": 2288,
     "excerpt": "if (url.startsWith(\"tg:premium_offer\") || url.startsWith(\"tg://premium_offer\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2286,
+        "text": "case \"tg\": {"
+      },
+      {
+        "line": 2287,
+        "text": "String url = data.toString();"
+      },
+      {
+        "line": 2288,
+        "text": "if (url.startsWith(\"tg:premium_offer\") || url.startsWith(\"tg://premium_offer\")) {"
+      },
+      {
+        "line": 2289,
+        "text": "String finalUrl = url.replace(\"tg:premium_offer\", \"tg://premium_offer\");"
+      },
+      {
+        "line": 2290,
+        "text": "AndroidUtilities.runOnUIThread(() -> {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -772,6 +1762,28 @@
     "line": 2403,
     "excerpt": "} else if (url.startsWith(\"tg:privatepost\") || url.startsWith(\"tg://privatepost\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2401,
+        "text": "contactToken = data.getQueryParameter(\"token\");"
+      },
+      {
+        "line": 2402,
+        "text": "noPaidMessagesToken = data.getQueryParameter(\"free\");"
+      },
+      {
+        "line": 2403,
+        "text": "} else if (url.startsWith(\"tg:privatepost\") || url.startsWith(\"tg://privatepost\")) {"
+      },
+      {
+        "line": 2404,
+        "text": "url = url.replace(\"tg:privatepost\", \"tg://telegram.org\").replace(\"tg://privatepost\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2405,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -789,6 +1801,28 @@
     "line": 428,
     "excerpt": "isProxy = url.startsWith(\"tg:proxy\") || url.startsWith(\"tg://proxy\")",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 426,
+        "text": "if (uri != null) {"
+      },
+      {
+        "line": 427,
+        "text": "String url = uri.toString().toLowerCase();"
+      },
+      {
+        "line": 428,
+        "text": "isProxy = url.startsWith(\"tg:proxy\") || url.startsWith(\"tg://proxy\")"
+      },
+      {
+        "line": 429,
+        "text": "|| url.startsWith(\"tg:webproxy\") || url.startsWith(\"tg://webproxy\")"
+      },
+      {
+        "line": 430,
+        "text": "|| url.startsWith(\"tg:socks\") || url.startsWith(\"tg://socks\");"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -806,6 +1840,28 @@
     "line": 2296,
     "excerpt": "} else if (url.startsWith(\"tg:resolve\") || url.startsWith(\"tg://resolve\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2294,
+        "text": "fragment.presentFragment(new PremiumPreviewFragment(uri.getQueryParameter(\"ref\")));"
+      },
+      {
+        "line": 2295,
+        "text": "}});"
+      },
+      {
+        "line": 2296,
+        "text": "} else if (url.startsWith(\"tg:resolve\") || url.startsWith(\"tg://resolve\")) {"
+      },
+      {
+        "line": 2297,
+        "text": "url = url.replace(\"tg:resolve\", \"tg://telegram.org\").replace(\"tg://resolve\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2298,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -823,6 +1879,28 @@
     "line": 2694,
     "excerpt": "} else if ((url.startsWith(\"tg:scanqr\") || url.startsWith(\"tg://scanqr\"))) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2692,
+        "text": "}"
+      },
+      {
+        "line": 2693,
+        "text": "}"
+      },
+      {
+        "line": 2694,
+        "text": "} else if ((url.startsWith(\"tg:scanqr\") || url.startsWith(\"tg://scanqr\"))) {"
+      },
+      {
+        "line": 2695,
+        "text": "scanQr = true;"
+      },
+      {
+        "line": 2696,
+        "text": "} else if ((url.startsWith(\"tg:addcontact\") || url.startsWith(\"tg://addcontact\"))) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -840,6 +1918,28 @@
     "line": 2643,
     "excerpt": "} else if ((url.startsWith(\"tg:search\") || url.startsWith(\"tg://search\"))) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2641,
+        "text": "open_settings = 1;"
+      },
+      {
+        "line": 2642,
+        "text": "}"
+      },
+      {
+        "line": 2643,
+        "text": "} else if ((url.startsWith(\"tg:search\") || url.startsWith(\"tg://search\"))) {"
+      },
+      {
+        "line": 2644,
+        "text": "url = url.replace(\"tg:search\", \"tg://telegram.org\").replace(\"tg://search\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2645,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -857,6 +1957,28 @@
     "line": 2739,
     "excerpt": "} else if (url.startsWith(\"tg:send_gift\") || url.startsWith(\"tg://send_gift\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2737,
+        "text": "presentFragment(new StarsIntroActivity());"
+      },
+      {
+        "line": 2738,
+        "text": "return pushOpened;"
+      },
+      {
+        "line": 2739,
+        "text": "} else if (url.startsWith(\"tg:send_gift\") || url.startsWith(\"tg://send_gift\")) {"
+      },
+      {
+        "line": 2740,
+        "text": "String toParam = data.getQueryParameter(\"to\");"
+      },
+      {
+        "line": 2741,
+        "text": "if (toParam != null && toParam.startsWith(\"@\")) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -874,6 +1996,28 @@
     "line": 2605,
     "excerpt": "} else if (url.startsWith(\"tg:setlanguage\") || url.startsWith(\"tg://setlanguage\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2603,
+        "text": "auth.put(\"public_key\", data.getQueryParameter(\"public_key\"));"
+      },
+      {
+        "line": 2604,
+        "text": "auth.put(\"callback_url\", data.getQueryParameter(\"callback_url\"));"
+      },
+      {
+        "line": 2605,
+        "text": "} else if (url.startsWith(\"tg:setlanguage\") || url.startsWith(\"tg://setlanguage\")) {"
+      },
+      {
+        "line": 2606,
+        "text": "url = url.replace(\"tg:setlanguage\", \"tg://telegram.org\").replace(\"tg://setlanguage\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2607,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -891,6 +2035,28 @@
     "line": 2613,
     "excerpt": "} else if (url.startsWith(\"tg:settings\") || url.startsWith(\"tg://settings\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2611,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2612,
+        "text": "theme = data.getQueryParameter(\"slug\");"
+      },
+      {
+        "line": 2613,
+        "text": "} else if (url.startsWith(\"tg:settings\") || url.startsWith(\"tg://settings\")) {"
+      },
+      {
+        "line": 2614,
+        "text": "if (url.contains(\"themes\") || url.contains(\"theme\")) {"
+      },
+      {
+        "line": 2615,
+        "text": "open_settings = 2;"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -908,6 +2074,28 @@
     "line": 2522,
     "excerpt": "} else if (url.startsWith(\"tg:msg\") || url.startsWith(\"tg://msg\") || url.startsWith(\"tg://share\") || url.startsWith(\"tg:share\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2520,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2521,
+        "text": "emoji = data.getQueryParameter(\"set\");"
+      },
+      {
+        "line": 2522,
+        "text": "} else if (url.startsWith(\"tg:msg\") || url.startsWith(\"tg://msg\") || url.startsWith(\"tg://share\") || url.startsWith(\"tg:share\")) {"
+      },
+      {
+        "line": 2523,
+        "text": "url = url.replace(\"tg:msg\", \"tg://telegram.org\").replace(\"tg://msg\", \"tg://telegram.org\").replace(\"tg://share\", \"tg://telegram.org\").replace(\"tg:share\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2524,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -925,6 +2113,28 @@
     "line": 430,
     "excerpt": "|| url.startsWith(\"tg:socks\") || url.startsWith(\"tg://socks\");",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 428,
+        "text": "isProxy = url.startsWith(\"tg:proxy\") || url.startsWith(\"tg://proxy\")"
+      },
+      {
+        "line": 429,
+        "text": "|| url.startsWith(\"tg:webproxy\") || url.startsWith(\"tg://webproxy\")"
+      },
+      {
+        "line": 430,
+        "text": "|| url.startsWith(\"tg:socks\") || url.startsWith(\"tg://socks\");"
+      },
+      {
+        "line": 431,
+        "text": "}"
+      },
+      {
+        "line": 432,
+        "text": "}"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -942,6 +2152,28 @@
     "line": 2390,
     "excerpt": "} else if (url.startsWith(\"tg:stargift_auction\") || url.startsWith(\"tg://stargift_auction\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2388,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2389,
+        "text": "inputInvoiceSlug = data.getQueryParameter(\"slug\");"
+      },
+      {
+        "line": 2390,
+        "text": "} else if (url.startsWith(\"tg:stargift_auction\") || url.startsWith(\"tg://stargift_auction\")) {"
+      },
+      {
+        "line": 2391,
+        "text": "url = url.replace(\"tg:stargift_auction\", \"tg://stargift_auction\");"
+      },
+      {
+        "line": 2392,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -959,6 +2191,28 @@
     "line": 2733,
     "excerpt": "} else if (url.startsWith(\"tg:stars\") || url.startsWith(\"tg://stars\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2731,
+        "text": "presentFragment(new TONIntroActivity());"
+      },
+      {
+        "line": 2732,
+        "text": "return pushOpened;"
+      },
+      {
+        "line": 2733,
+        "text": "} else if (url.startsWith(\"tg:stars\") || url.startsWith(\"tg://stars\")) {"
+      },
+      {
+        "line": 2734,
+        "text": "if (progress != null) {"
+      },
+      {
+        "line": 2735,
+        "text": "progress.end();"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -976,6 +2230,28 @@
     "line": 2715,
     "excerpt": "} else if (url.startsWith(\"tg:stars_topup\") || url.startsWith(\"tg://stars_topup\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2713,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2714,
+        "text": "chatLinkSlug = data.getQueryParameter(\"slug\");"
+      },
+      {
+        "line": 2715,
+        "text": "} else if (url.startsWith(\"tg:stars_topup\") || url.startsWith(\"tg://stars_topup\")) {"
+      },
+      {
+        "line": 2716,
+        "text": "url = url.replace(\"tg:stars_topup\", \"tg://telegram.org\").replace(\"tg://stars_topup\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2717,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -993,6 +2269,28 @@
     "line": 2297,
     "excerpt": "url = url.replace(\"tg:resolve\", \"tg://telegram.org\").replace(\"tg://resolve\", \"tg://telegram.org\");",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2295,
+        "text": "}});"
+      },
+      {
+        "line": 2296,
+        "text": "} else if (url.startsWith(\"tg:resolve\") || url.startsWith(\"tg://resolve\")) {"
+      },
+      {
+        "line": 2297,
+        "text": "url = url.replace(\"tg:resolve\", \"tg://telegram.org\").replace(\"tg://resolve\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2298,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2299,
+        "text": "username = data.getQueryParameter(\"domain\");"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1010,6 +2308,28 @@
     "line": 2727,
     "excerpt": "} else if (url.startsWith(\"tg:ton\") || url.startsWith(\"tg://ton\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2725,
+        "text": "String purpose = data.getQueryParameter(\"purpose\");"
+      },
+      {
+        "line": 2726,
+        "text": "StarsController.getInstance(intentAccount[0]).showStarsTopup(this, balance, purpose);"
+      },
+      {
+        "line": 2727,
+        "text": "} else if (url.startsWith(\"tg:ton\") || url.startsWith(\"tg://ton\")) {"
+      },
+      {
+        "line": 2728,
+        "text": "if (progress != null) {"
+      },
+      {
+        "line": 2729,
+        "text": "progress.end();"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1027,6 +2347,28 @@
     "line": 429,
     "excerpt": "|| url.startsWith(\"tg:webproxy\") || url.startsWith(\"tg://webproxy\")",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 427,
+        "text": "String url = uri.toString().toLowerCase();"
+      },
+      {
+        "line": 428,
+        "text": "isProxy = url.startsWith(\"tg:proxy\") || url.startsWith(\"tg://proxy\")"
+      },
+      {
+        "line": 429,
+        "text": "|| url.startsWith(\"tg:webproxy\") || url.startsWith(\"tg://webproxy\")"
+      },
+      {
+        "line": 430,
+        "text": "|| url.startsWith(\"tg:socks\") || url.startsWith(\"tg://socks\");"
+      },
+      {
+        "line": 431,
+        "text": "}"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1044,6 +2386,28 @@
     "line": 2696,
     "excerpt": "} else if ((url.startsWith(\"tg:addcontact\") || url.startsWith(\"tg://addcontact\"))) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2694,
+        "text": "} else if ((url.startsWith(\"tg:scanqr\") || url.startsWith(\"tg://scanqr\"))) {"
+      },
+      {
+        "line": 2695,
+        "text": "scanQr = true;"
+      },
+      {
+        "line": 2696,
+        "text": "} else if ((url.startsWith(\"tg:addcontact\") || url.startsWith(\"tg://addcontact\"))) {"
+      },
+      {
+        "line": 2697,
+        "text": "url = url.replace(\"tg:addcontact\", \"tg://telegram.org\").replace(\"tg://addcontact\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2698,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1061,6 +2425,28 @@
     "line": 2518,
     "excerpt": "} else if (url.startsWith(\"tg:addemoji\") || url.startsWith(\"tg://addemoji\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2516,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2517,
+        "text": "sticker = data.getQueryParameter(\"set\");"
+      },
+      {
+        "line": 2518,
+        "text": "} else if (url.startsWith(\"tg:addemoji\") || url.startsWith(\"tg://addemoji\")) {"
+      },
+      {
+        "line": 2519,
+        "text": "url = url.replace(\"tg:addemoji\", \"tg://telegram.org\").replace(\"tg://addemoji\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2520,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1078,6 +2464,28 @@
     "line": 2707,
     "excerpt": "} else if (url.startsWith(\"tg:addlist\") || url.startsWith(\"tg://addlist\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2705,
+        "text": "}"
+      },
+      {
+        "line": 2706,
+        "text": "newContact = true;"
+      },
+      {
+        "line": 2707,
+        "text": "} else if (url.startsWith(\"tg:addlist\") || url.startsWith(\"tg://addlist\")) {"
+      },
+      {
+        "line": 2708,
+        "text": "url = url.replace(\"tg:addlist\", \"tg://telegram.org\").replace(\"tg://addlist\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2709,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1095,6 +2503,28 @@
     "line": 2514,
     "excerpt": "} else if (url.startsWith(\"tg:addstickers\") || url.startsWith(\"tg://addstickers\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2512,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2513,
+        "text": "group = data.getQueryParameter(\"invite\");"
+      },
+      {
+        "line": 2514,
+        "text": "} else if (url.startsWith(\"tg:addstickers\") || url.startsWith(\"tg://addstickers\")) {"
+      },
+      {
+        "line": 2515,
+        "text": "url = url.replace(\"tg:addstickers\", \"tg://telegram.org\").replace(\"tg://addstickers\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2516,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1112,6 +2542,28 @@
     "line": 2609,
     "excerpt": "} else if (url.startsWith(\"tg:addtheme\") || url.startsWith(\"tg://addtheme\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2607,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2608,
+        "text": "lang = data.getQueryParameter(\"lang\");"
+      },
+      {
+        "line": 2609,
+        "text": "} else if (url.startsWith(\"tg:addtheme\") || url.startsWith(\"tg://addtheme\")) {"
+      },
+      {
+        "line": 2610,
+        "text": "url = url.replace(\"tg:addtheme\", \"tg://telegram.org\").replace(\"tg://addtheme\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2611,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1129,6 +2581,28 @@
     "line": 2426,
     "excerpt": "} else if (url.startsWith(\"tg:bg\") || url.startsWith(\"tg://bg\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2424,
+        "text": "commentId = null;"
+      },
+      {
+        "line": 2425,
+        "text": "}"
+      },
+      {
+        "line": 2426,
+        "text": "} else if (url.startsWith(\"tg:bg\") || url.startsWith(\"tg://bg\")) {"
+      },
+      {
+        "line": 2427,
+        "text": "url = url.replace(\"tg:bg\", \"tg://telegram.org\").replace(\"tg://bg\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2428,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1146,6 +2620,28 @@
     "line": 2654,
     "excerpt": "} else if ((url.startsWith(\"tg:call\") || url.startsWith(\"tg://call\"))) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2652,
+        "text": "} else if ((url.startsWith(\"tg:calllog\") || url.startsWith(\"tg://calllog\"))) {"
+      },
+      {
+        "line": 2653,
+        "text": "showCallLog = true;"
+      },
+      {
+        "line": 2654,
+        "text": "} else if ((url.startsWith(\"tg:call\") || url.startsWith(\"tg://call\"))) {"
+      },
+      {
+        "line": 2655,
+        "text": "if (UserConfig.getInstance(currentAccount).isClientActivated()) {"
+      },
+      {
+        "line": 2656,
+        "text": "final String extraForceCall = \"extra_force_call\";"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1163,6 +2659,28 @@
     "line": 2652,
     "excerpt": "} else if ((url.startsWith(\"tg:calllog\") || url.startsWith(\"tg://calllog\"))) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2650,
+        "text": "searchQuery = \"\";"
+      },
+      {
+        "line": 2651,
+        "text": "}"
+      },
+      {
+        "line": 2652,
+        "text": "} else if ((url.startsWith(\"tg:calllog\") || url.startsWith(\"tg://calllog\"))) {"
+      },
+      {
+        "line": 2653,
+        "text": "showCallLog = true;"
+      },
+      {
+        "line": 2654,
+        "text": "} else if ((url.startsWith(\"tg:call\") || url.startsWith(\"tg://call\"))) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1180,6 +2698,28 @@
     "line": 2542,
     "excerpt": "} else if (url.startsWith(\"tg:confirmphone\") || url.startsWith(\"tg://confirmphone\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2540,
+        "text": "message = message.substring(0, message.length() - 1);"
+      },
+      {
+        "line": 2541,
+        "text": "}"
+      },
+      {
+        "line": 2542,
+        "text": "} else if (url.startsWith(\"tg:confirmphone\") || url.startsWith(\"tg://confirmphone\")) {"
+      },
+      {
+        "line": 2543,
+        "text": "url = url.replace(\"tg:confirmphone\", \"tg://telegram.org\").replace(\"tg://confirmphone\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2544,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1197,6 +2737,28 @@
     "line": 2398,
     "excerpt": "} else if (url.startsWith(\"tg:contact\") || url.startsWith(\"tg://contact\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2396,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2397,
+        "text": "uniqueGiftSlug = data.getQueryParameter(\"slug\");"
+      },
+      {
+        "line": 2398,
+        "text": "} else if (url.startsWith(\"tg:contact\") || url.startsWith(\"tg://contact\")) {"
+      },
+      {
+        "line": 2399,
+        "text": "url = url.replace(\"tg:contact\", \"tg://contact\");"
+      },
+      {
+        "line": 2400,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1214,6 +2776,28 @@
     "line": 2386,
     "excerpt": "} else if (url.startsWith(\"tg:invoice\") || url.startsWith(\"tg://invoice\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2384,
+        "text": "}"
+      },
+      {
+        "line": 2385,
+        "text": "}"
+      },
+      {
+        "line": 2386,
+        "text": "} else if (url.startsWith(\"tg:invoice\") || url.startsWith(\"tg://invoice\")) {"
+      },
+      {
+        "line": 2387,
+        "text": "url = url.replace(\"tg:invoice\", \"tg://invoice\");"
+      },
+      {
+        "line": 2388,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1231,6 +2815,28 @@
     "line": 2510,
     "excerpt": "} else if (url.startsWith(\"tg:join\") || url.startsWith(\"tg://join\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2508,
+        "text": "}"
+      },
+      {
+        "line": 2509,
+        "text": "}"
+      },
+      {
+        "line": 2510,
+        "text": "} else if (url.startsWith(\"tg:join\") || url.startsWith(\"tg://join\")) {"
+      },
+      {
+        "line": 2511,
+        "text": "url = url.replace(\"tg:join\", \"tg://telegram.org\").replace(\"tg://join\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2512,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1248,6 +2854,28 @@
     "line": 2548,
     "excerpt": "} else if (url.startsWith(\"tg:login\") || url.startsWith(\"tg://login\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2546,
+        "text": "phone = data.getQueryParameter(\"phone\");"
+      },
+      {
+        "line": 2547,
+        "text": "phoneHash = data.getQueryParameter(\"hash\");"
+      },
+      {
+        "line": 2548,
+        "text": "} else if (url.startsWith(\"tg:login\") || url.startsWith(\"tg://login\")) {"
+      },
+      {
+        "line": 2549,
+        "text": "url = url.replace(\"tg:login\", \"tg://telegram.org\").replace(\"tg://login\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2550,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1265,6 +2893,28 @@
     "line": 2711,
     "excerpt": "} else if (url.startsWith(\"tg:message\") || url.startsWith(\"tg://message\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2709,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2710,
+        "text": "folderSlug = data.getQueryParameter(\"slug\");"
+      },
+      {
+        "line": 2711,
+        "text": "} else if (url.startsWith(\"tg:message\") || url.startsWith(\"tg://message\")) {"
+      },
+      {
+        "line": 2712,
+        "text": "url = url.replace(\"tg:message\", \"tg://telegram.org\").replace(\"tg://message\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2713,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1282,6 +2932,28 @@
     "line": 2522,
     "excerpt": "} else if (url.startsWith(\"tg:msg\") || url.startsWith(\"tg://msg\") || url.startsWith(\"tg://share\") || url.startsWith(\"tg:share\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2520,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2521,
+        "text": "emoji = data.getQueryParameter(\"set\");"
+      },
+      {
+        "line": 2522,
+        "text": "} else if (url.startsWith(\"tg:msg\") || url.startsWith(\"tg://msg\") || url.startsWith(\"tg://share\") || url.startsWith(\"tg:share\")) {"
+      },
+      {
+        "line": 2523,
+        "text": "url = url.replace(\"tg:msg\", \"tg://telegram.org\").replace(\"tg://msg\", \"tg://telegram.org\").replace(\"tg://share\", \"tg://telegram.org\").replace(\"tg:share\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2524,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1299,6 +2971,28 @@
     "line": 2394,
     "excerpt": "} else if (url.startsWith(\"tg:nft\") || url.startsWith(\"tg://nft\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2392,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2393,
+        "text": "auctionSlug = data.getQueryParameter(\"slug\");"
+      },
+      {
+        "line": 2394,
+        "text": "} else if (url.startsWith(\"tg:nft\") || url.startsWith(\"tg://nft\")) {"
+      },
+      {
+        "line": 2395,
+        "text": "url = url.replace(\"tg:nft\", \"tg://nft\");"
+      },
+      {
+        "line": 2396,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1316,6 +3010,28 @@
     "line": 2556,
     "excerpt": "} else if (url.startsWith(\"tg:openmessage\") || url.startsWith(\"tg://openmessage\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2554,
+        "text": "code = \"\" + intCode;"
+      },
+      {
+        "line": 2555,
+        "text": "}"
+      },
+      {
+        "line": 2556,
+        "text": "} else if (url.startsWith(\"tg:openmessage\") || url.startsWith(\"tg://openmessage\")) {"
+      },
+      {
+        "line": 2557,
+        "text": "url = url.replace(\"tg:openmessage\", \"tg://telegram.org\").replace(\"tg://openmessage\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2558,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1333,6 +3049,28 @@
     "line": 2591,
     "excerpt": "} else if (url.startsWith(\"tg:passport\") || url.startsWith(\"tg://passport\") || url.startsWith(\"tg:secureid\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2589,
+        "text": "} catch (NumberFormatException ignore) {}"
+      },
+      {
+        "line": 2590,
+        "text": "}"
+      },
+      {
+        "line": 2591,
+        "text": "} else if (url.startsWith(\"tg:passport\") || url.startsWith(\"tg://passport\") || url.startsWith(\"tg:secureid\")) {"
+      },
+      {
+        "line": 2592,
+        "text": "url = url.replace(\"tg:passport\", \"tg://telegram.org\").replace(\"tg://passport\", \"tg://telegram.org\").replace(\"tg:secureid\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2593,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1350,6 +3088,28 @@
     "line": 2288,
     "excerpt": "if (url.startsWith(\"tg:premium_offer\") || url.startsWith(\"tg://premium_offer\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2286,
+        "text": "case \"tg\": {"
+      },
+      {
+        "line": 2287,
+        "text": "String url = data.toString();"
+      },
+      {
+        "line": 2288,
+        "text": "if (url.startsWith(\"tg:premium_offer\") || url.startsWith(\"tg://premium_offer\")) {"
+      },
+      {
+        "line": 2289,
+        "text": "String finalUrl = url.replace(\"tg:premium_offer\", \"tg://premium_offer\");"
+      },
+      {
+        "line": 2290,
+        "text": "AndroidUtilities.runOnUIThread(() -> {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1367,6 +3127,28 @@
     "line": 2403,
     "excerpt": "} else if (url.startsWith(\"tg:privatepost\") || url.startsWith(\"tg://privatepost\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2401,
+        "text": "contactToken = data.getQueryParameter(\"token\");"
+      },
+      {
+        "line": 2402,
+        "text": "noPaidMessagesToken = data.getQueryParameter(\"free\");"
+      },
+      {
+        "line": 2403,
+        "text": "} else if (url.startsWith(\"tg:privatepost\") || url.startsWith(\"tg://privatepost\")) {"
+      },
+      {
+        "line": 2404,
+        "text": "url = url.replace(\"tg:privatepost\", \"tg://telegram.org\").replace(\"tg://privatepost\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2405,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1384,6 +3166,28 @@
     "line": 428,
     "excerpt": "isProxy = url.startsWith(\"tg:proxy\") || url.startsWith(\"tg://proxy\")",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 426,
+        "text": "if (uri != null) {"
+      },
+      {
+        "line": 427,
+        "text": "String url = uri.toString().toLowerCase();"
+      },
+      {
+        "line": 428,
+        "text": "isProxy = url.startsWith(\"tg:proxy\") || url.startsWith(\"tg://proxy\")"
+      },
+      {
+        "line": 429,
+        "text": "|| url.startsWith(\"tg:webproxy\") || url.startsWith(\"tg://webproxy\")"
+      },
+      {
+        "line": 430,
+        "text": "|| url.startsWith(\"tg:socks\") || url.startsWith(\"tg://socks\");"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1401,6 +3205,28 @@
     "line": 2296,
     "excerpt": "} else if (url.startsWith(\"tg:resolve\") || url.startsWith(\"tg://resolve\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2294,
+        "text": "fragment.presentFragment(new PremiumPreviewFragment(uri.getQueryParameter(\"ref\")));"
+      },
+      {
+        "line": 2295,
+        "text": "}});"
+      },
+      {
+        "line": 2296,
+        "text": "} else if (url.startsWith(\"tg:resolve\") || url.startsWith(\"tg://resolve\")) {"
+      },
+      {
+        "line": 2297,
+        "text": "url = url.replace(\"tg:resolve\", \"tg://telegram.org\").replace(\"tg://resolve\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2298,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1418,6 +3244,28 @@
     "line": 2694,
     "excerpt": "} else if ((url.startsWith(\"tg:scanqr\") || url.startsWith(\"tg://scanqr\"))) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2692,
+        "text": "}"
+      },
+      {
+        "line": 2693,
+        "text": "}"
+      },
+      {
+        "line": 2694,
+        "text": "} else if ((url.startsWith(\"tg:scanqr\") || url.startsWith(\"tg://scanqr\"))) {"
+      },
+      {
+        "line": 2695,
+        "text": "scanQr = true;"
+      },
+      {
+        "line": 2696,
+        "text": "} else if ((url.startsWith(\"tg:addcontact\") || url.startsWith(\"tg://addcontact\"))) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1435,6 +3283,28 @@
     "line": 2643,
     "excerpt": "} else if ((url.startsWith(\"tg:search\") || url.startsWith(\"tg://search\"))) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2641,
+        "text": "open_settings = 1;"
+      },
+      {
+        "line": 2642,
+        "text": "}"
+      },
+      {
+        "line": 2643,
+        "text": "} else if ((url.startsWith(\"tg:search\") || url.startsWith(\"tg://search\"))) {"
+      },
+      {
+        "line": 2644,
+        "text": "url = url.replace(\"tg:search\", \"tg://telegram.org\").replace(\"tg://search\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2645,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1452,6 +3322,28 @@
     "line": 2591,
     "excerpt": "} else if (url.startsWith(\"tg:passport\") || url.startsWith(\"tg://passport\") || url.startsWith(\"tg:secureid\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2589,
+        "text": "} catch (NumberFormatException ignore) {}"
+      },
+      {
+        "line": 2590,
+        "text": "}"
+      },
+      {
+        "line": 2591,
+        "text": "} else if (url.startsWith(\"tg:passport\") || url.startsWith(\"tg://passport\") || url.startsWith(\"tg:secureid\")) {"
+      },
+      {
+        "line": 2592,
+        "text": "url = url.replace(\"tg:passport\", \"tg://telegram.org\").replace(\"tg://passport\", \"tg://telegram.org\").replace(\"tg:secureid\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2593,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1469,6 +3361,28 @@
     "line": 2739,
     "excerpt": "} else if (url.startsWith(\"tg:send_gift\") || url.startsWith(\"tg://send_gift\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2737,
+        "text": "presentFragment(new StarsIntroActivity());"
+      },
+      {
+        "line": 2738,
+        "text": "return pushOpened;"
+      },
+      {
+        "line": 2739,
+        "text": "} else if (url.startsWith(\"tg:send_gift\") || url.startsWith(\"tg://send_gift\")) {"
+      },
+      {
+        "line": 2740,
+        "text": "String toParam = data.getQueryParameter(\"to\");"
+      },
+      {
+        "line": 2741,
+        "text": "if (toParam != null && toParam.startsWith(\"@\")) {"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1486,6 +3400,28 @@
     "line": 2605,
     "excerpt": "} else if (url.startsWith(\"tg:setlanguage\") || url.startsWith(\"tg://setlanguage\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2603,
+        "text": "auth.put(\"public_key\", data.getQueryParameter(\"public_key\"));"
+      },
+      {
+        "line": 2604,
+        "text": "auth.put(\"callback_url\", data.getQueryParameter(\"callback_url\"));"
+      },
+      {
+        "line": 2605,
+        "text": "} else if (url.startsWith(\"tg:setlanguage\") || url.startsWith(\"tg://setlanguage\")) {"
+      },
+      {
+        "line": 2606,
+        "text": "url = url.replace(\"tg:setlanguage\", \"tg://telegram.org\").replace(\"tg://setlanguage\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2607,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1503,6 +3439,28 @@
     "line": 2613,
     "excerpt": "} else if (url.startsWith(\"tg:settings\") || url.startsWith(\"tg://settings\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2611,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2612,
+        "text": "theme = data.getQueryParameter(\"slug\");"
+      },
+      {
+        "line": 2613,
+        "text": "} else if (url.startsWith(\"tg:settings\") || url.startsWith(\"tg://settings\")) {"
+      },
+      {
+        "line": 2614,
+        "text": "if (url.contains(\"themes\") || url.contains(\"theme\")) {"
+      },
+      {
+        "line": 2615,
+        "text": "open_settings = 2;"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1520,6 +3478,28 @@
     "line": 2522,
     "excerpt": "} else if (url.startsWith(\"tg:msg\") || url.startsWith(\"tg://msg\") || url.startsWith(\"tg://share\") || url.startsWith(\"tg:share\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2520,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2521,
+        "text": "emoji = data.getQueryParameter(\"set\");"
+      },
+      {
+        "line": 2522,
+        "text": "} else if (url.startsWith(\"tg:msg\") || url.startsWith(\"tg://msg\") || url.startsWith(\"tg://share\") || url.startsWith(\"tg:share\")) {"
+      },
+      {
+        "line": 2523,
+        "text": "url = url.replace(\"tg:msg\", \"tg://telegram.org\").replace(\"tg://msg\", \"tg://telegram.org\").replace(\"tg://share\", \"tg://telegram.org\").replace(\"tg:share\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2524,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1537,6 +3517,28 @@
     "line": 430,
     "excerpt": "|| url.startsWith(\"tg:socks\") || url.startsWith(\"tg://socks\");",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 428,
+        "text": "isProxy = url.startsWith(\"tg:proxy\") || url.startsWith(\"tg://proxy\")"
+      },
+      {
+        "line": 429,
+        "text": "|| url.startsWith(\"tg:webproxy\") || url.startsWith(\"tg://webproxy\")"
+      },
+      {
+        "line": 430,
+        "text": "|| url.startsWith(\"tg:socks\") || url.startsWith(\"tg://socks\");"
+      },
+      {
+        "line": 431,
+        "text": "}"
+      },
+      {
+        "line": 432,
+        "text": "}"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1554,6 +3556,28 @@
     "line": 2390,
     "excerpt": "} else if (url.startsWith(\"tg:stargift_auction\") || url.startsWith(\"tg://stargift_auction\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2388,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2389,
+        "text": "inputInvoiceSlug = data.getQueryParameter(\"slug\");"
+      },
+      {
+        "line": 2390,
+        "text": "} else if (url.startsWith(\"tg:stargift_auction\") || url.startsWith(\"tg://stargift_auction\")) {"
+      },
+      {
+        "line": 2391,
+        "text": "url = url.replace(\"tg:stargift_auction\", \"tg://stargift_auction\");"
+      },
+      {
+        "line": 2392,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1571,6 +3595,28 @@
     "line": 2733,
     "excerpt": "} else if (url.startsWith(\"tg:stars\") || url.startsWith(\"tg://stars\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2731,
+        "text": "presentFragment(new TONIntroActivity());"
+      },
+      {
+        "line": 2732,
+        "text": "return pushOpened;"
+      },
+      {
+        "line": 2733,
+        "text": "} else if (url.startsWith(\"tg:stars\") || url.startsWith(\"tg://stars\")) {"
+      },
+      {
+        "line": 2734,
+        "text": "if (progress != null) {"
+      },
+      {
+        "line": 2735,
+        "text": "progress.end();"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1588,6 +3634,28 @@
     "line": 2715,
     "excerpt": "} else if (url.startsWith(\"tg:stars_topup\") || url.startsWith(\"tg://stars_topup\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2713,
+        "text": "data = Uri.parse(url);"
+      },
+      {
+        "line": 2714,
+        "text": "chatLinkSlug = data.getQueryParameter(\"slug\");"
+      },
+      {
+        "line": 2715,
+        "text": "} else if (url.startsWith(\"tg:stars_topup\") || url.startsWith(\"tg://stars_topup\")) {"
+      },
+      {
+        "line": 2716,
+        "text": "url = url.replace(\"tg:stars_topup\", \"tg://telegram.org\").replace(\"tg://stars_topup\", \"tg://telegram.org\");"
+      },
+      {
+        "line": 2717,
+        "text": "data = Uri.parse(url);"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1605,6 +3673,28 @@
     "line": 2727,
     "excerpt": "} else if (url.startsWith(\"tg:ton\") || url.startsWith(\"tg://ton\")) {",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 2725,
+        "text": "String purpose = data.getQueryParameter(\"purpose\");"
+      },
+      {
+        "line": 2726,
+        "text": "StarsController.getInstance(intentAccount[0]).showStarsTopup(this, balance, purpose);"
+      },
+      {
+        "line": 2727,
+        "text": "} else if (url.startsWith(\"tg:ton\") || url.startsWith(\"tg://ton\")) {"
+      },
+      {
+        "line": 2728,
+        "text": "if (progress != null) {"
+      },
+      {
+        "line": 2729,
+        "text": "progress.end();"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
@@ -1622,6 +3712,28 @@
     "line": 429,
     "excerpt": "|| url.startsWith(\"tg:webproxy\") || url.startsWith(\"tg://webproxy\")",
     "extraction": "literal-uri",
+    "sourceContext": [
+      {
+        "line": 427,
+        "text": "String url = uri.toString().toLowerCase();"
+      },
+      {
+        "line": 428,
+        "text": "isProxy = url.startsWith(\"tg:proxy\") || url.startsWith(\"tg://proxy\")"
+      },
+      {
+        "line": 429,
+        "text": "|| url.startsWith(\"tg:webproxy\") || url.startsWith(\"tg://webproxy\")"
+      },
+      {
+        "line": 430,
+        "text": "|| url.startsWith(\"tg:socks\") || url.startsWith(\"tg://socks\");"
+      },
+      {
+        "line": 431,
+        "text": "}"
+      }
+    ],
     "reviewStatus": "needs_review",
     "candidateType": "full-uri",
     "category": "deep-link",
