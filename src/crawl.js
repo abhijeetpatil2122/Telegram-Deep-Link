@@ -186,6 +186,8 @@ function scanJava(source) {
     if (!candidates.has(key)) candidates.set(key, {
       id: idFor('android\n' + candidate), candidate, source: 'android_launch_activity',
       sourceUrl: JAVA_PAGE_URL, line: lineNumber, excerpt: excerpt.trim().slice(0, 320), extraction,
+      sourceContext: lines.slice(Math.max(0, lineNumber - 3), Math.min(lines.length, lineNumber + 2))
+        .map((text, index) => ({ line: Math.max(0, lineNumber - 3) + index + 1, text: text.trim().slice(0, 400) })),
       reviewStatus: 'needs_review',
       ...classifyCandidate(candidate, excerpt, extraction),
       note: 'Implementation-derived candidate; verify route behavior and required parameters before publishing.'
@@ -255,7 +257,9 @@ async function main() {
   const documentedKeys = new Set(documented.map(item => item.template.toLowerCase()));
   const candidates = android.map(item => ({ ...item, alreadyInDocs: documentedKeys.has(item.candidate.toLowerCase()) }));
   const incompleteCandidateMetadata = candidates.filter(item =>
-    !item.candidateType || !item.category || !item.classification || !item.classificationMethod || !item.reviewNote
+    !item.candidateType || !item.category || !item.classification || !item.classificationMethod ||
+    !item.reviewNote || !Array.isArray(item.sourceContext) || item.sourceContext.length < 3 ||
+    !item.sourceContext.some(contextLine => contextLine.line === item.line)
   );
   if (incompleteCandidateMetadata.length) {
     throw new Error('Android candidate classification metadata is incomplete for ' + incompleteCandidateMetadata.length + ' entries.');
