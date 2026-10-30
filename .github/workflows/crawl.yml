@@ -27,9 +27,9 @@ jobs:
           node-version: 22
       - name: Check JavaScript syntax
         run: npm run check
-      - name: Crawl official docs and Android source
+      - name: Crawl official Telegram deep-link documentation only
         run: npm run crawl
-      - name: Publish full inventory to admin private chat (one-time)
+      - name: Publish official documentation to admin private chat (one-time)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: '1314643983'
@@ -41,7 +41,7 @@ jobs:
           TELEGRAM_CHAT_ID: '1314643983'
           GITHUB_RUN_NUMBER: ${{ github.run_number }}
         run: npm run notify
-      - name: Commit updated inventory and notification state
+      - name: Commit updated documentation catalog and notification state
         run: |
           git add data/
           if git diff --cached --quiet -- data/; then
@@ -50,7 +50,7 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: refresh deep-link inventory and notification state"
+          git commit -m "chore: refresh official deep-link documentation and notification state"
           for attempt in 1 2 3; do
             git fetch origin main
             if git rebase origin/main; then
