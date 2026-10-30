@@ -1,197 +1,242 @@
 {
-  "notifiedAt": "2026-10-30T05:15:14.689Z",
+  "notifiedAt": "2026-10-30T05:42:03.369Z",
   "inventory": [
     {
       "id": "official:87e7946d5bf6",
+      "kind": "official-template",
       "template": "t.me/path?query",
       "category": "Deep links",
       "group": "General",
-      "placeholders": []
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
       "id": "official:b961d87faff4",
+      "kind": "official-template",
       "template": "http://t.me/path?query",
       "category": "Deep links",
       "group": "General",
-      "placeholders": []
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
       "id": "official:4cc1a4c287d5",
+      "kind": "official-template",
       "template": "https://t.me/path?query",
       "category": "Deep links",
       "group": "General",
-      "placeholders": []
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
       "id": "official:2d2d4e181faf",
+      "kind": "official-template",
       "template": "tg:path?query",
       "category": "Deep links",
       "group": "General",
-      "placeholders": []
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
       "id": "official:63a1ec421fb1",
+      "kind": "official-template",
       "template": "tg://path?query",
       "category": "Deep links",
       "group": "General",
-      "placeholders": []
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
       "id": "official:1b0e0bc9cb4e",
+      "kind": "official-template",
       "template": "t.me/<username>/",
       "category": "Deep links",
       "group": "General",
       "placeholders": [
         "username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:19bdef0437ac",
+      "id": "official:0795047e183e",
+      "kind": "official-template",
       "template": "tonsite://somesite.domain/path?query#hash",
-      "category": "Deep links",
-      "group": "TON Sites",
-      "placeholders": []
+      "category": "TON Sites",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:136603abc031",
+      "id": "official:af46a4080f28",
+      "kind": "official-template",
       "template": "tonsite://",
-      "category": "Deep links",
-      "group": "TON Sites",
-      "placeholders": []
+      "category": "TON Sites",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:512a26f2252f",
+      "id": "official:175bd8d226d9",
+      "kind": "official-template",
       "template": "getting-started.ton/path?query#hash",
-      "category": "Deep links",
-      "group": "TON Sites",
-      "placeholders": []
+      "category": "TON Sites",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:2173c17daa8c",
+      "id": "official:1b6072828dd0",
+      "kind": "official-template",
       "template": "t.me/<username>?text=<draft_text>&profile",
-      "category": "Deep links",
-      "group": "Public username links",
+      "category": "Public username links",
+      "group": "General",
       "placeholders": [
         "username",
         "draft_text"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:5b01b11f2bf6",
+      "id": "official:43e30e86d5c6",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<username>&text=<draft_text>&profile",
-      "category": "Deep links",
-      "group": "Public username links",
+      "category": "Public username links",
+      "group": "General",
       "placeholders": [
         "username",
         "draft_text"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:6e48b11252b5",
+      "id": "official:4497c2c03bdc",
+      "kind": "official-template",
       "template": "t.me/<username>?direct",
-      "category": "Deep links",
-      "group": "Monoforum links",
+      "category": "Monoforum links",
+      "group": "General",
       "placeholders": [
         "username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:74517102381f",
+      "id": "official:2e27232db0d8",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<username>&direct",
-      "category": "Deep links",
-      "group": "Monoforum links",
+      "category": "Monoforum links",
+      "group": "General",
       "placeholders": [
         "username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:5caaf30c7a9a",
+      "id": "official:59dcc123fce7",
+      "kind": "official-template",
       "template": "t.me/contact/<token>",
-      "category": "Deep links",
-      "group": "Temporary profile links",
+      "category": "Temporary profile links",
+      "group": "General",
       "placeholders": [
         "token"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:730ed573f8dd",
+      "id": "official:ee7876baca0c",
+      "kind": "official-template",
       "template": "tg://contact?token=<token>",
-      "category": "Deep links",
-      "group": "Temporary profile links",
+      "category": "Temporary profile links",
+      "group": "General",
       "placeholders": [
         "token"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:4b8c3c33ade8",
+      "id": "official:222980c453f9",
+      "kind": "official-template",
       "template": "t.me/+<phone_number>?text=<draft_text>&profile",
-      "category": "Deep links",
-      "group": "Phone number links",
+      "category": "Phone number links",
+      "group": "General",
       "placeholders": [
         "phone_number",
         "draft_text"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:d20ba1643986",
+      "id": "official:ed72fc90cf27",
+      "kind": "official-template",
       "template": "tg://resolve?phone=<phone_number>&text=<draft_text>&profile",
-      "category": "Deep links",
-      "group": "Phone number links",
+      "category": "Phone number links",
+      "group": "General",
       "placeholders": [
         "phone_number",
         "draft_text"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:61530820b4fd",
+      "id": "official:b33dae336159",
+      "kind": "official-template",
       "template": "t.me/+<hash>",
-      "category": "Deep links",
-      "group": "Chat invite links",
+      "category": "Chat invite links",
+      "group": "General",
       "placeholders": [
         "hash"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:8ff6f7958aa5",
+      "id": "official:ae1574c130d9",
+      "kind": "official-template",
       "template": "t.me/joinchat/<hash>",
-      "category": "Deep links",
-      "group": "Chat invite links",
+      "category": "Chat invite links",
+      "group": "General",
       "placeholders": [
         "hash"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:e4f2e36a0760",
+      "id": "official:e1685f73e35a",
+      "kind": "official-template",
       "template": "tg://join?invite=<hash>",
-      "category": "Deep links",
-      "group": "Chat invite links",
+      "category": "Chat invite links",
+      "group": "General",
       "placeholders": [
         "hash"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:ad1fd69bcadd",
+      "id": "official:96a80419534d",
+      "kind": "official-template",
       "template": "t.me/addlist/<slug>",
-      "category": "Deep links",
-      "group": "Chat folder links",
+      "category": "Chat folder links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:2f9a6bc4460f",
+      "id": "official:4dd4740034eb",
+      "kind": "official-template",
       "template": "tg://addlist?slug=<slug>",
-      "category": "Deep links",
-      "group": "Chat folder links",
+      "category": "Chat folder links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:304f425c3ad4",
+      "id": "official:4fe74b0776a1",
+      "kind": "official-template",
       "template": "t.me/<username>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
-      "category": "Deep links",
-      "group": "Message links",
+      "category": "Message links",
+      "group": "General",
       "placeholders": [
         "username",
         "id",
@@ -200,13 +245,15 @@
         "media_timestamp",
         "task_id",
         "option_id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:3d4c9f31bb9c",
+      "id": "official:39f8c9fe0aa9",
+      "kind": "official-template",
       "template": "t.me/<username>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
-      "category": "Deep links",
-      "group": "Message links",
+      "category": "Message links",
+      "group": "General",
       "placeholders": [
         "username",
         "thread_id",
@@ -215,13 +262,15 @@
         "media_timestamp",
         "task_id",
         "option_id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:6ba6eb945901",
+      "id": "official:07ac618c8719",
+      "kind": "official-template",
       "template": "t.me/c/<channel>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
-      "category": "Deep links",
-      "group": "Message links",
+      "category": "Message links",
+      "group": "General",
       "placeholders": [
         "channel",
         "id",
@@ -230,13 +279,15 @@
         "media_timestamp",
         "task_id",
         "option_id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:a2884a75e56a",
+      "id": "official:2ee147b308ee",
+      "kind": "official-template",
       "template": "t.me/c/<channel>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
-      "category": "Deep links",
-      "group": "Message links",
+      "category": "Message links",
+      "group": "General",
       "placeholders": [
         "channel",
         "thread_id",
@@ -245,13 +296,15 @@
         "media_timestamp",
         "task_id",
         "option_id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:8073134a20e7",
+      "id": "official:ddbc91a90b32",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<username>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
-      "category": "Deep links",
-      "group": "Message links",
+      "category": "Message links",
+      "group": "General",
       "placeholders": [
         "username",
         "id",
@@ -260,13 +313,15 @@
         "media_timestamp",
         "task_id",
         "option_id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:9f26900412cf",
+      "id": "official:e1f8af501778",
+      "kind": "official-template",
       "template": "tg://privatepost?channel=<channel>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
-      "category": "Deep links",
-      "group": "Message links",
+      "category": "Message links",
+      "group": "General",
       "placeholders": [
         "channel",
         "id",
@@ -275,675 +330,813 @@
         "media_timestamp",
         "task_id",
         "option_id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:396f1a7b221b",
+      "id": "official:4b77f7a56aa4",
+      "kind": "official-template",
       "template": "t.me/share?url=<url>&text=<text>",
-      "category": "Deep links",
-      "group": "Share links",
+      "category": "Share links",
+      "group": "General",
       "placeholders": [
         "url",
         "text"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:db11d6e62c71",
+      "id": "official:83d5a44e273d",
+      "kind": "official-template",
       "template": "t.me/share/url?url=<url>&text=<text>",
-      "category": "Deep links",
-      "group": "Share links",
+      "category": "Share links",
+      "group": "General",
       "placeholders": [
         "url",
         "text"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:05427997670b",
+      "id": "official:b3c9d8e560d9",
+      "kind": "official-template",
       "template": "t.me/share/url/?url=<url>&text=<text>",
-      "category": "Deep links",
-      "group": "Share links",
+      "category": "Share links",
+      "group": "General",
       "placeholders": [
         "url",
         "text"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:4dbe9c03d7d6",
+      "id": "official:ea828f64ad6c",
+      "kind": "official-template",
       "template": "t.me/msg/url?url=<url>&text=<text>",
-      "category": "Deep links",
-      "group": "Share links",
+      "category": "Share links",
+      "group": "General",
       "placeholders": [
         "url",
         "text"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:327f551086b5",
+      "id": "official:7f26c4eecde4",
+      "kind": "official-template",
       "template": "tg://msg_url?url=<url>&text=<text>",
-      "category": "Deep links",
-      "group": "Share links",
+      "category": "Share links",
+      "group": "General",
       "placeholders": [
         "url",
         "text"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:ceb1b2be1b6d",
+      "id": "official:09aa32bf1a21",
+      "kind": "official-template",
       "template": "t.me/m/<slug>",
-      "category": "Deep links",
-      "group": "Business chat links",
+      "category": "Business chat links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:f9cae3da6369",
+      "id": "official:56784fee7f4d",
+      "kind": "official-template",
       "template": "tg://message?slug=<slug>",
-      "category": "Deep links",
-      "group": "Business chat links",
+      "category": "Business chat links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:cdbf01ae09cd",
+      "id": "official:f80b0d65cbea",
+      "kind": "official-template",
       "template": "t.me/<username>?videochat",
-      "category": "Deep links",
-      "group": "Video chat/Livestream links",
+      "category": "Video chat/Livestream links",
+      "group": "General",
       "placeholders": [
         "username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:0d560894da7f",
+      "id": "official:f964583082c3",
+      "kind": "official-template",
       "template": "t.me/<username>?videochat=<invite_hash>",
-      "category": "Deep links",
-      "group": "Video chat/Livestream links",
+      "category": "Video chat/Livestream links",
+      "group": "General",
       "placeholders": [
         "username",
         "invite_hash"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:6f2008238560",
+      "id": "official:9ab88b357c36",
+      "kind": "official-template",
       "template": "t.me/<username>?livestream",
-      "category": "Deep links",
-      "group": "Video chat/Livestream links",
+      "category": "Video chat/Livestream links",
+      "group": "General",
       "placeholders": [
         "username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:815e3d700d11",
+      "id": "official:a85f5b7ec832",
+      "kind": "official-template",
       "template": "t.me/<username>?livestream=<invite_hash>",
-      "category": "Deep links",
-      "group": "Video chat/Livestream links",
+      "category": "Video chat/Livestream links",
+      "group": "General",
       "placeholders": [
         "username",
         "invite_hash"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:a70b3e15b6c6",
+      "id": "official:c2d95c0756a0",
+      "kind": "official-template",
       "template": "t.me/<username>?voicechat",
-      "category": "Deep links",
-      "group": "Video chat/Livestream links",
+      "category": "Video chat/Livestream links",
+      "group": "General",
       "placeholders": [
         "username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:c5e4ffc38b75",
+      "id": "official:f99c92e3578b",
+      "kind": "official-template",
       "template": "t.me/<username>?voicechat=<invite_hash>",
-      "category": "Deep links",
-      "group": "Video chat/Livestream links",
+      "category": "Video chat/Livestream links",
+      "group": "General",
       "placeholders": [
         "username",
         "invite_hash"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:ea07f059d3b5",
+      "id": "official:8d971ca3541a",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<username>&videochat",
-      "category": "Deep links",
-      "group": "Video chat/Livestream links",
+      "category": "Video chat/Livestream links",
+      "group": "General",
       "placeholders": [
         "username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:be2c8b88184e",
+      "id": "official:e17de3aa4eec",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<username>&videochat=<invite_hash>",
-      "category": "Deep links",
-      "group": "Video chat/Livestream links",
+      "category": "Video chat/Livestream links",
+      "group": "General",
       "placeholders": [
         "username",
         "invite_hash"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:cd60898dc074",
+      "id": "official:f71360fd9194",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<username>&livestream",
-      "category": "Deep links",
-      "group": "Video chat/Livestream links",
+      "category": "Video chat/Livestream links",
+      "group": "General",
       "placeholders": [
         "username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:b7419b8c9ebf",
+      "id": "official:a4b87396c459",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<username>&livestream=<invite_hash>",
-      "category": "Deep links",
-      "group": "Video chat/Livestream links",
+      "category": "Video chat/Livestream links",
+      "group": "General",
       "placeholders": [
         "username",
         "invite_hash"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:3a934b4b3a9e",
+      "id": "official:7cc1592f1518",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<username>&voicechat",
-      "category": "Deep links",
-      "group": "Video chat/Livestream links",
+      "category": "Video chat/Livestream links",
+      "group": "General",
       "placeholders": [
         "username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:bb4a627d976b",
+      "id": "official:013513ab82a5",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<username>&voicechat=<invite_hash>",
-      "category": "Deep links",
-      "group": "Video chat/Livestream links",
+      "category": "Video chat/Livestream links",
+      "group": "General",
       "placeholders": [
         "username",
         "invite_hash"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:74a539c95c0e",
+      "id": "official:2c3f4558a58f",
+      "kind": "official-template",
       "template": "t.me/call/<slug>",
-      "category": "Deep links",
-      "group": "Conference links",
+      "category": "Conference links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:e4c31a17f1f9",
+      "id": "official:79f9c07d04c1",
+      "kind": "official-template",
       "template": "tg://call?slug=<slug>",
-      "category": "Deep links",
-      "group": "Conference links",
+      "category": "Conference links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:e6f86acebf81",
+      "id": "official:94b3338f62e4",
+      "kind": "official-template",
       "template": "t.me/addstickers/<slug>",
-      "category": "Deep links",
-      "group": "Stickerset links",
+      "category": "Stickerset links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:14c113ccb281",
+      "id": "official:cbd63da2456b",
+      "kind": "official-template",
       "template": "t.me/addemoji/<slug>",
-      "category": "Deep links",
-      "group": "Stickerset links",
+      "category": "Stickerset links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:8436a878c0d7",
+      "id": "official:9cb4e3908f9d",
+      "kind": "official-template",
       "template": "tg://addstickers?set=<slug>",
-      "category": "Deep links",
-      "group": "Stickerset links",
+      "category": "Stickerset links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:2f454c2df01e",
+      "id": "official:1e5f10041fcb",
+      "kind": "official-template",
       "template": "tg://addemoji?set=<slug>",
-      "category": "Deep links",
-      "group": "Stickerset links",
+      "category": "Stickerset links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:83f0cc888e74",
+      "id": "official:3a1a6ed39cdf",
+      "kind": "official-template",
       "template": "t.me/addemoji/<slug>",
-      "category": "Deep links",
-      "group": "Custom emoji stickerset links",
+      "category": "Custom emoji stickerset links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:4954f3e52162",
+      "id": "official:1f1cd6cab5d1",
+      "kind": "official-template",
       "template": "tg://addemoji?set=<slug>",
-      "category": "Deep links",
-      "group": "Custom emoji stickerset links",
+      "category": "Custom emoji stickerset links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:44c3bec67663",
+      "id": "official:295171ab3c99",
+      "kind": "official-template",
       "template": "t.me/<username>/s/<story_id>",
-      "category": "Deep links",
-      "group": "Story links",
+      "category": "Story links",
+      "group": "General",
       "placeholders": [
         "username",
         "story_id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:78eca6a1928d",
+      "id": "official:6a9747fa9e81",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<username>&story=<story_id>",
-      "category": "Deep links",
-      "group": "Story links",
+      "category": "Story links",
+      "group": "General",
       "placeholders": [
         "username",
         "story_id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:c777c4e6cf09",
+      "id": "official:95ae290c8830",
+      "kind": "official-template",
       "template": "t.me/<username>/s/live",
-      "category": "Deep links",
+      "category": "Story links",
       "group": "Live story links",
       "placeholders": [
         "username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:8449a9f3243c",
+      "id": "official:178854a02c4e",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<username>&story=live",
-      "category": "Deep links",
+      "category": "Story links",
       "group": "Live story links",
       "placeholders": [
         "username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:e20e7a37dea2",
+      "id": "official:fa018561d19f",
+      "kind": "official-template",
       "template": "t.me/<username>?album=<album_id>",
-      "category": "Deep links",
-      "group": "Story album links",
+      "category": "Story album links",
+      "group": "General",
       "placeholders": [
         "username",
         "album_id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:2a3b0ef108b8",
+      "id": "official:570f9094873d",
+      "kind": "official-template",
       "template": "t.me/<username>/a/<album_id>",
-      "category": "Deep links",
-      "group": "Story album links",
+      "category": "Story album links",
+      "group": "General",
       "placeholders": [
         "username",
         "album_id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:9b96c85c7e41",
+      "id": "official:9d997945baef",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<username>&album=<album_id>",
-      "category": "Deep links",
-      "group": "Story album links",
+      "category": "Story album links",
+      "group": "General",
       "placeholders": [
         "username",
         "album_id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:7f8862b5689a",
+      "id": "official:51e860285aec",
+      "kind": "official-template",
       "template": "tg://post",
-      "category": "Deep links",
-      "group": "Post story links",
-      "placeholders": []
+      "category": "Post story links",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:697729f84d1e",
+      "id": "official:653359515df4",
+      "kind": "official-template",
       "template": "tg://post/<content_type>",
-      "category": "Deep links",
-      "group": "Post story links",
+      "category": "Post story links",
+      "group": "General",
       "placeholders": [
         "content_type"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:9e7f1c0cc71f",
+      "id": "official:43c2b0bf0303",
+      "kind": "official-template",
       "template": "t.me/newbot/<manager_bot_username>/<suggested_bot_username>?name=<suggested_bot_name>",
-      "category": "Deep links",
-      "group": "Managed bot creation request links",
+      "category": "Managed bot creation request links",
+      "group": "General",
       "placeholders": [
         "manager_bot_username",
         "suggested_bot_username",
         "suggested_bot_name"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:b6b8f701b755",
+      "id": "official:97508afd9b4f",
+      "kind": "official-template",
       "template": "t.me/newbot/<manager_bot_username>?name=<suggested_bot_name>",
-      "category": "Deep links",
-      "group": "Managed bot creation request links",
+      "category": "Managed bot creation request links",
+      "group": "General",
       "placeholders": [
         "manager_bot_username",
         "suggested_bot_name"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:b00a6c5863d0",
+      "id": "official:1f37ddd8ee2a",
+      "kind": "official-template",
       "template": "tg://newbot?manager=<manager_bot_username>&username=<suggested_bot_username>&name=<suggested_bot_name>",
-      "category": "Deep links",
-      "group": "Managed bot creation request links",
+      "category": "Managed bot creation request links",
+      "group": "General",
       "placeholders": [
         "manager_bot_username",
         "suggested_bot_username",
         "suggested_bot_name"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:f6aa85502d11",
+      "id": "official:06ec97fd5a49",
+      "kind": "official-template",
       "template": "t.me/boost/<username>",
-      "category": "Deep links",
-      "group": "Boost links",
+      "category": "Boost links",
+      "group": "General",
       "placeholders": [
         "username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:31863bf84a9d",
+      "id": "official:e9d1699a0e6d",
+      "kind": "official-template",
       "template": "t.me/<username>?boost",
-      "category": "Deep links",
-      "group": "Boost links",
+      "category": "Boost links",
+      "group": "General",
       "placeholders": [
         "username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:a0407f03de18",
+      "id": "official:b45f3d0fed70",
+      "kind": "official-template",
       "template": "t.me/boost?c=<id>",
-      "category": "Deep links",
-      "group": "Boost links",
+      "category": "Boost links",
+      "group": "General",
       "placeholders": [
         "id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:1115168ff298",
+      "id": "official:98c5029f0c93",
+      "kind": "official-template",
       "template": "t.me/c/<id>?boost",
-      "category": "Deep links",
-      "group": "Boost links",
+      "category": "Boost links",
+      "group": "General",
       "placeholders": [
         "id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:7aef7f149f9a",
+      "id": "official:e1d8b0fa074b",
+      "kind": "official-template",
       "template": "tg://boost?domain=<username>",
-      "category": "Deep links",
-      "group": "Boost links",
+      "category": "Boost links",
+      "group": "General",
       "placeholders": [
         "username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:7a9875818b88",
+      "id": "official:0f94160467be",
+      "kind": "official-template",
       "template": "tg://boost?channel=<id>",
-      "category": "Deep links",
-      "group": "Boost links",
+      "category": "Boost links",
+      "group": "General",
       "placeholders": [
         "id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:e6f97035afa7",
+      "id": "official:7252c2434f71",
+      "kind": "official-template",
       "template": "https://t.me/oauth?startapp=<token>",
-      "category": "Deep links",
-      "group": "OAuth links",
+      "category": "OAuth links",
+      "group": "General",
       "placeholders": [
         "token"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:0aee7b7716ed",
+      "id": "official:1a0b83fea7e2",
+      "kind": "official-template",
       "template": "tg://oauth?token=<token>",
-      "category": "Deep links",
-      "group": "OAuth links",
+      "category": "OAuth links",
+      "group": "General",
       "placeholders": [
         "token"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:4bfe8fcaabe9",
+      "id": "official:81976f5ebea0",
+      "kind": "official-template",
       "template": "tg://resolve?domain=oauth&startapp=<token>",
-      "category": "Deep links",
-      "group": "OAuth links",
+      "category": "OAuth links",
+      "group": "General",
       "placeholders": [
         "token"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:61de316d65d0",
+      "id": "official:9af1f07051b2",
+      "kind": "official-template",
       "template": "t.me/proxy?server=<server>&port=<port>&secret=<secret>",
-      "category": "Deep links",
+      "category": "Proxy links",
       "group": "MTProxy links",
       "placeholders": [
         "server",
         "port",
         "secret"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:ad25c356f30c",
+      "id": "official:3bc433019934",
+      "kind": "official-template",
       "template": "tg://proxy?server=<server>&port=<port>&secret=<secret>",
-      "category": "Deep links",
+      "category": "Proxy links",
       "group": "MTProxy links",
       "placeholders": [
         "server",
         "port",
         "secret"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:ee2602f8d119",
+      "id": "official:3a2d5161630a",
+      "kind": "official-template",
       "template": "t.me/socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
-      "category": "Deep links",
+      "category": "Proxy links",
       "group": "SOCKS5 proxy links",
       "placeholders": [
         "server",
         "port",
         "user",
         "pass"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:6ce441f420e2",
+      "id": "official:e442604a7753",
+      "kind": "official-template",
       "template": "tg://socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
-      "category": "Deep links",
+      "category": "Proxy links",
       "group": "SOCKS5 proxy links",
       "placeholders": [
         "server",
         "port",
         "user",
         "pass"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:9e5c556c11c9",
+      "id": "official:6cc92cecb717",
+      "kind": "official-template",
       "template": "t.me/addtheme/<name>",
-      "category": "Deep links",
-      "group": "Theme links",
+      "category": "Theme links",
+      "group": "General",
       "placeholders": [
         "name"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:0dae772b75e9",
+      "id": "official:47c5acd22547",
+      "kind": "official-template",
       "template": "tg://addtheme?slug=<name>",
-      "category": "Deep links",
-      "group": "Theme links",
+      "category": "Theme links",
+      "group": "General",
       "placeholders": [
         "name"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:c86929446ae3",
+      "id": "official:f3668d1b98df",
+      "kind": "official-template",
       "template": "t.me/addstyle/<slug>",
-      "category": "Deep links",
-      "group": "AI compose tone links",
+      "category": "AI compose tone links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:914d83d347e3",
+      "id": "official:0ccd63d856e0",
+      "kind": "official-template",
       "template": "tg://addstyle?slug=<slug>",
-      "category": "Deep links",
-      "group": "AI compose tone links",
+      "category": "AI compose tone links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:4d19e4b4be55",
+      "id": "official:526f5e89b0dd",
+      "kind": "official-template",
       "template": "t.me/bg/<slug>?mode=<mode>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "[Image wallpapers](/api/wallpapers.md#image-wallpapers)",
       "placeholders": [
         "slug",
         "mode"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:cb2624bb8f2f",
+      "id": "official:d9d3b35a9a61",
+      "kind": "official-template",
       "template": "tg://bg?slug=<slug>&mode=<mode>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "[Image wallpapers](/api/wallpapers.md#image-wallpapers)",
       "placeholders": [
         "slug",
         "mode"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:fc0afa982b84",
+      "id": "official:2a86649b62bf",
+      "kind": "official-template",
       "template": "t.me/bg/<hex_color>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "Solid fill wallpapers",
       "placeholders": [
         "hex_color"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:a3bcb2144373",
+      "id": "official:2728263bc2de",
+      "kind": "official-template",
       "template": "tg://bg?color=<hex_color>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "Solid fill wallpapers",
       "placeholders": [
         "hex_color"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:41ff550d1d5e",
+      "id": "official:218f0cb90a1b",
+      "kind": "official-template",
       "template": "t.me/bg/<top_color>-<bottom_color>?rotation=<rotation>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "Gradient fill wallpapers",
       "placeholders": [
         "top_color",
         "bottom_color",
         "rotation"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:b2bf7b3e860c",
+      "id": "official:ff9309a25e3e",
+      "kind": "official-template",
       "template": "tg://bg?gradient=<top_color>-<bottom_color>&rotation=<rotation>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "Gradient fill wallpapers",
       "placeholders": [
         "top_color",
         "bottom_color",
         "rotation"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:0799a13f165c",
+      "id": "official:8a6e074ad2e7",
+      "kind": "official-template",
       "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "Free-form gradient fill wallpapers",
       "placeholders": [
         "hex_color1",
         "hex_color2",
         "hex_color3"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:7bbce20869c2",
+      "id": "official:cbc6ba72672f",
+      "kind": "official-template",
       "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "Free-form gradient fill wallpapers",
       "placeholders": [
         "hex_color1",
         "hex_color2",
         "hex_color3",
         "hex_color4"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:45698348de92",
+      "id": "official:4e70db8a0825",
+      "kind": "official-template",
       "template": "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "Free-form gradient fill wallpapers",
       "placeholders": [
         "hex_color1",
         "hex_color2",
         "hex_color3"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:c48045539edc",
+      "id": "official:47505d541912",
+      "kind": "official-template",
       "template": "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "Free-form gradient fill wallpapers",
       "placeholders": [
         "hex_color1",
         "hex_color2",
         "hex_color3",
         "hex_color4"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:26ca50444fac",
+      "id": "official:8fbaa34b0e74",
+      "kind": "official-template",
       "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "Solid pattern wallpapers",
       "placeholders": [
         "slug",
         "intensity",
         "bg_color",
         "mode"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:2dc7404eda35",
+      "id": "official:9d92cee9d2bc",
+      "kind": "official-template",
       "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "Solid pattern wallpapers",
       "placeholders": [
         "slug",
         "intensity",
         "bg_color",
         "mode"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:fd87fc53173a",
+      "id": "official:2dbb91654f74",
+      "kind": "official-template",
       "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "Gradient pattern wallpapers",
       "placeholders": [
         "slug",
@@ -952,12 +1145,14 @@
         "bottom_color",
         "rotation",
         "mode"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:834094aa7a6d",
+      "id": "official:f393fb40b137",
+      "kind": "official-template",
       "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "Gradient pattern wallpapers",
       "placeholders": [
         "slug",
@@ -966,12 +1161,14 @@
         "bottom_color",
         "rotation",
         "mode"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:112c2d8675b8",
+      "id": "official:da992730db0f",
+      "kind": "official-template",
       "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "Free-form gradient pattern wallpapers",
       "placeholders": [
         "slug",
@@ -980,12 +1177,14 @@
         "hex_color2",
         "hex_color3",
         "mode"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:26773ccbde8c",
+      "id": "official:90467ea03508",
+      "kind": "official-template",
       "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "Free-form gradient pattern wallpapers",
       "placeholders": [
         "slug",
@@ -995,12 +1194,14 @@
         "hex_color3",
         "hex_color4",
         "mode"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:0f10d76fc68f",
+      "id": "official:b766adf1c823",
+      "kind": "official-template",
       "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "Free-form gradient pattern wallpapers",
       "placeholders": [
         "slug",
@@ -1009,12 +1210,14 @@
         "hex_color2",
         "hex_color3",
         "mode"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:70f5a4448a62",
+      "id": "official:8c13a8fcec28",
+      "kind": "official-template",
       "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
-      "category": "Deep links",
+      "category": "Wallpaper links",
       "group": "Free-form gradient pattern wallpapers",
       "placeholders": [
         "slug",
@@ -1024,737 +1227,896 @@
         "hex_color3",
         "hex_color4",
         "mode"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:e6c25f20c7a1",
+      "id": "official:5fc3d91e34df",
+      "kind": "official-template",
       "template": "t.me/<bot_username>?start=<parameter>",
-      "category": "Deep links",
-      "group": "Bot links",
+      "category": "Bot links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "parameter"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:2c59ac5e9aaa",
+      "id": "official:ff2c991faa4f",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<bot_username>&start=<parameter>",
-      "category": "Deep links",
-      "group": "Bot links",
+      "category": "Bot links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "parameter"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:ae9a772a2e47",
+      "id": "official:320136e70f6e",
+      "kind": "official-template",
       "template": "t.me/<bot_username>?startgroup=<parameter>&admin=<permissions>",
-      "category": "Deep links",
-      "group": "Group/channel bot links",
+      "category": "Group/channel bot links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "parameter",
         "permissions"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:14fc808b3e2d",
+      "id": "official:262e2cd28476",
+      "kind": "official-template",
       "template": "t.me/<bot_username>?startgroup&admin=<permissions>",
-      "category": "Deep links",
-      "group": "Group/channel bot links",
+      "category": "Group/channel bot links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "permissions"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:394013922b4e",
+      "id": "official:abaf9266bf28",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<bot_username>&startgroup=<parameter>&admin=<permissions>",
-      "category": "Deep links",
-      "group": "Group/channel bot links",
+      "category": "Group/channel bot links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "parameter",
         "permissions"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:7371316014ac",
+      "id": "official:ee19bee26dbd",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<bot_username>&startgroup&admin=<permissions>",
-      "category": "Deep links",
-      "group": "Group/channel bot links",
+      "category": "Group/channel bot links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "permissions"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:4206f11e15e7",
+      "id": "official:b66c5d3c5104",
+      "kind": "official-template",
       "template": "t.me/<bot_username>?startchannel&admin=<permissions>",
-      "category": "Deep links",
-      "group": "Group/channel bot links",
+      "category": "Group/channel bot links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "permissions"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:9dcf21d47dbd",
+      "id": "official:23eda204af6f",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<bot_username>&startchannel&admin=<permissions>",
-      "category": "Deep links",
-      "group": "Group/channel bot links",
+      "category": "Group/channel bot links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "permissions"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:25f65f66760a",
+      "id": "official:90aefdc6465c",
+      "kind": "official-template",
       "template": "t.me/<bot_username>?game=<short_name>",
-      "category": "Deep links",
-      "group": "Game links",
+      "category": "Game links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "short_name"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:2ad8c13eba92",
+      "id": "official:c83ba8782cba",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<bot_username>&game=<short_name>",
-      "category": "Deep links",
-      "group": "Game links",
+      "category": "Game links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "short_name"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:03b6e46f0a19",
+      "id": "official:1c48490cdaaf",
+      "kind": "official-template",
       "template": "tg://settings",
-      "category": "Deep links",
-      "group": "Settings links",
-      "placeholders": []
+      "category": "Settings links",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:fb409d865f5b",
+      "id": "official:ca16a97217e2",
+      "kind": "official-template",
       "template": "tg://settings/<path>",
-      "category": "Deep links",
-      "group": "Settings links",
+      "category": "Settings links",
+      "group": "General",
       "placeholders": [
         "path"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:1d55b1292f3e",
+      "id": "official:c8a37c3b222e",
+      "kind": "official-template",
       "template": "tg://settings/stars",
-      "category": "Deep links",
-      "group": "My stars links",
-      "placeholders": []
+      "category": "My stars links",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:fd944f68e42a",
+      "id": "official:81e419a568db",
+      "kind": "official-template",
       "template": "tg://stars",
-      "category": "Deep links",
-      "group": "My stars links",
-      "placeholders": []
+      "category": "My stars links",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:541cf624d643",
+      "id": "official:a926af30265b",
+      "kind": "official-template",
       "template": "tg://settings/ton",
-      "category": "Deep links",
-      "group": "My Grams links",
-      "placeholders": []
+      "category": "My Grams links",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:31e6fc71da60",
+      "id": "official:ef24568ee488",
+      "kind": "official-template",
       "template": "tg://ton",
-      "category": "Deep links",
-      "group": "My Grams links",
-      "placeholders": []
+      "category": "My Grams links",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:e52f71fb3849",
+      "id": "official:35d9c9811375",
+      "kind": "official-template",
       "template": "tg://contacts",
-      "category": "Deep links",
-      "group": "Contacts links",
-      "placeholders": []
+      "category": "Contacts links",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:1a8589a9da8e",
+      "id": "official:fc1a933a4ade",
+      "kind": "official-template",
       "template": "tg://contacts/<section>",
-      "category": "Deep links",
-      "group": "Contacts links",
+      "category": "Contacts links",
+      "group": "General",
       "placeholders": [
         "section"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:59efb2ecd2a0",
+      "id": "official:1b2a8b5f97c9",
+      "kind": "official-template",
       "template": "tg://new",
-      "category": "Deep links",
-      "group": "New chat links",
-      "placeholders": []
+      "category": "New chat links",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:95b77e06c38e",
+      "id": "official:8c727356a51c",
+      "kind": "official-template",
       "template": "tg://new/channel",
-      "category": "Deep links",
-      "group": "New chat links",
-      "placeholders": []
+      "category": "New chat links",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:0e336fbed4b1",
+      "id": "official:b633febcdac0",
+      "kind": "official-template",
       "template": "tg://new/group",
-      "category": "Deep links",
-      "group": "New chat links",
-      "placeholders": []
+      "category": "New chat links",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:8ae973d5907f",
+      "id": "official:3dd877e62feb",
+      "kind": "official-template",
       "template": "tg://chats/edit",
-      "category": "Deep links",
-      "group": "Chat list links",
-      "placeholders": []
+      "category": "Chat list links",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:f3652acd2b3a",
+      "id": "official:206cf443d9a0",
+      "kind": "official-template",
       "template": "tg://chats/search",
-      "category": "Deep links",
-      "group": "Chat list links",
-      "placeholders": []
+      "category": "Chat list links",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:e235a292f91d",
+      "id": "official:f2fcc58cad50",
+      "kind": "official-template",
       "template": "tg://chats/emoji-status",
-      "category": "Deep links",
-      "group": "Chat list links",
-      "placeholders": []
+      "category": "Chat list links",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:775dcd5d881d",
+      "id": "official:e09944e7ceac",
+      "kind": "official-template",
       "template": "t.me/login/<code>",
-      "category": "Deep links",
-      "group": "Login code link",
+      "category": "Login code link",
+      "group": "General",
       "placeholders": [
         "code"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:90a0fedd2336",
+      "id": "official:dfc1d6811820",
+      "kind": "official-template",
       "template": "tg://login?code=<code>",
-      "category": "Deep links",
-      "group": "Login code link",
+      "category": "Login code link",
+      "group": "General",
       "placeholders": [
         "code"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:a5087099d9c3",
+      "id": "official:8d3bd1b2e31b",
+      "kind": "official-template",
       "template": "t.me/invoice/<slug>",
-      "category": "Deep links",
-      "group": "Invoice links",
+      "category": "Invoice links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:53a406fad93c",
+      "id": "official:08bc48ed3cda",
+      "kind": "official-template",
       "template": "t.me/$<slug>",
-      "category": "Deep links",
-      "group": "Invoice links",
+      "category": "Invoice links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:608bf1eb23a3",
+      "id": "official:69aff5ba896d",
+      "kind": "official-template",
       "template": "tg://invoice?slug=<slug>",
-      "category": "Deep links",
-      "group": "Invoice links",
+      "category": "Invoice links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:3d31038faa2e",
+      "id": "official:42dd78ec6a25",
+      "kind": "official-template",
       "template": "t.me/setlanguage/<slug>",
-      "category": "Deep links",
-      "group": "Language pack links",
+      "category": "Language pack links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:5ee69b7674b6",
+      "id": "official:0e9f84adee27",
+      "kind": "official-template",
       "template": "tg://setlanguage?lang=<slug>",
-      "category": "Deep links",
-      "group": "Language pack links",
+      "category": "Language pack links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:b810f7e5a029",
+      "id": "official:70112aa73969",
+      "kind": "official-template",
       "template": "tg://passport?params",
-      "category": "Deep links",
-      "group": "Telegram Passport links",
-      "placeholders": []
+      "category": "Telegram Passport links",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:4218c25e3d16",
+      "id": "official:4c818af2d00a",
+      "kind": "official-template",
       "template": "tg://resolve?domain=telegrampassport&params",
-      "category": "Deep links",
-      "group": "Telegram Passport links",
-      "placeholders": []
+      "category": "Telegram Passport links",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:50897392d0e2",
+      "id": "official:52357f60fd9d",
+      "kind": "official-template",
       "template": "t.me/confirmphone?phone=<phone>&hash=<hash>",
-      "category": "Deep links",
-      "group": "Phone confirmation links",
+      "category": "Phone confirmation links",
+      "group": "General",
       "placeholders": [
         "phone",
         "hash"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:bcec431da950",
+      "id": "official:5ae05f141fdf",
+      "kind": "official-template",
       "template": "tg://confirmphone?phone=<phone>&hash=<hash>",
-      "category": "Deep links",
-      "group": "Phone confirmation links",
+      "category": "Phone confirmation links",
+      "group": "General",
       "placeholders": [
         "phone",
         "hash"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:0b776d646c8f",
+      "id": "official:e7fc9a93f02d",
+      "kind": "official-template",
       "template": "tg://premium_multigift?ref=<referrer>",
-      "category": "Deep links",
-      "group": "Premium multigift links",
+      "category": "Premium multigift links",
+      "group": "General",
       "placeholders": [
         "referrer"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:f35472d9cb08",
+      "id": "official:5bb6bad20df4",
+      "kind": "official-template",
       "template": "tg://premium_offer?ref=<referrer>",
-      "category": "Deep links",
-      "group": "Premium referrer links",
+      "category": "Premium referrer links",
+      "group": "General",
       "placeholders": [
         "referrer"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:f5219d1d0495",
+      "id": "official:054a84844453",
+      "kind": "official-template",
       "template": "tg://giftcode?slug=<slug>",
-      "category": "Deep links",
-      "group": "Premium giftcode links",
+      "category": "Premium giftcode links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:12dbe090c87b",
+      "id": "official:95ef6e5bce34",
+      "kind": "official-template",
       "template": "t.me/giftcode/<slug>",
-      "category": "Deep links",
-      "group": "Premium giftcode links",
+      "category": "Premium giftcode links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:a0c744942767",
+      "id": "official:c2f10291a072",
+      "kind": "official-template",
       "template": "tg://login?token=<base64encodedtoken>",
-      "category": "Deep links",
-      "group": "QR code login links",
+      "category": "QR code login links",
+      "group": "General",
       "placeholders": [
         "base64encodedtoken"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:08b1e675f113",
+      "id": "official:fd439e7ae7f4",
+      "kind": "official-template",
       "template": "t.me/<bot_username>?startapp&mode=<mode>",
-      "category": "Deep links",
-      "group": "Main Mini App links",
+      "category": "Main Mini App links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "mode"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:07f632e2990f",
+      "id": "official:47db1e12d098",
+      "kind": "official-template",
       "template": "t.me/<bot_username>?startapp=<start_parameter>&mode=<mode>",
-      "category": "Deep links",
-      "group": "Main Mini App links",
+      "category": "Main Mini App links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "start_parameter",
         "mode"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:f4451d8780b1",
+      "id": "official:c228d4ecd16c",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<bot_username>&startapp&mode=<mode>",
-      "category": "Deep links",
-      "group": "Main Mini App links",
+      "category": "Main Mini App links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "mode"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:206c8e175a8d",
+      "id": "official:a9f8e0323a3c",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<bot_username>&startapp=<start_parameter>&mode=<mode>",
-      "category": "Deep links",
-      "group": "Main Mini App links",
+      "category": "Main Mini App links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "start_parameter",
         "mode"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:385f5169810a",
+      "id": "official:e6badcf800d5",
+      "kind": "official-template",
       "template": "t.me/<bot_username>/<short_name>?startapp=<start_parameter>&mode=<mode>",
-      "category": "Deep links",
-      "group": "Direct mini app links",
+      "category": "Direct mini app links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "short_name",
         "start_parameter",
         "mode"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:1e9f383ee97a",
+      "id": "official:3f2caffec9d2",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<bot_username>&appname=<short_name>&startapp=<start_parameter>&mode=<mode>",
-      "category": "Deep links",
-      "group": "Direct mini app links",
+      "category": "Direct mini app links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "short_name",
         "start_parameter",
         "mode"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:2d9398107132",
+      "id": "official:f93a0980820d",
+      "kind": "official-template",
       "template": "t.me/<bot_username>?startattach",
-      "category": "Deep links",
+      "category": "Bot attachment or side menu links",
       "group": "Open in current chat",
       "placeholders": [
         "bot_username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:02ad3ea214a3",
+      "id": "official:f4b9301be73f",
+      "kind": "official-template",
       "template": "t.me/<bot_username>?startattach=<start_parameter>",
-      "category": "Deep links",
+      "category": "Bot attachment or side menu links",
       "group": "Open in current chat",
       "placeholders": [
         "bot_username",
         "start_parameter"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:210b52472f71",
+      "id": "official:885448ded6ca",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<bot_username>&startattach",
-      "category": "Deep links",
+      "category": "Bot attachment or side menu links",
       "group": "Open in current chat",
       "placeholders": [
         "bot_username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:6cc5932608b4",
+      "id": "official:b015118316d8",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<bot_username>&startattach=<start_parameter>",
-      "category": "Deep links",
+      "category": "Bot attachment or side menu links",
       "group": "Open in current chat",
       "placeholders": [
         "bot_username",
         "start_parameter"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:3a657ab93543",
+      "id": "official:755e63aa3c77",
+      "kind": "official-template",
       "template": "t.me/<username>?attach=<bot_username>",
-      "category": "Deep links",
+      "category": "Bot attachment or side menu links",
       "group": "Open in specific chat",
       "placeholders": [
         "username",
         "bot_username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:dca28ff296c6",
+      "id": "official:0209c46179f1",
+      "kind": "official-template",
       "template": "t.me/<username>?attach=<bot_username>&startattach=<start_parameter>",
-      "category": "Deep links",
+      "category": "Bot attachment or side menu links",
       "group": "Open in specific chat",
       "placeholders": [
         "username",
         "bot_username",
         "start_parameter"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:59d0748279d8",
+      "id": "official:b97230cff14a",
+      "kind": "official-template",
       "template": "t.me/+<phone_number>?attach=<bot_username>",
-      "category": "Deep links",
+      "category": "Bot attachment or side menu links",
       "group": "Open in specific chat",
       "placeholders": [
         "phone_number",
         "bot_username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:4e11b00ec28f",
+      "id": "official:4e541392d09b",
+      "kind": "official-template",
       "template": "t.me/+<phone_number>?attach=<bot_username>&startattach=<start_parameter>",
-      "category": "Deep links",
+      "category": "Bot attachment or side menu links",
       "group": "Open in specific chat",
       "placeholders": [
         "phone_number",
         "bot_username",
         "start_parameter"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:8881706e8746",
+      "id": "official:a8ef4efe4206",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<username>&attach=<bot_username>",
-      "category": "Deep links",
+      "category": "Bot attachment or side menu links",
       "group": "Open in specific chat",
       "placeholders": [
         "username",
         "bot_username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:be18cb1e44d5",
+      "id": "official:0bf90a1263ec",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<username>&attach=<bot_username>&startattach=<start_parameter>",
-      "category": "Deep links",
+      "category": "Bot attachment or side menu links",
       "group": "Open in specific chat",
       "placeholders": [
         "username",
         "bot_username",
         "start_parameter"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:5919615c50df",
+      "id": "official:f37ef44c0908",
+      "kind": "official-template",
       "template": "tg://resolve?phone=<phone_number>&attach=<bot_username>",
-      "category": "Deep links",
+      "category": "Bot attachment or side menu links",
       "group": "Open in specific chat",
       "placeholders": [
         "phone_number",
         "bot_username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:c5dcb1401781",
+      "id": "official:2c2f595f8295",
+      "kind": "official-template",
       "template": "tg://resolve?phone=<phone_number>&attach=<bot_username>&startattach=<start_parameter>",
-      "category": "Deep links",
+      "category": "Bot attachment or side menu links",
       "group": "Open in specific chat",
       "placeholders": [
         "phone_number",
         "bot_username",
         "start_parameter"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:90cc1cb74016",
+      "id": "official:1360517e32d8",
+      "kind": "official-template",
       "template": "t.me/<bot_username>?startattach&choose=users+bots+groups+channels",
-      "category": "Deep links",
+      "category": "Bot attachment or side menu links",
       "group": "Open in any chat",
       "placeholders": [
         "bot_username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:32ec108c217b",
+      "id": "official:b566e87ceb15",
+      "kind": "official-template",
       "template": "t.me/<bot_username>?startattach=<start_parameter>&choose=users+bots+groups+channels",
-      "category": "Deep links",
+      "category": "Bot attachment or side menu links",
       "group": "Open in any chat",
       "placeholders": [
         "bot_username",
         "start_parameter"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:e511421e848b",
+      "id": "official:ee0893e05c6f",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<bot_username>&startattach&choose=users+bots+groups+channels",
-      "category": "Deep links",
+      "category": "Bot attachment or side menu links",
       "group": "Open in any chat",
       "placeholders": [
         "bot_username"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:db9622333d83",
+      "id": "official:7e5136769fa0",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<bot_username>&startattach=<start_parameter>&choose=users+bots+groups+channels",
-      "category": "Deep links",
+      "category": "Bot attachment or side menu links",
       "group": "Open in any chat",
       "placeholders": [
         "bot_username",
         "start_parameter"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:97a88cb954da",
+      "id": "official:f35d1487aa74",
+      "kind": "official-template",
       "template": "tg://stars_topup?balance=<star_count>&purpose=<purpose>",
-      "category": "Deep links",
-      "group": "Stars topup link",
+      "category": "Stars topup link",
+      "group": "General",
       "placeholders": [
         "star_count",
         "purpose"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:f2cee9907ec5",
+      "id": "official:7dff6968b8c5",
+      "kind": "official-template",
       "template": "t.me/nft/<slug>",
-      "category": "Deep links",
-      "group": "Collectible gift link",
+      "category": "Collectible gift link",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:8d3b6f629196",
+      "id": "official:1751354ead03",
+      "kind": "official-template",
       "template": "tg://nft?slug=<slug>",
-      "category": "Deep links",
-      "group": "Collectible gift link",
+      "category": "Collectible gift link",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:040f1b558df3",
+      "id": "official:a62c63ee9a7b",
+      "kind": "official-template",
       "template": "t.me/<username>?collection=<collection_id>",
-      "category": "Deep links",
-      "group": "Gift collection links",
+      "category": "Gift collection links",
+      "group": "General",
       "placeholders": [
         "username",
         "collection_id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:cb0e82770f87",
+      "id": "official:a952f2d3a28a",
+      "kind": "official-template",
       "template": "t.me/<username>/c/<collection_id>",
-      "category": "Deep links",
-      "group": "Gift collection links",
+      "category": "Gift collection links",
+      "group": "General",
       "placeholders": [
         "username",
         "collection_id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:d20800c91f49",
+      "id": "official:f2eee157f1a2",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<username>&collection=<collection_id>",
-      "category": "Deep links",
-      "group": "Gift collection links",
+      "category": "Gift collection links",
+      "group": "General",
       "placeholders": [
         "username",
         "collection_id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:54fc0e95c947",
+      "id": "official:39b2ce79a262",
+      "kind": "official-template",
       "template": "t.me/auction/<slug>",
-      "category": "Deep links",
-      "group": "Auction links",
+      "category": "Auction links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:5db4dd88e25e",
+      "id": "official:955a5232b98d",
+      "kind": "official-template",
       "template": "tg://stargift_auction?slug=<slug>",
-      "category": "Deep links",
-      "group": "Auction links",
+      "category": "Auction links",
+      "group": "General",
       "placeholders": [
         "slug"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:76da7314d8a6",
+      "id": "official:0ae2f9d7dccd",
+      "kind": "official-template",
       "template": "t.me/<bot_username>?ref=<referrer>",
-      "category": "Deep links",
-      "group": "Referral links",
+      "category": "Referral links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "referrer"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:19111e3c1038",
+      "id": "official:cf07184187f1",
+      "kind": "official-template",
       "template": "t.me/<bot_username>?start={prefix}<referrer>",
-      "category": "Deep links",
-      "group": "Referral links",
+      "category": "Referral links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "referrer"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:ae168d93d86e",
+      "id": "official:55ee238c3f52",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<bot_username>&ref=<referrer>",
-      "category": "Deep links",
-      "group": "Referral links",
+      "category": "Referral links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "referrer"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:f45705af9301",
+      "id": "official:0abf5483762a",
+      "kind": "official-template",
       "template": "tg://resolve?domain=<bot_username>&start={prefix}<referrer>",
-      "category": "Deep links",
-      "group": "Referral links",
+      "category": "Referral links",
+      "group": "General",
       "placeholders": [
         "bot_username",
         "referrer"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:ed8c31e181fb",
+      "id": "official:db2acc60b112",
+      "kind": "official-template",
       "template": "tg://user?id=<id>",
-      "category": "Deep links",
-      "group": "ID links",
+      "category": "ID links",
+      "group": "General",
       "placeholders": [
         "id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:6d846822dc48",
+      "id": "official:28c32b380040",
+      "kind": "official-template",
       "template": "tg://emoji?id=<id>",
-      "category": "Deep links",
-      "group": "Emoji links",
+      "category": "Emoji links",
+      "group": "General",
       "placeholders": [
         "id"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:4ad2bf42d86d",
+      "id": "official:8c7c21dafa91",
+      "kind": "official-template",
       "template": "tg://time?unix=<unix>&format=<format>",
-      "category": "Deep links",
-      "group": "Timestamp links",
+      "category": "Timestamp links",
+      "group": "General",
       "placeholders": [
         "unix",
         "format"
-      ]
+      ],
+      "status": "officially-documented"
     },
     {
-      "id": "official:cce457eaa7e2",
+      "id": "official:5a8300439aac",
+      "kind": "official-template",
       "template": "tg://need_update_for_some_feature?test=a",
-      "category": "Deep links",
-      "group": "Unsupported links",
-      "placeholders": []
+      "category": "Unsupported links",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     },
     {
-      "id": "official:60ad1a1ec641",
+      "id": "official:d03432f2fc35",
+      "kind": "official-template",
       "template": "tg:some_unsupported_feature?test=b",
-      "category": "Deep links",
-      "group": "Unsupported links",
-      "placeholders": []
+      "category": "Unsupported links",
+      "group": "General",
+      "placeholders": [],
+      "status": "officially-documented"
     }
   ]
 }

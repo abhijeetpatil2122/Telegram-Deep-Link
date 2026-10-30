@@ -155,27 +155,27 @@
     ]
   },
   {
-    "id": "aa2e58830d7d",
-    "category": "Deep links",
-    "group": "TON Sites",
+    "id": "a01655caabe1",
+    "category": "TON Sites",
+    "group": "General",
     "description": "Used to open [TON Sites](https://blog.ton.org/ton-sites) using the in-app [Telegram Browser](https://telegram.org/blog/w3-browser-mini-app-store#telegram-browser).",
     "templates": [
       {
-        "id": "19bdef0437ac",
+        "id": "0795047e183e",
         "template": "tonsite://somesite.domain/path?query#hash",
         "placeholders": [],
         "line": 65,
         "extraction": "fenced-code"
       },
       {
-        "id": "136603abc031",
+        "id": "af46a4080f28",
         "template": "tonsite://",
         "placeholders": [],
         "line": 69,
         "extraction": "inline-code"
       },
       {
-        "id": "512a26f2252f",
+        "id": "175bd8d226d9",
         "template": "getting-started.ton/path?query#hash",
         "placeholders": [],
         "line": 71,
@@ -211,13 +211,13 @@
     ]
   },
   {
-    "id": "827d86318390",
-    "category": "Deep links",
-    "group": "Public username links",
+    "id": "00741f0dc284",
+    "category": "Public username links",
+    "group": "General",
     "description": "Used to link to public users, groups and channels, see [here for more info on how to handle them&nbsp;&raquo;](/api/invites.md#public-usernames).",
     "templates": [
       {
-        "id": "2173c17daa8c",
+        "id": "1b6072828dd0",
         "template": "t.me/<username>?text=<draft_text>&profile",
         "placeholders": [
           "username",
@@ -227,7 +227,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "5b01b11f2bf6",
+        "id": "43e30e86d5c6",
         "template": "tg://resolve?domain=<username>&text=<draft_text>&profile",
         "placeholders": [
           "username",
@@ -270,13 +270,13 @@
     ]
   },
   {
-    "id": "affedbaf5aaf",
-    "category": "Deep links",
-    "group": "Monoforum links",
+    "id": "94a2df7242ef",
+    "category": "Monoforum links",
+    "group": "General",
     "description": "Used to open the direct messages chat (aka [monoforum &raquo;](/api/monoforum.md)) associated to a channel, see [here for more info on monoforums&nbsp;&raquo;](/api/monoforum.md).",
     "templates": [
       {
-        "id": "6e48b11252b5",
+        "id": "4497c2c03bdc",
         "template": "t.me/<username>?direct",
         "placeholders": [
           "username"
@@ -285,7 +285,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "74517102381f",
+        "id": "2e27232db0d8",
         "template": "tg://resolve?domain=<username>&direct",
         "placeholders": [
           "username"
@@ -309,13 +309,13 @@
     "details": []
   },
   {
-    "id": "487a5138d721",
-    "category": "Deep links",
-    "group": "Temporary profile links",
+    "id": "c63ca1cd3e31",
+    "category": "Temporary profile links",
+    "group": "General",
     "description": "Used to link to user profiles, generated using [contacts.exportContactToken](/method/contacts.exportContactToken.md).",
     "templates": [
       {
-        "id": "5caaf30c7a9a",
+        "id": "59dcc123fce7",
         "template": "t.me/contact/<token>",
         "placeholders": [
           "token"
@@ -324,7 +324,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "730ed573f8dd",
+        "id": "ee7876baca0c",
         "template": "tg://contact?token=<token>",
         "placeholders": [
           "token"
@@ -343,13 +343,13 @@
     "details": []
   },
   {
-    "id": "ea245cb8a1a5",
-    "category": "Deep links",
-    "group": "Phone number links",
+    "id": "9eb09227a7a1",
+    "category": "Phone number links",
+    "group": "General",
     "description": "Used to link to public and private users by their phone number.",
     "templates": [
       {
-        "id": "4b8c3c33ade8",
+        "id": "222980c453f9",
         "template": "t.me/+<phone_number>?text=<draft_text>&profile",
         "placeholders": [
           "phone_number",
@@ -359,7 +359,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "d20ba1643986",
+        "id": "ed72fc90cf27",
         "template": "tg://resolve?phone=<phone_number>&text=<draft_text>&profile",
         "placeholders": [
           "phone_number",
@@ -402,13 +402,13 @@
     ]
   },
   {
-    "id": "33a582740417",
-    "category": "Deep links",
-    "group": "Chat invite links",
+    "id": "990e0942440a",
+    "category": "Chat invite links",
+    "group": "General",
     "description": "Used to invite users to private groups and channels, see [here for more info on how to generate such links&nbsp;&raquo;](/api/invites.md#invite-links).",
     "templates": [
       {
-        "id": "61530820b4fd",
+        "id": "b33dae336159",
         "template": "t.me/+<hash>",
         "placeholders": [
           "hash"
@@ -417,7 +417,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "8ff6f7958aa5",
+        "id": "ae1574c130d9",
         "template": "t.me/joinchat/<hash>",
         "placeholders": [
           "hash"
@@ -426,7 +426,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "e4f2e36a0760",
+        "id": "e1685f73e35a",
         "template": "tg://join?invite=<hash>",
         "placeholders": [
           "hash"
@@ -445,13 +445,13 @@
     "details": []
   },
   {
-    "id": "cf3e28958e4e",
-    "category": "Deep links",
-    "group": "Chat folder links",
+    "id": "efcd12f110c7",
+    "category": "Chat folder links",
+    "group": "General",
     "description": "Used to invite users to private groups and channels, see [here for more info on how to generate such links&nbsp;&raquo;](/api/folders.md#shared-folders).",
     "templates": [
       {
-        "id": "ad1fd69bcadd",
+        "id": "96a80419534d",
         "template": "t.me/addlist/<slug>",
         "placeholders": [
           "slug"
@@ -460,7 +460,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "2f9a6bc4460f",
+        "id": "4dd4740034eb",
         "template": "tg://addlist?slug=<slug>",
         "placeholders": [
           "slug"
@@ -479,13 +479,13 @@
     "details": []
   },
   {
-    "id": "347109037c9c",
-    "category": "Deep links",
-    "group": "Message links",
+    "id": "c6c2a8eb87e0",
+    "category": "Message links",
+    "group": "General",
     "description": "Used to link to specific messages in public or private groups and channels.",
     "templates": [
       {
-        "id": "304f425c3ad4",
+        "id": "4fe74b0776a1",
         "template": "t.me/<username>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
         "placeholders": [
           "username",
@@ -500,7 +500,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "3d4c9f31bb9c",
+        "id": "39f8c9fe0aa9",
         "template": "t.me/<username>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
         "placeholders": [
           "username",
@@ -515,7 +515,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "6ba6eb945901",
+        "id": "07ac618c8719",
         "template": "t.me/c/<channel>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
         "placeholders": [
           "channel",
@@ -530,7 +530,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "a2884a75e56a",
+        "id": "2ee147b308ee",
         "template": "t.me/c/<channel>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
         "placeholders": [
           "channel",
@@ -545,7 +545,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "8073134a20e7",
+        "id": "ddbc91a90b32",
         "template": "tg://resolve?domain=<username>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
         "placeholders": [
           "username",
@@ -560,7 +560,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "9f26900412cf",
+        "id": "e1f8af501778",
         "template": "tg://privatepost?channel=<channel>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
         "placeholders": [
           "channel",
@@ -638,13 +638,13 @@
     ]
   },
   {
-    "id": "23a6f07339ef",
-    "category": "Deep links",
-    "group": "Share links",
+    "id": "efbfc99f5cda",
+    "category": "Share links",
+    "group": "General",
     "description": "Used to share a prepared message and URL into a chosen chat's text field.",
     "templates": [
       {
-        "id": "396f1a7b221b",
+        "id": "4b77f7a56aa4",
         "template": "t.me/share?url=<url>&text=<text>",
         "placeholders": [
           "url",
@@ -654,7 +654,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "db11d6e62c71",
+        "id": "83d5a44e273d",
         "template": "t.me/share/url?url=<url>&text=<text>",
         "placeholders": [
           "url",
@@ -664,7 +664,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "05427997670b",
+        "id": "b3c9d8e560d9",
         "template": "t.me/share/url/?url=<url>&text=<text>",
         "placeholders": [
           "url",
@@ -674,7 +674,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "4dbe9c03d7d6",
+        "id": "ea828f64ad6c",
         "template": "t.me/msg/url?url=<url>&text=<text>",
         "placeholders": [
           "url",
@@ -684,7 +684,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "327f551086b5",
+        "id": "7f26c4eecde4",
         "template": "tg://msg_url?url=<url>&text=<text>",
         "placeholders": [
           "url",
@@ -726,13 +726,13 @@
     ]
   },
   {
-    "id": "67bc7503b3d0",
-    "category": "Deep links",
-    "group": "Business chat links",
+    "id": "788901b229ac",
+    "category": "Business chat links",
+    "group": "General",
     "description": "[Business chat deep links&nbsp;&raquo;](/api/business.md#business-chat-links) allow business owners to share pre-made links to their [Telegram Business](/api/business.md) account, optionally filling out the message input field with a pre-prepared message (with support for [styled text entities&nbsp;&raquo;](/api/entities.md)).",
     "templates": [
       {
-        "id": "ceb1b2be1b6d",
+        "id": "09aa32bf1a21",
         "template": "t.me/m/<slug>",
         "placeholders": [
           "slug"
@@ -741,7 +741,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "f9cae3da6369",
+        "id": "56784fee7f4d",
         "template": "tg://message?slug=<slug>",
         "placeholders": [
           "slug"
@@ -769,13 +769,13 @@
     ]
   },
   {
-    "id": "1273cc422ece",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links",
+    "id": "f42894ed9309",
+    "category": "Video chat/Livestream links",
+    "group": "General",
     "description": "Used to join video/voice chats in groups, and livestreams in channels.",
     "templates": [
       {
-        "id": "cdbf01ae09cd",
+        "id": "f80b0d65cbea",
         "template": "t.me/<username>?videochat",
         "placeholders": [
           "username"
@@ -784,7 +784,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "0d560894da7f",
+        "id": "f964583082c3",
         "template": "t.me/<username>?videochat=<invite_hash>",
         "placeholders": [
           "username",
@@ -794,7 +794,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "6f2008238560",
+        "id": "9ab88b357c36",
         "template": "t.me/<username>?livestream",
         "placeholders": [
           "username"
@@ -803,7 +803,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "815e3d700d11",
+        "id": "a85f5b7ec832",
         "template": "t.me/<username>?livestream=<invite_hash>",
         "placeholders": [
           "username",
@@ -813,7 +813,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "a70b3e15b6c6",
+        "id": "c2d95c0756a0",
         "template": "t.me/<username>?voicechat",
         "placeholders": [
           "username"
@@ -822,7 +822,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "c5e4ffc38b75",
+        "id": "f99c92e3578b",
         "template": "t.me/<username>?voicechat=<invite_hash>",
         "placeholders": [
           "username",
@@ -832,7 +832,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "ea07f059d3b5",
+        "id": "8d971ca3541a",
         "template": "tg://resolve?domain=<username>&videochat",
         "placeholders": [
           "username"
@@ -841,7 +841,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "be2c8b88184e",
+        "id": "e17de3aa4eec",
         "template": "tg://resolve?domain=<username>&videochat=<invite_hash>",
         "placeholders": [
           "username",
@@ -851,7 +851,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "cd60898dc074",
+        "id": "f71360fd9194",
         "template": "tg://resolve?domain=<username>&livestream",
         "placeholders": [
           "username"
@@ -860,7 +860,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "b7419b8c9ebf",
+        "id": "a4b87396c459",
         "template": "tg://resolve?domain=<username>&livestream=<invite_hash>",
         "placeholders": [
           "username",
@@ -870,7 +870,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "3a934b4b3a9e",
+        "id": "7cc1592f1518",
         "template": "tg://resolve?domain=<username>&voicechat",
         "placeholders": [
           "username"
@@ -879,7 +879,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "bb4a627d976b",
+        "id": "013513ab82a5",
         "template": "tg://resolve?domain=<username>&voicechat=<invite_hash>",
         "placeholders": [
           "username",
@@ -899,13 +899,13 @@
     "details": []
   },
   {
-    "id": "699833cb585f",
-    "category": "Deep links",
-    "group": "Conference links",
+    "id": "2498d8fbed4a",
+    "category": "Conference links",
+    "group": "General",
     "description": "Used to link to [E2E conference calls](/api/end-to-end/group-calls.md).",
     "templates": [
       {
-        "id": "74a539c95c0e",
+        "id": "2c3f4558a58f",
         "template": "t.me/call/<slug>",
         "placeholders": [
           "slug"
@@ -914,7 +914,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "e4c31a17f1f9",
+        "id": "79f9c07d04c1",
         "template": "tg://call?slug=<slug>",
         "placeholders": [
           "slug"
@@ -933,13 +933,13 @@
     "details": []
   },
   {
-    "id": "eca9359c06d0",
-    "category": "Deep links",
-    "group": "Stickerset links",
+    "id": "34ff2281309f",
+    "category": "Stickerset links",
+    "group": "General",
     "description": "Used to import stickersets or [custom emoji](/api/custom-emoji.md) stickersets as described [here&nbsp;&raquo;](/api/stickers.md#installing-stickersets).",
     "templates": [
       {
-        "id": "e6f86acebf81",
+        "id": "94b3338f62e4",
         "template": "t.me/addstickers/<slug>",
         "placeholders": [
           "slug"
@@ -948,7 +948,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "14c113ccb281",
+        "id": "cbd63da2456b",
         "template": "t.me/addemoji/<slug>",
         "placeholders": [
           "slug"
@@ -957,7 +957,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "8436a878c0d7",
+        "id": "9cb4e3908f9d",
         "template": "tg://addstickers?set=<slug>",
         "placeholders": [
           "slug"
@@ -966,7 +966,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "2f454c2df01e",
+        "id": "1e5f10041fcb",
         "template": "tg://addemoji?set=<slug>",
         "placeholders": [
           "slug"
@@ -985,13 +985,13 @@
     "details": []
   },
   {
-    "id": "a4c31e4d09f8",
-    "category": "Deep links",
-    "group": "Custom emoji stickerset links",
+    "id": "6f26a2019400",
+    "category": "Custom emoji stickerset links",
+    "group": "General",
     "description": "Used to import [custom emoji](/api/custom-emoji.md) stickersets as described [here&nbsp;&raquo;](/api/stickers.md#installing-stickersets).",
     "templates": [
       {
-        "id": "83f0cc888e74",
+        "id": "3a1a6ed39cdf",
         "template": "t.me/addemoji/<slug>",
         "placeholders": [
           "slug"
@@ -1000,7 +1000,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "4954f3e52162",
+        "id": "1f1cd6cab5d1",
         "template": "tg://addemoji?set=<slug>",
         "placeholders": [
           "slug"
@@ -1019,13 +1019,13 @@
     "details": []
   },
   {
-    "id": "6fb9973f74ac",
-    "category": "Deep links",
-    "group": "Story links",
+    "id": "748eb972a683",
+    "category": "Story links",
+    "group": "General",
     "description": "Used to link to a [Telegram Story&nbsp;&raquo;](/api/stories.md), generated using the procedure [specified here&nbsp;&raquo;](/api/links.md#story-links).",
     "templates": [
       {
-        "id": "44c3bec67663",
+        "id": "295171ab3c99",
         "template": "t.me/<username>/s/<story_id>",
         "placeholders": [
           "username",
@@ -1035,7 +1035,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "78eca6a1928d",
+        "id": "6a9747fa9e81",
         "template": "tg://resolve?domain=<username>&story=<story_id>",
         "placeholders": [
           "username",
@@ -1060,13 +1060,13 @@
     "details": []
   },
   {
-    "id": "ff7a2894fc96",
-    "category": "Deep links",
+    "id": "41562f7d6413",
+    "category": "Story links",
     "group": "Live story links",
     "description": "",
     "templates": [
       {
-        "id": "c777c4e6cf09",
+        "id": "95ae290c8830",
         "template": "t.me/<username>/s/live",
         "placeholders": [
           "username"
@@ -1075,7 +1075,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "8449a9f3243c",
+        "id": "178854a02c4e",
         "template": "tg://resolve?domain=<username>&story=live",
         "placeholders": [
           "username"
@@ -1094,13 +1094,13 @@
     "details": []
   },
   {
-    "id": "11d4b72512df",
-    "category": "Deep links",
-    "group": "Story album links",
+    "id": "95dea28037a6",
+    "category": "Story album links",
+    "group": "General",
     "description": "Identifies a [story album &raquo;](/api/stories.md#story-albums) on a peer's profile: use [stories.getAlbumStories](/method/stories.getAlbumStories.md) to fetch stories within the specified album.",
     "templates": [
       {
-        "id": "e20e7a37dea2",
+        "id": "fa018561d19f",
         "template": "t.me/<username>?album=<album_id>",
         "placeholders": [
           "username",
@@ -1110,7 +1110,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "2a3b0ef108b8",
+        "id": "570f9094873d",
         "template": "t.me/<username>/a/<album_id>",
         "placeholders": [
           "username",
@@ -1120,7 +1120,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "9b96c85c7e41",
+        "id": "9d997945baef",
         "template": "tg://resolve?domain=<username>&album=<album_id>",
         "placeholders": [
           "username",
@@ -1145,20 +1145,20 @@
     "details": []
   },
   {
-    "id": "199bbf55b649",
-    "category": "Deep links",
-    "group": "Post story links",
+    "id": "08d6ccabbd27",
+    "category": "Post story links",
+    "group": "General",
     "description": "Used to bring the user to the [story&nbsp;&raquo;](/api/stories.md) composer, optionally pre-selecting the type of story content to post.",
     "templates": [
       {
-        "id": "7f8862b5689a",
+        "id": "51e860285aec",
         "template": "tg://post",
         "placeholders": [],
         "line": 511,
         "extraction": "fenced-code"
       },
       {
-        "id": "697729f84d1e",
+        "id": "653359515df4",
         "template": "tg://post/<content_type>",
         "placeholders": [
           "content_type"
@@ -1190,13 +1190,13 @@
     ]
   },
   {
-    "id": "c715489c6d29",
-    "category": "Deep links",
-    "group": "Managed bot creation request links",
+    "id": "73d1dc0cd316",
+    "category": "Managed bot creation request links",
+    "group": "General",
     "description": "Used to request creation of a new [managed bot &raquo;](/api/bots/managed-bots.md).",
     "templates": [
       {
-        "id": "9e7f1c0cc71f",
+        "id": "43c2b0bf0303",
         "template": "t.me/newbot/<manager_bot_username>/<suggested_bot_username>?name=<suggested_bot_name>",
         "placeholders": [
           "manager_bot_username",
@@ -1207,7 +1207,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "b6b8f701b755",
+        "id": "97508afd9b4f",
         "template": "t.me/newbot/<manager_bot_username>?name=<suggested_bot_name>",
         "placeholders": [
           "manager_bot_username",
@@ -1217,7 +1217,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "b00a6c5863d0",
+        "id": "1f37ddd8ee2a",
         "template": "tg://newbot?manager=<manager_bot_username>&username=<suggested_bot_username>&name=<suggested_bot_name>",
         "placeholders": [
           "manager_bot_username",
@@ -1248,13 +1248,13 @@
     "details": []
   },
   {
-    "id": "feeb09b9206f",
-    "category": "Deep links",
-    "group": "Boost links",
+    "id": "92aea6e7b30a",
+    "category": "Boost links",
+    "group": "General",
     "description": "Used by users to [boost channels&nbsp;&raquo;](/api/boost.md), granting them the ability to post stories and further perks.",
     "templates": [
       {
-        "id": "f6aa85502d11",
+        "id": "06ec97fd5a49",
         "template": "t.me/boost/<username>",
         "placeholders": [
           "username"
@@ -1263,7 +1263,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "31863bf84a9d",
+        "id": "e9d1699a0e6d",
         "template": "t.me/<username>?boost",
         "placeholders": [
           "username"
@@ -1272,7 +1272,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "a0407f03de18",
+        "id": "b45f3d0fed70",
         "template": "t.me/boost?c=<id>",
         "placeholders": [
           "id"
@@ -1281,7 +1281,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "1115168ff298",
+        "id": "98c5029f0c93",
         "template": "t.me/c/<id>?boost",
         "placeholders": [
           "id"
@@ -1290,7 +1290,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "7aef7f149f9a",
+        "id": "e1d8b0fa074b",
         "template": "tg://boost?domain=<username>",
         "placeholders": [
           "username"
@@ -1299,7 +1299,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "7a9875818b88",
+        "id": "0f94160467be",
         "template": "tg://boost?channel=<id>",
         "placeholders": [
           "id"
@@ -1323,13 +1323,13 @@
     "details": []
   },
   {
-    "id": "7923164b0239",
-    "category": "Deep links",
-    "group": "OAuth links",
+    "id": "e33f2a4dda52",
+    "category": "OAuth links",
+    "group": "General",
     "description": "Used to authorize an incoming [OAuth Telegram login request &raquo;](/api/url-authorization.md#oauth-authorization).",
     "templates": [
       {
-        "id": "e6f97035afa7",
+        "id": "7252c2434f71",
         "template": "https://t.me/oauth?startapp=<token>",
         "placeholders": [
           "token"
@@ -1338,7 +1338,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "0aee7b7716ed",
+        "id": "1a0b83fea7e2",
         "template": "tg://oauth?token=<token>",
         "placeholders": [
           "token"
@@ -1347,7 +1347,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "4bfe8fcaabe9",
+        "id": "81976f5ebea0",
         "template": "tg://resolve?domain=oauth&startapp=<token>",
         "placeholders": [
           "token"
@@ -1366,13 +1366,13 @@
     "details": []
   },
   {
-    "id": "d837e3b22612",
-    "category": "Deep links",
+    "id": "7cbee89f3cc3",
+    "category": "Proxy links",
     "group": "MTProxy links",
     "description": "Used for [MTProxies&nbsp;&raquo;](/mtproto/mtproto-transports.md#transport-obfuscation).",
     "templates": [
       {
-        "id": "61de316d65d0",
+        "id": "9af1f07051b2",
         "template": "t.me/proxy?server=<server>&port=<port>&secret=<secret>",
         "placeholders": [
           "server",
@@ -1383,7 +1383,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "ad25c356f30c",
+        "id": "3bc433019934",
         "template": "tg://proxy?server=<server>&port=<port>&secret=<secret>",
         "placeholders": [
           "server",
@@ -1414,13 +1414,13 @@
     "details": []
   },
   {
-    "id": "72fa12f18f21",
-    "category": "Deep links",
+    "id": "a01a24a81942",
+    "category": "Proxy links",
     "group": "SOCKS5 proxy links",
     "description": "Used for SOCKS5 proxies.",
     "templates": [
       {
-        "id": "ee2602f8d119",
+        "id": "3a2d5161630a",
         "template": "t.me/socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
         "placeholders": [
           "server",
@@ -1432,7 +1432,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "6ce441f420e2",
+        "id": "e442604a7753",
         "template": "tg://socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
         "placeholders": [
           "server",
@@ -1469,13 +1469,13 @@
     "details": []
   },
   {
-    "id": "ca02c748e38e",
-    "category": "Deep links",
-    "group": "Theme links",
+    "id": "f25786ed8f6d",
+    "category": "Theme links",
+    "group": "General",
     "description": "Used to [install themes&nbsp;&raquo;](/api/themes.md#installing-themes).",
     "templates": [
       {
-        "id": "9e5c556c11c9",
+        "id": "6cc92cecb717",
         "template": "t.me/addtheme/<name>",
         "placeholders": [
           "name"
@@ -1484,7 +1484,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "0dae772b75e9",
+        "id": "47c5acd22547",
         "template": "tg://addtheme?slug=<name>",
         "placeholders": [
           "name"
@@ -1497,13 +1497,13 @@
     "details": []
   },
   {
-    "id": "eb2f8c9ed4aa",
-    "category": "Deep links",
-    "group": "AI compose tone links",
+    "id": "617eed25367e",
+    "category": "AI compose tone links",
+    "group": "General",
     "description": "Used to share and install a custom [AI composer tone&nbsp;&raquo;](/api/ai.md#ai-compose-tones).",
     "templates": [
       {
-        "id": "c86929446ae3",
+        "id": "f3668d1b98df",
         "template": "t.me/addstyle/<slug>",
         "placeholders": [
           "slug"
@@ -1512,7 +1512,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "914d83d347e3",
+        "id": "0ccd63d856e0",
         "template": "tg://addstyle?slug=<slug>",
         "placeholders": [
           "slug"
@@ -1531,13 +1531,13 @@
     "details": []
   },
   {
-    "id": "7f61c15d31e6",
-    "category": "Deep links",
+    "id": "a282592587a0",
+    "category": "Wallpaper links",
     "group": "[Image wallpapers](/api/wallpapers.md#image-wallpapers)",
     "description": "Used for [image-based wallpapers&nbsp;&raquo;](/api/wallpapers.md#image-wallpapers).",
     "templates": [
       {
-        "id": "4d19e4b4be55",
+        "id": "526f5e89b0dd",
         "template": "t.me/bg/<slug>?mode=<mode>",
         "placeholders": [
           "slug",
@@ -1547,7 +1547,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "cb2624bb8f2f",
+        "id": "d9d3b35a9a61",
         "template": "tg://bg?slug=<slug>&mode=<mode>",
         "placeholders": [
           "slug",
@@ -1572,13 +1572,13 @@
     "details": []
   },
   {
-    "id": "0cafe8befa36",
-    "category": "Deep links",
+    "id": "e49a31a45e17",
+    "category": "Wallpaper links",
     "group": "Solid fill wallpapers",
     "description": "Used for [fill wallpapers&nbsp;&raquo;](/api/wallpapers.md#fill-wallpapers) with a [solid fill&nbsp;&raquo;](/api/wallpapers.md#solid-fill).",
     "templates": [
       {
-        "id": "fc0afa982b84",
+        "id": "2a86649b62bf",
         "template": "t.me/bg/<hex_color>",
         "placeholders": [
           "hex_color"
@@ -1587,7 +1587,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "a3bcb2144373",
+        "id": "2728263bc2de",
         "template": "tg://bg?color=<hex_color>",
         "placeholders": [
           "hex_color"
@@ -1606,13 +1606,13 @@
     "details": []
   },
   {
-    "id": "aec1c5d6a92f",
-    "category": "Deep links",
+    "id": "486d0748e8f6",
+    "category": "Wallpaper links",
     "group": "Gradient fill wallpapers",
     "description": "Used for [fill wallpapers&nbsp;&raquo;](/api/wallpapers.md#fill-wallpapers) with a [gradient fill&nbsp;&raquo;](/api/wallpapers.md#gradient-fill).",
     "templates": [
       {
-        "id": "41ff550d1d5e",
+        "id": "218f0cb90a1b",
         "template": "t.me/bg/<top_color>-<bottom_color>?rotation=<rotation>",
         "placeholders": [
           "top_color",
@@ -1623,7 +1623,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "b2bf7b3e860c",
+        "id": "ff9309a25e3e",
         "template": "tg://bg?gradient=<top_color>-<bottom_color>&rotation=<rotation>",
         "placeholders": [
           "top_color",
@@ -1654,13 +1654,13 @@
     "details": []
   },
   {
-    "id": "cc31662eeea4",
-    "category": "Deep links",
+    "id": "3a29ae4fa872",
+    "category": "Wallpaper links",
     "group": "Free-form gradient fill wallpapers",
     "description": "Used for [fill wallpapers&nbsp;&raquo;](/api/wallpapers.md#fill-wallpapers) with a [free-form gradient fill&nbsp;&raquo;](/api/wallpapers.md#freeform-gradient-fill).",
     "templates": [
       {
-        "id": "0799a13f165c",
+        "id": "8a6e074ad2e7",
         "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>",
         "placeholders": [
           "hex_color1",
@@ -1671,7 +1671,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "7bbce20869c2",
+        "id": "cbc6ba72672f",
         "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
         "placeholders": [
           "hex_color1",
@@ -1683,7 +1683,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "45698348de92",
+        "id": "4e70db8a0825",
         "template": "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>",
         "placeholders": [
           "hex_color1",
@@ -1694,7 +1694,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "c48045539edc",
+        "id": "47505d541912",
         "template": "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
         "placeholders": [
           "hex_color1",
@@ -1731,13 +1731,13 @@
     "details": []
   },
   {
-    "id": "3c37858d32ae",
-    "category": "Deep links",
+    "id": "b811e60ef26f",
+    "category": "Wallpaper links",
     "group": "Solid pattern wallpapers",
     "description": "Used for [pattern wallpapers&nbsp;&raquo;](/api/wallpapers.md#pattern-wallpapers) with a [solid fill&nbsp;&raquo;](/api/wallpapers.md#solid-fill).",
     "templates": [
       {
-        "id": "26ca50444fac",
+        "id": "8fbaa34b0e74",
         "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
         "placeholders": [
           "slug",
@@ -1749,7 +1749,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "2dc7404eda35",
+        "id": "9d92cee9d2bc",
         "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
         "placeholders": [
           "slug",
@@ -1786,13 +1786,13 @@
     "details": []
   },
   {
-    "id": "4de7face6cd6",
-    "category": "Deep links",
+    "id": "874095133198",
+    "category": "Wallpaper links",
     "group": "Gradient pattern wallpapers",
     "description": "Used for [pattern wallpapers&nbsp;&raquo;](/api/wallpapers.md#pattern-wallpapers) with a [gradient fill&nbsp;&raquo;](/api/wallpapers.md#gradient-fill).",
     "templates": [
       {
-        "id": "fd87fc53173a",
+        "id": "2dbb91654f74",
         "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
         "placeholders": [
           "slug",
@@ -1806,7 +1806,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "834094aa7a6d",
+        "id": "f393fb40b137",
         "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
         "placeholders": [
           "slug",
@@ -1855,13 +1855,13 @@
     "details": []
   },
   {
-    "id": "c5ec34be7f7c",
-    "category": "Deep links",
+    "id": "ad200f93af99",
+    "category": "Wallpaper links",
     "group": "Free-form gradient pattern wallpapers",
     "description": "Used for [pattern wallpapers&nbsp;&raquo;](/api/wallpapers.md#pattern-wallpapers) with a [free-form gradient fill&nbsp;&raquo;](/api/wallpapers.md#freeform-gradient-fill).",
     "templates": [
       {
-        "id": "112c2d8675b8",
+        "id": "da992730db0f",
         "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
         "placeholders": [
           "slug",
@@ -1875,7 +1875,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "26773ccbde8c",
+        "id": "90467ea03508",
         "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
         "placeholders": [
           "slug",
@@ -1890,7 +1890,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "0f10d76fc68f",
+        "id": "b766adf1c823",
         "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
         "placeholders": [
           "slug",
@@ -1904,7 +1904,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "70f5a4448a62",
+        "id": "8c13a8fcec28",
         "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
         "placeholders": [
           "slug",
@@ -1959,13 +1959,13 @@
     "details": []
   },
   {
-    "id": "034a10d2142a",
-    "category": "Deep links",
-    "group": "Bot links",
+    "id": "87ae2f0508d4",
+    "category": "Bot links",
+    "group": "General",
     "description": "Used to link to bots.",
     "templates": [
       {
-        "id": "e6c25f20c7a1",
+        "id": "5fc3d91e34df",
         "template": "t.me/<bot_username>?start=<parameter>",
         "placeholders": [
           "bot_username",
@@ -1975,7 +1975,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "2c59ac5e9aaa",
+        "id": "ff2c991faa4f",
         "template": "tg://resolve?domain=<bot_username>&start=<parameter>",
         "placeholders": [
           "bot_username",
@@ -1995,13 +1995,13 @@
     "details": []
   },
   {
-    "id": "461e21d49c2b",
-    "category": "Deep links",
-    "group": "Group/channel bot links",
+    "id": "075e3051c07d",
+    "category": "Group/channel bot links",
+    "group": "General",
     "description": "Used to add bots to groups or channels.",
     "templates": [
       {
-        "id": "ae9a772a2e47",
+        "id": "320136e70f6e",
         "template": "t.me/<bot_username>?startgroup=<parameter>&admin=<permissions>",
         "placeholders": [
           "bot_username",
@@ -2012,7 +2012,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "14fc808b3e2d",
+        "id": "262e2cd28476",
         "template": "t.me/<bot_username>?startgroup&admin=<permissions>",
         "placeholders": [
           "bot_username",
@@ -2022,7 +2022,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "394013922b4e",
+        "id": "abaf9266bf28",
         "template": "tg://resolve?domain=<bot_username>&startgroup=<parameter>&admin=<permissions>",
         "placeholders": [
           "bot_username",
@@ -2033,7 +2033,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "7371316014ac",
+        "id": "ee19bee26dbd",
         "template": "tg://resolve?domain=<bot_username>&startgroup&admin=<permissions>",
         "placeholders": [
           "bot_username",
@@ -2043,7 +2043,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "4206f11e15e7",
+        "id": "b66c5d3c5104",
         "template": "t.me/<bot_username>?startchannel&admin=<permissions>",
         "placeholders": [
           "bot_username",
@@ -2053,7 +2053,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "9dcf21d47dbd",
+        "id": "23eda204af6f",
         "template": "tg://resolve?domain=<bot_username>&startchannel&admin=<permissions>",
         "placeholders": [
           "bot_username",
@@ -2195,13 +2195,13 @@
     ]
   },
   {
-    "id": "76b36ac1d9a8",
-    "category": "Deep links",
-    "group": "Game links",
+    "id": "51b02cbcd3a7",
+    "category": "Game links",
+    "group": "General",
     "description": "Used to share [games](/api/bots/games.md).",
     "templates": [
       {
-        "id": "25f65f66760a",
+        "id": "90aefdc6465c",
         "template": "t.me/<bot_username>?game=<short_name>",
         "placeholders": [
           "bot_username",
@@ -2211,7 +2211,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "2ad8c13eba92",
+        "id": "c83ba8782cba",
         "template": "tg://resolve?domain=<bot_username>&game=<short_name>",
         "placeholders": [
           "bot_username",
@@ -2249,20 +2249,20 @@
     ]
   },
   {
-    "id": "43a64bd43a86",
-    "category": "Deep links",
-    "group": "Settings links",
+    "id": "d1b1d1c09b4a",
+    "category": "Settings links",
+    "group": "General",
     "description": "Used to bring the user to the app settings, optionally directly opening a specific settings page or subsection.",
     "templates": [
       {
-        "id": "03b6e46f0a19",
+        "id": "1c48490cdaaf",
         "template": "tg://settings",
         "placeholders": [],
         "line": 1003,
         "extraction": "fenced-code"
       },
       {
-        "id": "fb409d865f5b",
+        "id": "ca16a97217e2",
         "template": "tg://settings/<path>",
         "placeholders": [
           "path"
@@ -3642,20 +3642,20 @@
     ]
   },
   {
-    "id": "f97283dee2c2",
-    "category": "Deep links",
-    "group": "My stars links",
+    "id": "223ce8992b1b",
+    "category": "My stars links",
+    "group": "General",
     "description": "Used to bring the user to the My Stars page, containing the topup button, the Star transaction history, statistics, and [much more &raquo;](/api/stars.md).",
     "templates": [
       {
-        "id": "1d55b1292f3e",
+        "id": "c8a37c3b222e",
         "template": "tg://settings/stars",
         "placeholders": [],
         "line": 1366,
         "extraction": "inline-code"
       },
       {
-        "id": "fd944f68e42a",
+        "id": "81e419a568db",
         "template": "tg://stars",
         "placeholders": [],
         "line": 1369,
@@ -3666,20 +3666,20 @@
     "details": []
   },
   {
-    "id": "d61870dc78b9",
-    "category": "Deep links",
-    "group": "My Grams links",
+    "id": "40c420772bed",
+    "category": "My Grams links",
+    "group": "General",
     "description": "Used to bring the user to the TON balance page, containing the topup button, the TON transaction history and statistics.",
     "templates": [
       {
-        "id": "541cf624d643",
+        "id": "a926af30265b",
         "template": "tg://settings/ton",
         "placeholders": [],
         "line": 1376,
         "extraction": "inline-code"
       },
       {
-        "id": "31e6fc71da60",
+        "id": "ef24568ee488",
         "template": "tg://ton",
         "placeholders": [],
         "line": 1379,
@@ -3690,20 +3690,20 @@
     "details": []
   },
   {
-    "id": "bff84e92af99",
-    "category": "Deep links",
-    "group": "Contacts links",
+    "id": "b6d6e8e5ab12",
+    "category": "Contacts links",
+    "group": "General",
     "description": "Used to bring the user to the contact list, optionally directly opening a specific section or action.",
     "templates": [
       {
-        "id": "e52f71fb3849",
+        "id": "35d9c9811375",
         "template": "tg://contacts",
         "placeholders": [],
         "line": 1388,
         "extraction": "fenced-code"
       },
       {
-        "id": "1a8589a9da8e",
+        "id": "fc1a933a4ade",
         "template": "tg://contacts/<section>",
         "placeholders": [
           "section"
@@ -3716,27 +3716,27 @@
     "details": []
   },
   {
-    "id": "c4f04b82c751",
-    "category": "Deep links",
-    "group": "New chat links",
+    "id": "5d8699fd8c9c",
+    "category": "New chat links",
+    "group": "General",
     "description": "Used to bring the user to the chat creation flow.",
     "templates": [
       {
-        "id": "59efb2ecd2a0",
+        "id": "1b2a8b5f97c9",
         "template": "tg://new",
         "placeholders": [],
         "line": 1409,
         "extraction": "fenced-code"
       },
       {
-        "id": "95b77e06c38e",
+        "id": "8c727356a51c",
         "template": "tg://new/channel",
         "placeholders": [],
         "line": 1409,
         "extraction": "fenced-code"
       },
       {
-        "id": "0e336fbed4b1",
+        "id": "b633febcdac0",
         "template": "tg://new/group",
         "placeholders": [],
         "line": 1409,
@@ -3747,27 +3747,27 @@
     "details": []
   },
   {
-    "id": "0e7f4373af8a",
-    "category": "Deep links",
-    "group": "Chat list links",
+    "id": "f03fb28f6228",
+    "category": "Chat list links",
+    "group": "General",
     "description": "Used to perform actions on the main chat list.",
     "templates": [
       {
-        "id": "8ae973d5907f",
+        "id": "3dd877e62feb",
         "template": "tg://chats/edit",
         "placeholders": [],
         "line": 1426,
         "extraction": "fenced-code"
       },
       {
-        "id": "f3652acd2b3a",
+        "id": "206cf443d9a0",
         "template": "tg://chats/search",
         "placeholders": [],
         "line": 1426,
         "extraction": "fenced-code"
       },
       {
-        "id": "e235a292f91d",
+        "id": "f2fcc58cad50",
         "template": "tg://chats/emoji-status",
         "placeholders": [],
         "line": 1426,
@@ -3778,13 +3778,13 @@
     "details": []
   },
   {
-    "id": "fe3189018aee",
-    "category": "Deep links",
-    "group": "Login code link",
+    "id": "86a2d690a201",
+    "category": "Login code link",
+    "group": "General",
     "description": "Contains the phone number verification code to use during [user authorization&nbsp;&raquo;](/api/auth.md).",
     "templates": [
       {
-        "id": "775dcd5d881d",
+        "id": "e09944e7ceac",
         "template": "t.me/login/<code>",
         "placeholders": [
           "code"
@@ -3793,7 +3793,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "90a0fedd2336",
+        "id": "dfc1d6811820",
         "template": "tg://login?code=<code>",
         "placeholders": [
           "code"
@@ -3812,13 +3812,13 @@
     "details": []
   },
   {
-    "id": "47ca93232e66",
-    "category": "Deep links",
-    "group": "Invoice links",
+    "id": "d0f21cef7bae",
+    "category": "Invoice links",
+    "group": "General",
     "description": "Used to initiate [payment of an invoice&nbsp;&raquo;](/api/payments.md), generated using [payments.exportedInvoice](/constructor/payments.exportedInvoice.md).",
     "templates": [
       {
-        "id": "a5087099d9c3",
+        "id": "8d3bd1b2e31b",
         "template": "t.me/invoice/<slug>",
         "placeholders": [
           "slug"
@@ -3827,7 +3827,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "53a406fad93c",
+        "id": "08bc48ed3cda",
         "template": "t.me/$<slug>",
         "placeholders": [
           "slug"
@@ -3836,7 +3836,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "608bf1eb23a3",
+        "id": "69aff5ba896d",
         "template": "tg://invoice?slug=<slug>",
         "placeholders": [
           "slug"
@@ -3855,13 +3855,13 @@
     "details": []
   },
   {
-    "id": "20178b8bc116",
-    "category": "Deep links",
-    "group": "Language pack links",
+    "id": "78108dd650c7",
+    "category": "Language pack links",
+    "group": "General",
     "description": "Used to import custom language packs using [langpack.getLangPack](/method/langpack.getLangPack.md).",
     "templates": [
       {
-        "id": "3d31038faa2e",
+        "id": "42dd78ec6a25",
         "template": "t.me/setlanguage/<slug>",
         "placeholders": [
           "slug"
@@ -3870,7 +3870,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "5ee69b7674b6",
+        "id": "0e9f84adee27",
         "template": "tg://setlanguage?lang=<slug>",
         "placeholders": [
           "slug"
@@ -3889,20 +3889,20 @@
     "details": []
   },
   {
-    "id": "89eac26c64b4",
-    "category": "Deep links",
-    "group": "Telegram Passport links",
+    "id": "71f65d32b5a6",
+    "category": "Telegram Passport links",
+    "group": "General",
     "description": "See [the Telegram Passport documentation for parameters and usage&nbsp;&raquo;](/api/passport.md#uri-format).",
     "templates": [
       {
-        "id": "b810f7e5a029",
+        "id": "70112aa73969",
         "template": "tg://passport?params",
         "placeholders": [],
         "line": 1504,
         "extraction": "fenced-code"
       },
       {
-        "id": "4218c25e3d16",
+        "id": "4c818af2d00a",
         "template": "tg://resolve?domain=telegrampassport&params",
         "placeholders": [],
         "line": 1504,
@@ -3913,13 +3913,13 @@
     "details": []
   },
   {
-    "id": "31c3d155ab58",
-    "category": "Deep links",
-    "group": "Phone confirmation links",
+    "id": "669facf5689d",
+    "category": "Phone confirmation links",
+    "group": "General",
     "description": "Different from [login code links](#login-code-link).",
     "templates": [
       {
-        "id": "50897392d0e2",
+        "id": "52357f60fd9d",
         "template": "t.me/confirmphone?phone=<phone>&hash=<hash>",
         "placeholders": [
           "phone",
@@ -3929,7 +3929,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "bcec431da950",
+        "id": "5ae05f141fdf",
         "template": "tg://confirmphone?phone=<phone>&hash=<hash>",
         "placeholders": [
           "phone",
@@ -3954,13 +3954,13 @@
     "details": []
   },
   {
-    "id": "02ed41fce126",
-    "category": "Deep links",
-    "group": "Premium multigift links",
+    "id": "e9bb0b2de005",
+    "category": "Premium multigift links",
+    "group": "General",
     "description": "Used to bring the user to the screen used for gifting Telegram Premium subscriptions to friends, see [here for more info on gifting Telegram Premium to multiple users&nbsp;&raquo;](/api/giveaways.md).",
     "templates": [
       {
-        "id": "0b776d646c8f",
+        "id": "e7fc9a93f02d",
         "template": "tg://premium_multigift?ref=<referrer>",
         "placeholders": [
           "referrer"
@@ -3979,13 +3979,13 @@
     "details": []
   },
   {
-    "id": "94bfe9fd7dc7",
-    "category": "Deep links",
-    "group": "Premium referrer links",
+    "id": "eff3b1e83124",
+    "category": "Premium referrer links",
+    "group": "General",
     "description": "Used by official apps to show the [Telegram Premium](/api/premium.md) subscription page.",
     "templates": [
       {
-        "id": "f35472d9cb08",
+        "id": "5bb6bad20df4",
         "template": "tg://premium_offer?ref=<referrer>",
         "placeholders": [
           "referrer"
@@ -4004,13 +4004,13 @@
     "details": []
   },
   {
-    "id": "0a177020281e",
-    "category": "Deep links",
-    "group": "Premium giftcode links",
+    "id": "25a3f70494d2",
+    "category": "Premium giftcode links",
+    "group": "General",
     "description": "Used to process [Telegram Premium giftcode links](/api/giveaways.md).",
     "templates": [
       {
-        "id": "f5219d1d0495",
+        "id": "054a84844453",
         "template": "tg://giftcode?slug=<slug>",
         "placeholders": [
           "slug"
@@ -4019,7 +4019,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "12dbe090c87b",
+        "id": "95ef6e5bce34",
         "template": "t.me/giftcode/<slug>",
         "placeholders": [
           "slug"
@@ -4038,13 +4038,13 @@
     "details": []
   },
   {
-    "id": "95e4b524102d",
-    "category": "Deep links",
-    "group": "QR code login links",
+    "id": "02b6dc571a46",
+    "category": "QR code login links",
+    "group": "General",
     "description": "Used by the [QR code login flow&nbsp;&raquo;](/api/qr-login.md).",
     "templates": [
       {
-        "id": "a0c744942767",
+        "id": "c2f10291a072",
         "template": "tg://login?token=<base64encodedtoken>",
         "placeholders": [
           "base64encodedtoken"
@@ -4063,13 +4063,13 @@
     "details": []
   },
   {
-    "id": "982c2be5f61f",
-    "category": "Deep links",
-    "group": "Main Mini App links",
+    "id": "548dd4891ccd",
+    "category": "Main Mini App links",
+    "group": "General",
     "description": "Used to open [Main Mini Apps&nbsp;&raquo;](/api/bots/webapps.md#main-mini-apps).",
     "templates": [
       {
-        "id": "08b1e675f113",
+        "id": "fd439e7ae7f4",
         "template": "t.me/<bot_username>?startapp&mode=<mode>",
         "placeholders": [
           "bot_username",
@@ -4079,7 +4079,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "07f632e2990f",
+        "id": "47db1e12d098",
         "template": "t.me/<bot_username>?startapp=<start_parameter>&mode=<mode>",
         "placeholders": [
           "bot_username",
@@ -4090,7 +4090,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "f4451d8780b1",
+        "id": "c228d4ecd16c",
         "template": "tg://resolve?domain=<bot_username>&startapp&mode=<mode>",
         "placeholders": [
           "bot_username",
@@ -4100,7 +4100,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "206c8e175a8d",
+        "id": "a9f8e0323a3c",
         "template": "tg://resolve?domain=<bot_username>&startapp=<start_parameter>&mode=<mode>",
         "placeholders": [
           "bot_username",
@@ -4131,13 +4131,13 @@
     "details": []
   },
   {
-    "id": "9eb74662098d",
-    "category": "Deep links",
-    "group": "Direct mini app links",
+    "id": "e104dd6aed88",
+    "category": "Direct mini app links",
+    "group": "General",
     "description": "Used to share [Direct link Mini apps](/api/bots/webapps.md#direct-link-mini-apps).",
     "templates": [
       {
-        "id": "385f5169810a",
+        "id": "e6badcf800d5",
         "template": "t.me/<bot_username>/<short_name>?startapp=<start_parameter>&mode=<mode>",
         "placeholders": [
           "bot_username",
@@ -4149,7 +4149,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "1e9f383ee97a",
+        "id": "3f2caffec9d2",
         "template": "tg://resolve?domain=<bot_username>&appname=<short_name>&startapp=<start_parameter>&mode=<mode>",
         "placeholders": [
           "bot_username",
@@ -4186,13 +4186,13 @@
     "details": []
   },
   {
-    "id": "5b6e81fab921",
-    "category": "Deep links",
+    "id": "f47cda89d8be",
+    "category": "Bot attachment or side menu links",
     "group": "Open in current chat",
     "description": "",
     "templates": [
       {
-        "id": "2d9398107132",
+        "id": "f93a0980820d",
         "template": "t.me/<bot_username>?startattach",
         "placeholders": [
           "bot_username"
@@ -4201,7 +4201,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "02ad3ea214a3",
+        "id": "f4b9301be73f",
         "template": "t.me/<bot_username>?startattach=<start_parameter>",
         "placeholders": [
           "bot_username",
@@ -4211,7 +4211,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "210b52472f71",
+        "id": "885448ded6ca",
         "template": "tg://resolve?domain=<bot_username>&startattach",
         "placeholders": [
           "bot_username"
@@ -4220,7 +4220,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "6cc5932608b4",
+        "id": "b015118316d8",
         "template": "tg://resolve?domain=<bot_username>&startattach=<start_parameter>",
         "placeholders": [
           "bot_username",
@@ -4254,13 +4254,13 @@
     ]
   },
   {
-    "id": "7145262899fd",
-    "category": "Deep links",
+    "id": "d9ab38690770",
+    "category": "Bot attachment or side menu links",
     "group": "Open in specific chat",
     "description": "",
     "templates": [
       {
-        "id": "3a657ab93543",
+        "id": "755e63aa3c77",
         "template": "t.me/<username>?attach=<bot_username>",
         "placeholders": [
           "username",
@@ -4270,7 +4270,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "dca28ff296c6",
+        "id": "0209c46179f1",
         "template": "t.me/<username>?attach=<bot_username>&startattach=<start_parameter>",
         "placeholders": [
           "username",
@@ -4281,7 +4281,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "59d0748279d8",
+        "id": "b97230cff14a",
         "template": "t.me/+<phone_number>?attach=<bot_username>",
         "placeholders": [
           "phone_number",
@@ -4291,7 +4291,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "4e11b00ec28f",
+        "id": "4e541392d09b",
         "template": "t.me/+<phone_number>?attach=<bot_username>&startattach=<start_parameter>",
         "placeholders": [
           "phone_number",
@@ -4302,7 +4302,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "8881706e8746",
+        "id": "a8ef4efe4206",
         "template": "tg://resolve?domain=<username>&attach=<bot_username>",
         "placeholders": [
           "username",
@@ -4312,7 +4312,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "be18cb1e44d5",
+        "id": "0bf90a1263ec",
         "template": "tg://resolve?domain=<username>&attach=<bot_username>&startattach=<start_parameter>",
         "placeholders": [
           "username",
@@ -4323,7 +4323,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "5919615c50df",
+        "id": "f37ef44c0908",
         "template": "tg://resolve?phone=<phone_number>&attach=<bot_username>",
         "placeholders": [
           "phone_number",
@@ -4333,7 +4333,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "c5dcb1401781",
+        "id": "2c2f595f8295",
         "template": "tg://resolve?phone=<phone_number>&attach=<bot_username>&startattach=<start_parameter>",
         "placeholders": [
           "phone_number",
@@ -4378,13 +4378,13 @@
     ]
   },
   {
-    "id": "12c49b404e50",
-    "category": "Deep links",
+    "id": "43013ade4c06",
+    "category": "Bot attachment or side menu links",
     "group": "Open in any chat",
     "description": "",
     "templates": [
       {
-        "id": "90cc1cb74016",
+        "id": "1360517e32d8",
         "template": "t.me/<bot_username>?startattach&choose=users+bots+groups+channels",
         "placeholders": [
           "bot_username"
@@ -4393,7 +4393,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "32ec108c217b",
+        "id": "b566e87ceb15",
         "template": "t.me/<bot_username>?startattach=<start_parameter>&choose=users+bots+groups+channels",
         "placeholders": [
           "bot_username",
@@ -4403,7 +4403,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "e511421e848b",
+        "id": "ee0893e05c6f",
         "template": "tg://resolve?domain=<bot_username>&startattach&choose=users+bots+groups+channels",
         "placeholders": [
           "bot_username"
@@ -4412,7 +4412,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "db9622333d83",
+        "id": "7e5136769fa0",
         "template": "tg://resolve?domain=<bot_username>&startattach=<start_parameter>&choose=users+bots+groups+channels",
         "placeholders": [
           "bot_username",
@@ -4442,13 +4442,13 @@
     "details": []
   },
   {
-    "id": "e6738db4b956",
-    "category": "Deep links",
-    "group": "Stars topup link",
+    "id": "cafc3f1a7223",
+    "category": "Stars topup link",
+    "group": "General",
     "description": "Used to ensure that the user has at least N [Telegram Stars](/api/stars.md) on their balance.",
     "templates": [
       {
-        "id": "97a88cb954da",
+        "id": "f35d1487aa74",
         "template": "tg://stars_topup?balance=<star_count>&purpose=<purpose>",
         "placeholders": [
           "star_count",
@@ -4482,13 +4482,13 @@
     ]
   },
   {
-    "id": "7b2d34a85b75",
-    "category": "Deep links",
-    "group": "Collectible gift link",
+    "id": "26430e9ae8ef",
+    "category": "Collectible gift link",
+    "group": "General",
     "description": "Identifies a unique [collectible gift &raquo;](/api/gifts.md#collectible-gifts): use [payments.getUniqueStarGift](/method/payments.getUniqueStarGift.md) to fetch info about the collectible.",
     "templates": [
       {
-        "id": "f2cee9907ec5",
+        "id": "7dff6968b8c5",
         "template": "t.me/nft/<slug>",
         "placeholders": [
           "slug"
@@ -4497,7 +4497,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "8d3b6f629196",
+        "id": "1751354ead03",
         "template": "tg://nft?slug=<slug>",
         "placeholders": [
           "slug"
@@ -4516,13 +4516,13 @@
     "details": []
   },
   {
-    "id": "aa3c86bdd422",
-    "category": "Deep links",
-    "group": "Gift collection links",
+    "id": "4b00139971b1",
+    "category": "Gift collection links",
+    "group": "General",
     "description": "",
     "templates": [
       {
-        "id": "040f1b558df3",
+        "id": "a62c63ee9a7b",
         "template": "t.me/<username>?collection=<collection_id>",
         "placeholders": [
           "username",
@@ -4532,7 +4532,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "cb0e82770f87",
+        "id": "a952f2d3a28a",
         "template": "t.me/<username>/c/<collection_id>",
         "placeholders": [
           "username",
@@ -4542,7 +4542,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "d20800c91f49",
+        "id": "f2eee157f1a2",
         "template": "tg://resolve?domain=<username>&collection=<collection_id>",
         "placeholders": [
           "username",
@@ -4567,13 +4567,13 @@
     "details": []
   },
   {
-    "id": "b69fb9d1b114",
-    "category": "Deep links",
-    "group": "Auction links",
+    "id": "0077b3d011ae",
+    "category": "Auction links",
+    "group": "General",
     "description": "Identifies a [collectible gift auction &raquo;](/api/auctions.md)",
     "templates": [
       {
-        "id": "54fc0e95c947",
+        "id": "39b2ce79a262",
         "template": "t.me/auction/<slug>",
         "placeholders": [
           "slug"
@@ -4582,7 +4582,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "5db4dd88e25e",
+        "id": "955a5232b98d",
         "template": "tg://stargift_auction?slug=<slug>",
         "placeholders": [
           "slug"
@@ -4601,13 +4601,13 @@
     "details": []
   },
   {
-    "id": "5c63111bdd9b",
-    "category": "Deep links",
-    "group": "Referral links",
+    "id": "fed666aeedc3",
+    "category": "Referral links",
+    "group": "General",
     "description": "Used for [Affiliate programs](/api/bots/referrals.md): when imported, all Telegram Star purchases made for digital products and subscriptions in the associated [mini app](/api/bots/webapps.md) will also transfer a certain amount of Stars to the *creator* of the link.",
     "templates": [
       {
-        "id": "76da7314d8a6",
+        "id": "0ae2f9d7dccd",
         "template": "t.me/<bot_username>?ref=<referrer>",
         "placeholders": [
           "bot_username",
@@ -4617,7 +4617,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "19111e3c1038",
+        "id": "cf07184187f1",
         "template": "t.me/<bot_username>?start={prefix}<referrer>",
         "placeholders": [
           "bot_username",
@@ -4627,7 +4627,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "ae168d93d86e",
+        "id": "55ee238c3f52",
         "template": "tg://resolve?domain=<bot_username>&ref=<referrer>",
         "placeholders": [
           "bot_username",
@@ -4637,7 +4637,7 @@
         "extraction": "fenced-code"
       },
       {
-        "id": "f45705af9301",
+        "id": "0abf5483762a",
         "template": "tg://resolve?domain=<bot_username>&start={prefix}<referrer>",
         "placeholders": [
           "bot_username",
@@ -4662,13 +4662,13 @@
     "details": []
   },
   {
-    "id": "93aabae0d841",
-    "category": "Deep links",
-    "group": "ID links",
+    "id": "103e31c28040",
+    "category": "ID links",
+    "group": "General",
     "description": "ID links are merely an abstraction offered by the [bot API](/bots/api.md) to simplify construction of [inputMessageEntityMentionName](/constructor/inputMessageEntityMentionName.md) and [inputKeyboardButtonUserProfile](/constructor/inputKeyboardButtonUserProfile.md) constructors, and should be ignored by normal clients.",
     "templates": [
       {
-        "id": "ed8c31e181fb",
+        "id": "db2acc60b112",
         "template": "tg://user?id=<id>",
         "placeholders": [
           "id"
@@ -4687,13 +4687,13 @@
     "details": []
   },
   {
-    "id": "fa5e0a9a49cb",
-    "category": "Deep links",
-    "group": "Emoji links",
+    "id": "3f4cf48a876b",
+    "category": "Emoji links",
+    "group": "General",
     "description": "Emoji links are merely an abstraction offered by the [bot API](/bots/api.md) to simplify construction of [messageEntityCustomEmoji](/constructor/messageEntityCustomEmoji.md) constructors, and should be ignored by normal clients.",
     "templates": [
       {
-        "id": "6d846822dc48",
+        "id": "28c32b380040",
         "template": "tg://emoji?id=<id>",
         "placeholders": [
           "id"
@@ -4712,13 +4712,13 @@
     "details": []
   },
   {
-    "id": "7b0c3d499c69",
-    "category": "Deep links",
-    "group": "Timestamp links",
+    "id": "d5be12029ad4",
+    "category": "Timestamp links",
+    "group": "General",
     "description": "Timestamp links are merely an abstraction offered by the [bot API](/bots/api.md) to simplify construction of [messageEntityFormattedDate](/constructor/inputMessageEntityMentionName.md), and should be ignored by normal clients.",
     "templates": [
       {
-        "id": "4ad2bf42d86d",
+        "id": "8c7c21dafa91",
         "template": "tg://time?unix=<unix>&format=<format>",
         "placeholders": [
           "unix",
@@ -4743,20 +4743,20 @@
     "details": []
   },
   {
-    "id": "686c5b613e31",
-    "category": "Deep links",
-    "group": "Unsupported links",
+    "id": "8ba55c487182",
+    "category": "Unsupported links",
+    "group": "General",
     "description": "Schema:",
     "templates": [
       {
-        "id": "cce457eaa7e2",
+        "id": "5a8300439aac",
         "template": "tg://need_update_for_some_feature?test=a",
         "placeholders": [],
         "line": 1932,
         "extraction": "inline-code"
       },
       {
-        "id": "60ad1a1ec641",
+        "id": "d03432f2fc35",
         "template": "tg:some_unsupported_feature?test=b",
         "placeholders": [],
         "line": 1933,

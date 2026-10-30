@@ -56,34 +56,34 @@
     "group": "General"
   },
   {
-    "id": "19bdef0437ac",
+    "id": "0795047e183e",
     "template": "tonsite://somesite.domain/path?query#hash",
     "placeholders": [],
     "line": 65,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "TON Sites"
+    "category": "TON Sites",
+    "group": "General"
   },
   {
-    "id": "136603abc031",
+    "id": "af46a4080f28",
     "template": "tonsite://",
     "placeholders": [],
     "line": 69,
     "extraction": "inline-code",
-    "category": "Deep links",
-    "group": "TON Sites"
+    "category": "TON Sites",
+    "group": "General"
   },
   {
-    "id": "512a26f2252f",
+    "id": "175bd8d226d9",
     "template": "getting-started.ton/path?query#hash",
     "placeholders": [],
     "line": 71,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "TON Sites"
+    "category": "TON Sites",
+    "group": "General"
   },
   {
-    "id": "2173c17daa8c",
+    "id": "1b6072828dd0",
     "template": "t.me/<username>?text=<draft_text>&profile",
     "placeholders": [
       "username",
@@ -91,11 +91,11 @@
     ],
     "line": 93,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Public username links"
+    "category": "Public username links",
+    "group": "General"
   },
   {
-    "id": "5b01b11f2bf6",
+    "id": "43e30e86d5c6",
     "template": "tg://resolve?domain=<username>&text=<draft_text>&profile",
     "placeholders": [
       "username",
@@ -103,55 +103,55 @@
     ],
     "line": 98,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Public username links"
+    "category": "Public username links",
+    "group": "General"
   },
   {
-    "id": "6e48b11252b5",
+    "id": "4497c2c03bdc",
     "template": "t.me/<username>?direct",
     "placeholders": [
       "username"
     ],
     "line": 123,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Monoforum links"
+    "category": "Monoforum links",
+    "group": "General"
   },
   {
-    "id": "74517102381f",
+    "id": "2e27232db0d8",
     "template": "tg://resolve?domain=<username>&direct",
     "placeholders": [
       "username"
     ],
     "line": 128,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Monoforum links"
+    "category": "Monoforum links",
+    "group": "General"
   },
   {
-    "id": "5caaf30c7a9a",
+    "id": "59dcc123fce7",
     "template": "t.me/contact/<token>",
     "placeholders": [
       "token"
     ],
     "line": 147,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Temporary profile links"
+    "category": "Temporary profile links",
+    "group": "General"
   },
   {
-    "id": "730ed573f8dd",
+    "id": "ee7876baca0c",
     "template": "tg://contact?token=<token>",
     "placeholders": [
       "token"
     ],
     "line": 152,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Temporary profile links"
+    "category": "Temporary profile links",
+    "group": "General"
   },
   {
-    "id": "4b8c3c33ade8",
+    "id": "222980c453f9",
     "template": "t.me/+<phone_number>?text=<draft_text>&profile",
     "placeholders": [
       "phone_number",
@@ -159,11 +159,11 @@
     ],
     "line": 167,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Phone number links"
+    "category": "Phone number links",
+    "group": "General"
   },
   {
-    "id": "d20ba1643986",
+    "id": "ed72fc90cf27",
     "template": "tg://resolve?phone=<phone_number>&text=<draft_text>&profile",
     "placeholders": [
       "phone_number",
@@ -171,66 +171,66 @@
     ],
     "line": 172,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Phone number links"
+    "category": "Phone number links",
+    "group": "General"
   },
   {
-    "id": "61530820b4fd",
+    "id": "b33dae336159",
     "template": "t.me/+<hash>",
     "placeholders": [
       "hash"
     ],
     "line": 195,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Chat invite links"
+    "category": "Chat invite links",
+    "group": "General"
   },
   {
-    "id": "8ff6f7958aa5",
+    "id": "ae1574c130d9",
     "template": "t.me/joinchat/<hash>",
     "placeholders": [
       "hash"
     ],
     "line": 200,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Chat invite links"
+    "category": "Chat invite links",
+    "group": "General"
   },
   {
-    "id": "e4f2e36a0760",
+    "id": "e1685f73e35a",
     "template": "tg://join?invite=<hash>",
     "placeholders": [
       "hash"
     ],
     "line": 205,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Chat invite links"
+    "category": "Chat invite links",
+    "group": "General"
   },
   {
-    "id": "ad1fd69bcadd",
+    "id": "96a80419534d",
     "template": "t.me/addlist/<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 220,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Chat folder links"
+    "category": "Chat folder links",
+    "group": "General"
   },
   {
-    "id": "2f9a6bc4460f",
+    "id": "4dd4740034eb",
     "template": "tg://addlist?slug=<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 225,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Chat folder links"
+    "category": "Chat folder links",
+    "group": "General"
   },
   {
-    "id": "304f425c3ad4",
+    "id": "4fe74b0776a1",
     "template": "t.me/<username>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
     "placeholders": [
       "username",
@@ -243,11 +243,11 @@
     ],
     "line": 240,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Message links"
+    "category": "Message links",
+    "group": "General"
   },
   {
-    "id": "3d4c9f31bb9c",
+    "id": "39f8c9fe0aa9",
     "template": "t.me/<username>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
     "placeholders": [
       "username",
@@ -260,11 +260,11 @@
     ],
     "line": 240,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Message links"
+    "category": "Message links",
+    "group": "General"
   },
   {
-    "id": "6ba6eb945901",
+    "id": "07ac618c8719",
     "template": "t.me/c/<channel>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
     "placeholders": [
       "channel",
@@ -277,11 +277,11 @@
     ],
     "line": 246,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Message links"
+    "category": "Message links",
+    "group": "General"
   },
   {
-    "id": "a2884a75e56a",
+    "id": "2ee147b308ee",
     "template": "t.me/c/<channel>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
     "placeholders": [
       "channel",
@@ -294,11 +294,11 @@
     ],
     "line": 246,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Message links"
+    "category": "Message links",
+    "group": "General"
   },
   {
-    "id": "8073134a20e7",
+    "id": "ddbc91a90b32",
     "template": "tg://resolve?domain=<username>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
     "placeholders": [
       "username",
@@ -311,11 +311,11 @@
     ],
     "line": 252,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Message links"
+    "category": "Message links",
+    "group": "General"
   },
   {
-    "id": "9f26900412cf",
+    "id": "e1f8af501778",
     "template": "tg://privatepost?channel=<channel>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
     "placeholders": [
       "channel",
@@ -328,11 +328,11 @@
     ],
     "line": 257,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Message links"
+    "category": "Message links",
+    "group": "General"
   },
   {
-    "id": "396f1a7b221b",
+    "id": "4b77f7a56aa4",
     "template": "t.me/share?url=<url>&text=<text>",
     "placeholders": [
       "url",
@@ -340,11 +340,11 @@
     ],
     "line": 300,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Share links"
+    "category": "Share links",
+    "group": "General"
   },
   {
-    "id": "db11d6e62c71",
+    "id": "83d5a44e273d",
     "template": "t.me/share/url?url=<url>&text=<text>",
     "placeholders": [
       "url",
@@ -352,11 +352,11 @@
     ],
     "line": 300,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Share links"
+    "category": "Share links",
+    "group": "General"
   },
   {
-    "id": "05427997670b",
+    "id": "b3c9d8e560d9",
     "template": "t.me/share/url/?url=<url>&text=<text>",
     "placeholders": [
       "url",
@@ -364,11 +364,11 @@
     ],
     "line": 300,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Share links"
+    "category": "Share links",
+    "group": "General"
   },
   {
-    "id": "4dbe9c03d7d6",
+    "id": "ea828f64ad6c",
     "template": "t.me/msg/url?url=<url>&text=<text>",
     "placeholders": [
       "url",
@@ -376,11 +376,11 @@
     ],
     "line": 300,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Share links"
+    "category": "Share links",
+    "group": "General"
   },
   {
-    "id": "327f551086b5",
+    "id": "7f26c4eecde4",
     "template": "tg://msg_url?url=<url>&text=<text>",
     "placeholders": [
       "url",
@@ -388,44 +388,44 @@
     ],
     "line": 308,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Share links"
+    "category": "Share links",
+    "group": "General"
   },
   {
-    "id": "ceb1b2be1b6d",
+    "id": "09aa32bf1a21",
     "template": "t.me/m/<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 333,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Business chat links"
+    "category": "Business chat links",
+    "group": "General"
   },
   {
-    "id": "f9cae3da6369",
+    "id": "56784fee7f4d",
     "template": "tg://message?slug=<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 338,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Business chat links"
+    "category": "Business chat links",
+    "group": "General"
   },
   {
-    "id": "cdbf01ae09cd",
+    "id": "f80b0d65cbea",
     "template": "t.me/<username>?videochat",
     "placeholders": [
       "username"
     ],
     "line": 355,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links"
+    "category": "Video chat/Livestream links",
+    "group": "General"
   },
   {
-    "id": "0d560894da7f",
+    "id": "f964583082c3",
     "template": "t.me/<username>?videochat=<invite_hash>",
     "placeholders": [
       "username",
@@ -433,22 +433,22 @@
     ],
     "line": 355,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links"
+    "category": "Video chat/Livestream links",
+    "group": "General"
   },
   {
-    "id": "6f2008238560",
+    "id": "9ab88b357c36",
     "template": "t.me/<username>?livestream",
     "placeholders": [
       "username"
     ],
     "line": 355,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links"
+    "category": "Video chat/Livestream links",
+    "group": "General"
   },
   {
-    "id": "815e3d700d11",
+    "id": "a85f5b7ec832",
     "template": "t.me/<username>?livestream=<invite_hash>",
     "placeholders": [
       "username",
@@ -456,22 +456,22 @@
     ],
     "line": 355,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links"
+    "category": "Video chat/Livestream links",
+    "group": "General"
   },
   {
-    "id": "a70b3e15b6c6",
+    "id": "c2d95c0756a0",
     "template": "t.me/<username>?voicechat",
     "placeholders": [
       "username"
     ],
     "line": 355,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links"
+    "category": "Video chat/Livestream links",
+    "group": "General"
   },
   {
-    "id": "c5e4ffc38b75",
+    "id": "f99c92e3578b",
     "template": "t.me/<username>?voicechat=<invite_hash>",
     "placeholders": [
       "username",
@@ -479,22 +479,22 @@
     ],
     "line": 355,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links"
+    "category": "Video chat/Livestream links",
+    "group": "General"
   },
   {
-    "id": "ea07f059d3b5",
+    "id": "8d971ca3541a",
     "template": "tg://resolve?domain=<username>&videochat",
     "placeholders": [
       "username"
     ],
     "line": 365,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links"
+    "category": "Video chat/Livestream links",
+    "group": "General"
   },
   {
-    "id": "be2c8b88184e",
+    "id": "e17de3aa4eec",
     "template": "tg://resolve?domain=<username>&videochat=<invite_hash>",
     "placeholders": [
       "username",
@@ -502,22 +502,22 @@
     ],
     "line": 365,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links"
+    "category": "Video chat/Livestream links",
+    "group": "General"
   },
   {
-    "id": "cd60898dc074",
+    "id": "f71360fd9194",
     "template": "tg://resolve?domain=<username>&livestream",
     "placeholders": [
       "username"
     ],
     "line": 365,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links"
+    "category": "Video chat/Livestream links",
+    "group": "General"
   },
   {
-    "id": "b7419b8c9ebf",
+    "id": "a4b87396c459",
     "template": "tg://resolve?domain=<username>&livestream=<invite_hash>",
     "placeholders": [
       "username",
@@ -525,22 +525,22 @@
     ],
     "line": 365,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links"
+    "category": "Video chat/Livestream links",
+    "group": "General"
   },
   {
-    "id": "3a934b4b3a9e",
+    "id": "7cc1592f1518",
     "template": "tg://resolve?domain=<username>&voicechat",
     "placeholders": [
       "username"
     ],
     "line": 365,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links"
+    "category": "Video chat/Livestream links",
+    "group": "General"
   },
   {
-    "id": "bb4a627d976b",
+    "id": "013513ab82a5",
     "template": "tg://resolve?domain=<username>&voicechat=<invite_hash>",
     "placeholders": [
       "username",
@@ -548,99 +548,99 @@
     ],
     "line": 365,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links"
+    "category": "Video chat/Livestream links",
+    "group": "General"
   },
   {
-    "id": "74a539c95c0e",
+    "id": "2c3f4558a58f",
     "template": "t.me/call/<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 385,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Conference links"
+    "category": "Conference links",
+    "group": "General"
   },
   {
-    "id": "e4c31a17f1f9",
+    "id": "79f9c07d04c1",
     "template": "tg://call?slug=<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 390,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Conference links"
+    "category": "Conference links",
+    "group": "General"
   },
   {
-    "id": "e6f86acebf81",
+    "id": "94b3338f62e4",
     "template": "t.me/addstickers/<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 405,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Stickerset links"
+    "category": "Stickerset links",
+    "group": "General"
   },
   {
-    "id": "14c113ccb281",
+    "id": "cbd63da2456b",
     "template": "t.me/addemoji/<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 405,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Stickerset links"
+    "category": "Stickerset links",
+    "group": "General"
   },
   {
-    "id": "8436a878c0d7",
+    "id": "9cb4e3908f9d",
     "template": "tg://addstickers?set=<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 411,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Stickerset links"
+    "category": "Stickerset links",
+    "group": "General"
   },
   {
-    "id": "2f454c2df01e",
+    "id": "1e5f10041fcb",
     "template": "tg://addemoji?set=<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 411,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Stickerset links"
+    "category": "Stickerset links",
+    "group": "General"
   },
   {
-    "id": "83f0cc888e74",
+    "id": "3a1a6ed39cdf",
     "template": "t.me/addemoji/<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 427,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Custom emoji stickerset links"
+    "category": "Custom emoji stickerset links",
+    "group": "General"
   },
   {
-    "id": "4954f3e52162",
+    "id": "1f1cd6cab5d1",
     "template": "tg://addemoji?set=<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 432,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Custom emoji stickerset links"
+    "category": "Custom emoji stickerset links",
+    "group": "General"
   },
   {
-    "id": "44c3bec67663",
+    "id": "295171ab3c99",
     "template": "t.me/<username>/s/<story_id>",
     "placeholders": [
       "username",
@@ -648,11 +648,11 @@
     ],
     "line": 447,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Story links"
+    "category": "Story links",
+    "group": "General"
   },
   {
-    "id": "78eca6a1928d",
+    "id": "6a9747fa9e81",
     "template": "tg://resolve?domain=<username>&story=<story_id>",
     "placeholders": [
       "username",
@@ -660,33 +660,33 @@
     ],
     "line": 452,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Story links"
+    "category": "Story links",
+    "group": "General"
   },
   {
-    "id": "c777c4e6cf09",
+    "id": "95ae290c8830",
     "template": "t.me/<username>/s/live",
     "placeholders": [
       "username"
     ],
     "line": 469,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Story links",
     "group": "Live story links"
   },
   {
-    "id": "8449a9f3243c",
+    "id": "178854a02c4e",
     "template": "tg://resolve?domain=<username>&story=live",
     "placeholders": [
       "username"
     ],
     "line": 474,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Story links",
     "group": "Live story links"
   },
   {
-    "id": "e20e7a37dea2",
+    "id": "fa018561d19f",
     "template": "t.me/<username>?album=<album_id>",
     "placeholders": [
       "username",
@@ -694,11 +694,11 @@
     ],
     "line": 489,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Story album links"
+    "category": "Story album links",
+    "group": "General"
   },
   {
-    "id": "2a3b0ef108b8",
+    "id": "570f9094873d",
     "template": "t.me/<username>/a/<album_id>",
     "placeholders": [
       "username",
@@ -706,11 +706,11 @@
     ],
     "line": 489,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Story album links"
+    "category": "Story album links",
+    "group": "General"
   },
   {
-    "id": "9b96c85c7e41",
+    "id": "9d997945baef",
     "template": "tg://resolve?domain=<username>&album=<album_id>",
     "placeholders": [
       "username",
@@ -718,31 +718,31 @@
     ],
     "line": 495,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Story album links"
+    "category": "Story album links",
+    "group": "General"
   },
   {
-    "id": "7f8862b5689a",
+    "id": "51e860285aec",
     "template": "tg://post",
     "placeholders": [],
     "line": 511,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Post story links"
+    "category": "Post story links",
+    "group": "General"
   },
   {
-    "id": "697729f84d1e",
+    "id": "653359515df4",
     "template": "tg://post/<content_type>",
     "placeholders": [
       "content_type"
     ],
     "line": 511,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Post story links"
+    "category": "Post story links",
+    "group": "General"
   },
   {
-    "id": "9e7f1c0cc71f",
+    "id": "43c2b0bf0303",
     "template": "t.me/newbot/<manager_bot_username>/<suggested_bot_username>?name=<suggested_bot_name>",
     "placeholders": [
       "manager_bot_username",
@@ -751,11 +751,11 @@
     ],
     "line": 537,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Managed bot creation request links"
+    "category": "Managed bot creation request links",
+    "group": "General"
   },
   {
-    "id": "b6b8f701b755",
+    "id": "97508afd9b4f",
     "template": "t.me/newbot/<manager_bot_username>?name=<suggested_bot_name>",
     "placeholders": [
       "manager_bot_username",
@@ -763,11 +763,11 @@
     ],
     "line": 537,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Managed bot creation request links"
+    "category": "Managed bot creation request links",
+    "group": "General"
   },
   {
-    "id": "b00a6c5863d0",
+    "id": "1f37ddd8ee2a",
     "template": "tg://newbot?manager=<manager_bot_username>&username=<suggested_bot_username>&name=<suggested_bot_name>",
     "placeholders": [
       "manager_bot_username",
@@ -776,110 +776,110 @@
     ],
     "line": 543,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Managed bot creation request links"
+    "category": "Managed bot creation request links",
+    "group": "General"
   },
   {
-    "id": "f6aa85502d11",
+    "id": "06ec97fd5a49",
     "template": "t.me/boost/<username>",
     "placeholders": [
       "username"
     ],
     "line": 566,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Boost links"
+    "category": "Boost links",
+    "group": "General"
   },
   {
-    "id": "31863bf84a9d",
+    "id": "e9d1699a0e6d",
     "template": "t.me/<username>?boost",
     "placeholders": [
       "username"
     ],
     "line": 566,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Boost links"
+    "category": "Boost links",
+    "group": "General"
   },
   {
-    "id": "a0407f03de18",
+    "id": "b45f3d0fed70",
     "template": "t.me/boost?c=<id>",
     "placeholders": [
       "id"
     ],
     "line": 572,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Boost links"
+    "category": "Boost links",
+    "group": "General"
   },
   {
-    "id": "1115168ff298",
+    "id": "98c5029f0c93",
     "template": "t.me/c/<id>?boost",
     "placeholders": [
       "id"
     ],
     "line": 572,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Boost links"
+    "category": "Boost links",
+    "group": "General"
   },
   {
-    "id": "7aef7f149f9a",
+    "id": "e1d8b0fa074b",
     "template": "tg://boost?domain=<username>",
     "placeholders": [
       "username"
     ],
     "line": 578,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Boost links"
+    "category": "Boost links",
+    "group": "General"
   },
   {
-    "id": "7a9875818b88",
+    "id": "0f94160467be",
     "template": "tg://boost?channel=<id>",
     "placeholders": [
       "id"
     ],
     "line": 583,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Boost links"
+    "category": "Boost links",
+    "group": "General"
   },
   {
-    "id": "e6f97035afa7",
+    "id": "7252c2434f71",
     "template": "https://t.me/oauth?startapp=<token>",
     "placeholders": [
       "token"
     ],
     "line": 606,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "OAuth links"
+    "category": "OAuth links",
+    "group": "General"
   },
   {
-    "id": "0aee7b7716ed",
+    "id": "1a0b83fea7e2",
     "template": "tg://oauth?token=<token>",
     "placeholders": [
       "token"
     ],
     "line": 612,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "OAuth links"
+    "category": "OAuth links",
+    "group": "General"
   },
   {
-    "id": "4bfe8fcaabe9",
+    "id": "81976f5ebea0",
     "template": "tg://resolve?domain=oauth&startapp=<token>",
     "placeholders": [
       "token"
     ],
     "line": 612,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "OAuth links"
+    "category": "OAuth links",
+    "group": "General"
   },
   {
-    "id": "61de316d65d0",
+    "id": "9af1f07051b2",
     "template": "t.me/proxy?server=<server>&port=<port>&secret=<secret>",
     "placeholders": [
       "server",
@@ -888,11 +888,11 @@
     ],
     "line": 632,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Proxy links",
     "group": "MTProxy links"
   },
   {
-    "id": "ad25c356f30c",
+    "id": "3bc433019934",
     "template": "tg://proxy?server=<server>&port=<port>&secret=<secret>",
     "placeholders": [
       "server",
@@ -901,11 +901,11 @@
     ],
     "line": 637,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Proxy links",
     "group": "MTProxy links"
   },
   {
-    "id": "ee2602f8d119",
+    "id": "3a2d5161630a",
     "template": "t.me/socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
     "placeholders": [
       "server",
@@ -915,11 +915,11 @@
     ],
     "line": 654,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Proxy links",
     "group": "SOCKS5 proxy links"
   },
   {
-    "id": "6ce441f420e2",
+    "id": "e442604a7753",
     "template": "tg://socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
     "placeholders": [
       "server",
@@ -929,55 +929,55 @@
     ],
     "line": 659,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Proxy links",
     "group": "SOCKS5 proxy links"
   },
   {
-    "id": "9e5c556c11c9",
+    "id": "6cc92cecb717",
     "template": "t.me/addtheme/<name>",
     "placeholders": [
       "name"
     ],
     "line": 677,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Theme links"
+    "category": "Theme links",
+    "group": "General"
   },
   {
-    "id": "0dae772b75e9",
+    "id": "47c5acd22547",
     "template": "tg://addtheme?slug=<name>",
     "placeholders": [
       "name"
     ],
     "line": 682,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Theme links"
+    "category": "Theme links",
+    "group": "General"
   },
   {
-    "id": "c86929446ae3",
+    "id": "f3668d1b98df",
     "template": "t.me/addstyle/<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 699,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "AI compose tone links"
+    "category": "AI compose tone links",
+    "group": "General"
   },
   {
-    "id": "914d83d347e3",
+    "id": "0ccd63d856e0",
     "template": "tg://addstyle?slug=<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 704,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "AI compose tone links"
+    "category": "AI compose tone links",
+    "group": "General"
   },
   {
-    "id": "4d19e4b4be55",
+    "id": "526f5e89b0dd",
     "template": "t.me/bg/<slug>?mode=<mode>",
     "placeholders": [
       "slug",
@@ -985,11 +985,11 @@
     ],
     "line": 723,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "[Image wallpapers](/api/wallpapers.md#image-wallpapers)"
   },
   {
-    "id": "cb2624bb8f2f",
+    "id": "d9d3b35a9a61",
     "template": "tg://bg?slug=<slug>&mode=<mode>",
     "placeholders": [
       "slug",
@@ -997,33 +997,33 @@
     ],
     "line": 728,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "[Image wallpapers](/api/wallpapers.md#image-wallpapers)"
   },
   {
-    "id": "fc0afa982b84",
+    "id": "2a86649b62bf",
     "template": "t.me/bg/<hex_color>",
     "placeholders": [
       "hex_color"
     ],
     "line": 744,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "Solid fill wallpapers"
   },
   {
-    "id": "a3bcb2144373",
+    "id": "2728263bc2de",
     "template": "tg://bg?color=<hex_color>",
     "placeholders": [
       "hex_color"
     ],
     "line": 749,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "Solid fill wallpapers"
   },
   {
-    "id": "41ff550d1d5e",
+    "id": "218f0cb90a1b",
     "template": "t.me/bg/<top_color>-<bottom_color>?rotation=<rotation>",
     "placeholders": [
       "top_color",
@@ -1032,11 +1032,11 @@
     ],
     "line": 764,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "Gradient fill wallpapers"
   },
   {
-    "id": "b2bf7b3e860c",
+    "id": "ff9309a25e3e",
     "template": "tg://bg?gradient=<top_color>-<bottom_color>&rotation=<rotation>",
     "placeholders": [
       "top_color",
@@ -1045,11 +1045,11 @@
     ],
     "line": 769,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "Gradient fill wallpapers"
   },
   {
-    "id": "0799a13f165c",
+    "id": "8a6e074ad2e7",
     "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>",
     "placeholders": [
       "hex_color1",
@@ -1058,11 +1058,11 @@
     ],
     "line": 786,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "Free-form gradient fill wallpapers"
   },
   {
-    "id": "7bbce20869c2",
+    "id": "cbc6ba72672f",
     "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
     "placeholders": [
       "hex_color1",
@@ -1072,11 +1072,11 @@
     ],
     "line": 786,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "Free-form gradient fill wallpapers"
   },
   {
-    "id": "45698348de92",
+    "id": "4e70db8a0825",
     "template": "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>",
     "placeholders": [
       "hex_color1",
@@ -1085,11 +1085,11 @@
     ],
     "line": 792,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "Free-form gradient fill wallpapers"
   },
   {
-    "id": "c48045539edc",
+    "id": "47505d541912",
     "template": "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
     "placeholders": [
       "hex_color1",
@@ -1099,11 +1099,11 @@
     ],
     "line": 792,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "Free-form gradient fill wallpapers"
   },
   {
-    "id": "26ca50444fac",
+    "id": "8fbaa34b0e74",
     "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
     "placeholders": [
       "slug",
@@ -1113,11 +1113,11 @@
     ],
     "line": 811,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "Solid pattern wallpapers"
   },
   {
-    "id": "2dc7404eda35",
+    "id": "9d92cee9d2bc",
     "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
     "placeholders": [
       "slug",
@@ -1127,11 +1127,11 @@
     ],
     "line": 816,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "Solid pattern wallpapers"
   },
   {
-    "id": "fd87fc53173a",
+    "id": "2dbb91654f74",
     "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
     "placeholders": [
       "slug",
@@ -1143,11 +1143,11 @@
     ],
     "line": 834,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "Gradient pattern wallpapers"
   },
   {
-    "id": "834094aa7a6d",
+    "id": "f393fb40b137",
     "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
     "placeholders": [
       "slug",
@@ -1159,11 +1159,11 @@
     ],
     "line": 839,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "Gradient pattern wallpapers"
   },
   {
-    "id": "112c2d8675b8",
+    "id": "da992730db0f",
     "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
     "placeholders": [
       "slug",
@@ -1175,11 +1175,11 @@
     ],
     "line": 859,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "Free-form gradient pattern wallpapers"
   },
   {
-    "id": "26773ccbde8c",
+    "id": "90467ea03508",
     "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
     "placeholders": [
       "slug",
@@ -1192,11 +1192,11 @@
     ],
     "line": 859,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "Free-form gradient pattern wallpapers"
   },
   {
-    "id": "0f10d76fc68f",
+    "id": "b766adf1c823",
     "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
     "placeholders": [
       "slug",
@@ -1208,11 +1208,11 @@
     ],
     "line": 865,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "Free-form gradient pattern wallpapers"
   },
   {
-    "id": "70f5a4448a62",
+    "id": "8c13a8fcec28",
     "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
     "placeholders": [
       "slug",
@@ -1225,11 +1225,11 @@
     ],
     "line": 865,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Wallpaper links",
     "group": "Free-form gradient pattern wallpapers"
   },
   {
-    "id": "e6c25f20c7a1",
+    "id": "5fc3d91e34df",
     "template": "t.me/<bot_username>?start=<parameter>",
     "placeholders": [
       "bot_username",
@@ -1237,11 +1237,11 @@
     ],
     "line": 887,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Bot links"
+    "category": "Bot links",
+    "group": "General"
   },
   {
-    "id": "2c59ac5e9aaa",
+    "id": "ff2c991faa4f",
     "template": "tg://resolve?domain=<bot_username>&start=<parameter>",
     "placeholders": [
       "bot_username",
@@ -1249,11 +1249,11 @@
     ],
     "line": 892,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Bot links"
+    "category": "Bot links",
+    "group": "General"
   },
   {
-    "id": "ae9a772a2e47",
+    "id": "320136e70f6e",
     "template": "t.me/<bot_username>?startgroup=<parameter>&admin=<permissions>",
     "placeholders": [
       "bot_username",
@@ -1262,11 +1262,11 @@
     ],
     "line": 926,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Group/channel bot links"
+    "category": "Group/channel bot links",
+    "group": "General"
   },
   {
-    "id": "14fc808b3e2d",
+    "id": "262e2cd28476",
     "template": "t.me/<bot_username>?startgroup&admin=<permissions>",
     "placeholders": [
       "bot_username",
@@ -1274,11 +1274,11 @@
     ],
     "line": 926,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Group/channel bot links"
+    "category": "Group/channel bot links",
+    "group": "General"
   },
   {
-    "id": "394013922b4e",
+    "id": "abaf9266bf28",
     "template": "tg://resolve?domain=<bot_username>&startgroup=<parameter>&admin=<permissions>",
     "placeholders": [
       "bot_username",
@@ -1287,11 +1287,11 @@
     ],
     "line": 932,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Group/channel bot links"
+    "category": "Group/channel bot links",
+    "group": "General"
   },
   {
-    "id": "7371316014ac",
+    "id": "ee19bee26dbd",
     "template": "tg://resolve?domain=<bot_username>&startgroup&admin=<permissions>",
     "placeholders": [
       "bot_username",
@@ -1299,11 +1299,11 @@
     ],
     "line": 932,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Group/channel bot links"
+    "category": "Group/channel bot links",
+    "group": "General"
   },
   {
-    "id": "4206f11e15e7",
+    "id": "b66c5d3c5104",
     "template": "t.me/<bot_username>?startchannel&admin=<permissions>",
     "placeholders": [
       "bot_username",
@@ -1311,11 +1311,11 @@
     ],
     "line": 938,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Group/channel bot links"
+    "category": "Group/channel bot links",
+    "group": "General"
   },
   {
-    "id": "9dcf21d47dbd",
+    "id": "23eda204af6f",
     "template": "tg://resolve?domain=<bot_username>&startchannel&admin=<permissions>",
     "placeholders": [
       "bot_username",
@@ -1323,11 +1323,11 @@
     ],
     "line": 943,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Group/channel bot links"
+    "category": "Group/channel bot links",
+    "group": "General"
   },
   {
-    "id": "25f65f66760a",
+    "id": "90aefdc6465c",
     "template": "t.me/<bot_username>?game=<short_name>",
     "placeholders": [
       "bot_username",
@@ -1335,11 +1335,11 @@
     ],
     "line": 982,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Game links"
+    "category": "Game links",
+    "group": "General"
   },
   {
-    "id": "2ad8c13eba92",
+    "id": "c83ba8782cba",
     "template": "tg://resolve?domain=<bot_username>&game=<short_name>",
     "placeholders": [
       "bot_username",
@@ -1347,236 +1347,236 @@
     ],
     "line": 987,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Game links"
+    "category": "Game links",
+    "group": "General"
   },
   {
-    "id": "03b6e46f0a19",
+    "id": "1c48490cdaaf",
     "template": "tg://settings",
     "placeholders": [],
     "line": 1003,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Settings links"
+    "category": "Settings links",
+    "group": "General"
   },
   {
-    "id": "fb409d865f5b",
+    "id": "ca16a97217e2",
     "template": "tg://settings/<path>",
     "placeholders": [
       "path"
     ],
     "line": 1003,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Settings links"
+    "category": "Settings links",
+    "group": "General"
   },
   {
-    "id": "1d55b1292f3e",
+    "id": "c8a37c3b222e",
     "template": "tg://settings/stars",
     "placeholders": [],
     "line": 1366,
     "extraction": "inline-code",
-    "category": "Deep links",
-    "group": "My stars links"
+    "category": "My stars links",
+    "group": "General"
   },
   {
-    "id": "fd944f68e42a",
+    "id": "81e419a568db",
     "template": "tg://stars",
     "placeholders": [],
     "line": 1369,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "My stars links"
+    "category": "My stars links",
+    "group": "General"
   },
   {
-    "id": "541cf624d643",
+    "id": "a926af30265b",
     "template": "tg://settings/ton",
     "placeholders": [],
     "line": 1376,
     "extraction": "inline-code",
-    "category": "Deep links",
-    "group": "My Grams links"
+    "category": "My Grams links",
+    "group": "General"
   },
   {
-    "id": "31e6fc71da60",
+    "id": "ef24568ee488",
     "template": "tg://ton",
     "placeholders": [],
     "line": 1379,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "My Grams links"
+    "category": "My Grams links",
+    "group": "General"
   },
   {
-    "id": "e52f71fb3849",
+    "id": "35d9c9811375",
     "template": "tg://contacts",
     "placeholders": [],
     "line": 1388,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Contacts links"
+    "category": "Contacts links",
+    "group": "General"
   },
   {
-    "id": "1a8589a9da8e",
+    "id": "fc1a933a4ade",
     "template": "tg://contacts/<section>",
     "placeholders": [
       "section"
     ],
     "line": 1388,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Contacts links"
+    "category": "Contacts links",
+    "group": "General"
   },
   {
-    "id": "59efb2ecd2a0",
+    "id": "1b2a8b5f97c9",
     "template": "tg://new",
     "placeholders": [],
     "line": 1409,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "New chat links"
+    "category": "New chat links",
+    "group": "General"
   },
   {
-    "id": "95b77e06c38e",
+    "id": "8c727356a51c",
     "template": "tg://new/channel",
     "placeholders": [],
     "line": 1409,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "New chat links"
+    "category": "New chat links",
+    "group": "General"
   },
   {
-    "id": "0e336fbed4b1",
+    "id": "b633febcdac0",
     "template": "tg://new/group",
     "placeholders": [],
     "line": 1409,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "New chat links"
+    "category": "New chat links",
+    "group": "General"
   },
   {
-    "id": "8ae973d5907f",
+    "id": "3dd877e62feb",
     "template": "tg://chats/edit",
     "placeholders": [],
     "line": 1426,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Chat list links"
+    "category": "Chat list links",
+    "group": "General"
   },
   {
-    "id": "f3652acd2b3a",
+    "id": "206cf443d9a0",
     "template": "tg://chats/search",
     "placeholders": [],
     "line": 1426,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Chat list links"
+    "category": "Chat list links",
+    "group": "General"
   },
   {
-    "id": "e235a292f91d",
+    "id": "f2fcc58cad50",
     "template": "tg://chats/emoji-status",
     "placeholders": [],
     "line": 1426,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Chat list links"
+    "category": "Chat list links",
+    "group": "General"
   },
   {
-    "id": "775dcd5d881d",
+    "id": "e09944e7ceac",
     "template": "t.me/login/<code>",
     "placeholders": [
       "code"
     ],
     "line": 1443,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Login code link"
+    "category": "Login code link",
+    "group": "General"
   },
   {
-    "id": "90a0fedd2336",
+    "id": "dfc1d6811820",
     "template": "tg://login?code=<code>",
     "placeholders": [
       "code"
     ],
     "line": 1448,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Login code link"
+    "category": "Login code link",
+    "group": "General"
   },
   {
-    "id": "a5087099d9c3",
+    "id": "8d3bd1b2e31b",
     "template": "t.me/invoice/<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 1463,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Invoice links"
+    "category": "Invoice links",
+    "group": "General"
   },
   {
-    "id": "53a406fad93c",
+    "id": "08bc48ed3cda",
     "template": "t.me/$<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 1463,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Invoice links"
+    "category": "Invoice links",
+    "group": "General"
   },
   {
-    "id": "608bf1eb23a3",
+    "id": "69aff5ba896d",
     "template": "tg://invoice?slug=<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 1469,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Invoice links"
+    "category": "Invoice links",
+    "group": "General"
   },
   {
-    "id": "3d31038faa2e",
+    "id": "42dd78ec6a25",
     "template": "t.me/setlanguage/<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 1484,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Language pack links"
+    "category": "Language pack links",
+    "group": "General"
   },
   {
-    "id": "5ee69b7674b6",
+    "id": "0e9f84adee27",
     "template": "tg://setlanguage?lang=<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 1489,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Language pack links"
+    "category": "Language pack links",
+    "group": "General"
   },
   {
-    "id": "b810f7e5a029",
+    "id": "70112aa73969",
     "template": "tg://passport?params",
     "placeholders": [],
     "line": 1504,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Telegram Passport links"
+    "category": "Telegram Passport links",
+    "group": "General"
   },
   {
-    "id": "4218c25e3d16",
+    "id": "4c818af2d00a",
     "template": "tg://resolve?domain=telegrampassport&params",
     "placeholders": [],
     "line": 1504,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Telegram Passport links"
+    "category": "Telegram Passport links",
+    "group": "General"
   },
   {
-    "id": "50897392d0e2",
+    "id": "52357f60fd9d",
     "template": "t.me/confirmphone?phone=<phone>&hash=<hash>",
     "placeholders": [
       "phone",
@@ -1584,11 +1584,11 @@
     ],
     "line": 1515,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Phone confirmation links"
+    "category": "Phone confirmation links",
+    "group": "General"
   },
   {
-    "id": "bcec431da950",
+    "id": "5ae05f141fdf",
     "template": "tg://confirmphone?phone=<phone>&hash=<hash>",
     "placeholders": [
       "phone",
@@ -1596,66 +1596,66 @@
     ],
     "line": 1520,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Phone confirmation links"
+    "category": "Phone confirmation links",
+    "group": "General"
   },
   {
-    "id": "0b776d646c8f",
+    "id": "e7fc9a93f02d",
     "template": "tg://premium_multigift?ref=<referrer>",
     "placeholders": [
       "referrer"
     ],
     "line": 1538,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Premium multigift links"
+    "category": "Premium multigift links",
+    "group": "General"
   },
   {
-    "id": "f35472d9cb08",
+    "id": "5bb6bad20df4",
     "template": "tg://premium_offer?ref=<referrer>",
     "placeholders": [
       "referrer"
     ],
     "line": 1553,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Premium referrer links"
+    "category": "Premium referrer links",
+    "group": "General"
   },
   {
-    "id": "f5219d1d0495",
+    "id": "054a84844453",
     "template": "tg://giftcode?slug=<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 1568,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Premium giftcode links"
+    "category": "Premium giftcode links",
+    "group": "General"
   },
   {
-    "id": "12dbe090c87b",
+    "id": "95ef6e5bce34",
     "template": "t.me/giftcode/<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 1573,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Premium giftcode links"
+    "category": "Premium giftcode links",
+    "group": "General"
   },
   {
-    "id": "a0c744942767",
+    "id": "c2f10291a072",
     "template": "tg://login?token=<base64encodedtoken>",
     "placeholders": [
       "base64encodedtoken"
     ],
     "line": 1588,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "QR code login links"
+    "category": "QR code login links",
+    "group": "General"
   },
   {
-    "id": "08b1e675f113",
+    "id": "fd439e7ae7f4",
     "template": "t.me/<bot_username>?startapp&mode=<mode>",
     "placeholders": [
       "bot_username",
@@ -1663,11 +1663,11 @@
     ],
     "line": 1607,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Main Mini App links"
+    "category": "Main Mini App links",
+    "group": "General"
   },
   {
-    "id": "07f632e2990f",
+    "id": "47db1e12d098",
     "template": "t.me/<bot_username>?startapp=<start_parameter>&mode=<mode>",
     "placeholders": [
       "bot_username",
@@ -1676,11 +1676,11 @@
     ],
     "line": 1607,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Main Mini App links"
+    "category": "Main Mini App links",
+    "group": "General"
   },
   {
-    "id": "f4451d8780b1",
+    "id": "c228d4ecd16c",
     "template": "tg://resolve?domain=<bot_username>&startapp&mode=<mode>",
     "placeholders": [
       "bot_username",
@@ -1688,11 +1688,11 @@
     ],
     "line": 1615,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Main Mini App links"
+    "category": "Main Mini App links",
+    "group": "General"
   },
   {
-    "id": "206c8e175a8d",
+    "id": "a9f8e0323a3c",
     "template": "tg://resolve?domain=<bot_username>&startapp=<start_parameter>&mode=<mode>",
     "placeholders": [
       "bot_username",
@@ -1701,11 +1701,11 @@
     ],
     "line": 1615,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Main Mini App links"
+    "category": "Main Mini App links",
+    "group": "General"
   },
   {
-    "id": "385f5169810a",
+    "id": "e6badcf800d5",
     "template": "t.me/<bot_username>/<short_name>?startapp=<start_parameter>&mode=<mode>",
     "placeholders": [
       "bot_username",
@@ -1715,11 +1715,11 @@
     ],
     "line": 1638,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Direct mini app links"
+    "category": "Direct mini app links",
+    "group": "General"
   },
   {
-    "id": "1e9f383ee97a",
+    "id": "3f2caffec9d2",
     "template": "tg://resolve?domain=<bot_username>&appname=<short_name>&startapp=<start_parameter>&mode=<mode>",
     "placeholders": [
       "bot_username",
@@ -1729,22 +1729,22 @@
     ],
     "line": 1643,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Direct mini app links"
+    "category": "Direct mini app links",
+    "group": "General"
   },
   {
-    "id": "2d9398107132",
+    "id": "f93a0980820d",
     "template": "t.me/<bot_username>?startattach",
     "placeholders": [
       "bot_username"
     ],
     "line": 1674,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Bot attachment or side menu links",
     "group": "Open in current chat"
   },
   {
-    "id": "02ad3ea214a3",
+    "id": "f4b9301be73f",
     "template": "t.me/<bot_username>?startattach=<start_parameter>",
     "placeholders": [
       "bot_username",
@@ -1752,22 +1752,22 @@
     ],
     "line": 1674,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Bot attachment or side menu links",
     "group": "Open in current chat"
   },
   {
-    "id": "210b52472f71",
+    "id": "885448ded6ca",
     "template": "tg://resolve?domain=<bot_username>&startattach",
     "placeholders": [
       "bot_username"
     ],
     "line": 1680,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Bot attachment or side menu links",
     "group": "Open in current chat"
   },
   {
-    "id": "6cc5932608b4",
+    "id": "b015118316d8",
     "template": "tg://resolve?domain=<bot_username>&startattach=<start_parameter>",
     "placeholders": [
       "bot_username",
@@ -1775,11 +1775,11 @@
     ],
     "line": 1680,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Bot attachment or side menu links",
     "group": "Open in current chat"
   },
   {
-    "id": "3a657ab93543",
+    "id": "755e63aa3c77",
     "template": "t.me/<username>?attach=<bot_username>",
     "placeholders": [
       "username",
@@ -1787,11 +1787,11 @@
     ],
     "line": 1697,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Bot attachment or side menu links",
     "group": "Open in specific chat"
   },
   {
-    "id": "dca28ff296c6",
+    "id": "0209c46179f1",
     "template": "t.me/<username>?attach=<bot_username>&startattach=<start_parameter>",
     "placeholders": [
       "username",
@@ -1800,11 +1800,11 @@
     ],
     "line": 1697,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Bot attachment or side menu links",
     "group": "Open in specific chat"
   },
   {
-    "id": "59d0748279d8",
+    "id": "b97230cff14a",
     "template": "t.me/+<phone_number>?attach=<bot_username>",
     "placeholders": [
       "phone_number",
@@ -1812,11 +1812,11 @@
     ],
     "line": 1697,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Bot attachment or side menu links",
     "group": "Open in specific chat"
   },
   {
-    "id": "4e11b00ec28f",
+    "id": "4e541392d09b",
     "template": "t.me/+<phone_number>?attach=<bot_username>&startattach=<start_parameter>",
     "placeholders": [
       "phone_number",
@@ -1825,11 +1825,11 @@
     ],
     "line": 1697,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Bot attachment or side menu links",
     "group": "Open in specific chat"
   },
   {
-    "id": "8881706e8746",
+    "id": "a8ef4efe4206",
     "template": "tg://resolve?domain=<username>&attach=<bot_username>",
     "placeholders": [
       "username",
@@ -1837,11 +1837,11 @@
     ],
     "line": 1705,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Bot attachment or side menu links",
     "group": "Open in specific chat"
   },
   {
-    "id": "be18cb1e44d5",
+    "id": "0bf90a1263ec",
     "template": "tg://resolve?domain=<username>&attach=<bot_username>&startattach=<start_parameter>",
     "placeholders": [
       "username",
@@ -1850,11 +1850,11 @@
     ],
     "line": 1705,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Bot attachment or side menu links",
     "group": "Open in specific chat"
   },
   {
-    "id": "5919615c50df",
+    "id": "f37ef44c0908",
     "template": "tg://resolve?phone=<phone_number>&attach=<bot_username>",
     "placeholders": [
       "phone_number",
@@ -1862,11 +1862,11 @@
     ],
     "line": 1705,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Bot attachment or side menu links",
     "group": "Open in specific chat"
   },
   {
-    "id": "c5dcb1401781",
+    "id": "2c2f595f8295",
     "template": "tg://resolve?phone=<phone_number>&attach=<bot_username>&startattach=<start_parameter>",
     "placeholders": [
       "phone_number",
@@ -1875,22 +1875,22 @@
     ],
     "line": 1705,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Bot attachment or side menu links",
     "group": "Open in specific chat"
   },
   {
-    "id": "90cc1cb74016",
+    "id": "1360517e32d8",
     "template": "t.me/<bot_username>?startattach&choose=users+bots+groups+channels",
     "placeholders": [
       "bot_username"
     ],
     "line": 1731,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Bot attachment or side menu links",
     "group": "Open in any chat"
   },
   {
-    "id": "32ec108c217b",
+    "id": "b566e87ceb15",
     "template": "t.me/<bot_username>?startattach=<start_parameter>&choose=users+bots+groups+channels",
     "placeholders": [
       "bot_username",
@@ -1898,22 +1898,22 @@
     ],
     "line": 1731,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Bot attachment or side menu links",
     "group": "Open in any chat"
   },
   {
-    "id": "e511421e848b",
+    "id": "ee0893e05c6f",
     "template": "tg://resolve?domain=<bot_username>&startattach&choose=users+bots+groups+channels",
     "placeholders": [
       "bot_username"
     ],
     "line": 1737,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Bot attachment or side menu links",
     "group": "Open in any chat"
   },
   {
-    "id": "db9622333d83",
+    "id": "7e5136769fa0",
     "template": "tg://resolve?domain=<bot_username>&startattach=<start_parameter>&choose=users+bots+groups+channels",
     "placeholders": [
       "bot_username",
@@ -1921,11 +1921,11 @@
     ],
     "line": 1737,
     "extraction": "fenced-code",
-    "category": "Deep links",
+    "category": "Bot attachment or side menu links",
     "group": "Open in any chat"
   },
   {
-    "id": "97a88cb954da",
+    "id": "f35d1487aa74",
     "template": "tg://stars_topup?balance=<star_count>&purpose=<purpose>",
     "placeholders": [
       "star_count",
@@ -1933,33 +1933,33 @@
     ],
     "line": 1757,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Stars topup link"
+    "category": "Stars topup link",
+    "group": "General"
   },
   {
-    "id": "f2cee9907ec5",
+    "id": "7dff6968b8c5",
     "template": "t.me/nft/<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 1780,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Collectible gift link"
+    "category": "Collectible gift link",
+    "group": "General"
   },
   {
-    "id": "8d3b6f629196",
+    "id": "1751354ead03",
     "template": "tg://nft?slug=<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 1786,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Collectible gift link"
+    "category": "Collectible gift link",
+    "group": "General"
   },
   {
-    "id": "040f1b558df3",
+    "id": "a62c63ee9a7b",
     "template": "t.me/<username>?collection=<collection_id>",
     "placeholders": [
       "username",
@@ -1967,11 +1967,11 @@
     ],
     "line": 1801,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Gift collection links"
+    "category": "Gift collection links",
+    "group": "General"
   },
   {
-    "id": "cb0e82770f87",
+    "id": "a952f2d3a28a",
     "template": "t.me/<username>/c/<collection_id>",
     "placeholders": [
       "username",
@@ -1979,11 +1979,11 @@
     ],
     "line": 1801,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Gift collection links"
+    "category": "Gift collection links",
+    "group": "General"
   },
   {
-    "id": "d20800c91f49",
+    "id": "f2eee157f1a2",
     "template": "tg://resolve?domain=<username>&collection=<collection_id>",
     "placeholders": [
       "username",
@@ -1991,33 +1991,33 @@
     ],
     "line": 1807,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Gift collection links"
+    "category": "Gift collection links",
+    "group": "General"
   },
   {
-    "id": "54fc0e95c947",
+    "id": "39b2ce79a262",
     "template": "t.me/auction/<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 1823,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Auction links"
+    "category": "Auction links",
+    "group": "General"
   },
   {
-    "id": "5db4dd88e25e",
+    "id": "955a5232b98d",
     "template": "tg://stargift_auction?slug=<slug>",
     "placeholders": [
       "slug"
     ],
     "line": 1828,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Auction links"
+    "category": "Auction links",
+    "group": "General"
   },
   {
-    "id": "76da7314d8a6",
+    "id": "0ae2f9d7dccd",
     "template": "t.me/<bot_username>?ref=<referrer>",
     "placeholders": [
       "bot_username",
@@ -2025,11 +2025,11 @@
     ],
     "line": 1845,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Referral links"
+    "category": "Referral links",
+    "group": "General"
   },
   {
-    "id": "19111e3c1038",
+    "id": "cf07184187f1",
     "template": "t.me/<bot_username>?start={prefix}<referrer>",
     "placeholders": [
       "bot_username",
@@ -2037,11 +2037,11 @@
     ],
     "line": 1845,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Referral links"
+    "category": "Referral links",
+    "group": "General"
   },
   {
-    "id": "ae168d93d86e",
+    "id": "55ee238c3f52",
     "template": "tg://resolve?domain=<bot_username>&ref=<referrer>",
     "placeholders": [
       "bot_username",
@@ -2049,11 +2049,11 @@
     ],
     "line": 1851,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Referral links"
+    "category": "Referral links",
+    "group": "General"
   },
   {
-    "id": "f45705af9301",
+    "id": "0abf5483762a",
     "template": "tg://resolve?domain=<bot_username>&start={prefix}<referrer>",
     "placeholders": [
       "bot_username",
@@ -2061,33 +2061,33 @@
     ],
     "line": 1851,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Referral links"
+    "category": "Referral links",
+    "group": "General"
   },
   {
-    "id": "ed8c31e181fb",
+    "id": "db2acc60b112",
     "template": "tg://user?id=<id>",
     "placeholders": [
       "id"
     ],
     "line": 1870,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "ID links"
+    "category": "ID links",
+    "group": "General"
   },
   {
-    "id": "6d846822dc48",
+    "id": "28c32b380040",
     "template": "tg://emoji?id=<id>",
     "placeholders": [
       "id"
     ],
     "line": 1885,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Emoji links"
+    "category": "Emoji links",
+    "group": "General"
   },
   {
-    "id": "4ad2bf42d86d",
+    "id": "8c7c21dafa91",
     "template": "tg://time?unix=<unix>&format=<format>",
     "placeholders": [
       "unix",
@@ -2095,25 +2095,25 @@
     ],
     "line": 1900,
     "extraction": "fenced-code",
-    "category": "Deep links",
-    "group": "Timestamp links"
+    "category": "Timestamp links",
+    "group": "General"
   },
   {
-    "id": "cce457eaa7e2",
+    "id": "5a8300439aac",
     "template": "tg://need_update_for_some_feature?test=a",
     "placeholders": [],
     "line": 1932,
     "extraction": "inline-code",
-    "category": "Deep links",
-    "group": "Unsupported links"
+    "category": "Unsupported links",
+    "group": "General"
   },
   {
-    "id": "60ad1a1ec641",
+    "id": "d03432f2fc35",
     "template": "tg:some_unsupported_feature?test=b",
     "placeholders": [],
     "line": 1933,
     "extraction": "inline-code",
-    "category": "Deep links",
-    "group": "Unsupported links"
+    "category": "Unsupported links",
+    "group": "General"
   }
 ]

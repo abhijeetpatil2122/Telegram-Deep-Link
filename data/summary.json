@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T05:14:26.807Z",
+  "generatedAt": "2026-10-30T05:41:12.773Z",
   "source": {
     "url": "https://core.telegram.org/api/links",
     "fetchedUrl": "https://core.telegram.org/api/links.md",
@@ -10,7 +10,7 @@
   "counts": {
     "documentedTemplates": 181,
     "documentationGroups": 65,
-    "categories": 1,
+    "categories": 55,
     "parameterDefinitions": 117,
     "documentedOptions": 431,
     "templatesWithPlaceholders": 156
