@@ -52,9 +52,16 @@ function optionLines(group) {
       if (!all.has(key)) all.set(key, option);
     }
   }
-  return [...all.entries()].map(([key, option]) =>
+  const lines = [...all.entries()].map(([key, option]) =>
     '• <code>' + escapeHtml(key) + '</code>' + (option.value ? ' — value shown as a placeholder in the format' : ' — flag option')
   );
+  const settingsPaths = group.templates
+    .map(item => item.template.match(/^tg:\/\/settings\/([^?&#]+)/i)?.[1])
+    .filter(Boolean);
+  if (settingsPaths.length) {
+    lines.push('• <b>Settings paths:</b> ' + [...new Set(settingsPaths)].map(path => '<code>' + escapeHtml(path) + '</code>').join(', '));
+  }
+  return lines;
 }
 
 function renderGroup(group, index, total) {
