@@ -5,8 +5,6 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DOC_URL = 'https://core.telegram.org/api/links';
-const JAVA_URL = 'https://raw.githubusercontent.com/DrKLO/Telegram/master/TMessagesProj/src/main/java/org/telegram/ui/LaunchActivity.java';
-const JAVA_PAGE_URL = 'https://github.com/DrKLO/Telegram/blob/master/TMessagesProj/src/main/java/org/telegram/ui/LaunchActivity.java';
 const USER_AGENT = 'Telegram-Deep-Link-Crawler/0.1 (+https://github.com/abhijeetpatil2122/Telegram-Deep-Link)';
 const hash = value => createHash('sha256').update(value).digest('hex');
 const idFor = value => createHash('sha1').update(value).digest('hex').slice(0, 12);
@@ -119,206 +117,10 @@ function parseMarkdown(markdown) {
   return [...entries.values()].sort((a, b) => a.section.localeCompare(b.section) || a.template.localeCompare(b.template));
 }
 
-function classifyCandidate(candidate, excerpt, extraction) {
-  const value = candidate.toLowerCase();
-  const context = excerpt.toLowerCase();
-  let candidateType = 'handler-token';
-  let category = 'other';
-  let classification = 'needs-manual-review';
-  let reviewNote = 'Heuristic classification only; inspect the surrounding source and confirm how Telegram parses this value.';
-
-  if (/^tg:\/\/(?:addcontact|send_gift|calllog|scanqr)$/i.test(candidate)) {
-    candidateType = 'scheme-prefix';
-    category = 'runtime-supported-action';
-    classification = 'user-confirmed-working';
-    reviewNote = 'The user reports this tg:// route works in Telegram. Android source also contains a matching explicit handler; this is implementation evidence, not an official documentation claim.';
-  } else if (/^tg:\/\/telegram\.org$/i.test(candidate) && /replace\(/i.test(context)) {
-    candidateType = 'internal-url-rewrite';
-    category = 'internal-url-rewrite';
-    classification = 'likely-internal-or-contextual';
-    reviewNote = 'This value is used as an internal URL rewrite target while parsing another link; it is not a public deep-link template.';
-  } else if (/^tg:\/\/(?:calllog|scanqr|search|openmessage)$/i.test(candidate) || /^tg:(?:calllog|scanqr|search|openmessage)$/i.test(candidate)) {
-    candidateType = 'scheme-prefix';
-    category = 'client-action-route';
-    classification = 'likely-internal-or-contextual';
-    reviewNote = 'Android handles this as a direct client action or compatibility route. The source match does not establish a documented, stable public link format; keep it out of the confirmed-template inventory unless independently verified.';
-  } else if (/^tg:\/\/(?:[a-z0-9_]+)?$/i.test(candidate) || /^tg:(?!\/\/)[a-z0-9_]+$/i.test(candidate)) {
-    candidateType = 'scheme-prefix';
-    category = 'deep-link';
-    reviewNote = 'This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.';
-  } else if (/^(?:t\.me|telegram\.me|telegram\.dog)$/i.test(candidate)) {
-    candidateType = 'host-token';
-    category = 'link-host-alias';
-    reviewNote = 'Host alias used by the URL parser, not a standalone link template.';
-  } else if (/^tg:\/\/[a-z0-9_]+\?[^=]+=$/i.test(candidate)) {
-    candidateType = 'uri-query-prefix';
-    category = 'deep-link';
-    reviewNote = 'Partial URI with a query parameter name but no value. Use the surrounding parser and official documentation to recover the complete parameter schema.';
-  } else if (/^https?:\/\/(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)\//i.test(candidate)
-      || /^tg:\/\//i.test(candidate)
-      || /^tonsite:\/\//i.test(candidate)) {
-    candidateType = 'full-uri';
-    category = value.startsWith('tonsite:') ? 'ton-sites' : 'deep-link';
-    reviewNote = 'Looks like a URI example or partial URI; confirm required parameters and whether it is a documented public format.';
-  } else if (/^(?:\?(?:enablelogs|disablelogs|sendlogs)\b|login_email$)/i.test(candidate)) {
-    candidateType = candidate.startsWith('?') ? 'query-fragment' : 'handler-token';
-    category = /logs/i.test(candidate) ? 'diagnostics' : 'authentication';
-    classification = 'likely-internal-or-contextual';
-    reviewNote = 'This token appears in a diagnostic/authentication settings branch, not as a complete documented deep-link template. Do not publish it as a standalone link.';
-
-  } else if (candidate.startsWith('?')) {
-    candidateType = 'query-fragment';
-    category = 'query-parameters';
-    reviewNote = 'Query fragment only; it needs a valid base URL and may be an option handled by a particular route.';
-  } else if (/^(?:addstickers|addemoji|addtheme|addstyle|bg|call|contact|invoice|login|joinchat|proxy|socks|setlanguage|giftcode|boost|story|privatepost|resolve|settings|nft|msg|share|stargift_auction|stargift_preview)\//i.test(candidate)) {
-    candidateType = 'path-prefix';
-    category = /^(?:addstickers|addemoji)/i.test(candidate) ? 'stickers-and-emoji'
-      : /^(?:addtheme|addstyle|bg)\//i.test(candidate) ? 'themes-and-backgrounds'
-      : /^(?:invoice|giftcode|boost)\//i.test(candidate) ? 'payments-and-gifts'
-      : /^(?:stargift_auction|stargift_preview|nft)\//i.test(candidate) ? 'collectibles-and-gifts'
-      : /^(?:call|joinchat)\//i.test(candidate) ? 'calls-and-invites'
-      : /^(?:settings|setlanguage)\//i.test(candidate) ? 'settings-and-language'
-      : /^(?:login)\//i.test(candidate) ? 'authentication'
-      : 'chat-and-navigation';
-    reviewNote = 'Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.';
-  } else if (/^\/(?:[a-z0-9_-]+)?(?:\?|$)/i.test(candidate)) {
-    candidateType = 'path-fragment';
-    category = 'path-fragments';
-    reviewNote = 'Relative path fragment only; inspect the URL construction and caller before treating it as a deep link.';
-  } else if (/^(?:settings|contacts?|new_dialog|login_email|restore_purchases|importstickers|scanqr|msg_url|privatepost|resolve|proxy|socks|call|nft|invoice|gift|auth|search|confirmphone|setlanguage)\b/i.test(candidate)) {
-    candidateType = 'handler-token';
-    category = /^(?:login|auth|confirmphone)/i.test(candidate) ? 'authentication'
-      : /^(?:invoice|gift|restore_purchases)/i.test(candidate) ? 'payments-and-gifts'
-      : /^(?:settings|contacts?)/i.test(candidate) ? 'settings-and-navigation'
-      : /^(?:new_dialog)/i.test(candidate) ? 'internal-intent-action'
-      : 'handler-route';
-    if (/^new_dialog$/i.test(candidate)) {
-      classification = 'likely-internal-or-contextual';
-      reviewNote = 'Android Intent action used to open the new-dialog UI, not a Telegram public deep-link route.';
-    } else {
-      reviewNote = 'This appears to be a route/handler token rather than a complete URI; verify how the client combines it with a scheme, host, path, and parameters.';
-    }
-  } else if (/\b(?:sendlogs|disablelogs|enablelogs|login_email)\b/i.test(context)) {
-    candidateType = 'contextual-token';
-    category = 'diagnostics-or-authentication';
-    classification = 'likely-internal-or-contextual';
-    reviewNote = 'Found in a diagnostic/authentication branch; likely not a general-purpose public deep-link template.';
-  }
-
-  return { candidateType, category, classification, classificationMethod: 'heuristic-v1', reviewNote };
-}
-
-function scanJava(source) {
-  const lines = source.split(/\r?\n/), candidates = new Map();
-  const direct = /(?:https?:\/\/)?(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)\/[A-Za-z0-9_+./?=&%{}<>:-]+|tg:(?:\/\/)?[A-Za-z0-9_+./?=&%{}<>:-]+|tonsite:\/\/[A-Za-z0-9_+./?=&%{}<>:-]+/gi;
-  const literals = /(?:startsWith|endsWith|equals(?:IgnoreCase)?|contains|indexOf)\s*\(\s*"([^"\n]{1,100})"/g;
-  const context = /(?:deep.?link|uri|url|scheme|host|path|query|intent|resolve|launch|open.?link|telegram\.me|t\.me|tg:)/i;
-
-  function add(value, lineNumber, excerpt, extraction) {
-    const candidate = clean(value).replace(/[),;]+$/, '');
-    if (!candidate || candidate.length > 1200) return;
-    const key = candidate.toLowerCase();
-    if (!candidates.has(key)) candidates.set(key, {
-      id: idFor('android\n' + candidate), candidate, source: 'android_launch_activity',
-      sourceUrl: JAVA_PAGE_URL, line: lineNumber, excerpt: excerpt.trim().slice(0, 320), extraction,
-      sourceContext: lines.slice(Math.max(0, lineNumber - 3), Math.min(lines.length, lineNumber + 2))
-        .map((text, index) => ({ line: Math.max(0, lineNumber - 3) + index + 1, text: text.trim().slice(0, 400) })),
-      reviewStatus: 'needs_review',
-      ...classifyCandidate(candidate, excerpt, extraction),
-      note: 'Implementation-derived candidate; verify route behavior and required parameters before publishing.'
-    });
-  }
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    for (const match of line.matchAll(direct)) add(match[0], i + 1, line, 'literal-uri');
-    if (context.test(line)) for (const match of line.matchAll(literals)) {
-      const value = match[1];
-      if (/^(?:tg|t\.me|telegram\.me|telegram\.dog|https?:|\/|\?|settings|contacts?|new|chats?|login|passport|stars?|ton|bg|addstickers|addemoji|addtheme|addstyle|share|msg_url|privatepost|resolve|proxy|socks|call|nft|invoice|gift|auth|scanqr|search|confirmphone|setlanguage|emoji|time|user|restore_purchases|importStickers)/i.test(value)) {
-        add(value, i + 1, line, 'url-handler-string');
-      }
-    }
-  }
-  return [...candidates.values()].sort((a, b) => a.candidate.localeCompare(b.candidate));
-}
-
 async function writeJson(path, value) {
   const target = resolve(ROOT, path);
   await mkdir(dirname(target), { recursive: true });
   await writeFile(target, JSON.stringify(value, null, 2) + '\n', 'utf8');
-}
-
-const USER_CONFIRMED_RUNTIME_ROUTES = [
-  {
-    template: 'tg://addcontact?name=<name>&phone=<phone>',
-    route: 'tg://addcontact',
-    purpose: 'Open the add-contact flow with a name and phone number.',
-    parameters: [
-      { name: 'name', required: false, description: 'Contact display name.' },
-      { name: 'phone', required: false, description: 'Phone number to add.' }
-    ],
-    sourceNeedle: 'url.startsWith("tg://addcontact")',
-    sourceLineHint: 2696,
-    verification: 'user-confirmed-working',
-    caveat: 'The source reads name and phone query parameters; phone values containing + should be URL-encoded correctly.'
-  },
-  {
-    template: 'tg://send_gift?to=<username-or-user_id>',
-    route: 'tg://send_gift',
-    purpose: 'Open the gift flow for a recipient.',
-    parameters: [
-      { name: 'to', required: false, description: 'Recipient username (with or without @) or numeric user ID. If omitted, Telegram opens recipient selection.' }
-    ],
-    sourceNeedle: 'url.startsWith("tg://send_gift")',
-    sourceLineHint: 2739,
-    verification: 'user-confirmed-working',
-    caveat: 'Recipient resolution and gift availability depend on the Telegram account and recipient.'
-  },
-  {
-    template: 'tg://calllog',
-    route: 'tg://calllog',
-    purpose: 'Open the call log.',
-    parameters: [],
-    sourceNeedle: 'url.startsWith("tg://calllog")',
-    sourceLineHint: 2652,
-    verification: 'user-confirmed-working',
-    caveat: 'Client action; not listed as an official public template in the documentation snapshot.'
-  },
-  {
-    template: 'tg://scanqr',
-    route: 'tg://scanqr',
-    purpose: 'Open the QR-scanning flow.',
-    parameters: [],
-    sourceNeedle: 'url.startsWith("tg://scanqr")',
-    sourceLineHint: 2694,
-    verification: 'user-confirmed-working',
-    caveat: 'Requires the client/device to be able to use the camera and the relevant UI.'
-  }
-];
-
-const NOT_CONFIRMED_TG_SCHEME_FORMS = [
-  { template: 'tg://enablelogs', observedFragment: '?enablelogs' },
-  { template: 'tg://disablelogs', observedFragment: '?disablelogs' },
-  { template: 'tg://sendlogs', observedFragment: '?sendlogs' },
-  { template: 'tg://login_email', observedFragment: 'login_email' }
-];
-
-function buildRuntimeLinks(androidSource) {
-  const lines = androidSource.split(/\r?\n/);
-  return USER_CONFIRMED_RUNTIME_ROUTES.map(route => {
-    const sourceLine = lines.findIndex(line => line.includes(route.sourceNeedle));
-    if (sourceLine < 0) {
-      throw new Error('Expected Android route handler was not found: ' + route.route);
-    }
-    return {
-      ...route,
-      source: 'android_launch_activity',
-      sourceUrl: JAVA_PAGE_URL,
-      sourceLine: sourceLine + 1,
-      officialDocumentationStatus: 'not-confirmed-as-official-template',
-      note: 'Separate from data/documented-links.json. User-confirmed runtime behavior plus an explicit Android handler; not a claim of official public documentation.'
-    };
-  });
 }
 
 function placeholders(template) {
@@ -355,19 +157,19 @@ function buildDocumentationCatalog(documented) {
 async function main() {
   console.log('Fetching official Telegram deep-link documentation:', DOC_URL);
   const html = await fetchText(DOC_URL);
-  if (!/<(?:html|article|main|h[1-6])\\b/i.test(html.text) || html.text.length < 1000) {
+  if (!/<(?:html|article|main|h[1-6])\b/i.test(html.text) || html.text.length < 1000) {
     throw new Error('The official deep-link website did not return recognizable HTML.');
   }
   const docs = { ...html, text: htmlToMarkdown(html.text) };
-  if (!/^\\s*#/m.test(docs.text) || docs.text.length < 1000) {
+  if (!/^\s*#/m.test(docs.text) || docs.text.length < 1000) {
     throw new Error('Could not extract usable deep-link documentation from the official website HTML.');
   }
 
   const documented = parseMarkdown(docs.text);
   const malformed = documented.filter(item =>
-    /<\\/?code>/i.test(item.template)
-    || /(?:t\\.me|telegram\\.me|telegram\\.dog)\\/\\s+(?:\\?|\\/|$)/i.test(item.template)
-    || /\\btg:\\s+\\//i.test(item.template)
+    /<\/?code>/i.test(item.template)
+    || /(?:t\.me|telegram\.me|telegram\.dog)\/\s+(?:\?|\/|$)/i.test(item.template)
+    || /\btg:\s+\//i.test(item.template)
   );
   if (malformed.length) {
     throw new Error('Malformed templates detected in official HTML extraction: ' +
