@@ -12,7 +12,7 @@ function escapeHtml(value) {
 }
 
 function category(item) {
-  if (item.kind === 'official-documented-template' || item.kind === 'documented-template' || item.kind?.includes('documented')) return 'Official documented templates';
+  if (item.kind === 'official-template' || item.kind === 'official-documented-template' || item.kind === 'documented-template' || item.kind?.includes('documented')) return 'Official documented templates';
   if (item.status === 'user-confirmed-working' || item.kind === 'runtime-supported-action') return 'Maintainer-reported runtime-tested routes';
   return 'Android source candidates and implementation-derived observations';
 }
