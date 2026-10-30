@@ -57,7 +57,7 @@ function placeholders(value) {
   return [...new Set([...value.matchAll(/<([a-zA-Z][\w-]*)>/g)].map(x => x[1]))];
 }
 function parseTableRow(line) {
-  const cells = line.trim().replace(/^\|?|\|?$/g, '').split('|').map(x => x.trim());
+  const cells = line.trim().replace(/^\\|/, '').replace(/\\|$/, '').split('|').map(x => x.trim());
   if (cells.length < 2 || cells.every(x => /^:?-{2,}:?$/.test(x))) return null;
   return cells;
 }
