@@ -1,46 +1,54 @@
 # Telegram Deep-Link Documentation
 
-A crawler and Telegram publisher for the official Telegram deep-link reference.
+A structured crawler and Rich Message publisher for Telegram's official deep-link reference.
 
-## Source and scope
+## Source
 
-The only source is Telegram's official deep-link documentation at https://core.telegram.org/api/links (including its machine-readable Markdown endpoint).
+The project reads only the official Telegram deep-link documentation:
+- https://core.telegram.org/api/links
+- Its machine-readable Markdown representation.
 
-The parser preserves the page structure instead of treating it as a list of URL strings. It extracts:
+## Extraction
+
+The crawler preserves the documentation hierarchy and extracts:
 - Section and subsection headings
-- Every documented deep-link format in code samples
-- Parameter tables, including required/optional status and descriptions
+- Deep-link formats and examples
+- Parameter names, required/optional status, types and descriptions
 - Enumerated values and supported paths
-- Settings paths and other documented option lists
+- Inline documentation references and links
 
-No Android source scraping, inferred routes, or undocumented handler names are included.
+No Android source scraping, inferred routes, or undocumented handlers are included.
 
-## Generated data
+## Rich Message publishing
 
-- `data/documented-links.json` — normalized list of documented formats.
-- `data/documentation-catalog.json` — structured sections, formats, parameters, and documented option values.
-- `data/publication-inventory.json` — flat change-detection inventory.
-- `data/summary.json` — source fingerprint and extraction counts.
+Documentation is sent with Telegram Bot API `sendRichMessage` using structured `InputRichMessage.blocks`.
 
-## Telegram publishing
+- Original documentation section title as the heading; no numbered post counters.
+- Introductory descriptions rendered as rich paragraphs.
+- Format and example links shown in a compact table.
+- Example URLs are displayed as their actual full URLs, not generic “Open example” labels.
+- Parameter definitions rendered in expandable tables.
+- Supported paths and enumerated values rendered in expandable lists.
+- Internal documentation links are normalized to canonical `https://core.telegram.org/...` URLs.
+- Telegram links are normalized to HTTPS where appropriate; `tg://` and TON schemes are preserved.
+- No source footer, repository footer, placeholder boilerplate, or generic publication summary.
 
-Posts are sent to the maintainer's private chat `1314643983` while formatting is being tested. The channel is not used.
+Long sections are split only when required by Telegram Rich Message limits. No format or parameter is intentionally truncated.
 
-Post style:
-- Clean, plain-text format lists using hyphen bullets.
-- Ready-made example links.
-- Parameter definitions and supported values inside expandable blockquotes.
-- Monospace is used only inside expandable details.
-- No source URLs, repository links, parser notes, or placeholder boilerplate in posts.
+## Crawl notifications
 
-Long sections are split into multiple messages to respect Telegram's message limit without dropping formats or options.
+Crawl reports are also sent using Rich Message blocks and tables. They summarize totals and list added, updated, and removed formats.
+
+## Destination
+
+All current tests target private chat `1314643983`. The publication workflow does not send to the channel until the private-chat output is approved.
 
 ## Configuration
 
 Required GitHub Actions secret:
 - `TELEGRAM_BOT_TOKEN`
 
-The private test destination is configured in `.github/workflows/crawl.yml`. Do not switch to the channel until the private-chat output is approved.
+The workflow uses the Bot API `sendRichMessage` method. The bot must have access to this method in its configured Bot API environment.
 
 ## Local commands
 
@@ -49,6 +57,7 @@ npm install
 npm run check
 npm run crawl
 npm run publish
+npm run notify
 ```
 
-Set `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, and `PUBLISH_FULL_INVENTORY=true` to test publication.
+Set `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, and `PUBLISH_FULL_INVENTORY=true` to test full publication.
