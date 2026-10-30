@@ -1,0 +1,4052 @@
+{
+  "notifiedAt": "2026-10-30T03:52:13.462Z",
+  "inventory": [
+    {
+      "id": "android:0ddab864cd0a",
+      "template": "tg:addtheme",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "lang = data.getQueryParameter(\"lang\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:addtheme\") || url.startsWith(\"tg://addtheme\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:addtheme\", \"tg://telegram.org\").replace(\"tg://addtheme\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:11480f5b0b07",
+      "template": "tg://nft",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "auctionSlug = data.getQueryParameter(\"slug\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:nft\") || url.startsWith(\"tg://nft\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:nft\", \"tg://nft\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:16774efad547",
+      "template": "tg://invoice",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "}"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:invoice\") || url.startsWith(\"tg://invoice\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:invoice\", \"tg://invoice\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:170726bf1ca8",
+      "template": "tg://stargift_auction",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "inputInvoiceSlug = data.getQueryParameter(\"slug\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:stargift_auction\") || url.startsWith(\"tg://stargift_auction\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:stargift_auction\", \"tg://stargift_auction\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:18aed25ba7c0",
+      "template": "tg://calllog",
+      "kind": "android-source-candidate",
+      "status": "user-confirmed-working",
+      "classification": "user-confirmed-working",
+      "note": "The user reports this tg:// route works in Telegram. Android source also contains a matching explicit handler; this is implementation evidence, not an official documentation claim.",
+      "sourceContext": [
+        {
+          "text": "searchQuery = \"\";"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if ((url.startsWith(\"tg:calllog\") || url.startsWith(\"tg://calllog\"))) {"
+        },
+        {
+          "text": "showCallLog = true;"
+        },
+        {
+          "text": "} else if ((url.startsWith(\"tg:call\") || url.startsWith(\"tg://call\"))) {"
+        }
+      ]
+    },
+    {
+      "id": "android:1b813fc3c084",
+      "template": "tg:stargift_auction",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "inputInvoiceSlug = data.getQueryParameter(\"slug\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:stargift_auction\") || url.startsWith(\"tg://stargift_auction\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:stargift_auction\", \"tg://stargift_auction\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:20478882b4b7",
+      "template": "telegram.dog",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Host alias used by the URL parser, not a standalone link template.",
+      "sourceContext": [
+        {
+          "text": "Matcher prefixMatcher = PREFIX_T_ME_PATTERN.matcher(host);"
+        },
+        {
+          "text": "boolean isPrefix = prefixMatcher.find();"
+        },
+        {
+          "text": "if (host.equals(\"telegram.me\") || host.equals(\"t.me\") || host.equals(\"telegram.dog\") || isPrefix) {"
+        },
+        {
+          "text": "if (isPrefix) {"
+        },
+        {
+          "text": "data = Uri.parse(\"https://t.me/\" + prefixMatcher.group(1) + (TextUtils.isEmpty(data.getPath()) ? \"\" : data.getPath()) + (TextUtils.isEmpty(data.getQuery()) ? \"\" : \"?\" + data.getQuery()));"
+        }
+      ]
+    },
+    {
+      "id": "android:22f11ac82e99",
+      "template": "login_email",
+      "kind": "android-source-candidate",
+      "status": "internal-or-contextual",
+      "classification": "likely-internal-or-contextual",
+      "note": "This token appears in a diagnostic/authentication settings branch, not as a complete documented deep-link template. Do not publish it as a standalone link.",
+      "sourceContext": [
+        {
+          "text": "} else if (url.contains(\"premium_sms\")) {"
+        },
+        {
+          "text": "open_settings = 13;"
+        },
+        {
+          "text": "} else if (url.contains(\"login_email\")) {"
+        },
+        {
+          "text": "open_settings = 15;"
+        },
+        {
+          "text": "} else {"
+        }
+      ]
+    },
+    {
+      "id": "android:27752083d826",
+      "template": "login/",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
+      "sourceContext": [
+        {
+          "text": "}"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if (path.startsWith(\"login/\")) {"
+        },
+        {
+          "text": "int intCode = Utilities.parseInt(path.replace(\"login/\", \"\"));"
+        },
+        {
+          "text": "if (intCode != 0) {"
+        }
+      ]
+    },
+    {
+      "id": "android:27ba9128ad84",
+      "template": "stargift_preview/",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
+      "sourceContext": [
+        {
+          "text": "} else if (path.startsWith(\"stargift_auction/\")) {"
+        },
+        {
+          "text": "auctionSlug = path.replace(\"stargift_auction/\", \"\");"
+        },
+        {
+          "text": "} else if (path.startsWith(\"stargift_preview/\")) {"
+        },
+        {
+          "text": "stargiftPreviewSlug = path.replace(\"stargift_preview/\", \"\");"
+        },
+        {
+          "text": "} else if (path.startsWith(\"call/\")) {"
+        }
+      ]
+    },
+    {
+      "id": "android:2921ca26d64c",
+      "template": "?enablelogs",
+      "kind": "android-source-candidate",
+      "status": "internal-or-contextual",
+      "classification": "likely-internal-or-contextual",
+      "note": "This token appears in a diagnostic/authentication settings branch, not as a complete documented deep-link template. Do not publish it as a standalone link.",
+      "sourceContext": [
+        {
+          "text": "} else if (url.contains(\"privacy\")) {"
+        },
+        {
+          "text": "open_settings = 12;"
+        },
+        {
+          "text": "} else if (url.contains(\"?enablelogs\")) {"
+        },
+        {
+          "text": "open_settings = 7;"
+        },
+        {
+          "text": "} else if (url.contains(\"?sendlogs\")) {"
+        }
+      ]
+    },
+    {
+      "id": "android:2a1734fbd8a5",
+      "template": "tg://stars",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "presentFragment(new TONIntroActivity());"
+        },
+        {
+          "text": "return pushOpened;"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:stars\") || url.startsWith(\"tg://stars\")) {"
+        },
+        {
+          "text": "if (progress != null) {"
+        },
+        {
+          "text": "progress.end();"
+        }
+      ]
+    },
+    {
+      "id": "android:2be3b2de8d17",
+      "template": "tg:share",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "emoji = data.getQueryParameter(\"set\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:msg\") || url.startsWith(\"tg://msg\") || url.startsWith(\"tg://share\") || url.startsWith(\"tg:share\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:msg\", \"tg://telegram.org\").replace(\"tg://msg\", \"tg://telegram.org\").replace(\"tg://share\", \"tg://telegram.org\").replace(\"tg:share\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:2d43a3dce6b9",
+      "template": "tg:login",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "phone = data.getQueryParameter(\"phone\");"
+        },
+        {
+          "text": "phoneHash = data.getQueryParameter(\"hash\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:login\") || url.startsWith(\"tg://login\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:login\", \"tg://telegram.org\").replace(\"tg://login\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:315f8df9f53b",
+      "template": "tg:addcontact",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "} else if ((url.startsWith(\"tg:scanqr\") || url.startsWith(\"tg://scanqr\"))) {"
+        },
+        {
+          "text": "scanQr = true;"
+        },
+        {
+          "text": "} else if ((url.startsWith(\"tg:addcontact\") || url.startsWith(\"tg://addcontact\"))) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:addcontact\", \"tg://telegram.org\").replace(\"tg://addcontact\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:39b61083db7b",
+      "template": "tg://login",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "phone = data.getQueryParameter(\"phone\");"
+        },
+        {
+          "text": "phoneHash = data.getQueryParameter(\"hash\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:login\") || url.startsWith(\"tg://login\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:login\", \"tg://telegram.org\").replace(\"tg://login\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:3e46ce234360",
+      "template": "tg://addstickers",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "group = data.getQueryParameter(\"invite\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:addstickers\") || url.startsWith(\"tg://addstickers\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:addstickers\", \"tg://telegram.org\").replace(\"tg://addstickers\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:3fde547df57c",
+      "template": "tg:join",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "}"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:join\") || url.startsWith(\"tg://join\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:join\", \"tg://telegram.org\").replace(\"tg://join\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:43cf585c4d7b",
+      "template": "t.me",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Host alias used by the URL parser, not a standalone link template.",
+      "sourceContext": [
+        {
+          "text": "Matcher prefixMatcher = PREFIX_T_ME_PATTERN.matcher(host);"
+        },
+        {
+          "text": "boolean isPrefix = prefixMatcher.find();"
+        },
+        {
+          "text": "if (host.equals(\"telegram.me\") || host.equals(\"t.me\") || host.equals(\"telegram.dog\") || isPrefix) {"
+        },
+        {
+          "text": "if (isPrefix) {"
+        },
+        {
+          "text": "data = Uri.parse(\"https://t.me/\" + prefixMatcher.group(1) + (TextUtils.isEmpty(data.getPath()) ? \"\" : data.getPath()) + (TextUtils.isEmpty(data.getQuery()) ? \"\" : \"?\" + data.getQuery()));"
+        }
+      ]
+    },
+    {
+      "id": "android:43ef578ace92",
+      "template": "tg://share",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "emoji = data.getQueryParameter(\"set\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:msg\") || url.startsWith(\"tg://msg\") || url.startsWith(\"tg://share\") || url.startsWith(\"tg:share\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:msg\", \"tg://telegram.org\").replace(\"tg://msg\", \"tg://telegram.org\").replace(\"tg://share\", \"tg://telegram.org\").replace(\"tg:share\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:45dc50e34a68",
+      "template": "tg://openmessage",
+      "kind": "android-source-candidate",
+      "status": "internal-or-contextual",
+      "classification": "likely-internal-or-contextual",
+      "note": "Android handles this as a direct client action or compatibility route. The source match does not establish a documented, stable public link format; keep it out of the confirmed-template inventory unless independently verified.",
+      "sourceContext": [
+        {
+          "text": "code = \"\" + intCode;"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:openmessage\") || url.startsWith(\"tg://openmessage\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:openmessage\", \"tg://telegram.org\").replace(\"tg://openmessage\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:46358f716910",
+      "template": "tg:search",
+      "kind": "android-source-candidate",
+      "status": "internal-or-contextual",
+      "classification": "likely-internal-or-contextual",
+      "note": "Android handles this as a direct client action or compatibility route. The source match does not establish a documented, stable public link format; keep it out of the confirmed-template inventory unless independently verified.",
+      "sourceContext": [
+        {
+          "text": "open_settings = 1;"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if ((url.startsWith(\"tg:search\") || url.startsWith(\"tg://search\"))) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:search\", \"tg://telegram.org\").replace(\"tg://search\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:4803b816ce0b",
+      "template": "tg://addcontact",
+      "kind": "android-source-candidate",
+      "status": "user-confirmed-working",
+      "classification": "user-confirmed-working",
+      "note": "The user reports this tg:// route works in Telegram. Android source also contains a matching explicit handler; this is implementation evidence, not an official documentation claim.",
+      "sourceContext": [
+        {
+          "text": "} else if ((url.startsWith(\"tg:scanqr\") || url.startsWith(\"tg://scanqr\"))) {"
+        },
+        {
+          "text": "scanQr = true;"
+        },
+        {
+          "text": "} else if ((url.startsWith(\"tg:addcontact\") || url.startsWith(\"tg://addcontact\"))) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:addcontact\", \"tg://telegram.org\").replace(\"tg://addcontact\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:485e40cca97b",
+      "template": "new_dialog",
+      "kind": "android-source-candidate",
+      "status": "internal-or-contextual",
+      "classification": "likely-internal-or-contextual",
+      "note": "Android Intent action used to open the new-dialog UI, not a Telegram public deep-link route.",
+      "sourceContext": [
+        {
+          "text": "} else if (intent.getAction().equals(\"org.telegram.messenger.OPEN_ACCOUNT\")) {"
+        },
+        {
+          "text": "open_settings = 1;"
+        },
+        {
+          "text": "} else if (intent.getAction().equals(\"new_dialog\")) {"
+        },
+        {
+          "text": "open_new_dialog = 1;"
+        },
+        {
+          "text": "} else if (intent.getAction().startsWith(\"com.tmessages.openchat\")) {"
+        }
+      ]
+    },
+    {
+      "id": "android:48938635b806",
+      "template": "addtheme/",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
+      "sourceContext": [
+        {
+          "text": "} else if (path.startsWith(\"setlanguage/\")) {"
+        },
+        {
+          "text": "lang = path.substring(12);"
+        },
+        {
+          "text": "} else if (path.startsWith(\"addtheme/\")) {"
+        },
+        {
+          "text": "theme = path.substring(9);"
+        },
+        {
+          "text": "} else if (path.equalsIgnoreCase(\"boost\") || path.startsWith(\"boost/\")) {"
+        }
+      ]
+    },
+    {
+      "id": "android:4b60bcb52083",
+      "template": "tg:call",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "} else if ((url.startsWith(\"tg:calllog\") || url.startsWith(\"tg://calllog\"))) {"
+        },
+        {
+          "text": "showCallLog = true;"
+        },
+        {
+          "text": "} else if ((url.startsWith(\"tg:call\") || url.startsWith(\"tg://call\"))) {"
+        },
+        {
+          "text": "if (UserConfig.getInstance(currentAccount).isClientActivated()) {"
+        },
+        {
+          "text": "final String extraForceCall = \"extra_force_call\";"
+        }
+      ]
+    },
+    {
+      "id": "android:4cbd536cdf89",
+      "template": "tg:addstickers",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "group = data.getQueryParameter(\"invite\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:addstickers\") || url.startsWith(\"tg://addstickers\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:addstickers\", \"tg://telegram.org\").replace(\"tg://addstickers\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:4f0f8aadefe7",
+      "template": "tg:openmessage",
+      "kind": "android-source-candidate",
+      "status": "internal-or-contextual",
+      "classification": "likely-internal-or-contextual",
+      "note": "Android handles this as a direct client action or compatibility route. The source match does not establish a documented, stable public link format; keep it out of the confirmed-template inventory unless independently verified.",
+      "sourceContext": [
+        {
+          "text": "code = \"\" + intCode;"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:openmessage\") || url.startsWith(\"tg://openmessage\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:openmessage\", \"tg://telegram.org\").replace(\"tg://openmessage\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:571aff809586",
+      "template": "t.me/contact/",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Heuristic classification only; inspect the surrounding source and confirm how Telegram parses this value.",
+      "sourceContext": [
+        {
+          "text": "}"
+        },
+        {
+          "text": ""
+        },
+        {
+          "text": "/** t.me/contact/…?free=… (tg://contact?token=…&free=…): the user of the contact token, then the free token. */"
+        },
+        {
+          "text": "private void openNoPaidMessagesContactLink(final int account, final String contactToken, final String token, final Browser.Progress progress) {"
+        },
+        {
+          "text": "if (progress != null) {"
+        }
+      ]
+    },
+    {
+      "id": "android:599006234734",
+      "template": "tg:msg",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "emoji = data.getQueryParameter(\"set\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:msg\") || url.startsWith(\"tg://msg\") || url.startsWith(\"tg://share\") || url.startsWith(\"tg:share\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:msg\", \"tg://telegram.org\").replace(\"tg://msg\", \"tg://telegram.org\").replace(\"tg://share\", \"tg://telegram.org\").replace(\"tg:share\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:5d72c4201b81",
+      "template": "tg:privatepost",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "contactToken = data.getQueryParameter(\"token\");"
+        },
+        {
+          "text": "noPaidMessagesToken = data.getQueryParameter(\"free\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:privatepost\") || url.startsWith(\"tg://privatepost\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:privatepost\", \"tg://telegram.org\").replace(\"tg://privatepost\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:5f7a5ce4957b",
+      "template": "tg://scanqr",
+      "kind": "android-source-candidate",
+      "status": "user-confirmed-working",
+      "classification": "user-confirmed-working",
+      "note": "The user reports this tg:// route works in Telegram. Android source also contains a matching explicit handler; this is implementation evidence, not an official documentation claim.",
+      "sourceContext": [
+        {
+          "text": "}"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if ((url.startsWith(\"tg:scanqr\") || url.startsWith(\"tg://scanqr\"))) {"
+        },
+        {
+          "text": "scanQr = true;"
+        },
+        {
+          "text": "} else if ((url.startsWith(\"tg:addcontact\") || url.startsWith(\"tg://addcontact\"))) {"
+        }
+      ]
+    },
+    {
+      "id": "android:602e830f546c",
+      "template": "tg:bg",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "commentId = null;"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:bg\") || url.startsWith(\"tg://bg\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:bg\", \"tg://telegram.org\").replace(\"tg://bg\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:65e3927db500",
+      "template": "tg://settings",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "theme = data.getQueryParameter(\"slug\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:settings\") || url.startsWith(\"tg://settings\")) {"
+        },
+        {
+          "text": "if (url.contains(\"themes\") || url.contains(\"theme\")) {"
+        },
+        {
+          "text": "open_settings = 2;"
+        }
+      ]
+    },
+    {
+      "id": "android:691f5947a757",
+      "template": "tg://search",
+      "kind": "android-source-candidate",
+      "status": "internal-or-contextual",
+      "classification": "likely-internal-or-contextual",
+      "note": "Android handles this as a direct client action or compatibility route. The source match does not establish a documented, stable public link format; keep it out of the confirmed-template inventory unless independently verified.",
+      "sourceContext": [
+        {
+          "text": "open_settings = 1;"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if ((url.startsWith(\"tg:search\") || url.startsWith(\"tg://search\"))) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:search\", \"tg://telegram.org\").replace(\"tg://search\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:6a6a6333e2d0",
+      "template": "tg://ton",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "String purpose = data.getQueryParameter(\"purpose\");"
+        },
+        {
+          "text": "StarsController.getInstance(intentAccount[0]).showStarsTopup(this, balance, purpose);"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:ton\") || url.startsWith(\"tg://ton\")) {"
+        },
+        {
+          "text": "if (progress != null) {"
+        },
+        {
+          "text": "progress.end();"
+        }
+      ]
+    },
+    {
+      "id": "android:7016553c1131",
+      "template": "tg://premium_offer",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "case \"tg\": {"
+        },
+        {
+          "text": "String url = data.toString();"
+        },
+        {
+          "text": "if (url.startsWith(\"tg:premium_offer\") || url.startsWith(\"tg://premium_offer\")) {"
+        },
+        {
+          "text": "String finalUrl = url.replace(\"tg:premium_offer\", \"tg://premium_offer\");"
+        },
+        {
+          "text": "AndroidUtilities.runOnUIThread(() -> {"
+        }
+      ]
+    },
+    {
+      "id": "android:71861cc87966",
+      "template": "addstickers/",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
+      "sourceContext": [
+        {
+          "text": "}"
+        },
+        {
+          "text": "text = data.getQueryParameter(\"text\");"
+        },
+        {
+          "text": "} else if (path.startsWith(\"addstickers/\")) {"
+        },
+        {
+          "text": "sticker = path.replace(\"addstickers/\", \"\");"
+        },
+        {
+          "text": "} else if (path.startsWith(\"auction/\")) {"
+        }
+      ]
+    },
+    {
+      "id": "android:73ff02e4f8d3",
+      "template": "tg:premium_offer",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "case \"tg\": {"
+        },
+        {
+          "text": "String url = data.toString();"
+        },
+        {
+          "text": "if (url.startsWith(\"tg:premium_offer\") || url.startsWith(\"tg://premium_offer\")) {"
+        },
+        {
+          "text": "String finalUrl = url.replace(\"tg:premium_offer\", \"tg://premium_offer\");"
+        },
+        {
+          "text": "AndroidUtilities.runOnUIThread(() -> {"
+        }
+      ]
+    },
+    {
+      "id": "android:744017ab43be",
+      "template": "?sendlogs",
+      "kind": "android-source-candidate",
+      "status": "internal-or-contextual",
+      "classification": "likely-internal-or-contextual",
+      "note": "This token appears in a diagnostic/authentication settings branch, not as a complete documented deep-link template. Do not publish it as a standalone link.",
+      "sourceContext": [
+        {
+          "text": "} else if (url.contains(\"?enablelogs\")) {"
+        },
+        {
+          "text": "open_settings = 7;"
+        },
+        {
+          "text": "} else if (url.contains(\"?sendlogs\")) {"
+        },
+        {
+          "text": "open_settings = 8;"
+        },
+        {
+          "text": "} else if (url.contains(\"?disablelogs\")) {"
+        }
+      ]
+    },
+    {
+      "id": "android:7569ea1818b5",
+      "template": "share/",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
+      "sourceContext": [
+        {
+          "text": "} else if (path.startsWith(\"addemoji/\")) {"
+        },
+        {
+          "text": "emoji = path.replace(\"addemoji/\", \"\");"
+        },
+        {
+          "text": "} else if (path.startsWith(\"msg/\") || path.startsWith(\"share/\")) {"
+        },
+        {
+          "text": "message = data.getQueryParameter(\"url\");"
+        },
+        {
+          "text": "if (message == null) {"
+        }
+      ]
+    },
+    {
+      "id": "android:757a4f3d3954",
+      "template": "tg://contact",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "uniqueGiftSlug = data.getQueryParameter(\"slug\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:contact\") || url.startsWith(\"tg://contact\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:contact\", \"tg://contact\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:7c22d7851dc9",
+      "template": "telegram.me",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Host alias used by the URL parser, not a standalone link template.",
+      "sourceContext": [
+        {
+          "text": "Matcher prefixMatcher = PREFIX_T_ME_PATTERN.matcher(host);"
+        },
+        {
+          "text": "boolean isPrefix = prefixMatcher.find();"
+        },
+        {
+          "text": "if (host.equals(\"telegram.me\") || host.equals(\"t.me\") || host.equals(\"telegram.dog\") || isPrefix) {"
+        },
+        {
+          "text": "if (isPrefix) {"
+        },
+        {
+          "text": "data = Uri.parse(\"https://t.me/\" + prefixMatcher.group(1) + (TextUtils.isEmpty(data.getPath()) ? \"\" : data.getPath()) + (TextUtils.isEmpty(data.getQuery()) ? \"\" : \"?\" + data.getQuery()));"
+        }
+      ]
+    },
+    {
+      "id": "android:7da3c5dae517",
+      "template": "tg://confirmphone",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "message = message.substring(0, message.length() - 1);"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:confirmphone\") || url.startsWith(\"tg://confirmphone\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:confirmphone\", \"tg://telegram.org\").replace(\"tg://confirmphone\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:83e9e882c0e4",
+      "template": "tg://send_gift",
+      "kind": "android-source-candidate",
+      "status": "user-confirmed-working",
+      "classification": "user-confirmed-working",
+      "note": "The user reports this tg:// route works in Telegram. Android source also contains a matching explicit handler; this is implementation evidence, not an official documentation claim.",
+      "sourceContext": [
+        {
+          "text": "presentFragment(new StarsIntroActivity());"
+        },
+        {
+          "text": "return pushOpened;"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:send_gift\") || url.startsWith(\"tg://send_gift\")) {"
+        },
+        {
+          "text": "String toParam = data.getQueryParameter(\"to\");"
+        },
+        {
+          "text": "if (toParam != null && toParam.startsWith(\"@\")) {"
+        }
+      ]
+    },
+    {
+      "id": "android:83f7cc2c90b8",
+      "template": "tg:settings",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "theme = data.getQueryParameter(\"slug\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:settings\") || url.startsWith(\"tg://settings\")) {"
+        },
+        {
+          "text": "if (url.contains(\"themes\") || url.contains(\"theme\")) {"
+        },
+        {
+          "text": "open_settings = 2;"
+        }
+      ]
+    },
+    {
+      "id": "android:87f403f0b5d5",
+      "template": "invoice/",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
+      "sourceContext": [
+        {
+          "text": "if (path.startsWith(\"$\")) {"
+        },
+        {
+          "text": "inputInvoiceSlug = path.substring(1);"
+        },
+        {
+          "text": "} else if (path.startsWith(\"invoice/\")) {"
+        },
+        {
+          "text": "inputInvoiceSlug = path.substring(path.indexOf('/') + 1);"
+        },
+        {
+          "text": "} else if (path.startsWith(\"nft/\")) {"
+        }
+      ]
+    },
+    {
+      "id": "android:88fad0b18ebb",
+      "template": "tg://privatepost",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "contactToken = data.getQueryParameter(\"token\");"
+        },
+        {
+          "text": "noPaidMessagesToken = data.getQueryParameter(\"free\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:privatepost\") || url.startsWith(\"tg://privatepost\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:privatepost\", \"tg://telegram.org\").replace(\"tg://privatepost\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:91aea6da80b7",
+      "template": "stargift_auction/",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
+      "sourceContext": [
+        {
+          "text": "} else if (path.startsWith(\"auction/\")) {"
+        },
+        {
+          "text": "auctionSlug = path.replace(\"auction/\", \"\");"
+        },
+        {
+          "text": "} else if (path.startsWith(\"stargift_auction/\")) {"
+        },
+        {
+          "text": "auctionSlug = path.replace(\"stargift_auction/\", \"\");"
+        },
+        {
+          "text": "} else if (path.startsWith(\"stargift_preview/\")) {"
+        }
+      ]
+    },
+    {
+      "id": "android:93414be0bd25",
+      "template": "bg/",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
+      "sourceContext": [
+        {
+          "text": "} else if (path.startsWith(\"nft/\")) {"
+        },
+        {
+          "text": "uniqueGiftSlug = path.substring(path.indexOf('/') + 1);"
+        },
+        {
+          "text": "} else if (path.startsWith(\"bg/\")) {"
+        },
+        {
+          "text": "wallPaper = new TLRPC.TL_wallPaper();"
+        },
+        {
+          "text": "wallPaper.settings = new TLRPC.TL_wallPaperSettings();"
+        }
+      ]
+    },
+    {
+      "id": "android:93ce1cfe6c00",
+      "template": "contact/",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
+      "sourceContext": [
+        {
+          "text": "}"
+        },
+        {
+          "text": "optionId = PollAttachedMediaPack.getOptionIdQueryParameter(data, \"option\");"
+        },
+        {
+          "text": "} else if (path.startsWith(\"contact/\")) {"
+        },
+        {
+          "text": "contactToken = path.substring(8);"
+        },
+        {
+          "text": "noPaidMessagesToken = data.getQueryParameter(\"free\");"
+        }
+      ]
+    },
+    {
+      "id": "android:93dc770416a3",
+      "template": "tg:setlanguage",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "auth.put(\"public_key\", data.getQueryParameter(\"public_key\"));"
+        },
+        {
+          "text": "auth.put(\"callback_url\", data.getQueryParameter(\"callback_url\"));"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:setlanguage\") || url.startsWith(\"tg://setlanguage\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:setlanguage\", \"tg://telegram.org\").replace(\"tg://setlanguage\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:952fadecd436",
+      "template": "addemoji/",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
+      "sourceContext": [
+        {
+          "text": "} else if (path.startsWith(\"call/\")) {"
+        },
+        {
+          "text": "conferenceSlug = path.replace(\"call/\", \"\");"
+        },
+        {
+          "text": "} else if (path.startsWith(\"addemoji/\")) {"
+        },
+        {
+          "text": "emoji = path.replace(\"addemoji/\", \"\");"
+        },
+        {
+          "text": "} else if (path.startsWith(\"msg/\") || path.startsWith(\"share/\")) {"
+        }
+      ]
+    },
+    {
+      "id": "android:a0cce5b02e9d",
+      "template": "tg:addlist",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "}"
+        },
+        {
+          "text": "newContact = true;"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:addlist\") || url.startsWith(\"tg://addlist\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:addlist\", \"tg://telegram.org\").replace(\"tg://addlist\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:a159d44b2efa",
+      "template": "tg:stars",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "presentFragment(new TONIntroActivity());"
+        },
+        {
+          "text": "return pushOpened;"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:stars\") || url.startsWith(\"tg://stars\")) {"
+        },
+        {
+          "text": "if (progress != null) {"
+        },
+        {
+          "text": "progress.end();"
+        }
+      ]
+    },
+    {
+      "id": "android:a30a98ba927f",
+      "template": "tg:resolve",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "fragment.presentFragment(new PremiumPreviewFragment(uri.getQueryParameter(\"ref\")));"
+        },
+        {
+          "text": "}});"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:resolve\") || url.startsWith(\"tg://resolve\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:resolve\", \"tg://telegram.org\").replace(\"tg://resolve\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:aa8b2966cc2b",
+      "template": "tg://msg",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "emoji = data.getQueryParameter(\"set\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:msg\") || url.startsWith(\"tg://msg\") || url.startsWith(\"tg://share\") || url.startsWith(\"tg:share\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:msg\", \"tg://telegram.org\").replace(\"tg://msg\", \"tg://telegram.org\").replace(\"tg://share\", \"tg://telegram.org\").replace(\"tg:share\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:b0b5fc4e38a7",
+      "template": "tg:contact",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "uniqueGiftSlug = data.getQueryParameter(\"slug\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:contact\") || url.startsWith(\"tg://contact\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:contact\", \"tg://contact\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:b1286c2b682a",
+      "template": "tg://contact?token=",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Partial URI with a query parameter name but no value. Use the surrounding parser and official documentation to recover the complete parameter schema.",
+      "sourceContext": [
+        {
+          "text": "}"
+        },
+        {
+          "text": ""
+        },
+        {
+          "text": "/** t.me/contact/…?free=… (tg://contact?token=…&free=…): the user of the contact token, then the free token. */"
+        },
+        {
+          "text": "private void openNoPaidMessagesContactLink(final int account, final String contactToken, final String token, final Browser.Progress progress) {"
+        },
+        {
+          "text": "if (progress != null) {"
+        }
+      ]
+    },
+    {
+      "id": "android:b31ffbc10da1",
+      "template": "tg://addemoji",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "sticker = data.getQueryParameter(\"set\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:addemoji\") || url.startsWith(\"tg://addemoji\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:addemoji\", \"tg://telegram.org\").replace(\"tg://addemoji\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:b484e3f49f91",
+      "template": "tg:webproxy",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "String url = uri.toString().toLowerCase();"
+        },
+        {
+          "text": "isProxy = url.startsWith(\"tg:proxy\") || url.startsWith(\"tg://proxy\")"
+        },
+        {
+          "text": "|| url.startsWith(\"tg:webproxy\") || url.startsWith(\"tg://webproxy\")"
+        },
+        {
+          "text": "|| url.startsWith(\"tg:socks\") || url.startsWith(\"tg://socks\");"
+        },
+        {
+          "text": "}"
+        }
+      ]
+    },
+    {
+      "id": "android:b76d88f1b032",
+      "template": "tg:invoice",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "}"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:invoice\") || url.startsWith(\"tg://invoice\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:invoice\", \"tg://invoice\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:b8c82197ccd6",
+      "template": "tg:passport",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "} catch (NumberFormatException ignore) {}"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:passport\") || url.startsWith(\"tg://passport\") || url.startsWith(\"tg:secureid\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:passport\", \"tg://telegram.org\").replace(\"tg://passport\", \"tg://telegram.org\").replace(\"tg:secureid\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:bb2f09b2f733",
+      "template": "call/",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
+      "sourceContext": [
+        {
+          "text": "} else if (path.startsWith(\"stargift_preview/\")) {"
+        },
+        {
+          "text": "stargiftPreviewSlug = path.replace(\"stargift_preview/\", \"\");"
+        },
+        {
+          "text": "} else if (path.startsWith(\"call/\")) {"
+        },
+        {
+          "text": "conferenceSlug = path.replace(\"call/\", \"\");"
+        },
+        {
+          "text": "} else if (path.startsWith(\"addemoji/\")) {"
+        }
+      ]
+    },
+    {
+      "id": "android:bd08f2985f64",
+      "template": "tg://resolve",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "fragment.presentFragment(new PremiumPreviewFragment(uri.getQueryParameter(\"ref\")));"
+        },
+        {
+          "text": "}});"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:resolve\") || url.startsWith(\"tg://resolve\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:resolve\", \"tg://telegram.org\").replace(\"tg://resolve\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:bdbf6ee33600",
+      "template": "tg://socks",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "isProxy = url.startsWith(\"tg:proxy\") || url.startsWith(\"tg://proxy\")"
+        },
+        {
+          "text": "|| url.startsWith(\"tg:webproxy\") || url.startsWith(\"tg://webproxy\")"
+        },
+        {
+          "text": "|| url.startsWith(\"tg:socks\") || url.startsWith(\"tg://socks\");"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "}"
+        }
+      ]
+    },
+    {
+      "id": "android:c06715ac7df2",
+      "template": "tg://call",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "} else if ((url.startsWith(\"tg:calllog\") || url.startsWith(\"tg://calllog\"))) {"
+        },
+        {
+          "text": "showCallLog = true;"
+        },
+        {
+          "text": "} else if ((url.startsWith(\"tg:call\") || url.startsWith(\"tg://call\"))) {"
+        },
+        {
+          "text": "if (UserConfig.getInstance(currentAccount).isClientActivated()) {"
+        },
+        {
+          "text": "final String extraForceCall = \"extra_force_call\";"
+        }
+      ]
+    },
+    {
+      "id": "android:c1d23fb64f03",
+      "template": "tg:proxy",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "if (uri != null) {"
+        },
+        {
+          "text": "String url = uri.toString().toLowerCase();"
+        },
+        {
+          "text": "isProxy = url.startsWith(\"tg:proxy\") || url.startsWith(\"tg://proxy\")"
+        },
+        {
+          "text": "|| url.startsWith(\"tg:webproxy\") || url.startsWith(\"tg://webproxy\")"
+        },
+        {
+          "text": "|| url.startsWith(\"tg:socks\") || url.startsWith(\"tg://socks\");"
+        }
+      ]
+    },
+    {
+      "id": "android:c2fedb2686f5",
+      "template": "tg://telegram.org",
+      "kind": "android-source-candidate",
+      "status": "internal-or-contextual",
+      "classification": "likely-internal-or-contextual",
+      "note": "This value is used as an internal URL rewrite target while parsing another link; it is not a public deep-link template.",
+      "sourceContext": [
+        {
+          "text": "}});"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:resolve\") || url.startsWith(\"tg://resolve\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:resolve\", \"tg://telegram.org\").replace(\"tg://resolve\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "username = data.getQueryParameter(\"domain\");"
+        }
+      ]
+    },
+    {
+      "id": "android:c36ab00d2b71",
+      "template": "tg:socks",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "isProxy = url.startsWith(\"tg:proxy\") || url.startsWith(\"tg://proxy\")"
+        },
+        {
+          "text": "|| url.startsWith(\"tg:webproxy\") || url.startsWith(\"tg://webproxy\")"
+        },
+        {
+          "text": "|| url.startsWith(\"tg:socks\") || url.startsWith(\"tg://socks\");"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "}"
+        }
+      ]
+    },
+    {
+      "id": "android:c3ed4b9449aa",
+      "template": "tg:scanqr",
+      "kind": "android-source-candidate",
+      "status": "internal-or-contextual",
+      "classification": "likely-internal-or-contextual",
+      "note": "Android handles this as a direct client action or compatibility route. The source match does not establish a documented, stable public link format; keep it out of the confirmed-template inventory unless independently verified.",
+      "sourceContext": [
+        {
+          "text": "}"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if ((url.startsWith(\"tg:scanqr\") || url.startsWith(\"tg://scanqr\"))) {"
+        },
+        {
+          "text": "scanQr = true;"
+        },
+        {
+          "text": "} else if ((url.startsWith(\"tg:addcontact\") || url.startsWith(\"tg://addcontact\"))) {"
+        }
+      ]
+    },
+    {
+      "id": "android:c4f12dc5c0ca",
+      "template": "tg:confirmphone",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "message = message.substring(0, message.length() - 1);"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:confirmphone\") || url.startsWith(\"tg://confirmphone\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:confirmphone\", \"tg://telegram.org\").replace(\"tg://confirmphone\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:c7b860ca3ff5",
+      "template": "nft/",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
+      "sourceContext": [
+        {
+          "text": "} else if (path.startsWith(\"invoice/\")) {"
+        },
+        {
+          "text": "inputInvoiceSlug = path.substring(path.indexOf('/') + 1);"
+        },
+        {
+          "text": "} else if (path.startsWith(\"nft/\")) {"
+        },
+        {
+          "text": "uniqueGiftSlug = path.substring(path.indexOf('/') + 1);"
+        },
+        {
+          "text": "} else if (path.startsWith(\"bg/\")) {"
+        }
+      ]
+    },
+    {
+      "id": "android:c8d8d1e6e945",
+      "template": "tg:ton",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "String purpose = data.getQueryParameter(\"purpose\");"
+        },
+        {
+          "text": "StarsController.getInstance(intentAccount[0]).showStarsTopup(this, balance, purpose);"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:ton\") || url.startsWith(\"tg://ton\")) {"
+        },
+        {
+          "text": "if (progress != null) {"
+        },
+        {
+          "text": "progress.end();"
+        }
+      ]
+    },
+    {
+      "id": "android:c9e129d6100f",
+      "template": "tg:secureid",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "} catch (NumberFormatException ignore) {}"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:passport\") || url.startsWith(\"tg://passport\") || url.startsWith(\"tg:secureid\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:passport\", \"tg://telegram.org\").replace(\"tg://passport\", \"tg://telegram.org\").replace(\"tg:secureid\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:c9fd23516fcd",
+      "template": "tg:stars_topup",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "chatLinkSlug = data.getQueryParameter(\"slug\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:stars_topup\") || url.startsWith(\"tg://stars_topup\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:stars_topup\", \"tg://telegram.org\").replace(\"tg://stars_topup\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:cd8405b195b7",
+      "template": "tg:calllog",
+      "kind": "android-source-candidate",
+      "status": "internal-or-contextual",
+      "classification": "likely-internal-or-contextual",
+      "note": "Android handles this as a direct client action or compatibility route. The source match does not establish a documented, stable public link format; keep it out of the confirmed-template inventory unless independently verified.",
+      "sourceContext": [
+        {
+          "text": "searchQuery = \"\";"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if ((url.startsWith(\"tg:calllog\") || url.startsWith(\"tg://calllog\"))) {"
+        },
+        {
+          "text": "showCallLog = true;"
+        },
+        {
+          "text": "} else if ((url.startsWith(\"tg:call\") || url.startsWith(\"tg://call\"))) {"
+        }
+      ]
+    },
+    {
+      "id": "android:cd9c2994ecba",
+      "template": "?disablelogs",
+      "kind": "android-source-candidate",
+      "status": "internal-or-contextual",
+      "classification": "likely-internal-or-contextual",
+      "note": "This token appears in a diagnostic/authentication settings branch, not as a complete documented deep-link template. Do not publish it as a standalone link.",
+      "sourceContext": [
+        {
+          "text": "} else if (url.contains(\"?sendlogs\")) {"
+        },
+        {
+          "text": "open_settings = 8;"
+        },
+        {
+          "text": "} else if (url.contains(\"?disablelogs\")) {"
+        },
+        {
+          "text": "open_settings = 9;"
+        },
+        {
+          "text": "} else if (url.contains(\"premium_sms\")) {"
+        }
+      ]
+    },
+    {
+      "id": "android:d22d7b0de8fe",
+      "template": "confirmphone",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This appears to be a route/handler token rather than a complete URI; verify how the client combines it with a scheme, host, path, and parameters.",
+      "sourceContext": [
+        {
+          "text": "message = message.substring(0, message.length() - 1);"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if (path.startsWith(\"confirmphone\")) {"
+        },
+        {
+          "text": "phone = data.getQueryParameter(\"phone\");"
+        },
+        {
+          "text": "phoneHash = data.getQueryParameter(\"hash\");"
+        }
+      ]
+    },
+    {
+      "id": "android:d37fda317c8e",
+      "template": "setlanguage/",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Looks like a route prefix. The required path parameters and host/scheme must be recovered from the surrounding implementation before publishing.",
+      "sourceContext": [
+        {
+          "text": "phone = data.getQueryParameter(\"phone\");"
+        },
+        {
+          "text": "phoneHash = data.getQueryParameter(\"hash\");"
+        },
+        {
+          "text": "} else if (path.startsWith(\"setlanguage/\")) {"
+        },
+        {
+          "text": "lang = path.substring(12);"
+        },
+        {
+          "text": "} else if (path.startsWith(\"addtheme/\")) {"
+        }
+      ]
+    },
+    {
+      "id": "android:d8adec56fe0b",
+      "template": "tg://addtheme",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "lang = data.getQueryParameter(\"lang\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:addtheme\") || url.startsWith(\"tg://addtheme\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:addtheme\", \"tg://telegram.org\").replace(\"tg://addtheme\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:db1a8e8e639b",
+      "template": "tg:addemoji",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "sticker = data.getQueryParameter(\"set\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:addemoji\") || url.startsWith(\"tg://addemoji\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:addemoji\", \"tg://telegram.org\").replace(\"tg://addemoji\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:dccd5844b0df",
+      "template": "tg:send_gift",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "presentFragment(new StarsIntroActivity());"
+        },
+        {
+          "text": "return pushOpened;"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:send_gift\") || url.startsWith(\"tg://send_gift\")) {"
+        },
+        {
+          "text": "String toParam = data.getQueryParameter(\"to\");"
+        },
+        {
+          "text": "if (toParam != null && toParam.startsWith(\"@\")) {"
+        }
+      ]
+    },
+    {
+      "id": "android:dfffe945e33f",
+      "template": "tg://join",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "}"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:join\") || url.startsWith(\"tg://join\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:join\", \"tg://telegram.org\").replace(\"tg://join\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:e2517e1e9366",
+      "template": "tg://webproxy",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "String url = uri.toString().toLowerCase();"
+        },
+        {
+          "text": "isProxy = url.startsWith(\"tg:proxy\") || url.startsWith(\"tg://proxy\")"
+        },
+        {
+          "text": "|| url.startsWith(\"tg:webproxy\") || url.startsWith(\"tg://webproxy\")"
+        },
+        {
+          "text": "|| url.startsWith(\"tg:socks\") || url.startsWith(\"tg://socks\");"
+        },
+        {
+          "text": "}"
+        }
+      ]
+    },
+    {
+      "id": "android:e2786f57bb1c",
+      "template": "tg://login?token=",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "Partial URI with a query parameter name but no value. Use the surrounding parser and official documentation to recover the complete parameter schema.",
+      "sourceContext": [
+        {
+          "text": "progressDialog.setCanCancel(false);"
+        },
+        {
+          "text": "progressDialog.show();"
+        },
+        {
+          "text": "byte[] token = Base64.decode(code.substring(\"tg://login?token=\".length()), Base64.URL_SAFE);"
+        },
+        {
+          "text": "TLRPC.TL_auth_acceptLoginToken req = new TLRPC.TL_auth_acceptLoginToken();"
+        },
+        {
+          "text": "req.token = token;"
+        }
+      ]
+    },
+    {
+      "id": "android:e2e8d7f88b0d",
+      "template": "tg://passport",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "} catch (NumberFormatException ignore) {}"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:passport\") || url.startsWith(\"tg://passport\") || url.startsWith(\"tg:secureid\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:passport\", \"tg://telegram.org\").replace(\"tg://passport\", \"tg://telegram.org\").replace(\"tg:secureid\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:e888548cd0b9",
+      "template": "tg://addlist",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "}"
+        },
+        {
+          "text": "newContact = true;"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:addlist\") || url.startsWith(\"tg://addlist\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:addlist\", \"tg://telegram.org\").replace(\"tg://addlist\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:eb32b472451c",
+      "template": "tg:nft",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "auctionSlug = data.getQueryParameter(\"slug\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:nft\") || url.startsWith(\"tg://nft\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:nft\", \"tg://nft\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:ebf1a7ef1bc9",
+      "template": "tg://",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "return pushOpened;"
+        },
+        {
+          "text": "} else {"
+        },
+        {
+          "text": "unsupportedUrl = url.replace(\"tg://\", \"\").replace(\"tg:\", \"\");"
+        },
+        {
+          "text": "int index;"
+        },
+        {
+          "text": "if ((index = unsupportedUrl.indexOf('?')) >= 0) {"
+        }
+      ]
+    },
+    {
+      "id": "android:ed2ed9448582",
+      "template": "tg://bg",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "commentId = null;"
+        },
+        {
+          "text": "}"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:bg\") || url.startsWith(\"tg://bg\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:bg\", \"tg://telegram.org\").replace(\"tg://bg\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:f226ee0cc2ed",
+      "template": "tg://setlanguage",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "auth.put(\"public_key\", data.getQueryParameter(\"public_key\"));"
+        },
+        {
+          "text": "auth.put(\"callback_url\", data.getQueryParameter(\"callback_url\"));"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:setlanguage\") || url.startsWith(\"tg://setlanguage\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:setlanguage\", \"tg://telegram.org\").replace(\"tg://setlanguage\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:f6f6c8dd52e5",
+      "template": "tg://stars_topup",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "chatLinkSlug = data.getQueryParameter(\"slug\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:stars_topup\") || url.startsWith(\"tg://stars_topup\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:stars_topup\", \"tg://telegram.org\").replace(\"tg://stars_topup\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:f94533cf1c60",
+      "template": "tg:message",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "folderSlug = data.getQueryParameter(\"slug\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:message\") || url.startsWith(\"tg://message\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:message\", \"tg://telegram.org\").replace(\"tg://message\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:f959c4bf6f1f",
+      "template": "tg://message",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "data = Uri.parse(url);"
+        },
+        {
+          "text": "folderSlug = data.getQueryParameter(\"slug\");"
+        },
+        {
+          "text": "} else if (url.startsWith(\"tg:message\") || url.startsWith(\"tg://message\")) {"
+        },
+        {
+          "text": "url = url.replace(\"tg:message\", \"tg://telegram.org\").replace(\"tg://message\", \"tg://telegram.org\");"
+        },
+        {
+          "text": "data = Uri.parse(url);"
+        }
+      ]
+    },
+    {
+      "id": "android:fdc2599da7da",
+      "template": "tg://proxy",
+      "kind": "android-source-candidate",
+      "status": "implementation-derived-unverified",
+      "classification": "needs-manual-review",
+      "note": "This is a scheme/route prefix detected in client dispatch logic, not a complete deep-link template. Recover the supported parameters from the handler before publishing.",
+      "sourceContext": [
+        {
+          "text": "if (uri != null) {"
+        },
+        {
+          "text": "String url = uri.toString().toLowerCase();"
+        },
+        {
+          "text": "isProxy = url.startsWith(\"tg:proxy\") || url.startsWith(\"tg://proxy\")"
+        },
+        {
+          "text": "|| url.startsWith(\"tg:webproxy\") || url.startsWith(\"tg://webproxy\")"
+        },
+        {
+          "text": "|| url.startsWith(\"tg:socks\") || url.startsWith(\"tg://socks\");"
+        }
+      ]
+    },
+    {
+      "id": "official:01713e822ee0",
+      "template": "t.me/addemoji/<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:02264d3dfedb",
+      "template": "t.me/<username>?livestream",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:0250cd9d2cb8",
+      "template": "tg://resolve?domain=<username>&voicechat",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:03ea690fa201",
+      "template": "t.me/<username>?videochat",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:0608df0ce8f9",
+      "template": "tg://post",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:0795881ea2be",
+      "template": "t.me/socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:0824b30ab7b3",
+      "template": "tg://confirmphone?phone=<phone>&hash=<hash>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:084e3b4aaf98",
+      "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:08b27398129c",
+      "template": "t.me/<bot_username>?startattach",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:08f46d528722",
+      "template": "tg://bg?gradient=<top_color>-<bottom_color>&rotation=<rotation>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:0a15c8627cf6",
+      "template": "tg://privatepost?channel=<channel>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:0a9feb4b1e0a",
+      "template": "tg://premium_multigift?ref=<referrer>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:0cac1684a731",
+      "template": "t.me/share/url?url=<url>&text=<text>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:0d3e496c571f",
+      "template": "tg://path?query",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:0e04c0f44f4c",
+      "template": "tg://settings/<path>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:0ee09bb6ebe2",
+      "template": "tg://resolve?domain=<bot_username>&startapp&mode=<mode>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:11fd425404c1",
+      "template": "tg://settings",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:127945625e18",
+      "template": "t.me/$<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:1310d27fba78",
+      "template": "tg://addtheme?slug=<name>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:1585ab84daea",
+      "template": "t.me/<bot_username>?start=<parameter>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:16ebe25bf764",
+      "template": "t.me/addstickers/<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:17ea2042db1a",
+      "template": "t.me/<username>?collection=<collection_id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:18845a5f031e",
+      "template": "t.me/msg/url?url=<url>&text=<text>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:1936aeb5c8c4",
+      "template": "tg://new/channel",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:1a93c3853ecc",
+      "template": "tg://time?unix=<unix>&format=<format>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:1d3d5caa1d1e",
+      "template": "tg://resolve?domain=<username>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:1d5a93d42869",
+      "template": "t.me/+<phone_number>?attach=<bot_username>&startattach=<start_parameter>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:1da9ccc0eaf9",
+      "template": "t.me/<username>?attach=<bot_username>&startattach=<start_parameter>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:1ead8d8f6d0e",
+      "template": "t.me/bg/<slug>?mode=<mode>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:1fba0bbce725",
+      "template": "tg://resolve?domain=<username>&attach=<bot_username>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:1fc9ad2e8e01",
+      "template": "t.me/<username>?direct",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:20c20f1ea0bc",
+      "template": "tg:path?query",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:22568c3c92be",
+      "template": "t.me/<bot_username>?game=<short_name>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:2344c61d1f7c",
+      "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:24ea36ea9f64",
+      "template": "t.me/<username>?attach=<bot_username>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:2539210bc37e",
+      "template": "tg://resolve?domain=<username>&livestream=<invite_hash>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:2542b7cc9922",
+      "template": "tg://contacts",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:25d78fac8632",
+      "template": "t.me/c/<id>?boost",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:2609bb965491",
+      "template": "tg://resolve?domain=<username>&collection=<collection_id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:2baaf768fbbe",
+      "template": "tg://resolve?domain=<bot_username>&start={prefix}<referrer>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:2c8a8321a976",
+      "template": "t.me/addlist/<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:2c8fe4ad7f5d",
+      "template": "t.me/newbot/<manager_bot_username>?name=<suggested_bot_name>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:2d72bd5d3011",
+      "template": "tg://resolve?phone=<phone_number>&text=<draft_text>&profile",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:2e1317d6ff24",
+      "template": "t.me/<bot_username>?startgroup=<parameter>&admin=<permissions>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:2edd7b299570",
+      "template": "tg://resolve?domain=<bot_username>&startchannel&admin=<permissions>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:2f09c77f3ea7",
+      "template": "t.me/bg/<top_color>-<bottom_color>?rotation=<rotation>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:2fceea239091",
+      "template": "tg://resolve?domain=<username>&livestream",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:343bd70d395c",
+      "template": "t.me/boost/<username>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:34796fe8e133",
+      "template": "tg://newbot?manager=<manager_bot_username>&username=<suggested_bot_username>&name=<suggested_bot_name>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:34d9aff66d85",
+      "template": "t.me/login/",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:36719fa7c434",
+      "template": "tg://resolve?domain=<username>&attach=<bot_username>&startattach=<start_parameter>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:3a2a3ddb3299",
+      "template": "tonsite://",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:3c2596ba4165",
+      "template": "tg://addstyle?slug=<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:3c49da4d3f52",
+      "template": "t.me/invoice/<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:3ce905b62744",
+      "template": "t.me/c/<channel>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:3d1a3d9a7ff5",
+      "template": "tg://resolve?domain=<username>&voicechat=<invite_hash>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:3d59f06f08b0",
+      "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:3fbbe7fdb9b1",
+      "template": "tg://new",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:406075f40b65",
+      "template": "t.me/path?query",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:40d62af08382",
+      "template": "t.me/<username>/c/<collection_id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:41fa3d5f3cb0",
+      "template": "tg://stars",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:42dcb5c4dd45",
+      "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:457abc6ee0ec",
+      "template": "tg://giftcode?slug=<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:4934aab6f2bc",
+      "template": "t.me/<username>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:4a686fb46636",
+      "template": "t.me/<bot_username>?startapp=<start_parameter>&mode=<mode>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:4ab12eebd4b1",
+      "template": "tg://setlanguage?lang=<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:4b3bf4a91594",
+      "template": "tg://passport?params",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:4d6742574e6c",
+      "template": "tg:some_unsupported_feature?test=b",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:5202297dae77",
+      "template": "getting-started.ton/path?query#hash",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:536f9d6b01f4",
+      "template": "t.me/<bot_username>?startchannel&admin=<permissions>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:54c4405b6715",
+      "template": "t.me/contact/<token>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:54ead15de17e",
+      "template": "tg://login?token=<base64encodedtoken>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:592d54c9d9b1",
+      "template": "t.me/<username>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:5b085af2a8bd",
+      "template": "t.me/<bot_username>/<short_name>?startapp=<start_parameter>&mode=<mode>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:5b334633d442",
+      "template": "tg://settings/stars",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:5bb72e127d12",
+      "template": "tg://addstickers?set=<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:5c68ad9e8243",
+      "template": "t.me/<bot_username>?ref=<referrer>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:5cf55963db85",
+      "template": "t.me/+<hash>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:5d54094d1a2e",
+      "template": "tg://stars_topup?balance=<star_count>&purpose=<purpose>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:5e9ea5cf4f34",
+      "template": "tg://boost?channel=<id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:660a6f11b397",
+      "template": "t.me/setlanguage/<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:691c6e3c1662",
+      "template": "tonsite://somesite.domain/path?query#hash",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:6948da8d3f64",
+      "template": "tg://msg_url?url=<url>&text=<text>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:6bcbfb98a793",
+      "template": "tg://addlist?slug=<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:6f45a0fca512",
+      "template": "tg://chats/edit",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:6f51b78488b0",
+      "template": "t.me/share/url/?url=<url>&text=<text>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:714a0bec7895",
+      "template": "tg://stargift_auction?slug=<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:7462a61ae983",
+      "template": "tg://contact?token=<token>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:77dba6e726da",
+      "template": "t.me/<username>?videochat=<invite_hash>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:7858425e1cf8",
+      "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:795151517859",
+      "template": "tg://resolve?domain=telegrampassport&params",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:79d406d6a4d2",
+      "template": "t.me/+<phone_number>?text=<draft_text>&profile",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:7ab708dfeb25",
+      "template": "tg://resolve?domain=<bot_username>&startgroup&admin=<permissions>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:7cfb910ed25e",
+      "template": "t.me/addtheme/<name>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:7f08ea3b1aa2",
+      "template": "t.me/joinchat/<hash>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:7f9f15d92c47",
+      "template": "t.me/<bot_username>?startattach&choose=users+bots+groups+channels",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:7fb60d345974",
+      "template": "tg://oauth?token=<token>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:80d764ae9a17",
+      "template": "tg://proxy?server=<server>&port=<port>&secret=<secret>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:81a1ef5e1476",
+      "template": "t.me/auction/<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:81b7f478605f",
+      "template": "tg://resolve?domain=<bot_username>&ref=<referrer>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:856d798d7d1c",
+      "template": "t.me/<bot_username>?startapp&mode=<mode>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:88b99dbc89bb",
+      "template": "t.me/+<phone_number>?attach=<bot_username>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:88ec9d932780",
+      "template": "t.me/<username>/s/live",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:8adcd10218bc",
+      "template": "tg://login?code=",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:8b0ecb2a48e4",
+      "template": "tg://resolve?domain=<username>&direct",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:8cb0e78c729b",
+      "template": "tg://addemoji?set=<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:8d8d7774c4e8",
+      "template": "tg://post/<content_type>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:919c1de73a75",
+      "template": "https://t.me/oauth?startapp=<token>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:91cc9865d834",
+      "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:922ca7b36940",
+      "template": "tg://resolve?domain=<bot_username>&startattach",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:925a35819baa",
+      "template": "tg://boost?domain=<username>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:92f04eebe59c",
+      "template": "https://t.me/path?query",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:942d6411364d",
+      "template": "tg://nft?slug=<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:9594ffe5c293",
+      "template": "t.me/bg/<hex_color>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:9a620492761e",
+      "template": "t.me/<username>?album=<album_id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:9b54de96a743",
+      "template": "tg://socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:9c3f6ceacb15",
+      "template": "t.me/newbot/<manager_bot_username>/<suggested_bot_username>?name=<suggested_bot_name>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:9d1020c0d185",
+      "template": "tg://ton",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:9d265382957a",
+      "template": "tg://resolve?phone=<phone_number>&attach=<bot_username>&startattach=<start_parameter>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:9d70b755d3ea",
+      "template": "t.me/call/<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:9e70149a6fe2",
+      "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:9f160b64972a",
+      "template": "tg://new/group",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:a0e8343de842",
+      "template": "tg://contacts/<section>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:a234ca883ec1",
+      "template": "tg://user?id=<id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:a3a18b3fa0f4",
+      "template": "tg://settings/ton",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:a4ae8b13d356",
+      "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:a52a42634de5",
+      "template": "t.me/<username>/",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:a5f6b2416a94",
+      "template": "tg://resolve?domain=<username>&videochat",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:a66bd1f78044",
+      "template": "tg://resolve?domain=<bot_username>&startattach=<start_parameter>&choose=users+bots+groups+channels",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:aa94715bd7b6",
+      "template": "tg://resolve?domain=<username>&text=<draft_text>&profile",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:ab46c3dcc309",
+      "template": "t.me/addstyle/<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:ad116f777c55",
+      "template": "t.me/m/<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:b138ffa7bbbc",
+      "template": "tg://resolve?domain=<bot_username>&startattach&choose=users+bots+groups+channels",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:b55d70901d79",
+      "template": "tg://chats/search",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:b6c28fea681b",
+      "template": "tg://resolve?domain=<bot_username>&appname=<short_name>&startapp=<start_parameter>&mode=<mode>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:b761e21b676c",
+      "template": "tg://message?slug=<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:b79468011c7f",
+      "template": "tg://chats/emoji-status",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:b965fd2b0aa5",
+      "template": "tg://resolve?domain=<username>&story=live",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:ba143126ab86",
+      "template": "t.me/<username>?boost",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:bb5283766a24",
+      "template": "tg://resolve?domain=<username>&story=<story_id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:bd39b97c7a0d",
+      "template": "t.me/share?url=<url>&text=<text>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:bf8b1cfab0ec",
+      "template": "t.me/<username>?livestream=<invite_hash>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:c0032a5e0ffa",
+      "template": "t.me/nft/<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:c20aaa50f491",
+      "template": "t.me/<bot_username>?startgroup&admin=<permissions>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:c55230c5b412",
+      "template": "t.me/giftcode/<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:c57a14ea3105",
+      "template": "t.me/<username>?voicechat",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:c7446b068937",
+      "template": "tg://bg?color=<hex_color>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:c897dd9729a8",
+      "template": "tg://resolve?domain=<username>&videochat=<invite_hash>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:c8c4ba7213a9",
+      "template": "tg://bg?slug=<slug>&mode=<mode>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:c8f7572349be",
+      "template": "t.me/c/<channel>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:ca274779b939",
+      "template": "tg://resolve?domain=<username>&album=<album_id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:cc02a873741c",
+      "template": "tg://invoice?slug=<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:cc781a1c69fe",
+      "template": "tg://resolve?domain=<bot_username>&startattach=<start_parameter>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:ce66744a29d3",
+      "template": "tg://need_update_for_some_feature?test=a",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:ceaa96c1c1f2",
+      "template": "t.me/<bot_username>?start={prefix}<referrer>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:cfca24e03aa0",
+      "template": "tg://resolve?domain=<bot_username>&startgroup=<parameter>&admin=<permissions>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:d2797d094702",
+      "template": "tg://emoji?id=<id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:d4c19559c3d6",
+      "template": "t.me/<bot_username>?startattach=<start_parameter>&choose=users+bots+groups+channels",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:d5066708d4dd",
+      "template": "tg://premium_offer?ref=<referrer>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:d551940c0c4d",
+      "template": "t.me/<bot_username>?startattach=<start_parameter>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:d55e09fbed19",
+      "template": "t.me/confirmphone?phone=<phone>&hash=<hash>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:d5735df47727",
+      "template": "tg://join?invite=<hash>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:da012a2b134e",
+      "template": "t.me/<username>/a/<album_id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:db6d488abb0c",
+      "template": "t.me/<username>?text=<draft_text>&profile",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:db8c1e5ac4e5",
+      "template": "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:e143c5efede0",
+      "template": "tg://resolve?phone=<phone_number>&attach=<bot_username>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:e2168b3e6428",
+      "template": "tg://call?slug=<slug>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:e597caed5006",
+      "template": "t.me/<username>?voicechat=<invite_hash>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:e6c733013251",
+      "template": "t.me/proxy?server=<server>&port=<port>&secret=<secret>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:e88b90306a91",
+      "template": "t.me/<username>/s/<story_id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:ea42b15f7ddb",
+      "template": "http://t.me/path?query",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:eae3b5faadba",
+      "template": "tg://resolve?domain=<bot_username>&start=<parameter>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:f097923c9459",
+      "template": "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:f3bed5c7550b",
+      "template": "tg://resolve?domain=<bot_username>&game=<short_name>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:f4fd828312b0",
+      "template": "t.me/boost?c=<id>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:f6da890e8cfd",
+      "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:f83a61f34fb8",
+      "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:fe8bf2ad7b62",
+      "template": "tg://resolve?domain=oauth&startapp=<token>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "official:ffab54be3374",
+      "template": "tg://resolve?domain=<bot_username>&startapp=<start_parameter>&mode=<mode>",
+      "kind": "official-template",
+      "status": "officially-documented",
+      "classification": "documented",
+      "note": "Listed in Telegram official deep-link documentation.",
+      "sourceContext": null
+    },
+    {
+      "id": "runtime:35a5cadd8058",
+      "template": "tg://scanqr",
+      "kind": "runtime-route",
+      "status": "user-confirmed-working",
+      "classification": "user-confirmed-working",
+      "note": "Requires the client/device to be able to use the camera and the relevant UI.",
+      "sourceContext": null
+    },
+    {
+      "id": "runtime:3e796a009e5c",
+      "template": "tg://send_gift?to=<username-or-user_id>",
+      "kind": "runtime-route",
+      "status": "user-confirmed-working",
+      "classification": "user-confirmed-working",
+      "note": "Recipient resolution and gift availability depend on the Telegram account and recipient.",
+      "sourceContext": null
+    },
+    {
+      "id": "runtime:75f6f781c731",
+      "template": "tg://calllog",
+      "kind": "runtime-route",
+      "status": "user-confirmed-working",
+      "classification": "user-confirmed-working",
+      "note": "Client action; not listed as an official public template in the documentation snapshot.",
+      "sourceContext": null
+    },
+    {
+      "id": "runtime:e7631dbe62c7",
+      "template": "tg://addcontact?name=<name>&phone=<phone>",
+      "kind": "runtime-route",
+      "status": "user-confirmed-working",
+      "classification": "user-confirmed-working",
+      "note": "The source reads name and phone query parameters; phone values containing + should be URL-encoded correctly.",
+      "sourceContext": null
+    }
+  ]
+}
