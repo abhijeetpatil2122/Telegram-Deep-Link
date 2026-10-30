@@ -1,7 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
 const CATALOG_PATH = 'data/documentation-catalog.json';
-const STATE_PATH = 'data/full-publication-state.json';
+const STATE_PATH = 'data/documentation-publication-state.json';
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const CHAT_ID = process.env.TELEGRAM_CHAT_ID || '1314643983';
 const DOC_URL = 'https://core.telegram.org/api/links';
@@ -15,7 +15,7 @@ const EXAMPLES = {
   media_timestamp: '00:01:30', task_id: '1', option_id: '1',
   story_id: '123', invite_hash: 'AbCdEf123', hash: 'AbCdEf123',
   slug: 'example', url: 'https://example.com', text: 'Hello',
-  draft_text: 'Hello%20from%20Telegram', domain: 'example.com',
+  draft_text: 'Hello from Telegram', domain: 'example.com',
   phone: '1234567890', post: '123', token: 'example-token',
   mode: 'compact', path: 'example', query: 'q=hello',
   server: 'proxy.example.com', port: '443', secret: 'example-secret',
