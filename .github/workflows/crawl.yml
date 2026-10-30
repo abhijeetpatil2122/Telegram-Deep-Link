@@ -17,7 +17,7 @@ concurrency:
 jobs:
   crawl:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -29,23 +29,28 @@ jobs:
         run: npm run check
       - name: Crawl official docs and Android source
         run: npm run crawl
-      - name: Test inventory notification in admin private chat
+      - name: Publish full inventory to admin private chat (one-time)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHANNEL_ID: '1314643983'
+          TELEGRAM_CHAT_ID: '1314643983'
+          PUBLISH_FULL_INVENTORY: 'true'
+        run: npm run publish
+      - name: Send numbered crawl report to admin private chat
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: '1314643983'
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
         run: npm run notify
-      - name: Commit updated inventory
+      - name: Commit updated inventory and notification state
         run: |
           git add data/
           if git diff --cached --quiet -- data/; then
-            echo "No inventory changes."
+            echo "No inventory or notification-state changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: refresh deep-link inventory"
-          # A user commit may land while the crawl is running. Rebase if safe;
-          # if generated data conflicts, reset to latest main and regenerate it.
+          git commit -m "chore: refresh deep-link inventory and notification state"
           for attempt in 1 2 3; do
             git fetch origin main
             if git rebase origin/main; then
@@ -54,18 +59,18 @@ jobs:
               fi
               echo "Push attempt ${attempt} raced with another update; retrying."
             else
-              echo "Inventory conflicted with newer main; regenerating from latest main."
+              echo "Generated data conflicted with newer main; regenerating."
               git rebase --abort || true
               git reset --hard origin/main
               npm run check
               npm run crawl
               git add data/
               if git diff --cached --quiet -- data/; then
-                echo "Latest main already contains the current inventory."
+                echo "Latest main already contains current generated data."
                 exit 0
               fi
-              git commit -m "chore: refresh deep-link inventory"
+              git commit -m "chore: refresh deep-link inventory and notification state"
             fi
           done
-          echo "Unable to push inventory after 3 attempts."
+          echo "Unable to push generated data after 3 attempts."
           exit 1
