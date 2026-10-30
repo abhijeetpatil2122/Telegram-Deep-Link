@@ -1,17 +1,18 @@
 {
-  "generatedAt": "2026-10-30T04:30:22.076Z",
+  "generatedAt": "2026-10-30T05:14:26.807Z",
   "source": {
     "url": "https://core.telegram.org/api/links",
-    "finalUrl": "https://core.telegram.org/api/links",
-    "sha256": "0f371b2e5f5e2b454ba822939e245ab08ab480b4462ebc85995cbc9bd63b24c5",
+    "fetchedUrl": "https://core.telegram.org/api/links.md",
+    "sha256": "cc6a6c87f58307ddd05b1237b945ffacc10afe00ef08505cdf3bfc8407e6c8a1",
     "etag": null,
     "lastModified": null
   },
   "counts": {
-    "documentedTemplates": 179,
-    "documentationGroups": 64,
+    "documentedTemplates": 181,
+    "documentationGroups": 65,
     "categories": 1,
-    "templatesWithPlaceholders": 152
-  },
-  "note": "This catalog contains only deep-link formats and paths explicitly extracted from the official Telegram documentation website. No Android source candidates or inferred undocumented routes are included."
+    "parameterDefinitions": 117,
+    "documentedOptions": 431,
+    "templatesWithPlaceholders": 156
+  }
 }

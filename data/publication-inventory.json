@@ -1,3850 +1,2119 @@
 [
   {
-    "id": "official:5202297dae77",
-    "kind": "official-template",
-    "template": "getting-started.ton/path?query#hash",
-    "category": "Deep links",
-    "group": "TON Sites",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 115,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": [
-      {
-        "name": "query#hash",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:ea42b15f7ddb",
-    "kind": "official-template",
-    "template": "http://t.me/path?query",
-    "category": "Deep links",
-    "group": null,
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 32,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": [
-      {
-        "name": "query",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:919c1de73a75",
-    "kind": "official-template",
-    "template": "https://t.me/oauth?startapp=<token>",
-    "category": "Deep links",
-    "group": "OAuth links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 880,
-    "status": "officially-documented",
-    "placeholders": [
-      "token"
-    ],
-    "options": [
-      {
-        "name": "startapp",
-        "value": "<token>"
-      }
-    ]
-  },
-  {
-    "id": "official:92f04eebe59c",
-    "kind": "official-template",
-    "template": "https://t.me/path?query",
-    "category": "Deep links",
-    "group": null,
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 34,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": [
-      {
-        "name": "query",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:5cf55963db85",
-    "kind": "official-template",
-    "template": "t.me/+<hash>",
-    "category": "Deep links",
-    "group": "Chat invite links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 294,
-    "status": "officially-documented",
-    "placeholders": [
-      "hash"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:88b99dbc89bb",
-    "kind": "official-template",
-    "template": "t.me/+<phone_number>?attach=<bot_username>",
-    "category": "Deep links",
-    "group": "Open in specific chat",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2682,
-    "status": "officially-documented",
-    "placeholders": [
-      "phone_number",
-      "bot_username"
-    ],
-    "options": [
-      {
-        "name": "attach",
-        "value": "<bot_username>"
-      }
-    ]
-  },
-  {
-    "id": "official:1d5a93d42869",
-    "kind": "official-template",
-    "template": "t.me/+<phone_number>?attach=<bot_username>&startattach=<start_parameter>",
-    "category": "Deep links",
-    "group": "Open in specific chat",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2682,
-    "status": "officially-documented",
-    "placeholders": [
-      "phone_number",
-      "bot_username",
-      "start_parameter"
-    ],
-    "options": [
-      {
-        "name": "attach",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "startattach",
-        "value": "<start_parameter>"
-      }
-    ]
-  },
-  {
-    "id": "official:79d406d6a4d2",
-    "kind": "official-template",
-    "template": "t.me/+<phone_number>?text=<draft_text>&profile",
-    "category": "Deep links",
-    "group": "Phone number links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 252,
-    "status": "officially-documented",
-    "placeholders": [
-      "phone_number",
-      "draft_text"
-    ],
-    "options": [
-      {
-        "name": "text",
-        "value": "<draft_text>"
-      },
-      {
-        "name": "profile",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:22568c3c92be",
-    "kind": "official-template",
-    "template": "t.me/<bot_username>?game=<short_name>",
-    "category": "Deep links",
-    "group": "Game links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1472,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "short_name"
-    ],
-    "options": [
-      {
-        "name": "game",
-        "value": "<short_name>"
-      }
-    ]
-  },
-  {
-    "id": "official:5c68ad9e8243",
-    "kind": "official-template",
-    "template": "t.me/<bot_username>?ref=<referrer>",
-    "category": "Deep links",
-    "group": "Referral links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2894,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "referrer"
-    ],
-    "options": [
-      {
-        "name": "ref",
-        "value": "<referrer>"
-      }
-    ]
-  },
-  {
-    "id": "official:ceaa96c1c1f2",
-    "kind": "official-template",
-    "template": "t.me/<bot_username>?start={prefix}<referrer>",
-    "category": "Deep links",
-    "group": "Referral links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2894,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "referrer"
-    ],
-    "options": [
-      {
-        "name": "start",
-        "value": "{prefix}<referrer>"
-      }
-    ]
-  },
-  {
-    "id": "official:1585ab84daea",
-    "kind": "official-template",
-    "template": "t.me/<bot_username>?start=<parameter>",
-    "category": "Deep links",
-    "group": "Bot links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1331,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "parameter"
-    ],
-    "options": [
-      {
-        "name": "start",
-        "value": "<parameter>"
-      }
-    ]
-  },
-  {
-    "id": "official:856d798d7d1c",
-    "kind": "official-template",
-    "template": "t.me/<bot_username>?startapp&mode=<mode>",
-    "category": "Deep links",
-    "group": "Main Mini App links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2548,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "mode"
-    ],
-    "options": [
-      {
-        "name": "startapp",
-        "value": null
-      },
-      {
-        "name": "mode",
-        "value": "<mode>"
-      }
-    ]
-  },
-  {
-    "id": "official:4a686fb46636",
-    "kind": "official-template",
-    "template": "t.me/<bot_username>?startapp=<start_parameter>&mode=<mode>",
-    "category": "Deep links",
-    "group": "Main Mini App links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2548,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "start_parameter",
-      "mode"
-    ],
-    "options": [
-      {
-        "name": "startapp",
-        "value": "<start_parameter>"
-      },
-      {
-        "name": "mode",
-        "value": "<mode>"
-      }
-    ]
-  },
-  {
-    "id": "official:08b27398129c",
-    "kind": "official-template",
-    "template": "t.me/<bot_username>?startattach",
-    "category": "Deep links",
-    "group": "Open in current chat",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2648,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username"
-    ],
-    "options": [
-      {
-        "name": "startattach",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:7f9f15d92c47",
-    "kind": "official-template",
-    "template": "t.me/<bot_username>?startattach&choose=users+bots+groups+channels",
-    "category": "Deep links",
-    "group": "Open in any chat",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2734,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username"
-    ],
-    "options": [
-      {
-        "name": "startattach",
-        "value": null
-      },
-      {
-        "name": "choose",
-        "value": "users+bots+groups+channels"
-      }
-    ]
-  },
-  {
-    "id": "official:d551940c0c4d",
-    "kind": "official-template",
-    "template": "t.me/<bot_username>?startattach=<start_parameter>",
-    "category": "Deep links",
-    "group": "Open in current chat",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2648,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "start_parameter"
-    ],
-    "options": [
-      {
-        "name": "startattach",
-        "value": "<start_parameter>"
-      }
-    ]
-  },
-  {
-    "id": "official:d4c19559c3d6",
-    "kind": "official-template",
-    "template": "t.me/<bot_username>?startattach=<start_parameter>&choose=users+bots+groups+channels",
-    "category": "Deep links",
-    "group": "Open in any chat",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2734,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "start_parameter"
-    ],
-    "options": [
-      {
-        "name": "startattach",
-        "value": "<start_parameter>"
-      },
-      {
-        "name": "choose",
-        "value": "users+bots+groups+channels"
-      }
-    ]
-  },
-  {
-    "id": "official:536f9d6b01f4",
-    "kind": "official-template",
-    "template": "t.me/<bot_username>?startchannel&admin=<permissions>",
-    "category": "Deep links",
-    "group": "Group/channel bot links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1411,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "permissions"
-    ],
-    "options": [
-      {
-        "name": "startchannel",
-        "value": null
-      },
-      {
-        "name": "admin",
-        "value": "<permissions>"
-      }
-    ]
-  },
-  {
-    "id": "official:c20aaa50f491",
-    "kind": "official-template",
-    "template": "t.me/<bot_username>?startgroup&admin=<permissions>",
-    "category": "Deep links",
-    "group": "Group/channel bot links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1395,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "permissions"
-    ],
-    "options": [
-      {
-        "name": "startgroup",
-        "value": null
-      },
-      {
-        "name": "admin",
-        "value": "<permissions>"
-      }
-    ]
-  },
-  {
-    "id": "official:2e1317d6ff24",
-    "kind": "official-template",
-    "template": "t.me/<bot_username>?startgroup=<parameter>&admin=<permissions>",
-    "category": "Deep links",
-    "group": "Group/channel bot links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1395,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "parameter",
-      "permissions"
-    ],
-    "options": [
-      {
-        "name": "startgroup",
-        "value": "<parameter>"
-      },
-      {
-        "name": "admin",
-        "value": "<permissions>"
-      }
-    ]
-  },
-  {
-    "id": "official:5b085af2a8bd",
-    "kind": "official-template",
-    "template": "t.me/<bot_username>/<short_name>?startapp=<start_parameter>&mode=<mode>",
-    "category": "Deep links",
-    "group": "Direct mini app links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2593,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "short_name",
-      "start_parameter",
-      "mode"
-    ],
-    "options": [
-      {
-        "name": "startapp",
-        "value": "<start_parameter>"
-      },
-      {
-        "name": "mode",
-        "value": "<mode>"
-      }
-    ]
-  },
-  {
-    "id": "official:9a620492761e",
-    "kind": "official-template",
-    "template": "t.me/<username>?album=<album_id>",
-    "category": "Deep links",
-    "group": "Story album links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 720,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "album_id"
-    ],
-    "options": [
-      {
-        "name": "album",
-        "value": "<album_id>"
-      }
-    ]
-  },
-  {
-    "id": "official:24ea36ea9f64",
-    "kind": "official-template",
-    "template": "t.me/<username>?attach=<bot_username>",
-    "category": "Deep links",
-    "group": "Open in specific chat",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2682,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "bot_username"
-    ],
-    "options": [
-      {
-        "name": "attach",
-        "value": "<bot_username>"
-      }
-    ]
-  },
-  {
-    "id": "official:1da9ccc0eaf9",
-    "kind": "official-template",
-    "template": "t.me/<username>?attach=<bot_username>&startattach=<start_parameter>",
-    "category": "Deep links",
-    "group": "Open in specific chat",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2682,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "bot_username",
-      "start_parameter"
-    ],
-    "options": [
-      {
-        "name": "attach",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "startattach",
-        "value": "<start_parameter>"
-      }
-    ]
-  },
-  {
-    "id": "official:ba143126ab86",
-    "kind": "official-template",
-    "template": "t.me/<username>?boost",
-    "category": "Deep links",
-    "group": "Boost links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 826,
-    "status": "officially-documented",
-    "placeholders": [
-      "username"
-    ],
-    "options": [
-      {
-        "name": "boost",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:17ea2042db1a",
-    "kind": "official-template",
-    "template": "t.me/<username>?collection=<collection_id>",
-    "category": "Deep links",
-    "group": "Gift collection links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2831,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "collection_id"
-    ],
-    "options": [
-      {
-        "name": "collection",
-        "value": "<collection_id>"
-      }
-    ]
-  },
-  {
-    "id": "official:1fc9ad2e8e01",
-    "kind": "official-template",
-    "template": "t.me/<username>?direct",
-    "category": "Deep links",
-    "group": "Monoforum links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 188,
-    "status": "officially-documented",
-    "placeholders": [
-      "username"
-    ],
-    "options": [
-      {
-        "name": "direct",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:02264d3dfedb",
-    "kind": "official-template",
-    "template": "t.me/<username>?livestream",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 535,
-    "status": "officially-documented",
-    "placeholders": [
-      "username"
-    ],
-    "options": [
-      {
-        "name": "livestream",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:bf8b1cfab0ec",
-    "kind": "official-template",
-    "template": "t.me/<username>?livestream=<invite_hash>",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 535,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "invite_hash"
-    ],
-    "options": [
-      {
-        "name": "livestream",
-        "value": "<invite_hash>"
-      }
-    ]
-  },
-  {
-    "id": "official:db6d488abb0c",
-    "kind": "official-template",
-    "template": "t.me/<username>?text=<draft_text>&profile",
-    "category": "Deep links",
-    "group": "Public username links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 144,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "draft_text"
-    ],
-    "options": [
-      {
-        "name": "text",
-        "value": "<draft_text>"
-      },
-      {
-        "name": "profile",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:03ea690fa201",
-    "kind": "official-template",
-    "template": "t.me/<username>?videochat",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 535,
-    "status": "officially-documented",
-    "placeholders": [
-      "username"
-    ],
-    "options": [
-      {
-        "name": "videochat",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:77dba6e726da",
-    "kind": "official-template",
-    "template": "t.me/<username>?videochat=<invite_hash>",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 535,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "invite_hash"
-    ],
-    "options": [
-      {
-        "name": "videochat",
-        "value": "<invite_hash>"
-      }
-    ]
-  },
-  {
-    "id": "official:c57a14ea3105",
-    "kind": "official-template",
-    "template": "t.me/<username>?voicechat",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 535,
-    "status": "officially-documented",
-    "placeholders": [
-      "username"
-    ],
-    "options": [
-      {
-        "name": "voicechat",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:e597caed5006",
-    "kind": "official-template",
-    "template": "t.me/<username>?voicechat=<invite_hash>",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 535,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "invite_hash"
-    ],
-    "options": [
-      {
-        "name": "voicechat",
-        "value": "<invite_hash>"
-      }
-    ]
-  },
-  {
-    "id": "official:a52a42634de5",
-    "kind": "official-template",
-    "template": "t.me/<username>/",
-    "category": "Deep links",
-    "group": null,
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 98,
-    "status": "officially-documented",
-    "placeholders": [
-      "username"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:4934aab6f2bc",
-    "kind": "official-template",
-    "template": "t.me/<username>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
-    "category": "Deep links",
-    "group": "Message links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 357,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "id",
-      "thread_id",
-      "comment",
-      "media_timestamp",
-      "task_id",
-      "option_id"
-    ],
-    "options": [
-      {
-        "name": "single",
-        "value": null
-      },
-      {
-        "name": "thread",
-        "value": "<thread_id>"
-      },
-      {
-        "name": "comment",
-        "value": "<comment>"
-      },
-      {
-        "name": "t",
-        "value": "<media_timestamp>"
-      },
-      {
-        "name": "task",
-        "value": "<task_id>"
-      },
-      {
-        "name": "option",
-        "value": "<option_id>"
-      }
-    ]
-  },
-  {
-    "id": "official:592d54c9d9b1",
-    "kind": "official-template",
-    "template": "t.me/<username>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
-    "category": "Deep links",
-    "group": "Message links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 357,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "thread_id",
-      "id",
-      "comment",
-      "media_timestamp",
-      "task_id",
-      "option_id"
-    ],
-    "options": [
-      {
-        "name": "single",
-        "value": null
-      },
-      {
-        "name": "comment",
-        "value": "<comment>"
-      },
-      {
-        "name": "t",
-        "value": "<media_timestamp>"
-      },
-      {
-        "name": "task",
-        "value": "<task_id>"
-      },
-      {
-        "name": "option",
-        "value": "<option_id>"
-      }
-    ]
-  },
-  {
-    "id": "official:da012a2b134e",
-    "kind": "official-template",
-    "template": "t.me/<username>/a/<album_id>",
-    "category": "Deep links",
-    "group": "Story album links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 720,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "album_id"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:40d62af08382",
-    "kind": "official-template",
-    "template": "t.me/<username>/c/<collection_id>",
-    "category": "Deep links",
-    "group": "Gift collection links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2831,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "collection_id"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:e88b90306a91",
-    "kind": "official-template",
-    "template": "t.me/<username>/s/<story_id>",
-    "category": "Deep links",
-    "group": "Story links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 659,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "story_id"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:88ec9d932780",
-    "kind": "official-template",
-    "template": "t.me/<username>/s/live",
-    "category": "Deep links",
-    "group": "Live story links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 692,
-    "status": "officially-documented",
-    "placeholders": [
-      "username"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:127945625e18",
-    "kind": "official-template",
-    "template": "t.me/$<slug>",
-    "category": "Deep links",
-    "group": "Invoice links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2348,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:01713e822ee0",
-    "kind": "official-template",
-    "template": "t.me/addemoji/<slug>",
-    "category": "Deep links",
-    "group": "Stickerset links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 601,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:2c8a8321a976",
-    "kind": "official-template",
-    "template": "t.me/addlist/<slug>",
-    "category": "Deep links",
-    "group": "Chat folder links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 329,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:16ebe25bf764",
-    "kind": "official-template",
-    "template": "t.me/addstickers/<slug>",
-    "category": "Deep links",
-    "group": "Stickerset links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 601,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:ab46c3dcc309",
-    "kind": "official-template",
-    "template": "t.me/addstyle/<slug>",
-    "category": "Deep links",
-    "group": "AI compose tone links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1019,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:7cfb910ed25e",
-    "kind": "official-template",
-    "template": "t.me/addtheme/<name>",
-    "category": "Deep links",
-    "group": "Theme links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 989,
-    "status": "officially-documented",
-    "placeholders": [
-      "name"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:81a1ef5e1476",
-    "kind": "official-template",
-    "template": "t.me/auction/<slug>",
-    "category": "Deep links",
-    "group": "Auction links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2864,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:9594ffe5c293",
-    "kind": "official-template",
-    "template": "t.me/bg/<hex_color>",
-    "category": "Deep links",
-    "group": "Solid fill wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1083,
-    "status": "officially-documented",
-    "placeholders": [
-      "hex_color"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:a4ae8b13d356",
-    "kind": "official-template",
-    "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>",
-    "category": "Deep links",
-    "group": "Free-form gradient fill wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1147,
-    "status": "officially-documented",
-    "placeholders": [
-      "hex_color1",
-      "hex_color2",
-      "hex_color3"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:2344c61d1f7c",
-    "kind": "official-template",
-    "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
-    "category": "Deep links",
-    "group": "Free-form gradient fill wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1147,
-    "status": "officially-documented",
-    "placeholders": [
-      "hex_color1",
-      "hex_color2",
-      "hex_color3",
-      "hex_color4"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:42dcb5c4dd45",
-    "kind": "official-template",
-    "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
-    "category": "Deep links",
-    "group": "Solid pattern wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1189,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug",
-      "intensity",
-      "bg_color",
-      "mode"
-    ],
-    "options": [
-      {
-        "name": "intensity",
-        "value": "<intensity>"
-      },
-      {
-        "name": "bg_color",
-        "value": "<bg_color>"
-      },
-      {
-        "name": "mode",
-        "value": "<mode>"
-      }
-    ]
-  },
-  {
-    "id": "official:3d59f06f08b0",
-    "kind": "official-template",
-    "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
-    "category": "Deep links",
-    "group": "Free-form gradient pattern wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1277,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug",
-      "intensity",
-      "hex_color1",
-      "hex_color2",
-      "hex_color3",
-      "mode"
-    ],
-    "options": [
-      {
-        "name": "intensity",
-        "value": "<intensity>"
-      },
-      {
-        "name": "bg_color",
-        "value": "<hex_color1>~<hex_color2>~<hex_color3>"
-      },
-      {
-        "name": "mode",
-        "value": "<mode>"
-      }
-    ]
-  },
-  {
-    "id": "official:084e3b4aaf98",
-    "kind": "official-template",
-    "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
-    "category": "Deep links",
-    "group": "Free-form gradient pattern wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1277,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug",
-      "intensity",
-      "hex_color1",
-      "hex_color2",
-      "hex_color3",
-      "hex_color4",
-      "mode"
-    ],
-    "options": [
-      {
-        "name": "intensity",
-        "value": "<intensity>"
-      },
-      {
-        "name": "bg_color",
-        "value": "<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>"
-      },
-      {
-        "name": "mode",
-        "value": "<mode>"
-      }
-    ]
-  },
-  {
-    "id": "official:f6da890e8cfd",
-    "kind": "official-template",
-    "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
-    "category": "Deep links",
-    "group": "Gradient pattern wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1229,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug",
-      "intensity",
-      "top_color",
-      "bottom_color",
-      "rotation",
-      "mode"
-    ],
-    "options": [
-      {
-        "name": "intensity",
-        "value": "<intensity>"
-      },
-      {
-        "name": "bg_color",
-        "value": "<top_color>-<bottom_color>"
-      },
-      {
-        "name": "rotation",
-        "value": "<rotation>"
-      },
-      {
-        "name": "mode",
-        "value": "<mode>"
-      }
-    ]
-  },
-  {
-    "id": "official:1ead8d8f6d0e",
-    "kind": "official-template",
-    "template": "t.me/bg/<slug>?mode=<mode>",
-    "category": "Deep links",
-    "group": "Image wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1051,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug",
-      "mode"
-    ],
-    "options": [
-      {
-        "name": "mode",
-        "value": "<mode>"
-      }
-    ]
-  },
-  {
-    "id": "official:2f09c77f3ea7",
-    "kind": "official-template",
-    "template": "t.me/bg/<top_color>-<bottom_color>?rotation=<rotation>",
-    "category": "Deep links",
-    "group": "Gradient fill wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1111,
-    "status": "officially-documented",
-    "placeholders": [
-      "top_color",
-      "bottom_color",
-      "rotation"
-    ],
-    "options": [
-      {
-        "name": "rotation",
-        "value": "<rotation>"
-      }
-    ]
-  },
-  {
-    "id": "official:f4fd828312b0",
-    "kind": "official-template",
-    "template": "t.me/boost?c=<id>",
-    "category": "Deep links",
-    "group": "Boost links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 834,
-    "status": "officially-documented",
-    "placeholders": [
-      "id"
-    ],
-    "options": [
-      {
-        "name": "c",
-        "value": "<id>"
-      }
-    ]
-  },
-  {
-    "id": "official:343bd70d395c",
-    "kind": "official-template",
-    "template": "t.me/boost/<username>",
-    "category": "Deep links",
-    "group": "Boost links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 826,
-    "status": "officially-documented",
-    "placeholders": [
-      "username"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:3ce905b62744",
-    "kind": "official-template",
-    "template": "t.me/c/<channel>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
-    "category": "Deep links",
-    "group": "Message links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 365,
-    "status": "officially-documented",
-    "placeholders": [
-      "channel",
-      "id",
-      "thread_id",
-      "comment",
-      "media_timestamp",
-      "task_id",
-      "option_id"
-    ],
-    "options": [
-      {
-        "name": "single",
-        "value": null
-      },
-      {
-        "name": "thread",
-        "value": "<thread_id>"
-      },
-      {
-        "name": "comment",
-        "value": "<comment>"
-      },
-      {
-        "name": "t",
-        "value": "<media_timestamp>"
-      },
-      {
-        "name": "task",
-        "value": "<task_id>"
-      },
-      {
-        "name": "option",
-        "value": "<option_id>"
-      }
-    ]
-  },
-  {
-    "id": "official:c8f7572349be",
-    "kind": "official-template",
-    "template": "t.me/c/<channel>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
-    "category": "Deep links",
-    "group": "Message links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 365,
-    "status": "officially-documented",
-    "placeholders": [
-      "channel",
-      "thread_id",
-      "id",
-      "comment",
-      "media_timestamp",
-      "task_id",
-      "option_id"
-    ],
-    "options": [
-      {
-        "name": "single",
-        "value": null
-      },
-      {
-        "name": "comment",
-        "value": "<comment>"
-      },
-      {
-        "name": "t",
-        "value": "<media_timestamp>"
-      },
-      {
-        "name": "task",
-        "value": "<task_id>"
-      },
-      {
-        "name": "option",
-        "value": "<option_id>"
-      }
-    ]
-  },
-  {
-    "id": "official:25d78fac8632",
-    "kind": "official-template",
-    "template": "t.me/c/<id>?boost",
-    "category": "Deep links",
-    "group": "Boost links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 834,
-    "status": "officially-documented",
-    "placeholders": [
-      "id"
-    ],
-    "options": [
-      {
-        "name": "boost",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:9d70b755d3ea",
-    "kind": "official-template",
-    "template": "t.me/call/<slug>",
-    "category": "Deep links",
-    "group": "Conference links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 573,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:d55e09fbed19",
-    "kind": "official-template",
-    "template": "t.me/confirmphone?phone=<phone>&hash=<hash>",
-    "category": "Deep links",
-    "group": "Phone confirmation links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2419,
-    "status": "officially-documented",
-    "placeholders": [
-      "phone",
-      "hash"
-    ],
-    "options": [
-      {
-        "name": "phone",
-        "value": "<phone>"
-      },
-      {
-        "name": "hash",
-        "value": "<hash>"
-      }
-    ]
-  },
-  {
-    "id": "official:54c4405b6715",
-    "kind": "official-template",
-    "template": "t.me/contact/<token>",
-    "category": "Deep links",
-    "group": "Temporary profile links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 224,
-    "status": "officially-documented",
-    "placeholders": [
-      "token"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:c55230c5b412",
-    "kind": "official-template",
-    "template": "t.me/giftcode/<slug>",
-    "category": "Deep links",
-    "group": "Premium giftcode links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2502,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:3c49da4d3f52",
-    "kind": "official-template",
-    "template": "t.me/invoice/<slug>",
-    "category": "Deep links",
-    "group": "Invoice links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2348,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:7f08ea3b1aa2",
-    "kind": "official-template",
-    "template": "t.me/joinchat/<hash>",
-    "category": "Deep links",
-    "group": "Chat invite links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 301,
-    "status": "officially-documented",
-    "placeholders": [
-      "hash"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:34d9aff66d85",
-    "kind": "official-template",
-    "template": "t.me/login/",
-    "category": "Deep links",
-    "group": "Login code link",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2320,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": []
-  },
-  {
-    "id": "official:ad116f777c55",
-    "kind": "official-template",
-    "template": "t.me/m/<slug>",
-    "category": "Deep links",
-    "group": "Business chat links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 503,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:18845a5f031e",
-    "kind": "official-template",
-    "template": "t.me/msg/url?url=<url>&text=<text>",
-    "category": "Deep links",
-    "group": "Share links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 458,
-    "status": "officially-documented",
-    "placeholders": [
-      "url",
-      "text"
-    ],
-    "options": [
-      {
-        "name": "url",
-        "value": "<url>"
-      },
-      {
-        "name": "text",
-        "value": "<text>"
-      }
-    ]
-  },
-  {
-    "id": "official:2c8fe4ad7f5d",
-    "kind": "official-template",
-    "template": "t.me/newbot/<manager_bot_username>?name=<suggested_bot_name>",
-    "category": "Deep links",
-    "group": "Managed bot creation request links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 783,
-    "status": "officially-documented",
-    "placeholders": [
-      "manager_bot_username",
-      "suggested_bot_name"
-    ],
-    "options": [
-      {
-        "name": "name",
-        "value": "<suggested_bot_name>"
-      }
-    ]
-  },
-  {
-    "id": "official:9c3f6ceacb15",
-    "kind": "official-template",
-    "template": "t.me/newbot/<manager_bot_username>/<suggested_bot_username>?name=<suggested_bot_name>",
-    "category": "Deep links",
-    "group": "Managed bot creation request links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 783,
-    "status": "officially-documented",
-    "placeholders": [
-      "manager_bot_username",
-      "suggested_bot_username",
-      "suggested_bot_name"
-    ],
-    "options": [
-      {
-        "name": "name",
-        "value": "<suggested_bot_name>"
-      }
-    ]
-  },
-  {
-    "id": "official:c0032a5e0ffa",
-    "kind": "official-template",
-    "template": "t.me/nft/<slug>",
-    "category": "Deep links",
-    "group": "Collectible gift link",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2803,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:406075f40b65",
+    "id": "official:87e7946d5bf6",
     "kind": "official-template",
     "template": "t.me/path?query",
     "category": "Deep links",
-    "group": null,
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 30,
-    "status": "officially-documented",
+    "group": "General",
     "placeholders": [],
-    "options": [
-      {
-        "name": "query",
-        "value": null
-      }
-    ]
+    "status": "officially-documented"
   },
   {
-    "id": "official:e6c733013251",
+    "id": "official:b961d87faff4",
     "kind": "official-template",
-    "template": "t.me/proxy?server=<server>&port=<port>&secret=<secret>",
+    "template": "http://t.me/path?query",
     "category": "Deep links",
-    "group": "MTProxy links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 913,
-    "status": "officially-documented",
-    "placeholders": [
-      "server",
-      "port",
-      "secret"
-    ],
-    "options": [
-      {
-        "name": "server",
-        "value": "<server>"
-      },
-      {
-        "name": "port",
-        "value": "<port>"
-      },
-      {
-        "name": "secret",
-        "value": "<secret>"
-      }
-    ]
-  },
-  {
-    "id": "official:660a6f11b397",
-    "kind": "official-template",
-    "template": "t.me/setlanguage/<slug>",
-    "category": "Deep links",
-    "group": "Language pack links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2377,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:bd39b97c7a0d",
-    "kind": "official-template",
-    "template": "t.me/share?url=<url>&text=<text>",
-    "category": "Deep links",
-    "group": "Share links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 458,
-    "status": "officially-documented",
-    "placeholders": [
-      "url",
-      "text"
-    ],
-    "options": [
-      {
-        "name": "url",
-        "value": "<url>"
-      },
-      {
-        "name": "text",
-        "value": "<text>"
-      }
-    ]
-  },
-  {
-    "id": "official:0cac1684a731",
-    "kind": "official-template",
-    "template": "t.me/share/url?url=<url>&text=<text>",
-    "category": "Deep links",
-    "group": "Share links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 458,
-    "status": "officially-documented",
-    "placeholders": [
-      "url",
-      "text"
-    ],
-    "options": [
-      {
-        "name": "url",
-        "value": "<url>"
-      },
-      {
-        "name": "text",
-        "value": "<text>"
-      }
-    ]
-  },
-  {
-    "id": "official:6f51b78488b0",
-    "kind": "official-template",
-    "template": "t.me/share/url/?url=<url>&text=<text>",
-    "category": "Deep links",
-    "group": "Share links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 458,
-    "status": "officially-documented",
-    "placeholders": [
-      "url",
-      "text"
-    ],
-    "options": [
-      {
-        "name": "url",
-        "value": "<url>"
-      },
-      {
-        "name": "text",
-        "value": "<text>"
-      }
-    ]
-  },
-  {
-    "id": "official:0795881ea2be",
-    "kind": "official-template",
-    "template": "t.me/socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
-    "category": "Deep links",
-    "group": "SOCKS5 proxy links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 949,
-    "status": "officially-documented",
-    "placeholders": [
-      "server",
-      "port",
-      "user",
-      "pass"
-    ],
-    "options": [
-      {
-        "name": "server",
-        "value": "<server>"
-      },
-      {
-        "name": "port",
-        "value": "<port>"
-      },
-      {
-        "name": "user",
-        "value": "<user>"
-      },
-      {
-        "name": "pass",
-        "value": "<pass>"
-      }
-    ]
-  },
-  {
-    "id": "official:8cb0e78c729b",
-    "kind": "official-template",
-    "template": "tg://addemoji?set=<slug>",
-    "category": "Deep links",
-    "group": "Stickerset links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 609,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": [
-      {
-        "name": "set",
-        "value": "<slug>"
-      }
-    ]
-  },
-  {
-    "id": "official:6bcbfb98a793",
-    "kind": "official-template",
-    "template": "tg://addlist?slug=<slug>",
-    "category": "Deep links",
-    "group": "Chat folder links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 336,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": [
-      {
-        "name": "slug",
-        "value": "<slug>"
-      }
-    ]
-  },
-  {
-    "id": "official:5bb72e127d12",
-    "kind": "official-template",
-    "template": "tg://addstickers?set=<slug>",
-    "category": "Deep links",
-    "group": "Stickerset links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 609,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": [
-      {
-        "name": "set",
-        "value": "<slug>"
-      }
-    ]
-  },
-  {
-    "id": "official:3c2596ba4165",
-    "kind": "official-template",
-    "template": "tg://addstyle?slug=<slug>",
-    "category": "Deep links",
-    "group": "AI compose tone links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1026,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": [
-      {
-        "name": "slug",
-        "value": "<slug>"
-      }
-    ]
-  },
-  {
-    "id": "official:1310d27fba78",
-    "kind": "official-template",
-    "template": "tg://addtheme?slug=<name>",
-    "category": "Deep links",
-    "group": "Theme links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 996,
-    "status": "officially-documented",
-    "placeholders": [
-      "name"
-    ],
-    "options": [
-      {
-        "name": "slug",
-        "value": "<name>"
-      }
-    ]
-  },
-  {
-    "id": "official:c7446b068937",
-    "kind": "official-template",
-    "template": "tg://bg?color=<hex_color>",
-    "category": "Deep links",
-    "group": "Solid fill wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1090,
-    "status": "officially-documented",
-    "placeholders": [
-      "hex_color"
-    ],
-    "options": [
-      {
-        "name": "color",
-        "value": "<hex_color>"
-      }
-    ]
-  },
-  {
-    "id": "official:f097923c9459",
-    "kind": "official-template",
-    "template": "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>",
-    "category": "Deep links",
-    "group": "Free-form gradient fill wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1155,
-    "status": "officially-documented",
-    "placeholders": [
-      "hex_color1",
-      "hex_color2",
-      "hex_color3"
-    ],
-    "options": [
-      {
-        "name": "gradient",
-        "value": "<hex_color1>~<hex_color2>~<hex_color3>"
-      }
-    ]
-  },
-  {
-    "id": "official:db8c1e5ac4e5",
-    "kind": "official-template",
-    "template": "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
-    "category": "Deep links",
-    "group": "Free-form gradient fill wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1155,
-    "status": "officially-documented",
-    "placeholders": [
-      "hex_color1",
-      "hex_color2",
-      "hex_color3",
-      "hex_color4"
-    ],
-    "options": [
-      {
-        "name": "gradient",
-        "value": "<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>"
-      }
-    ]
-  },
-  {
-    "id": "official:08f46d528722",
-    "kind": "official-template",
-    "template": "tg://bg?gradient=<top_color>-<bottom_color>&rotation=<rotation>",
-    "category": "Deep links",
-    "group": "Gradient fill wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1118,
-    "status": "officially-documented",
-    "placeholders": [
-      "top_color",
-      "bottom_color",
-      "rotation"
-    ],
-    "options": [
-      {
-        "name": "gradient",
-        "value": "<top_color>-<bottom_color>"
-      },
-      {
-        "name": "rotation",
-        "value": "<rotation>"
-      }
-    ]
-  },
-  {
-    "id": "official:7858425e1cf8",
-    "kind": "official-template",
-    "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
-    "category": "Deep links",
-    "group": "Solid pattern wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1196,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug",
-      "intensity",
-      "bg_color",
-      "mode"
-    ],
-    "options": [
-      {
-        "name": "slug",
-        "value": "<slug>"
-      },
-      {
-        "name": "intensity",
-        "value": "<intensity>"
-      },
-      {
-        "name": "bg_color",
-        "value": "<bg_color>"
-      },
-      {
-        "name": "mode",
-        "value": "<mode>"
-      }
-    ]
-  },
-  {
-    "id": "official:9e70149a6fe2",
-    "kind": "official-template",
-    "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
-    "category": "Deep links",
-    "group": "Free-form gradient pattern wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1285,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug",
-      "intensity",
-      "hex_color1",
-      "hex_color2",
-      "hex_color3",
-      "mode"
-    ],
-    "options": [
-      {
-        "name": "slug",
-        "value": "<slug>"
-      },
-      {
-        "name": "intensity",
-        "value": "<intensity>"
-      },
-      {
-        "name": "bg_color",
-        "value": "<hex_color1>~<hex_color2>~<hex_color3>"
-      },
-      {
-        "name": "mode",
-        "value": "<mode>"
-      }
-    ]
-  },
-  {
-    "id": "official:f83a61f34fb8",
-    "kind": "official-template",
-    "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
-    "category": "Deep links",
-    "group": "Free-form gradient pattern wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1285,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug",
-      "intensity",
-      "hex_color1",
-      "hex_color2",
-      "hex_color3",
-      "hex_color4",
-      "mode"
-    ],
-    "options": [
-      {
-        "name": "slug",
-        "value": "<slug>"
-      },
-      {
-        "name": "intensity",
-        "value": "<intensity>"
-      },
-      {
-        "name": "bg_color",
-        "value": "<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>"
-      },
-      {
-        "name": "mode",
-        "value": "<mode>"
-      }
-    ]
-  },
-  {
-    "id": "official:91cc9865d834",
-    "kind": "official-template",
-    "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
-    "category": "Deep links",
-    "group": "Gradient pattern wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1236,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug",
-      "intensity",
-      "top_color",
-      "bottom_color",
-      "rotation",
-      "mode"
-    ],
-    "options": [
-      {
-        "name": "slug",
-        "value": "<slug>"
-      },
-      {
-        "name": "intensity",
-        "value": "<intensity>"
-      },
-      {
-        "name": "bg_color",
-        "value": "<top_color>-<bottom_color>"
-      },
-      {
-        "name": "rotation",
-        "value": "<rotation>"
-      },
-      {
-        "name": "mode",
-        "value": "<mode>"
-      }
-    ]
-  },
-  {
-    "id": "official:c8c4ba7213a9",
-    "kind": "official-template",
-    "template": "tg://bg?slug=<slug>&mode=<mode>",
-    "category": "Deep links",
-    "group": "Image wallpapers",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1058,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug",
-      "mode"
-    ],
-    "options": [
-      {
-        "name": "slug",
-        "value": "<slug>"
-      },
-      {
-        "name": "mode",
-        "value": "<mode>"
-      }
-    ]
-  },
-  {
-    "id": "official:5e9ea5cf4f34",
-    "kind": "official-template",
-    "template": "tg://boost?channel=<id>",
-    "category": "Deep links",
-    "group": "Boost links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 849,
-    "status": "officially-documented",
-    "placeholders": [
-      "id"
-    ],
-    "options": [
-      {
-        "name": "channel",
-        "value": "<id>"
-      }
-    ]
-  },
-  {
-    "id": "official:925a35819baa",
-    "kind": "official-template",
-    "template": "tg://boost?domain=<username>",
-    "category": "Deep links",
-    "group": "Boost links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 842,
-    "status": "officially-documented",
-    "placeholders": [
-      "username"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<username>"
-      }
-    ]
-  },
-  {
-    "id": "official:e2168b3e6428",
-    "kind": "official-template",
-    "template": "tg://call?slug=<slug>",
-    "category": "Deep links",
-    "group": "Conference links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 580,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": [
-      {
-        "name": "slug",
-        "value": "<slug>"
-      }
-    ]
-  },
-  {
-    "id": "official:6f45a0fca512",
-    "kind": "official-template",
-    "template": "tg://chats/edit",
-    "category": "Deep links",
-    "group": "Chat list links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2295,
-    "status": "officially-documented",
+    "group": "General",
     "placeholders": [],
-    "options": []
+    "status": "officially-documented"
   },
   {
-    "id": "official:b79468011c7f",
+    "id": "official:4cc1a4c287d5",
     "kind": "official-template",
-    "template": "tg://chats/emoji-status",
+    "template": "https://t.me/path?query",
     "category": "Deep links",
-    "group": "Chat list links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2295,
-    "status": "officially-documented",
+    "group": "General",
     "placeholders": [],
-    "options": []
+    "status": "officially-documented"
   },
   {
-    "id": "official:b55d70901d79",
-    "kind": "official-template",
-    "template": "tg://chats/search",
-    "category": "Deep links",
-    "group": "Chat list links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2295,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": []
-  },
-  {
-    "id": "official:0824b30ab7b3",
-    "kind": "official-template",
-    "template": "tg://confirmphone?phone=<phone>&hash=<hash>",
-    "category": "Deep links",
-    "group": "Phone confirmation links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2426,
-    "status": "officially-documented",
-    "placeholders": [
-      "phone",
-      "hash"
-    ],
-    "options": [
-      {
-        "name": "phone",
-        "value": "<phone>"
-      },
-      {
-        "name": "hash",
-        "value": "<hash>"
-      }
-    ]
-  },
-  {
-    "id": "official:7462a61ae983",
-    "kind": "official-template",
-    "template": "tg://contact?token=<token>",
-    "category": "Deep links",
-    "group": "Temporary profile links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 231,
-    "status": "officially-documented",
-    "placeholders": [
-      "token"
-    ],
-    "options": [
-      {
-        "name": "token",
-        "value": "<token>"
-      }
-    ]
-  },
-  {
-    "id": "official:2542b7cc9922",
-    "kind": "official-template",
-    "template": "tg://contacts",
-    "category": "Deep links",
-    "group": "Contacts links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2236,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": []
-  },
-  {
-    "id": "official:a0e8343de842",
-    "kind": "official-template",
-    "template": "tg://contacts/<section>",
-    "category": "Deep links",
-    "group": "Contacts links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2236,
-    "status": "officially-documented",
-    "placeholders": [
-      "section"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:d2797d094702",
-    "kind": "official-template",
-    "template": "tg://emoji?id=<id>",
-    "category": "Deep links",
-    "group": "Emoji links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2951,
-    "status": "officially-documented",
-    "placeholders": [
-      "id"
-    ],
-    "options": [
-      {
-        "name": "id",
-        "value": "<id>"
-      }
-    ]
-  },
-  {
-    "id": "official:457abc6ee0ec",
-    "kind": "official-template",
-    "template": "tg://giftcode?slug=<slug>",
-    "category": "Deep links",
-    "group": "Premium giftcode links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2495,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": [
-      {
-        "name": "slug",
-        "value": "<slug>"
-      }
-    ]
-  },
-  {
-    "id": "official:cc02a873741c",
-    "kind": "official-template",
-    "template": "tg://invoice?slug=<slug>",
-    "category": "Deep links",
-    "group": "Invoice links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2356,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": [
-      {
-        "name": "slug",
-        "value": "<slug>"
-      }
-    ]
-  },
-  {
-    "id": "official:d5735df47727",
-    "kind": "official-template",
-    "template": "tg://join?invite=<hash>",
-    "category": "Deep links",
-    "group": "Chat invite links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 308,
-    "status": "officially-documented",
-    "placeholders": [
-      "hash"
-    ],
-    "options": [
-      {
-        "name": "invite",
-        "value": "<hash>"
-      }
-    ]
-  },
-  {
-    "id": "official:8adcd10218bc",
-    "kind": "official-template",
-    "template": "tg://login?code=",
-    "category": "Deep links",
-    "group": "Login code link",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2327,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": [
-      {
-        "name": "code",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:54ead15de17e",
-    "kind": "official-template",
-    "template": "tg://login?token=<base64encodedtoken>",
-    "category": "Deep links",
-    "group": "QR code login links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2523,
-    "status": "officially-documented",
-    "placeholders": [
-      "base64encodedtoken"
-    ],
-    "options": [
-      {
-        "name": "token",
-        "value": "<base64encodedtoken>"
-      }
-    ]
-  },
-  {
-    "id": "official:b761e21b676c",
-    "kind": "official-template",
-    "template": "tg://message?slug=<slug>",
-    "category": "Deep links",
-    "group": "Business chat links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 510,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": [
-      {
-        "name": "slug",
-        "value": "<slug>"
-      }
-    ]
-  },
-  {
-    "id": "official:6948da8d3f64",
-    "kind": "official-template",
-    "template": "tg://msg_url?url=<url>&text=<text>",
-    "category": "Deep links",
-    "group": "Share links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 468,
-    "status": "officially-documented",
-    "placeholders": [
-      "url",
-      "text"
-    ],
-    "options": [
-      {
-        "name": "url",
-        "value": "<url>"
-      },
-      {
-        "name": "text",
-        "value": "<text>"
-      }
-    ]
-  },
-  {
-    "id": "official:ce66744a29d3",
-    "kind": "official-template",
-    "template": "tg://need_update_for_some_feature?test=a",
-    "category": "Deep links",
-    "group": "Unsupported links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 3017,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": [
-      {
-        "name": "test",
-        "value": "a"
-      }
-    ]
-  },
-  {
-    "id": "official:3fbbe7fdb9b1",
-    "kind": "official-template",
-    "template": "tg://new",
-    "category": "Deep links",
-    "group": "New chat links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2270,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": []
-  },
-  {
-    "id": "official:1936aeb5c8c4",
-    "kind": "official-template",
-    "template": "tg://new/channel",
-    "category": "Deep links",
-    "group": "New chat links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2270,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": []
-  },
-  {
-    "id": "official:9f160b64972a",
-    "kind": "official-template",
-    "template": "tg://new/group",
-    "category": "Deep links",
-    "group": "New chat links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2270,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": []
-  },
-  {
-    "id": "official:34796fe8e133",
-    "kind": "official-template",
-    "template": "tg://newbot?manager=<manager_bot_username>&username=<suggested_bot_username>&name=<suggested_bot_name>",
-    "category": "Deep links",
-    "group": "Managed bot creation request links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 791,
-    "status": "officially-documented",
-    "placeholders": [
-      "manager_bot_username",
-      "suggested_bot_username",
-      "suggested_bot_name"
-    ],
-    "options": [
-      {
-        "name": "manager",
-        "value": "<manager_bot_username>"
-      },
-      {
-        "name": "username",
-        "value": "<suggested_bot_username>"
-      },
-      {
-        "name": "name",
-        "value": "<suggested_bot_name>"
-      }
-    ]
-  },
-  {
-    "id": "official:942d6411364d",
-    "kind": "official-template",
-    "template": "tg://nft?slug=<slug>",
-    "category": "Deep links",
-    "group": "Collectible gift link",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2810,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": [
-      {
-        "name": "slug",
-        "value": "<slug>"
-      }
-    ]
-  },
-  {
-    "id": "official:7fb60d345974",
-    "kind": "official-template",
-    "template": "tg://oauth?token=<token>",
-    "category": "Deep links",
-    "group": "OAuth links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 887,
-    "status": "officially-documented",
-    "placeholders": [
-      "token"
-    ],
-    "options": [
-      {
-        "name": "token",
-        "value": "<token>"
-      }
-    ]
-  },
-  {
-    "id": "official:4b3bf4a91594",
-    "kind": "official-template",
-    "template": "tg://passport?params",
-    "category": "Deep links",
-    "group": "Telegram Passport links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2405,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": [
-      {
-        "name": "params",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:0d3e496c571f",
-    "kind": "official-template",
-    "template": "tg://path?query",
-    "category": "Deep links",
-    "group": null,
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 42,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": [
-      {
-        "name": "query",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:0608df0ce8f9",
-    "kind": "official-template",
-    "template": "tg://post",
-    "category": "Deep links",
-    "group": "Post story links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 753,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": []
-  },
-  {
-    "id": "official:8d8d7774c4e8",
-    "kind": "official-template",
-    "template": "tg://post/<content_type>",
-    "category": "Deep links",
-    "group": "Post story links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 753,
-    "status": "officially-documented",
-    "placeholders": [
-      "content_type"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:0a9feb4b1e0a",
-    "kind": "official-template",
-    "template": "tg://premium_multigift?ref=<referrer>",
-    "category": "Deep links",
-    "group": "Premium multigift links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2453,
-    "status": "officially-documented",
-    "placeholders": [
-      "referrer"
-    ],
-    "options": [
-      {
-        "name": "ref",
-        "value": "<referrer>"
-      }
-    ]
-  },
-  {
-    "id": "official:d5066708d4dd",
-    "kind": "official-template",
-    "template": "tg://premium_offer?ref=<referrer>",
-    "category": "Deep links",
-    "group": "Premium referrer links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2474,
-    "status": "officially-documented",
-    "placeholders": [
-      "referrer"
-    ],
-    "options": [
-      {
-        "name": "ref",
-        "value": "<referrer>"
-      }
-    ]
-  },
-  {
-    "id": "official:0a15c8627cf6",
-    "kind": "official-template",
-    "template": "tg://privatepost?channel=<channel>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
-    "category": "Deep links",
-    "group": "Message links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 380,
-    "status": "officially-documented",
-    "placeholders": [
-      "channel",
-      "id",
-      "thread_id",
-      "comment",
-      "media_timestamp",
-      "task_id",
-      "option_id"
-    ],
-    "options": [
-      {
-        "name": "channel",
-        "value": "<channel>"
-      },
-      {
-        "name": "post",
-        "value": "<id>"
-      },
-      {
-        "name": "single",
-        "value": null
-      },
-      {
-        "name": "thread",
-        "value": "<thread_id>"
-      },
-      {
-        "name": "comment",
-        "value": "<comment>"
-      },
-      {
-        "name": "t",
-        "value": "<media_timestamp>"
-      },
-      {
-        "name": "task",
-        "value": "<task_id>"
-      },
-      {
-        "name": "option",
-        "value": "<option_id>"
-      }
-    ]
-  },
-  {
-    "id": "official:80d764ae9a17",
-    "kind": "official-template",
-    "template": "tg://proxy?server=<server>&port=<port>&secret=<secret>",
-    "category": "Deep links",
-    "group": "MTProxy links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 920,
-    "status": "officially-documented",
-    "placeholders": [
-      "server",
-      "port",
-      "secret"
-    ],
-    "options": [
-      {
-        "name": "server",
-        "value": "<server>"
-      },
-      {
-        "name": "port",
-        "value": "<port>"
-      },
-      {
-        "name": "secret",
-        "value": "<secret>"
-      }
-    ]
-  },
-  {
-    "id": "official:b6c28fea681b",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<bot_username>&appname=<short_name>&startapp=<start_parameter>&mode=<mode>",
-    "category": "Deep links",
-    "group": "Direct mini app links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2600,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "short_name",
-      "start_parameter",
-      "mode"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "appname",
-        "value": "<short_name>"
-      },
-      {
-        "name": "startapp",
-        "value": "<start_parameter>"
-      },
-      {
-        "name": "mode",
-        "value": "<mode>"
-      }
-    ]
-  },
-  {
-    "id": "official:f3bed5c7550b",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<bot_username>&game=<short_name>",
-    "category": "Deep links",
-    "group": "Game links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1479,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "short_name"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "game",
-        "value": "<short_name>"
-      }
-    ]
-  },
-  {
-    "id": "official:81b7f478605f",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<bot_username>&ref=<referrer>",
-    "category": "Deep links",
-    "group": "Referral links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2902,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "referrer"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "ref",
-        "value": "<referrer>"
-      }
-    ]
-  },
-  {
-    "id": "official:2baaf768fbbe",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<bot_username>&start={prefix}<referrer>",
-    "category": "Deep links",
-    "group": "Referral links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2902,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "referrer"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "start",
-        "value": "{prefix}<referrer>"
-      }
-    ]
-  },
-  {
-    "id": "official:eae3b5faadba",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<bot_username>&start=<parameter>",
-    "category": "Deep links",
-    "group": "Bot links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1338,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "parameter"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "start",
-        "value": "<parameter>"
-      }
-    ]
-  },
-  {
-    "id": "official:0ee09bb6ebe2",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<bot_username>&startapp&mode=<mode>",
-    "category": "Deep links",
-    "group": "Main Mini App links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2558,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "mode"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "startapp",
-        "value": null
-      },
-      {
-        "name": "mode",
-        "value": "<mode>"
-      }
-    ]
-  },
-  {
-    "id": "official:ffab54be3374",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<bot_username>&startapp=<start_parameter>&mode=<mode>",
-    "category": "Deep links",
-    "group": "Main Mini App links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2558,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "start_parameter",
-      "mode"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "startapp",
-        "value": "<start_parameter>"
-      },
-      {
-        "name": "mode",
-        "value": "<mode>"
-      }
-    ]
-  },
-  {
-    "id": "official:922ca7b36940",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<bot_username>&startattach",
-    "category": "Deep links",
-    "group": "Open in current chat",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2656,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "startattach",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:b138ffa7bbbc",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<bot_username>&startattach&choose=users+bots+groups+channels",
-    "category": "Deep links",
-    "group": "Open in any chat",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2742,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "startattach",
-        "value": null
-      },
-      {
-        "name": "choose",
-        "value": "users+bots+groups+channels"
-      }
-    ]
-  },
-  {
-    "id": "official:cc781a1c69fe",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<bot_username>&startattach=<start_parameter>",
-    "category": "Deep links",
-    "group": "Open in current chat",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2656,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "start_parameter"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "startattach",
-        "value": "<start_parameter>"
-      }
-    ]
-  },
-  {
-    "id": "official:a66bd1f78044",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<bot_username>&startattach=<start_parameter>&choose=users+bots+groups+channels",
-    "category": "Deep links",
-    "group": "Open in any chat",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2742,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "start_parameter"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "startattach",
-        "value": "<start_parameter>"
-      },
-      {
-        "name": "choose",
-        "value": "users+bots+groups+channels"
-      }
-    ]
-  },
-  {
-    "id": "official:2edd7b299570",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<bot_username>&startchannel&admin=<permissions>",
-    "category": "Deep links",
-    "group": "Group/channel bot links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1418,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "permissions"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "startchannel",
-        "value": null
-      },
-      {
-        "name": "admin",
-        "value": "<permissions>"
-      }
-    ]
-  },
-  {
-    "id": "official:7ab708dfeb25",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<bot_username>&startgroup&admin=<permissions>",
-    "category": "Deep links",
-    "group": "Group/channel bot links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1403,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "permissions"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "startgroup",
-        "value": null
-      },
-      {
-        "name": "admin",
-        "value": "<permissions>"
-      }
-    ]
-  },
-  {
-    "id": "official:cfca24e03aa0",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<bot_username>&startgroup=<parameter>&admin=<permissions>",
-    "category": "Deep links",
-    "group": "Group/channel bot links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1403,
-    "status": "officially-documented",
-    "placeholders": [
-      "bot_username",
-      "parameter",
-      "permissions"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "startgroup",
-        "value": "<parameter>"
-      },
-      {
-        "name": "admin",
-        "value": "<permissions>"
-      }
-    ]
-  },
-  {
-    "id": "official:ca274779b939",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<username>&album=<album_id>",
-    "category": "Deep links",
-    "group": "Story album links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 728,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "album_id"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<username>"
-      },
-      {
-        "name": "album",
-        "value": "<album_id>"
-      }
-    ]
-  },
-  {
-    "id": "official:1fba0bbce725",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<username>&attach=<bot_username>",
-    "category": "Deep links",
-    "group": "Open in specific chat",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2692,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "bot_username"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<username>"
-      },
-      {
-        "name": "attach",
-        "value": "<bot_username>"
-      }
-    ]
-  },
-  {
-    "id": "official:36719fa7c434",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<username>&attach=<bot_username>&startattach=<start_parameter>",
-    "category": "Deep links",
-    "group": "Open in specific chat",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2692,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "bot_username",
-      "start_parameter"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<username>"
-      },
-      {
-        "name": "attach",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "startattach",
-        "value": "<start_parameter>"
-      }
-    ]
-  },
-  {
-    "id": "official:2609bb965491",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<username>&collection=<collection_id>",
-    "category": "Deep links",
-    "group": "Gift collection links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2839,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "collection_id"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<username>"
-      },
-      {
-        "name": "collection",
-        "value": "<collection_id>"
-      }
-    ]
-  },
-  {
-    "id": "official:8b0ecb2a48e4",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<username>&direct",
-    "category": "Deep links",
-    "group": "Monoforum links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 195,
-    "status": "officially-documented",
-    "placeholders": [
-      "username"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<username>"
-      },
-      {
-        "name": "direct",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:2fceea239091",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<username>&livestream",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 547,
-    "status": "officially-documented",
-    "placeholders": [
-      "username"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<username>"
-      },
-      {
-        "name": "livestream",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:2539210bc37e",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<username>&livestream=<invite_hash>",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 547,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "invite_hash"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<username>"
-      },
-      {
-        "name": "livestream",
-        "value": "<invite_hash>"
-      }
-    ]
-  },
-  {
-    "id": "official:1d3d5caa1d1e",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<username>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
-    "category": "Deep links",
-    "group": "Message links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 373,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "id",
-      "thread_id",
-      "comment",
-      "media_timestamp",
-      "task_id",
-      "option_id"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<username>"
-      },
-      {
-        "name": "post",
-        "value": "<id>"
-      },
-      {
-        "name": "single",
-        "value": null
-      },
-      {
-        "name": "thread",
-        "value": "<thread_id>"
-      },
-      {
-        "name": "comment",
-        "value": "<comment>"
-      },
-      {
-        "name": "t",
-        "value": "<media_timestamp>"
-      },
-      {
-        "name": "task",
-        "value": "<task_id>"
-      },
-      {
-        "name": "option",
-        "value": "<option_id>"
-      }
-    ]
-  },
-  {
-    "id": "official:bb5283766a24",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<username>&story=<story_id>",
-    "category": "Deep links",
-    "group": "Story links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 666,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "story_id"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<username>"
-      },
-      {
-        "name": "story",
-        "value": "<story_id>"
-      }
-    ]
-  },
-  {
-    "id": "official:b965fd2b0aa5",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<username>&story=live",
-    "category": "Deep links",
-    "group": "Live story links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 699,
-    "status": "officially-documented",
-    "placeholders": [
-      "username"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<username>"
-      },
-      {
-        "name": "story",
-        "value": "live"
-      }
-    ]
-  },
-  {
-    "id": "official:aa94715bd7b6",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<username>&text=<draft_text>&profile",
-    "category": "Deep links",
-    "group": "Public username links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 151,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "draft_text"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<username>"
-      },
-      {
-        "name": "text",
-        "value": "<draft_text>"
-      },
-      {
-        "name": "profile",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:a5f6b2416a94",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<username>&videochat",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 547,
-    "status": "officially-documented",
-    "placeholders": [
-      "username"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<username>"
-      },
-      {
-        "name": "videochat",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:c897dd9729a8",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<username>&videochat=<invite_hash>",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 547,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "invite_hash"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<username>"
-      },
-      {
-        "name": "videochat",
-        "value": "<invite_hash>"
-      }
-    ]
-  },
-  {
-    "id": "official:0250cd9d2cb8",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<username>&voicechat",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 547,
-    "status": "officially-documented",
-    "placeholders": [
-      "username"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<username>"
-      },
-      {
-        "name": "voicechat",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:3d1a3d9a7ff5",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=<username>&voicechat=<invite_hash>",
-    "category": "Deep links",
-    "group": "Video chat/Livestream links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 547,
-    "status": "officially-documented",
-    "placeholders": [
-      "username",
-      "invite_hash"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "<username>"
-      },
-      {
-        "name": "voicechat",
-        "value": "<invite_hash>"
-      }
-    ]
-  },
-  {
-    "id": "official:fe8bf2ad7b62",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=oauth&startapp=<token>",
-    "category": "Deep links",
-    "group": "OAuth links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 887,
-    "status": "officially-documented",
-    "placeholders": [
-      "token"
-    ],
-    "options": [
-      {
-        "name": "domain",
-        "value": "oauth"
-      },
-      {
-        "name": "startapp",
-        "value": "<token>"
-      }
-    ]
-  },
-  {
-    "id": "official:795151517859",
-    "kind": "official-template",
-    "template": "tg://resolve?domain=telegrampassport&params",
-    "category": "Deep links",
-    "group": "Telegram Passport links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2405,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": [
-      {
-        "name": "domain",
-        "value": "telegrampassport"
-      },
-      {
-        "name": "params",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:e143c5efede0",
-    "kind": "official-template",
-    "template": "tg://resolve?phone=<phone_number>&attach=<bot_username>",
-    "category": "Deep links",
-    "group": "Open in specific chat",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2692,
-    "status": "officially-documented",
-    "placeholders": [
-      "phone_number",
-      "bot_username"
-    ],
-    "options": [
-      {
-        "name": "phone",
-        "value": "<phone_number>"
-      },
-      {
-        "name": "attach",
-        "value": "<bot_username>"
-      }
-    ]
-  },
-  {
-    "id": "official:9d265382957a",
-    "kind": "official-template",
-    "template": "tg://resolve?phone=<phone_number>&attach=<bot_username>&startattach=<start_parameter>",
-    "category": "Deep links",
-    "group": "Open in specific chat",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2692,
-    "status": "officially-documented",
-    "placeholders": [
-      "phone_number",
-      "bot_username",
-      "start_parameter"
-    ],
-    "options": [
-      {
-        "name": "phone",
-        "value": "<phone_number>"
-      },
-      {
-        "name": "attach",
-        "value": "<bot_username>"
-      },
-      {
-        "name": "startattach",
-        "value": "<start_parameter>"
-      }
-    ]
-  },
-  {
-    "id": "official:2d72bd5d3011",
-    "kind": "official-template",
-    "template": "tg://resolve?phone=<phone_number>&text=<draft_text>&profile",
-    "category": "Deep links",
-    "group": "Phone number links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 259,
-    "status": "officially-documented",
-    "placeholders": [
-      "phone_number",
-      "draft_text"
-    ],
-    "options": [
-      {
-        "name": "phone",
-        "value": "<phone_number>"
-      },
-      {
-        "name": "text",
-        "value": "<draft_text>"
-      },
-      {
-        "name": "profile",
-        "value": null
-      }
-    ]
-  },
-  {
-    "id": "official:4ab12eebd4b1",
-    "kind": "official-template",
-    "template": "tg://setlanguage?lang=<slug>",
-    "category": "Deep links",
-    "group": "Language pack links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2384,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": [
-      {
-        "name": "lang",
-        "value": "<slug>"
-      }
-    ]
-  },
-  {
-    "id": "official:11fd425404c1",
-    "kind": "official-template",
-    "template": "tg://settings",
-    "category": "Deep links",
-    "group": "Settings links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1504,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": []
-  },
-  {
-    "id": "official:0e04c0f44f4c",
-    "kind": "official-template",
-    "template": "tg://settings/<path>",
-    "category": "Deep links",
-    "group": "Settings links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 1504,
-    "status": "officially-documented",
-    "placeholders": [
-      "path"
-    ],
-    "options": []
-  },
-  {
-    "id": "official:5b334633d442",
-    "kind": "official-template",
-    "template": "tg://settings/stars",
-    "category": "Deep links",
-    "group": "My stars links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2208,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": []
-  },
-  {
-    "id": "official:a3a18b3fa0f4",
-    "kind": "official-template",
-    "template": "tg://settings/ton",
-    "category": "Deep links",
-    "group": "My Grams links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2221,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": []
-  },
-  {
-    "id": "official:9b54de96a743",
-    "kind": "official-template",
-    "template": "tg://socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
-    "category": "Deep links",
-    "group": "SOCKS5 proxy links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 956,
-    "status": "officially-documented",
-    "placeholders": [
-      "server",
-      "port",
-      "user",
-      "pass"
-    ],
-    "options": [
-      {
-        "name": "server",
-        "value": "<server>"
-      },
-      {
-        "name": "port",
-        "value": "<port>"
-      },
-      {
-        "name": "user",
-        "value": "<user>"
-      },
-      {
-        "name": "pass",
-        "value": "<pass>"
-      }
-    ]
-  },
-  {
-    "id": "official:714a0bec7895",
-    "kind": "official-template",
-    "template": "tg://stargift_auction?slug=<slug>",
-    "category": "Deep links",
-    "group": "Auction links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2871,
-    "status": "officially-documented",
-    "placeholders": [
-      "slug"
-    ],
-    "options": [
-      {
-        "name": "slug",
-        "value": "<slug>"
-      }
-    ]
-  },
-  {
-    "id": "official:41fa3d5f3cb0",
-    "kind": "official-template",
-    "template": "tg://stars",
-    "category": "Deep links",
-    "group": "My stars links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2212,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": []
-  },
-  {
-    "id": "official:5d54094d1a2e",
-    "kind": "official-template",
-    "template": "tg://stars_topup?balance=<star_count>&purpose=<purpose>",
-    "category": "Deep links",
-    "group": "Stars topup link",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2774,
-    "status": "officially-documented",
-    "placeholders": [
-      "star_count",
-      "purpose"
-    ],
-    "options": [
-      {
-        "name": "balance",
-        "value": "<star_count>"
-      },
-      {
-        "name": "purpose",
-        "value": "<purpose>"
-      }
-    ]
-  },
-  {
-    "id": "official:1a93c3853ecc",
-    "kind": "official-template",
-    "template": "tg://time?unix=<unix>&format=<format>",
-    "category": "Deep links",
-    "group": "Timestamp links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2972,
-    "status": "officially-documented",
-    "placeholders": [
-      "unix",
-      "format"
-    ],
-    "options": [
-      {
-        "name": "unix",
-        "value": "<unix>"
-      },
-      {
-        "name": "format",
-        "value": "<format>"
-      }
-    ]
-  },
-  {
-    "id": "official:9d1020c0d185",
-    "kind": "official-template",
-    "template": "tg://ton",
-    "category": "Deep links",
-    "group": "My Grams links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2225,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": []
-  },
-  {
-    "id": "official:a234ca883ec1",
-    "kind": "official-template",
-    "template": "tg://user?id=<id>",
-    "category": "Deep links",
-    "group": "ID links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 2930,
-    "status": "officially-documented",
-    "placeholders": [
-      "id"
-    ],
-    "options": [
-      {
-        "name": "id",
-        "value": "<id>"
-      }
-    ]
-  },
-  {
-    "id": "official:20c20f1ea0bc",
+    "id": "official:2d2d4e181faf",
     "kind": "official-template",
     "template": "tg:path?query",
     "category": "Deep links",
-    "group": null,
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 40,
-    "status": "officially-documented",
+    "group": "General",
     "placeholders": [],
-    "options": [
-      {
-        "name": "query",
-        "value": null
-      }
-    ]
+    "status": "officially-documented"
   },
   {
-    "id": "official:4d6742574e6c",
+    "id": "official:63a1ec421fb1",
     "kind": "official-template",
-    "template": "tg:some_unsupported_feature?test=b",
+    "template": "tg://path?query",
     "category": "Deep links",
-    "group": "Unsupported links",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 3019,
-    "status": "officially-documented",
+    "group": "General",
     "placeholders": [],
-    "options": [
-      {
-        "name": "test",
-        "value": "b"
-      }
-    ]
+    "status": "officially-documented"
   },
   {
-    "id": "official:3a2a3ddb3299",
+    "id": "official:1b0e0bc9cb4e",
     "kind": "official-template",
-    "template": "tonsite://",
+    "template": "t.me/<username>/",
     "category": "Deep links",
-    "group": "TON Sites",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 113,
-    "status": "officially-documented",
-    "placeholders": [],
-    "options": []
+    "group": "General",
+    "placeholders": [
+      "username"
+    ],
+    "status": "officially-documented"
   },
   {
-    "id": "official:691c6e3c1662",
+    "id": "official:19bdef0437ac",
     "kind": "official-template",
     "template": "tonsite://somesite.domain/path?query#hash",
     "category": "Deep links",
     "group": "TON Sites",
-    "sourceUrl": "https://core.telegram.org/api/links",
-    "line": 108,
-    "status": "officially-documented",
     "placeholders": [],
-    "options": [
-      {
-        "name": "query#hash",
-        "value": null
-      }
-    ]
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:136603abc031",
+    "kind": "official-template",
+    "template": "tonsite://",
+    "category": "Deep links",
+    "group": "TON Sites",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:512a26f2252f",
+    "kind": "official-template",
+    "template": "getting-started.ton/path?query#hash",
+    "category": "Deep links",
+    "group": "TON Sites",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:2173c17daa8c",
+    "kind": "official-template",
+    "template": "t.me/<username>?text=<draft_text>&profile",
+    "category": "Deep links",
+    "group": "Public username links",
+    "placeholders": [
+      "username",
+      "draft_text"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:5b01b11f2bf6",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<username>&text=<draft_text>&profile",
+    "category": "Deep links",
+    "group": "Public username links",
+    "placeholders": [
+      "username",
+      "draft_text"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:6e48b11252b5",
+    "kind": "official-template",
+    "template": "t.me/<username>?direct",
+    "category": "Deep links",
+    "group": "Monoforum links",
+    "placeholders": [
+      "username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:74517102381f",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<username>&direct",
+    "category": "Deep links",
+    "group": "Monoforum links",
+    "placeholders": [
+      "username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:5caaf30c7a9a",
+    "kind": "official-template",
+    "template": "t.me/contact/<token>",
+    "category": "Deep links",
+    "group": "Temporary profile links",
+    "placeholders": [
+      "token"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:730ed573f8dd",
+    "kind": "official-template",
+    "template": "tg://contact?token=<token>",
+    "category": "Deep links",
+    "group": "Temporary profile links",
+    "placeholders": [
+      "token"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:4b8c3c33ade8",
+    "kind": "official-template",
+    "template": "t.me/+<phone_number>?text=<draft_text>&profile",
+    "category": "Deep links",
+    "group": "Phone number links",
+    "placeholders": [
+      "phone_number",
+      "draft_text"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:d20ba1643986",
+    "kind": "official-template",
+    "template": "tg://resolve?phone=<phone_number>&text=<draft_text>&profile",
+    "category": "Deep links",
+    "group": "Phone number links",
+    "placeholders": [
+      "phone_number",
+      "draft_text"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:61530820b4fd",
+    "kind": "official-template",
+    "template": "t.me/+<hash>",
+    "category": "Deep links",
+    "group": "Chat invite links",
+    "placeholders": [
+      "hash"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:8ff6f7958aa5",
+    "kind": "official-template",
+    "template": "t.me/joinchat/<hash>",
+    "category": "Deep links",
+    "group": "Chat invite links",
+    "placeholders": [
+      "hash"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:e4f2e36a0760",
+    "kind": "official-template",
+    "template": "tg://join?invite=<hash>",
+    "category": "Deep links",
+    "group": "Chat invite links",
+    "placeholders": [
+      "hash"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:ad1fd69bcadd",
+    "kind": "official-template",
+    "template": "t.me/addlist/<slug>",
+    "category": "Deep links",
+    "group": "Chat folder links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:2f9a6bc4460f",
+    "kind": "official-template",
+    "template": "tg://addlist?slug=<slug>",
+    "category": "Deep links",
+    "group": "Chat folder links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:304f425c3ad4",
+    "kind": "official-template",
+    "template": "t.me/<username>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+    "category": "Deep links",
+    "group": "Message links",
+    "placeholders": [
+      "username",
+      "id",
+      "thread_id",
+      "comment",
+      "media_timestamp",
+      "task_id",
+      "option_id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:3d4c9f31bb9c",
+    "kind": "official-template",
+    "template": "t.me/<username>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+    "category": "Deep links",
+    "group": "Message links",
+    "placeholders": [
+      "username",
+      "thread_id",
+      "id",
+      "comment",
+      "media_timestamp",
+      "task_id",
+      "option_id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:6ba6eb945901",
+    "kind": "official-template",
+    "template": "t.me/c/<channel>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+    "category": "Deep links",
+    "group": "Message links",
+    "placeholders": [
+      "channel",
+      "id",
+      "thread_id",
+      "comment",
+      "media_timestamp",
+      "task_id",
+      "option_id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:a2884a75e56a",
+    "kind": "official-template",
+    "template": "t.me/c/<channel>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+    "category": "Deep links",
+    "group": "Message links",
+    "placeholders": [
+      "channel",
+      "thread_id",
+      "id",
+      "comment",
+      "media_timestamp",
+      "task_id",
+      "option_id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:8073134a20e7",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<username>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+    "category": "Deep links",
+    "group": "Message links",
+    "placeholders": [
+      "username",
+      "id",
+      "thread_id",
+      "comment",
+      "media_timestamp",
+      "task_id",
+      "option_id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:9f26900412cf",
+    "kind": "official-template",
+    "template": "tg://privatepost?channel=<channel>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+    "category": "Deep links",
+    "group": "Message links",
+    "placeholders": [
+      "channel",
+      "id",
+      "thread_id",
+      "comment",
+      "media_timestamp",
+      "task_id",
+      "option_id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:396f1a7b221b",
+    "kind": "official-template",
+    "template": "t.me/share?url=<url>&text=<text>",
+    "category": "Deep links",
+    "group": "Share links",
+    "placeholders": [
+      "url",
+      "text"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:db11d6e62c71",
+    "kind": "official-template",
+    "template": "t.me/share/url?url=<url>&text=<text>",
+    "category": "Deep links",
+    "group": "Share links",
+    "placeholders": [
+      "url",
+      "text"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:05427997670b",
+    "kind": "official-template",
+    "template": "t.me/share/url/?url=<url>&text=<text>",
+    "category": "Deep links",
+    "group": "Share links",
+    "placeholders": [
+      "url",
+      "text"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:4dbe9c03d7d6",
+    "kind": "official-template",
+    "template": "t.me/msg/url?url=<url>&text=<text>",
+    "category": "Deep links",
+    "group": "Share links",
+    "placeholders": [
+      "url",
+      "text"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:327f551086b5",
+    "kind": "official-template",
+    "template": "tg://msg_url?url=<url>&text=<text>",
+    "category": "Deep links",
+    "group": "Share links",
+    "placeholders": [
+      "url",
+      "text"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:ceb1b2be1b6d",
+    "kind": "official-template",
+    "template": "t.me/m/<slug>",
+    "category": "Deep links",
+    "group": "Business chat links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:f9cae3da6369",
+    "kind": "official-template",
+    "template": "tg://message?slug=<slug>",
+    "category": "Deep links",
+    "group": "Business chat links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:cdbf01ae09cd",
+    "kind": "official-template",
+    "template": "t.me/<username>?videochat",
+    "category": "Deep links",
+    "group": "Video chat/Livestream links",
+    "placeholders": [
+      "username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:0d560894da7f",
+    "kind": "official-template",
+    "template": "t.me/<username>?videochat=<invite_hash>",
+    "category": "Deep links",
+    "group": "Video chat/Livestream links",
+    "placeholders": [
+      "username",
+      "invite_hash"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:6f2008238560",
+    "kind": "official-template",
+    "template": "t.me/<username>?livestream",
+    "category": "Deep links",
+    "group": "Video chat/Livestream links",
+    "placeholders": [
+      "username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:815e3d700d11",
+    "kind": "official-template",
+    "template": "t.me/<username>?livestream=<invite_hash>",
+    "category": "Deep links",
+    "group": "Video chat/Livestream links",
+    "placeholders": [
+      "username",
+      "invite_hash"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:a70b3e15b6c6",
+    "kind": "official-template",
+    "template": "t.me/<username>?voicechat",
+    "category": "Deep links",
+    "group": "Video chat/Livestream links",
+    "placeholders": [
+      "username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:c5e4ffc38b75",
+    "kind": "official-template",
+    "template": "t.me/<username>?voicechat=<invite_hash>",
+    "category": "Deep links",
+    "group": "Video chat/Livestream links",
+    "placeholders": [
+      "username",
+      "invite_hash"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:ea07f059d3b5",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<username>&videochat",
+    "category": "Deep links",
+    "group": "Video chat/Livestream links",
+    "placeholders": [
+      "username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:be2c8b88184e",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<username>&videochat=<invite_hash>",
+    "category": "Deep links",
+    "group": "Video chat/Livestream links",
+    "placeholders": [
+      "username",
+      "invite_hash"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:cd60898dc074",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<username>&livestream",
+    "category": "Deep links",
+    "group": "Video chat/Livestream links",
+    "placeholders": [
+      "username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:b7419b8c9ebf",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<username>&livestream=<invite_hash>",
+    "category": "Deep links",
+    "group": "Video chat/Livestream links",
+    "placeholders": [
+      "username",
+      "invite_hash"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:3a934b4b3a9e",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<username>&voicechat",
+    "category": "Deep links",
+    "group": "Video chat/Livestream links",
+    "placeholders": [
+      "username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:bb4a627d976b",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<username>&voicechat=<invite_hash>",
+    "category": "Deep links",
+    "group": "Video chat/Livestream links",
+    "placeholders": [
+      "username",
+      "invite_hash"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:74a539c95c0e",
+    "kind": "official-template",
+    "template": "t.me/call/<slug>",
+    "category": "Deep links",
+    "group": "Conference links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:e4c31a17f1f9",
+    "kind": "official-template",
+    "template": "tg://call?slug=<slug>",
+    "category": "Deep links",
+    "group": "Conference links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:e6f86acebf81",
+    "kind": "official-template",
+    "template": "t.me/addstickers/<slug>",
+    "category": "Deep links",
+    "group": "Stickerset links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:14c113ccb281",
+    "kind": "official-template",
+    "template": "t.me/addemoji/<slug>",
+    "category": "Deep links",
+    "group": "Stickerset links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:8436a878c0d7",
+    "kind": "official-template",
+    "template": "tg://addstickers?set=<slug>",
+    "category": "Deep links",
+    "group": "Stickerset links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:2f454c2df01e",
+    "kind": "official-template",
+    "template": "tg://addemoji?set=<slug>",
+    "category": "Deep links",
+    "group": "Stickerset links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:83f0cc888e74",
+    "kind": "official-template",
+    "template": "t.me/addemoji/<slug>",
+    "category": "Deep links",
+    "group": "Custom emoji stickerset links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:4954f3e52162",
+    "kind": "official-template",
+    "template": "tg://addemoji?set=<slug>",
+    "category": "Deep links",
+    "group": "Custom emoji stickerset links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:44c3bec67663",
+    "kind": "official-template",
+    "template": "t.me/<username>/s/<story_id>",
+    "category": "Deep links",
+    "group": "Story links",
+    "placeholders": [
+      "username",
+      "story_id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:78eca6a1928d",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<username>&story=<story_id>",
+    "category": "Deep links",
+    "group": "Story links",
+    "placeholders": [
+      "username",
+      "story_id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:c777c4e6cf09",
+    "kind": "official-template",
+    "template": "t.me/<username>/s/live",
+    "category": "Deep links",
+    "group": "Live story links",
+    "placeholders": [
+      "username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:8449a9f3243c",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<username>&story=live",
+    "category": "Deep links",
+    "group": "Live story links",
+    "placeholders": [
+      "username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:e20e7a37dea2",
+    "kind": "official-template",
+    "template": "t.me/<username>?album=<album_id>",
+    "category": "Deep links",
+    "group": "Story album links",
+    "placeholders": [
+      "username",
+      "album_id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:2a3b0ef108b8",
+    "kind": "official-template",
+    "template": "t.me/<username>/a/<album_id>",
+    "category": "Deep links",
+    "group": "Story album links",
+    "placeholders": [
+      "username",
+      "album_id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:9b96c85c7e41",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<username>&album=<album_id>",
+    "category": "Deep links",
+    "group": "Story album links",
+    "placeholders": [
+      "username",
+      "album_id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:7f8862b5689a",
+    "kind": "official-template",
+    "template": "tg://post",
+    "category": "Deep links",
+    "group": "Post story links",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:697729f84d1e",
+    "kind": "official-template",
+    "template": "tg://post/<content_type>",
+    "category": "Deep links",
+    "group": "Post story links",
+    "placeholders": [
+      "content_type"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:9e7f1c0cc71f",
+    "kind": "official-template",
+    "template": "t.me/newbot/<manager_bot_username>/<suggested_bot_username>?name=<suggested_bot_name>",
+    "category": "Deep links",
+    "group": "Managed bot creation request links",
+    "placeholders": [
+      "manager_bot_username",
+      "suggested_bot_username",
+      "suggested_bot_name"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:b6b8f701b755",
+    "kind": "official-template",
+    "template": "t.me/newbot/<manager_bot_username>?name=<suggested_bot_name>",
+    "category": "Deep links",
+    "group": "Managed bot creation request links",
+    "placeholders": [
+      "manager_bot_username",
+      "suggested_bot_name"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:b00a6c5863d0",
+    "kind": "official-template",
+    "template": "tg://newbot?manager=<manager_bot_username>&username=<suggested_bot_username>&name=<suggested_bot_name>",
+    "category": "Deep links",
+    "group": "Managed bot creation request links",
+    "placeholders": [
+      "manager_bot_username",
+      "suggested_bot_username",
+      "suggested_bot_name"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:f6aa85502d11",
+    "kind": "official-template",
+    "template": "t.me/boost/<username>",
+    "category": "Deep links",
+    "group": "Boost links",
+    "placeholders": [
+      "username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:31863bf84a9d",
+    "kind": "official-template",
+    "template": "t.me/<username>?boost",
+    "category": "Deep links",
+    "group": "Boost links",
+    "placeholders": [
+      "username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:a0407f03de18",
+    "kind": "official-template",
+    "template": "t.me/boost?c=<id>",
+    "category": "Deep links",
+    "group": "Boost links",
+    "placeholders": [
+      "id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:1115168ff298",
+    "kind": "official-template",
+    "template": "t.me/c/<id>?boost",
+    "category": "Deep links",
+    "group": "Boost links",
+    "placeholders": [
+      "id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:7aef7f149f9a",
+    "kind": "official-template",
+    "template": "tg://boost?domain=<username>",
+    "category": "Deep links",
+    "group": "Boost links",
+    "placeholders": [
+      "username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:7a9875818b88",
+    "kind": "official-template",
+    "template": "tg://boost?channel=<id>",
+    "category": "Deep links",
+    "group": "Boost links",
+    "placeholders": [
+      "id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:e6f97035afa7",
+    "kind": "official-template",
+    "template": "https://t.me/oauth?startapp=<token>",
+    "category": "Deep links",
+    "group": "OAuth links",
+    "placeholders": [
+      "token"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:0aee7b7716ed",
+    "kind": "official-template",
+    "template": "tg://oauth?token=<token>",
+    "category": "Deep links",
+    "group": "OAuth links",
+    "placeholders": [
+      "token"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:4bfe8fcaabe9",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=oauth&startapp=<token>",
+    "category": "Deep links",
+    "group": "OAuth links",
+    "placeholders": [
+      "token"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:61de316d65d0",
+    "kind": "official-template",
+    "template": "t.me/proxy?server=<server>&port=<port>&secret=<secret>",
+    "category": "Deep links",
+    "group": "MTProxy links",
+    "placeholders": [
+      "server",
+      "port",
+      "secret"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:ad25c356f30c",
+    "kind": "official-template",
+    "template": "tg://proxy?server=<server>&port=<port>&secret=<secret>",
+    "category": "Deep links",
+    "group": "MTProxy links",
+    "placeholders": [
+      "server",
+      "port",
+      "secret"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:ee2602f8d119",
+    "kind": "official-template",
+    "template": "t.me/socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
+    "category": "Deep links",
+    "group": "SOCKS5 proxy links",
+    "placeholders": [
+      "server",
+      "port",
+      "user",
+      "pass"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:6ce441f420e2",
+    "kind": "official-template",
+    "template": "tg://socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
+    "category": "Deep links",
+    "group": "SOCKS5 proxy links",
+    "placeholders": [
+      "server",
+      "port",
+      "user",
+      "pass"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:9e5c556c11c9",
+    "kind": "official-template",
+    "template": "t.me/addtheme/<name>",
+    "category": "Deep links",
+    "group": "Theme links",
+    "placeholders": [
+      "name"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:0dae772b75e9",
+    "kind": "official-template",
+    "template": "tg://addtheme?slug=<name>",
+    "category": "Deep links",
+    "group": "Theme links",
+    "placeholders": [
+      "name"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:c86929446ae3",
+    "kind": "official-template",
+    "template": "t.me/addstyle/<slug>",
+    "category": "Deep links",
+    "group": "AI compose tone links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:914d83d347e3",
+    "kind": "official-template",
+    "template": "tg://addstyle?slug=<slug>",
+    "category": "Deep links",
+    "group": "AI compose tone links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:4d19e4b4be55",
+    "kind": "official-template",
+    "template": "t.me/bg/<slug>?mode=<mode>",
+    "category": "Deep links",
+    "group": "[Image wallpapers](/api/wallpapers.md#image-wallpapers)",
+    "placeholders": [
+      "slug",
+      "mode"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:cb2624bb8f2f",
+    "kind": "official-template",
+    "template": "tg://bg?slug=<slug>&mode=<mode>",
+    "category": "Deep links",
+    "group": "[Image wallpapers](/api/wallpapers.md#image-wallpapers)",
+    "placeholders": [
+      "slug",
+      "mode"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:fc0afa982b84",
+    "kind": "official-template",
+    "template": "t.me/bg/<hex_color>",
+    "category": "Deep links",
+    "group": "Solid fill wallpapers",
+    "placeholders": [
+      "hex_color"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:a3bcb2144373",
+    "kind": "official-template",
+    "template": "tg://bg?color=<hex_color>",
+    "category": "Deep links",
+    "group": "Solid fill wallpapers",
+    "placeholders": [
+      "hex_color"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:41ff550d1d5e",
+    "kind": "official-template",
+    "template": "t.me/bg/<top_color>-<bottom_color>?rotation=<rotation>",
+    "category": "Deep links",
+    "group": "Gradient fill wallpapers",
+    "placeholders": [
+      "top_color",
+      "bottom_color",
+      "rotation"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:b2bf7b3e860c",
+    "kind": "official-template",
+    "template": "tg://bg?gradient=<top_color>-<bottom_color>&rotation=<rotation>",
+    "category": "Deep links",
+    "group": "Gradient fill wallpapers",
+    "placeholders": [
+      "top_color",
+      "bottom_color",
+      "rotation"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:0799a13f165c",
+    "kind": "official-template",
+    "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>",
+    "category": "Deep links",
+    "group": "Free-form gradient fill wallpapers",
+    "placeholders": [
+      "hex_color1",
+      "hex_color2",
+      "hex_color3"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:7bbce20869c2",
+    "kind": "official-template",
+    "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
+    "category": "Deep links",
+    "group": "Free-form gradient fill wallpapers",
+    "placeholders": [
+      "hex_color1",
+      "hex_color2",
+      "hex_color3",
+      "hex_color4"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:45698348de92",
+    "kind": "official-template",
+    "template": "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>",
+    "category": "Deep links",
+    "group": "Free-form gradient fill wallpapers",
+    "placeholders": [
+      "hex_color1",
+      "hex_color2",
+      "hex_color3"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:c48045539edc",
+    "kind": "official-template",
+    "template": "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
+    "category": "Deep links",
+    "group": "Free-form gradient fill wallpapers",
+    "placeholders": [
+      "hex_color1",
+      "hex_color2",
+      "hex_color3",
+      "hex_color4"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:26ca50444fac",
+    "kind": "official-template",
+    "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
+    "category": "Deep links",
+    "group": "Solid pattern wallpapers",
+    "placeholders": [
+      "slug",
+      "intensity",
+      "bg_color",
+      "mode"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:2dc7404eda35",
+    "kind": "official-template",
+    "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
+    "category": "Deep links",
+    "group": "Solid pattern wallpapers",
+    "placeholders": [
+      "slug",
+      "intensity",
+      "bg_color",
+      "mode"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:fd87fc53173a",
+    "kind": "official-template",
+    "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
+    "category": "Deep links",
+    "group": "Gradient pattern wallpapers",
+    "placeholders": [
+      "slug",
+      "intensity",
+      "top_color",
+      "bottom_color",
+      "rotation",
+      "mode"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:834094aa7a6d",
+    "kind": "official-template",
+    "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
+    "category": "Deep links",
+    "group": "Gradient pattern wallpapers",
+    "placeholders": [
+      "slug",
+      "intensity",
+      "top_color",
+      "bottom_color",
+      "rotation",
+      "mode"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:112c2d8675b8",
+    "kind": "official-template",
+    "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
+    "category": "Deep links",
+    "group": "Free-form gradient pattern wallpapers",
+    "placeholders": [
+      "slug",
+      "intensity",
+      "hex_color1",
+      "hex_color2",
+      "hex_color3",
+      "mode"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:26773ccbde8c",
+    "kind": "official-template",
+    "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
+    "category": "Deep links",
+    "group": "Free-form gradient pattern wallpapers",
+    "placeholders": [
+      "slug",
+      "intensity",
+      "hex_color1",
+      "hex_color2",
+      "hex_color3",
+      "hex_color4",
+      "mode"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:0f10d76fc68f",
+    "kind": "official-template",
+    "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
+    "category": "Deep links",
+    "group": "Free-form gradient pattern wallpapers",
+    "placeholders": [
+      "slug",
+      "intensity",
+      "hex_color1",
+      "hex_color2",
+      "hex_color3",
+      "mode"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:70f5a4448a62",
+    "kind": "official-template",
+    "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
+    "category": "Deep links",
+    "group": "Free-form gradient pattern wallpapers",
+    "placeholders": [
+      "slug",
+      "intensity",
+      "hex_color1",
+      "hex_color2",
+      "hex_color3",
+      "hex_color4",
+      "mode"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:e6c25f20c7a1",
+    "kind": "official-template",
+    "template": "t.me/<bot_username>?start=<parameter>",
+    "category": "Deep links",
+    "group": "Bot links",
+    "placeholders": [
+      "bot_username",
+      "parameter"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:2c59ac5e9aaa",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<bot_username>&start=<parameter>",
+    "category": "Deep links",
+    "group": "Bot links",
+    "placeholders": [
+      "bot_username",
+      "parameter"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:ae9a772a2e47",
+    "kind": "official-template",
+    "template": "t.me/<bot_username>?startgroup=<parameter>&admin=<permissions>",
+    "category": "Deep links",
+    "group": "Group/channel bot links",
+    "placeholders": [
+      "bot_username",
+      "parameter",
+      "permissions"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:14fc808b3e2d",
+    "kind": "official-template",
+    "template": "t.me/<bot_username>?startgroup&admin=<permissions>",
+    "category": "Deep links",
+    "group": "Group/channel bot links",
+    "placeholders": [
+      "bot_username",
+      "permissions"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:394013922b4e",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<bot_username>&startgroup=<parameter>&admin=<permissions>",
+    "category": "Deep links",
+    "group": "Group/channel bot links",
+    "placeholders": [
+      "bot_username",
+      "parameter",
+      "permissions"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:7371316014ac",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<bot_username>&startgroup&admin=<permissions>",
+    "category": "Deep links",
+    "group": "Group/channel bot links",
+    "placeholders": [
+      "bot_username",
+      "permissions"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:4206f11e15e7",
+    "kind": "official-template",
+    "template": "t.me/<bot_username>?startchannel&admin=<permissions>",
+    "category": "Deep links",
+    "group": "Group/channel bot links",
+    "placeholders": [
+      "bot_username",
+      "permissions"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:9dcf21d47dbd",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<bot_username>&startchannel&admin=<permissions>",
+    "category": "Deep links",
+    "group": "Group/channel bot links",
+    "placeholders": [
+      "bot_username",
+      "permissions"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:25f65f66760a",
+    "kind": "official-template",
+    "template": "t.me/<bot_username>?game=<short_name>",
+    "category": "Deep links",
+    "group": "Game links",
+    "placeholders": [
+      "bot_username",
+      "short_name"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:2ad8c13eba92",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<bot_username>&game=<short_name>",
+    "category": "Deep links",
+    "group": "Game links",
+    "placeholders": [
+      "bot_username",
+      "short_name"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:03b6e46f0a19",
+    "kind": "official-template",
+    "template": "tg://settings",
+    "category": "Deep links",
+    "group": "Settings links",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:fb409d865f5b",
+    "kind": "official-template",
+    "template": "tg://settings/<path>",
+    "category": "Deep links",
+    "group": "Settings links",
+    "placeholders": [
+      "path"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:1d55b1292f3e",
+    "kind": "official-template",
+    "template": "tg://settings/stars",
+    "category": "Deep links",
+    "group": "My stars links",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:fd944f68e42a",
+    "kind": "official-template",
+    "template": "tg://stars",
+    "category": "Deep links",
+    "group": "My stars links",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:541cf624d643",
+    "kind": "official-template",
+    "template": "tg://settings/ton",
+    "category": "Deep links",
+    "group": "My Grams links",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:31e6fc71da60",
+    "kind": "official-template",
+    "template": "tg://ton",
+    "category": "Deep links",
+    "group": "My Grams links",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:e52f71fb3849",
+    "kind": "official-template",
+    "template": "tg://contacts",
+    "category": "Deep links",
+    "group": "Contacts links",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:1a8589a9da8e",
+    "kind": "official-template",
+    "template": "tg://contacts/<section>",
+    "category": "Deep links",
+    "group": "Contacts links",
+    "placeholders": [
+      "section"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:59efb2ecd2a0",
+    "kind": "official-template",
+    "template": "tg://new",
+    "category": "Deep links",
+    "group": "New chat links",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:95b77e06c38e",
+    "kind": "official-template",
+    "template": "tg://new/channel",
+    "category": "Deep links",
+    "group": "New chat links",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:0e336fbed4b1",
+    "kind": "official-template",
+    "template": "tg://new/group",
+    "category": "Deep links",
+    "group": "New chat links",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:8ae973d5907f",
+    "kind": "official-template",
+    "template": "tg://chats/edit",
+    "category": "Deep links",
+    "group": "Chat list links",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:f3652acd2b3a",
+    "kind": "official-template",
+    "template": "tg://chats/search",
+    "category": "Deep links",
+    "group": "Chat list links",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:e235a292f91d",
+    "kind": "official-template",
+    "template": "tg://chats/emoji-status",
+    "category": "Deep links",
+    "group": "Chat list links",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:775dcd5d881d",
+    "kind": "official-template",
+    "template": "t.me/login/<code>",
+    "category": "Deep links",
+    "group": "Login code link",
+    "placeholders": [
+      "code"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:90a0fedd2336",
+    "kind": "official-template",
+    "template": "tg://login?code=<code>",
+    "category": "Deep links",
+    "group": "Login code link",
+    "placeholders": [
+      "code"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:a5087099d9c3",
+    "kind": "official-template",
+    "template": "t.me/invoice/<slug>",
+    "category": "Deep links",
+    "group": "Invoice links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:53a406fad93c",
+    "kind": "official-template",
+    "template": "t.me/$<slug>",
+    "category": "Deep links",
+    "group": "Invoice links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:608bf1eb23a3",
+    "kind": "official-template",
+    "template": "tg://invoice?slug=<slug>",
+    "category": "Deep links",
+    "group": "Invoice links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:3d31038faa2e",
+    "kind": "official-template",
+    "template": "t.me/setlanguage/<slug>",
+    "category": "Deep links",
+    "group": "Language pack links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:5ee69b7674b6",
+    "kind": "official-template",
+    "template": "tg://setlanguage?lang=<slug>",
+    "category": "Deep links",
+    "group": "Language pack links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:b810f7e5a029",
+    "kind": "official-template",
+    "template": "tg://passport?params",
+    "category": "Deep links",
+    "group": "Telegram Passport links",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:4218c25e3d16",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=telegrampassport&params",
+    "category": "Deep links",
+    "group": "Telegram Passport links",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:50897392d0e2",
+    "kind": "official-template",
+    "template": "t.me/confirmphone?phone=<phone>&hash=<hash>",
+    "category": "Deep links",
+    "group": "Phone confirmation links",
+    "placeholders": [
+      "phone",
+      "hash"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:bcec431da950",
+    "kind": "official-template",
+    "template": "tg://confirmphone?phone=<phone>&hash=<hash>",
+    "category": "Deep links",
+    "group": "Phone confirmation links",
+    "placeholders": [
+      "phone",
+      "hash"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:0b776d646c8f",
+    "kind": "official-template",
+    "template": "tg://premium_multigift?ref=<referrer>",
+    "category": "Deep links",
+    "group": "Premium multigift links",
+    "placeholders": [
+      "referrer"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:f35472d9cb08",
+    "kind": "official-template",
+    "template": "tg://premium_offer?ref=<referrer>",
+    "category": "Deep links",
+    "group": "Premium referrer links",
+    "placeholders": [
+      "referrer"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:f5219d1d0495",
+    "kind": "official-template",
+    "template": "tg://giftcode?slug=<slug>",
+    "category": "Deep links",
+    "group": "Premium giftcode links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:12dbe090c87b",
+    "kind": "official-template",
+    "template": "t.me/giftcode/<slug>",
+    "category": "Deep links",
+    "group": "Premium giftcode links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:a0c744942767",
+    "kind": "official-template",
+    "template": "tg://login?token=<base64encodedtoken>",
+    "category": "Deep links",
+    "group": "QR code login links",
+    "placeholders": [
+      "base64encodedtoken"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:08b1e675f113",
+    "kind": "official-template",
+    "template": "t.me/<bot_username>?startapp&mode=<mode>",
+    "category": "Deep links",
+    "group": "Main Mini App links",
+    "placeholders": [
+      "bot_username",
+      "mode"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:07f632e2990f",
+    "kind": "official-template",
+    "template": "t.me/<bot_username>?startapp=<start_parameter>&mode=<mode>",
+    "category": "Deep links",
+    "group": "Main Mini App links",
+    "placeholders": [
+      "bot_username",
+      "start_parameter",
+      "mode"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:f4451d8780b1",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<bot_username>&startapp&mode=<mode>",
+    "category": "Deep links",
+    "group": "Main Mini App links",
+    "placeholders": [
+      "bot_username",
+      "mode"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:206c8e175a8d",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<bot_username>&startapp=<start_parameter>&mode=<mode>",
+    "category": "Deep links",
+    "group": "Main Mini App links",
+    "placeholders": [
+      "bot_username",
+      "start_parameter",
+      "mode"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:385f5169810a",
+    "kind": "official-template",
+    "template": "t.me/<bot_username>/<short_name>?startapp=<start_parameter>&mode=<mode>",
+    "category": "Deep links",
+    "group": "Direct mini app links",
+    "placeholders": [
+      "bot_username",
+      "short_name",
+      "start_parameter",
+      "mode"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:1e9f383ee97a",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<bot_username>&appname=<short_name>&startapp=<start_parameter>&mode=<mode>",
+    "category": "Deep links",
+    "group": "Direct mini app links",
+    "placeholders": [
+      "bot_username",
+      "short_name",
+      "start_parameter",
+      "mode"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:2d9398107132",
+    "kind": "official-template",
+    "template": "t.me/<bot_username>?startattach",
+    "category": "Deep links",
+    "group": "Open in current chat",
+    "placeholders": [
+      "bot_username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:02ad3ea214a3",
+    "kind": "official-template",
+    "template": "t.me/<bot_username>?startattach=<start_parameter>",
+    "category": "Deep links",
+    "group": "Open in current chat",
+    "placeholders": [
+      "bot_username",
+      "start_parameter"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:210b52472f71",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<bot_username>&startattach",
+    "category": "Deep links",
+    "group": "Open in current chat",
+    "placeholders": [
+      "bot_username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:6cc5932608b4",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<bot_username>&startattach=<start_parameter>",
+    "category": "Deep links",
+    "group": "Open in current chat",
+    "placeholders": [
+      "bot_username",
+      "start_parameter"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:3a657ab93543",
+    "kind": "official-template",
+    "template": "t.me/<username>?attach=<bot_username>",
+    "category": "Deep links",
+    "group": "Open in specific chat",
+    "placeholders": [
+      "username",
+      "bot_username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:dca28ff296c6",
+    "kind": "official-template",
+    "template": "t.me/<username>?attach=<bot_username>&startattach=<start_parameter>",
+    "category": "Deep links",
+    "group": "Open in specific chat",
+    "placeholders": [
+      "username",
+      "bot_username",
+      "start_parameter"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:59d0748279d8",
+    "kind": "official-template",
+    "template": "t.me/+<phone_number>?attach=<bot_username>",
+    "category": "Deep links",
+    "group": "Open in specific chat",
+    "placeholders": [
+      "phone_number",
+      "bot_username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:4e11b00ec28f",
+    "kind": "official-template",
+    "template": "t.me/+<phone_number>?attach=<bot_username>&startattach=<start_parameter>",
+    "category": "Deep links",
+    "group": "Open in specific chat",
+    "placeholders": [
+      "phone_number",
+      "bot_username",
+      "start_parameter"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:8881706e8746",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<username>&attach=<bot_username>",
+    "category": "Deep links",
+    "group": "Open in specific chat",
+    "placeholders": [
+      "username",
+      "bot_username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:be18cb1e44d5",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<username>&attach=<bot_username>&startattach=<start_parameter>",
+    "category": "Deep links",
+    "group": "Open in specific chat",
+    "placeholders": [
+      "username",
+      "bot_username",
+      "start_parameter"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:5919615c50df",
+    "kind": "official-template",
+    "template": "tg://resolve?phone=<phone_number>&attach=<bot_username>",
+    "category": "Deep links",
+    "group": "Open in specific chat",
+    "placeholders": [
+      "phone_number",
+      "bot_username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:c5dcb1401781",
+    "kind": "official-template",
+    "template": "tg://resolve?phone=<phone_number>&attach=<bot_username>&startattach=<start_parameter>",
+    "category": "Deep links",
+    "group": "Open in specific chat",
+    "placeholders": [
+      "phone_number",
+      "bot_username",
+      "start_parameter"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:90cc1cb74016",
+    "kind": "official-template",
+    "template": "t.me/<bot_username>?startattach&choose=users+bots+groups+channels",
+    "category": "Deep links",
+    "group": "Open in any chat",
+    "placeholders": [
+      "bot_username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:32ec108c217b",
+    "kind": "official-template",
+    "template": "t.me/<bot_username>?startattach=<start_parameter>&choose=users+bots+groups+channels",
+    "category": "Deep links",
+    "group": "Open in any chat",
+    "placeholders": [
+      "bot_username",
+      "start_parameter"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:e511421e848b",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<bot_username>&startattach&choose=users+bots+groups+channels",
+    "category": "Deep links",
+    "group": "Open in any chat",
+    "placeholders": [
+      "bot_username"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:db9622333d83",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<bot_username>&startattach=<start_parameter>&choose=users+bots+groups+channels",
+    "category": "Deep links",
+    "group": "Open in any chat",
+    "placeholders": [
+      "bot_username",
+      "start_parameter"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:97a88cb954da",
+    "kind": "official-template",
+    "template": "tg://stars_topup?balance=<star_count>&purpose=<purpose>",
+    "category": "Deep links",
+    "group": "Stars topup link",
+    "placeholders": [
+      "star_count",
+      "purpose"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:f2cee9907ec5",
+    "kind": "official-template",
+    "template": "t.me/nft/<slug>",
+    "category": "Deep links",
+    "group": "Collectible gift link",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:8d3b6f629196",
+    "kind": "official-template",
+    "template": "tg://nft?slug=<slug>",
+    "category": "Deep links",
+    "group": "Collectible gift link",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:040f1b558df3",
+    "kind": "official-template",
+    "template": "t.me/<username>?collection=<collection_id>",
+    "category": "Deep links",
+    "group": "Gift collection links",
+    "placeholders": [
+      "username",
+      "collection_id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:cb0e82770f87",
+    "kind": "official-template",
+    "template": "t.me/<username>/c/<collection_id>",
+    "category": "Deep links",
+    "group": "Gift collection links",
+    "placeholders": [
+      "username",
+      "collection_id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:d20800c91f49",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<username>&collection=<collection_id>",
+    "category": "Deep links",
+    "group": "Gift collection links",
+    "placeholders": [
+      "username",
+      "collection_id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:54fc0e95c947",
+    "kind": "official-template",
+    "template": "t.me/auction/<slug>",
+    "category": "Deep links",
+    "group": "Auction links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:5db4dd88e25e",
+    "kind": "official-template",
+    "template": "tg://stargift_auction?slug=<slug>",
+    "category": "Deep links",
+    "group": "Auction links",
+    "placeholders": [
+      "slug"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:76da7314d8a6",
+    "kind": "official-template",
+    "template": "t.me/<bot_username>?ref=<referrer>",
+    "category": "Deep links",
+    "group": "Referral links",
+    "placeholders": [
+      "bot_username",
+      "referrer"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:19111e3c1038",
+    "kind": "official-template",
+    "template": "t.me/<bot_username>?start={prefix}<referrer>",
+    "category": "Deep links",
+    "group": "Referral links",
+    "placeholders": [
+      "bot_username",
+      "referrer"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:ae168d93d86e",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<bot_username>&ref=<referrer>",
+    "category": "Deep links",
+    "group": "Referral links",
+    "placeholders": [
+      "bot_username",
+      "referrer"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:f45705af9301",
+    "kind": "official-template",
+    "template": "tg://resolve?domain=<bot_username>&start={prefix}<referrer>",
+    "category": "Deep links",
+    "group": "Referral links",
+    "placeholders": [
+      "bot_username",
+      "referrer"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:ed8c31e181fb",
+    "kind": "official-template",
+    "template": "tg://user?id=<id>",
+    "category": "Deep links",
+    "group": "ID links",
+    "placeholders": [
+      "id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:6d846822dc48",
+    "kind": "official-template",
+    "template": "tg://emoji?id=<id>",
+    "category": "Deep links",
+    "group": "Emoji links",
+    "placeholders": [
+      "id"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:4ad2bf42d86d",
+    "kind": "official-template",
+    "template": "tg://time?unix=<unix>&format=<format>",
+    "category": "Deep links",
+    "group": "Timestamp links",
+    "placeholders": [
+      "unix",
+      "format"
+    ],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:cce457eaa7e2",
+    "kind": "official-template",
+    "template": "tg://need_update_for_some_feature?test=a",
+    "category": "Deep links",
+    "group": "Unsupported links",
+    "placeholders": [],
+    "status": "officially-documented"
+  },
+  {
+    "id": "official:60ad1a1ec641",
+    "kind": "official-template",
+    "template": "tg:some_unsupported_feature?test=b",
+    "category": "Deep links",
+    "group": "Unsupported links",
+    "placeholders": [],
+    "status": "officially-documented"
   }
 ]
