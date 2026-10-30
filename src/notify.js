@@ -1,33 +1,18 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
 const INVENTORY_PATH = 'data/publication-inventory.json';
-const STATE_PATH = 'data/notification-state.json';
+const STATE_PATH = 'data/documentation-notification-state.json';
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const CHAT_ID = process.env.TELEGRAM_CHAT_ID || '1314643983';
-const REPO_URL = 'https://github.com/abhijeetpatil21222/Telegram-Deep-Link';
+const REPO_URL = 'https://github.com/abhijeetpatil2122/Telegram-Deep-Link';
 const RUN_NUMBER = process.env.GITHUB_RUN_NUMBER || 'unknown';
 
 function stableView(item) {
-  return JSON.stringify({
-    template: item.template, status: item.status, classification: item.classification,
-    note: item.note, context: item.sourceContext?.map(line => line.text) || null
-  });
+  return JSON.stringify({ template: item.template, category: item.category, group: item.group, placeholders: item.placeholders, options: item.options });
 }
 
 function escapeHtml(value) {
   return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-}
-
-async function writeNotificationState(items) {
-  const inventory = items.map(item => ({
-    id: item.id, template: item.template, kind: item.kind,
-    status: item.status, classification: item.classification, note: item.note,
-    sourceContext: item.sourceContext?.map(line => ({ text: line.text })) || null
-  }));
-  await writeFile(STATE_PATH, JSON.stringify({
-    notifiedAt: new Date().toISOString(),
-    inventory
-  }, null, 2) + '\n', 'utf8');
 }
 
 async function sendTelegram(message) {
@@ -40,29 +25,35 @@ async function sendTelegram(message) {
   if (!response.ok || !result.ok) throw new Error('Telegram crawl report failed: ' + (result.description || response.status));
 }
 
+async function saveState(items) {
+  await writeFile(STATE_PATH, JSON.stringify({
+    notifiedAt: new Date().toISOString(),
+    inventory: items.map(item => ({
+      id: item.id, template: item.template, category: item.category,
+      group: item.group, placeholders: item.placeholders, options: item.options
+    }))
+  }, null, 2) + '\n', 'utf8');
+}
+
 async function main() {
   if (!TOKEN) throw new Error('TELEGRAM_BOT_TOKEN is not configured.');
   const current = JSON.parse(await readFile(INVENTORY_PATH, 'utf8'));
   const summary = JSON.parse(await readFile('data/summary.json', 'utf8'));
-  const counts = summary.counts;
   let previous = null;
-  try {
-    const state = JSON.parse(await readFile(STATE_PATH, 'utf8'));
-    previous = state.inventory;
-  } catch {}
+  try { previous = JSON.parse(await readFile(STATE_PATH, 'utf8')).inventory; } catch {}
 
   if (!previous) {
-    const message = [
+    await sendTelegram([
       '<b>Crawl #' + escapeHtml(RUN_NUMBER) + ' completed</b>', '',
-      'Initial tracking baseline recorded.',
-      'Inventory: <b>' + counts.documentedTemplates + '</b> official templates · <b>' + counts.androidCandidates + '</b> Android candidates · <b>' + counts.userConfirmedWorkingRuntimeLinks + '</b> runtime-tested routes.',
+      'Status: <b>Success</b>',
+      'Tracking baseline initialized for the official Telegram documentation website.',
+      'Current catalog: <b>' + summary.counts.documentedTemplates + '</b> documented formats across <b>' + summary.counts.documentationGroups + '</b> groups.',
       '',
-      'No previous notification snapshot was available for a change comparison.',
-      '<a href="' + REPO_URL + '/blob/main/data/publication-inventory.json">Open full inventory</a>'
-    ].join('\n');
-    await sendTelegram(message);
-    await writeNotificationState(current);
-    console.log('Initial crawl status report sent.');
+      'Android source candidates and undocumented routes are excluded from this project scope.',
+      '<a href="' + REPO_URL + '/blob/main/data/documentation-catalog.json">Open documentation catalog</a>'
+    ].join('\n'));
+    await saveState(current);
+    console.log('Documentation crawl baseline report sent.');
     return;
   }
 
@@ -75,33 +66,30 @@ async function main() {
   const lines = [
     '<b>Crawl #' + escapeHtml(RUN_NUMBER) + ' completed</b>', '',
     'Status: <b>Success</b>',
-    'Inventory: <b>' + counts.documentedTemplates + '</b> official · <b>' + counts.androidCandidates + '</b> Android candidates · <b>' + counts.userConfirmedWorkingRuntimeLinks + '</b> runtime-tested routes.',
+    'Official documented formats: <b>' + summary.counts.documentedTemplates + '</b> · Groups: <b>' + summary.counts.documentationGroups + '</b>',
     '',
     'Changes: <b>' + added.length + '</b> new · <b>' + changed.length + '</b> updated · <b>' + removed.length + '</b> removed.'
   ];
-
   const entries = [
     ...added.map(item => ({ label: 'NEW', item })),
     ...changed.map(item => ({ label: 'UPDATED', item })),
     ...removed.map(item => ({ label: 'REMOVED', item }))
-  ].slice(0, 10);
+  ].slice(0, 12);
 
-  if (!entries.length) {
-    lines.push('', 'No inventory changes detected in this crawl.');
-  } else {
+  if (!entries.length) lines.push('', 'No documented-link changes detected in this crawl.');
+  else {
     lines.push('');
     for (const { label, item } of entries) {
       lines.push('• <b>' + label + '</b> <code>' + escapeHtml(item.template) + '</code>');
-      lines.push('  <i>' + escapeHtml(item.status || item.classification || item.kind) + '</i>');
+      lines.push('  <i>' + escapeHtml(item.category || 'Telegram links') + (item.group ? ' · ' + escapeHtml(item.group) : '') + '</i>');
     }
     const total = added.length + changed.length + removed.length;
     if (total > entries.length) lines.push('…and ' + (total - entries.length) + ' more changes.');
   }
-
-  lines.push('', '<a href="' + REPO_URL + '/blob/main/data/publication-inventory.json">Full inventory</a> · <a href="' + REPO_URL + '/actions">Crawl history</a>');
+  lines.push('', '<a href="' + REPO_URL + '/blob/main/data/documentation-catalog.json">Documentation catalog</a> · <a href="' + REPO_URL + '/actions">Crawl history</a>');
   await sendTelegram(lines.join('\n'));
-  await writeNotificationState(current);
-  console.log('Crawl #' + RUN_NUMBER + ' status report sent. New=' + added.length + ', changed=' + changed.length + ', removed=' + removed.length + '.');
+  await saveState(current);
+  console.log('Crawl #' + RUN_NUMBER + ' report sent. New=' + added.length + ', changed=' + changed.length + ', removed=' + removed.length + '.');
 }
 
 main().catch(error => { console.error(error?.stack || error); process.exitCode = 1; });
