@@ -321,40 +321,60 @@ function buildRuntimeLinks(androidSource) {
   });
 }
 
+function placeholders(template) {
+  return [...new Set([...template.matchAll(/<([^<>]+)>/g)].map(match => match[1]))];
+}
+
+function queryOptions(template) {
+  const query = template.split('?')[1] || '';
+  return query.split('&').filter(Boolean).map(part => {
+    const [name, ...rest] = part.split('=');
+    return { name, value: rest.join('=') || null };
+  });
+}
+
+function buildDocumentationCatalog(documented) {
+  const groups = new Map();
+  for (const item of documented) {
+    const key = (item.section || 'Telegram links') + ' / ' + (item.subsection || 'General');
+    if (!groups.has(key)) groups.set(key, {
+      id: idFor(key), category: item.section || 'Telegram links',
+      group: item.subsection || 'General', sourceUrl: DOC_URL, templates: []
+    });
+    groups.get(key).templates.push({
+      id: item.id, template: item.template, line: item.line,
+      placeholders: placeholders(item.template), options: queryOptions(item.template),
+      sourceUrl: item.sourceUrl
+    });
+  }
+  return [...groups.values()].sort((a,b) =>
+    a.category.localeCompare(b.category) || a.group.localeCompare(b.group)
+  );
+}
+
 async function main() {
-  console.log('Fetching official website documentation:', DOC_URL);
+  console.log('Fetching official Telegram deep-link documentation:', DOC_URL);
   const html = await fetchText(DOC_URL);
-  if (!/<(?:html|article|main|h[1-6])\b/i.test(html.text) || html.text.length < 1000) {
+  if (!/<(?:html|article|main|h[1-6])\\b/i.test(html.text) || html.text.length < 1000) {
     throw new Error('The official deep-link website did not return recognizable HTML.');
   }
   const docs = { ...html, text: htmlToMarkdown(html.text) };
-  if (!/^\s*#/m.test(docs.text) || docs.text.length < 1000) {
+  if (!/^\\s*#/m.test(docs.text) || docs.text.length < 1000) {
     throw new Error('Could not extract usable deep-link documentation from the official website HTML.');
   }
-  console.log('Fetching Android source:', JAVA_URL);
-  const java = await fetchText(JAVA_URL);
-  if (!java.text.includes('package org.telegram.ui;') || java.text.length < 100000) {
-    throw new Error('The Android response does not look like LaunchActivity.java.');
-  }
 
-  const documented = parseMarkdown(docs.text), android = scanJava(java.text);
-  const runtimeLinks = buildRuntimeLinks(java.text);
-  const missingExpectedWrongForms = NOT_CONFIRMED_TG_SCHEME_FORMS.filter(item =>
-    !java.text.includes(item.observedFragment)
-  );
-  if (missingExpectedWrongForms.length) {
-    throw new Error('Expected non-template diagnostic fragments were not found in Android source: ' +
-      missingExpectedWrongForms.map(item => item.observedFragment).join(', '));
-  }
+  const documented = parseMarkdown(docs.text);
   const malformed = documented.filter(item =>
-    /<\/?code>/i.test(item.template)
-    || /(?:t\.me|telegram\.me|telegram\.dog)\/\s+(?:\?|\/|$)/i.test(item.template)
-    || /\btg:\s+\//i.test(item.template)
+    /<\\/?code>/i.test(item.template)
+    || /(?:t\\.me|telegram\\.me|telegram\\.dog)\\/\\s+(?:\\?|\\/|$)/i.test(item.template)
+    || /\\btg:\\s+\\//i.test(item.template)
   );
   if (malformed.length) {
     throw new Error('Malformed templates detected in official HTML extraction: ' +
-      malformed.slice(0, 5).map(item => item.template).join(' | '));
+      malformed.slice(0, 5).map(item => item.template).join(' | ')
+    );
   }
+
   const requiredTemplates = [
     't.me/<username>?text=<draft_text>&profile',
     'tg://resolve?domain=<username>&text=<draft_text>&profile',
@@ -368,129 +388,41 @@ async function main() {
   );
   if (missingTemplates.length) {
     throw new Error('Official HTML extraction is missing expected documented examples: ' +
-      missingTemplates.join(' | '));
+      missingTemplates.join(' | ')
+    );
   }
-  const documentedKeys = new Set(documented.map(item => item.template.toLowerCase()));
-  const candidates = android.map(item => {
-    const alreadyInDocs = documentedKeys.has(item.candidate.toLowerCase());
-    const normalizedCandidate = item.candidate.replace(/^tg:(?!\/\/)/i, 'tg://').toLowerCase();
-    // These are implementation aliases, not proof of equivalent public syntax.
-    // Store related official examples as review hints while preserving the raw candidate.
-    const aliasRelatedPatterns = [
-      [/^(?:telegram\.me|telegram\.dog)$/i, /^(?:t\.me|tg:\/\/)/i],
-      [/^tg:(?:\/\/)?search$/i, /^tg:\/\/chats\/search(?:$|[?])/i],
-      [/^tg:(?:\/\/)?share$/i, /^(?:t\.me\/share|tg:\/\/msg_url)(?:[/?]|$)/i],
-      [/^stargift_auction\/$/i, /^(?:t\.me\/auction\/|tg:\/\/stargift_auction\?slug=)/i],
-      [/^tg:(?:\/\/)?webproxy$/i, /^tg:\/\/(?:proxy|socks)\?/i],
-      [/^tg:secureid$/i, /^tg:\/\/passport(?:\?|$)/i]
-    ];
-    const aliasPatterns = aliasRelatedPatterns.filter(([candidatePattern]) => candidatePattern.test(item.candidate))
-      .map(([, templatePattern]) => templatePattern);
-    const relatedDocumentedTemplates = documented
-      .filter(doc => {
-        const template = doc.template.toLowerCase();
-        return template.includes(item.candidate.toLowerCase()) || template.includes(normalizedCandidate)
-          || aliasPatterns.some(pattern => pattern.test(template));
-      })
-      .map(doc => doc.template)
-      .slice(0, 8);
-    return {
-      ...item,
-      alreadyInDocs,
-      documentationRelation: alreadyInDocs ? 'exact-match'
-        : relatedDocumentedTemplates.length ? 'related-official-template' : 'android-only-candidate',
-      relatedDocumentedTemplates
-    };
-  });
-  const incompleteCandidateMetadata = candidates.filter(item =>
-    !item.candidateType || !item.category || !item.classification || !item.classificationMethod ||
-    !item.reviewNote || !Array.isArray(item.sourceContext) || item.sourceContext.length < 3 ||
-    !item.sourceContext.some(contextLine => contextLine.line === item.line) ||
-    !['exact-match', 'related-official-template', 'android-only-candidate'].includes(item.documentationRelation) ||
-    !Array.isArray(item.relatedDocumentedTemplates)
-  );
-  if (incompleteCandidateMetadata.length) {
-    throw new Error('Android candidate classification metadata is incomplete for ' + incompleteCandidateMetadata.length + ' entries.');
-  }
-  // Implementation-derived fragments are inventory entries too. They are not
-  // promoted into invented standalone tg:// URLs; their raw observed form is preserved.
-  const publicationInventory = [
-    ...documented.map(item => ({
-      id: 'official:' + item.id,
-      kind: 'official-template',
-      template: item.template,
-      title: item.subsection || item.section,
-      source: item.source,
-      sourceUrl: item.sourceUrl,
-      line: item.line,
-      status: 'officially-documented',
-      classification: 'documented',
-      note: 'Listed in Telegram official deep-link documentation.'
-    })),
-    ...candidates.map(item => ({
-      id: 'android:' + item.id,
-      kind: 'android-source-candidate',
-      // Keep the exact observed token. A fragment or handler token is not
-      // converted into a guessed standalone URI.
-      template: item.candidate,
-      title: item.category,
-      source: item.source,
-      sourceUrl: item.sourceUrl,
-      line: item.line,
-      status: item.classification === 'user-confirmed-working'
-        ? 'user-confirmed-working'
-        : item.classification === 'likely-internal-or-contextual'
-          ? 'internal-or-contextual'
-          : 'implementation-derived-unverified',
-      classification: item.classification,
-      candidateType: item.candidateType,
-      documentationRelation: item.documentationRelation,
-      note: item.reviewNote,
-      sourceContext: item.sourceContext
-    })),
-    ...runtimeLinks.map(item => ({
-      id: 'runtime:' + idFor(item.template),
-      kind: 'runtime-route',
-      template: item.template,
-      title: item.purpose,
-      source: item.source,
-      sourceUrl: item.sourceUrl,
-      line: item.sourceLine,
-      status: item.verification,
-      classification: 'user-confirmed-working',
-      note: item.caveat
-    }))
-  ].sort((a, b) => a.id.localeCompare(b.id));
 
+  const catalog = buildDocumentationCatalog(documented);
   const summary = {
     generatedAt: new Date().toISOString(),
-    sources: {
-      officialDocs: { url: DOC_URL, finalUrl: docs.finalUrl, sha256: hash(docs.text), etag: docs.etag, lastModified: docs.lastModified },
-      androidSource: { url: JAVA_URL, displayUrl: JAVA_PAGE_URL, finalUrl: java.finalUrl, sha256: hash(java.text), etag: java.etag, lastModified: java.lastModified }
-    },
+    source: { url: DOC_URL, finalUrl: docs.finalUrl, sha256: hash(docs.text), etag: docs.etag, lastModified: docs.lastModified },
     counts: {
       documentedTemplates: documented.length,
-      androidCandidates: candidates.length,
-      runtimeSupportedLinks: runtimeLinks.length,
-      userConfirmedWorkingRuntimeLinks: runtimeLinks.filter(item => item.verification === 'user-confirmed-working').length,
-      publicationInventoryEntries: publicationInventory.length,
-      implementationDerivedEntries: candidates.length,
-      androidCandidatesNotExactMatches: candidates.filter(item => !item.alreadyInDocs).length,
-      androidCandidatesWithRelatedOfficialTemplates: candidates.filter(item => item.documentationRelation === 'related-official-template').length,
-      androidCandidatesWithoutDocumentationMatch: candidates.filter(item => item.documentationRelation === 'android-only-candidate').length,
-      androidCandidateTypes: Object.fromEntries([...new Set(candidates.map(item => item.candidateType))].sort().map(type => [type, candidates.filter(item => item.candidateType === type).length])),
-      androidCandidateCategories: Object.fromEntries([...new Set(candidates.map(item => item.category))].sort().map(category => [category, candidates.filter(item => item.category === category).length])),
-      likelyInternalOrContextualCandidates: candidates.filter(item => item.classification === 'likely-internal-or-contextual').length
+      documentationGroups: catalog.length,
+      categories: [...new Set(catalog.map(group => group.category))].length,
+      templatesWithPlaceholders: documented.filter(item => placeholders(item.template).length).length
     },
-    note: 'Inventory includes official templates and every extracted Android source candidate. Implementation-derived entries may be partial, internal, contextual, version-dependent, or unverified; inclusion is not a guarantee of runtime support.'
+    note: 'This catalog contains only deep-link formats and paths explicitly extracted from the official Telegram documentation website. No Android source candidates or inferred undocumented routes are included.'
   };
+
+  const publicationInventory = documented.map(item => ({
+    id: 'official:' + item.id,
+    kind: 'official-template',
+    template: item.template,
+    category: item.section,
+    group: item.subsection || null,
+    sourceUrl: item.sourceUrl,
+    line: item.line,
+    status: 'officially-documented',
+    placeholders: placeholders(item.template),
+    options: queryOptions(item.template)
+  }));
+
   await writeJson('data/documented-links.json', documented);
-  await writeJson('data/android-candidates.json', candidates);
-  await writeJson('data/runtime-supported-links.json', runtimeLinks);
+  await writeJson('data/documentation-catalog.json', catalog);
   await writeJson('data/publication-inventory.json', publicationInventory);
-  await writeJson('data/not-confirmed-tg-scheme-forms.json', NOT_CONFIRMED_TG_SCHEME_FORMS);
   await writeJson('data/summary.json', summary);
-  console.log(JSON.stringify({ ...summary.counts, publicationInventoryEntries: publicationInventory.length }, null, 2));
+  console.log(JSON.stringify(summary.counts, null, 2));
 }
 
 main().catch(error => { console.error(error?.stack || error); process.exitCode = 1; });
