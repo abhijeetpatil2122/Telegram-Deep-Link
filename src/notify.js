@@ -3,8 +3,9 @@ import { readFile, writeFile } from 'node:fs/promises';
 const INVENTORY_PATH = 'data/publication-inventory.json';
 const STATE_PATH = 'data/notification-state.json';
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const CHAT_ID = process.env.TELEGRAM_CHANNEL_ID || '@TDeepLink';
-const REPO_URL = 'https://github.com/abhijeetpatil2122/Telegram-Deep-Link';
+const CHAT_ID = process.env.TELEGRAM_CHAT_ID || '1314643983';
+const REPO_URL = 'https://github.com/abhijeetpatil21222/Telegram-Deep-Link';
+const RUN_NUMBER = process.env.GITHUB_RUN_NUMBER || 'unknown';
 
 function stableView(item) {
   return JSON.stringify({
@@ -26,7 +27,7 @@ async function writeNotificationState(items) {
   await writeFile(STATE_PATH, JSON.stringify({
     notifiedAt: new Date().toISOString(),
     inventory
-  }, null, 2) + String.fromCharCode(10), 'utf8');
+  }, null, 2) + '\n', 'utf8');
 }
 
 async function sendTelegram(message) {
@@ -36,63 +37,71 @@ async function sendTelegram(message) {
     signal: AbortSignal.timeout(30000)
   });
   const result = await response.json();
-  if (!response.ok || !result.ok) throw new Error('Telegram notification failed: ' + (result.description || response.status));
+  if (!response.ok || !result.ok) throw new Error('Telegram crawl report failed: ' + (result.description || response.status));
 }
 
 async function main() {
-  if (!TOKEN) {
-    console.log('Telegram notification skipped: configure the TELEGRAM_BOT_TOKEN repository secret to enable channel updates.');
-    return;
-  }
+  if (!TOKEN) throw new Error('TELEGRAM_BOT_TOKEN is not configured.');
   const current = JSON.parse(await readFile(INVENTORY_PATH, 'utf8'));
-  let previous;
+  const summary = JSON.parse(await readFile('data/summary.json', 'utf8'));
+  const counts = summary.counts;
+  let previous = null;
   try {
     const state = JSON.parse(await readFile(STATE_PATH, 'utf8'));
     previous = state.inventory;
-  } catch {
-    const summary = JSON.parse(await readFile('data/summary.json', 'utf8'));
-    const counts = summary.counts;
-    const baselineMessage = [
-      '<b>Telegram Deep-Link Inventory is now being tracked</b>', '',
-      'Baseline: <b>' + counts.documentedTemplates + '</b> official documented templates, <b>' + counts.androidCandidates + '</b> Android source candidates, and <b>' + counts.userConfirmedWorkingRuntimeLinks + '</b> maintainer-reported runtime-tested routes.', '',
-      'Android candidates are included even when undocumented. Some are internal, partial, contextual, client/version-dependent, or unverified. Inclusion does not guarantee a link works or is publicly supported.', '',
-      '<a href="' + REPO_URL + '/blob/main/data/publication-inventory.json">Open full inventory</a> · <a href="' + REPO_URL + '/blob/main/data/summary.json">Summary</a>'
-    ].join(String.fromCharCode(10));
-    await sendTelegram(baselineMessage);
+  } catch {}
+
+  if (!previous) {
+    const message = [
+      '<b>Crawl #' + escapeHtml(RUN_NUMBER) + ' completed</b>', '',
+      'Initial tracking baseline recorded.',
+      'Inventory: <b>' + counts.documentedTemplates + '</b> official templates · <b>' + counts.androidCandidates + '</b> Android candidates · <b>' + counts.userConfirmedWorkingRuntimeLinks + '</b> runtime-tested routes.',
+      '',
+      'No previous notification snapshot was available for a change comparison.',
+      '<a href="' + REPO_URL + '/blob/main/data/publication-inventory.json">Open full inventory</a>'
+    ].join('\n');
+    await sendTelegram(message);
     await writeNotificationState(current);
-    console.log('Initial Telegram inventory baseline notification sent.');
+    console.log('Initial crawl status report sent.');
     return;
   }
+
   const before = new Map(previous.map(item => [item.id, item]));
   const after = new Map(current.map(item => [item.id, item]));
   const added = current.filter(item => !before.has(item.id));
   const removed = previous.filter(item => !after.has(item.id));
   const changed = current.filter(item => before.has(item.id) && stableView(item) !== stableView(before.get(item.id)));
-  if (!added.length && !removed.length && !changed.length) {
-    console.log('No publication inventory changes; no Telegram notification needed.');
-    return;
-  }
-  const sections = [
-    '<b>Telegram Deep-Link Inventory Update</b>', '',
-    'New: <b>' + added.length + '</b> · Changed: <b>' + changed.length + '</b> · Removed: <b>' + removed.length + '</b>', '',
-    'Includes official templates and implementation-derived Android candidates. Undocumented entries may be internal, partial, contextual, client/version-dependent, or unverified; inclusion does not guarantee that a link works or is publicly supported.', ''
+
+  const lines = [
+    '<b>Crawl #' + escapeHtml(RUN_NUMBER) + ' completed</b>', '',
+    'Status: <b>Success</b>',
+    'Inventory: <b>' + counts.documentedTemplates + '</b> official · <b>' + counts.androidCandidates + '</b> Android candidates · <b>' + counts.userConfirmedWorkingRuntimeLinks + '</b> runtime-tested routes.',
+    '',
+    'Changes: <b>' + added.length + '</b> new · <b>' + changed.length + '</b> updated · <b>' + removed.length + '</b> removed.'
   ];
+
   const entries = [
     ...added.map(item => ({ label: 'NEW', item })),
     ...changed.map(item => ({ label: 'UPDATED', item })),
     ...removed.map(item => ({ label: 'REMOVED', item }))
-  ].slice(0, 12);
-  for (const { label, item } of entries) {
-    sections.push('• <b>' + label + '</b> <code>' + escapeHtml(item.template) + '</code>');
-    sections.push('  <i>' + escapeHtml(item.status || item.classification || item.kind) + '</i>');
+  ].slice(0, 10);
+
+  if (!entries.length) {
+    lines.push('', 'No inventory changes detected in this crawl.');
+  } else {
+    lines.push('');
+    for (const { label, item } of entries) {
+      lines.push('• <b>' + label + '</b> <code>' + escapeHtml(item.template) + '</code>');
+      lines.push('  <i>' + escapeHtml(item.status || item.classification || item.kind) + '</i>');
+    }
+    const total = added.length + changed.length + removed.length;
+    if (total > entries.length) lines.push('…and ' + (total - entries.length) + ' more changes.');
   }
-  const total = added.length + changed.length + removed.length;
-  if (total > entries.length) sections.push('', '…and ' + (total - entries.length) + ' more inventory changes.');
-  sections.push('', '<a href="' + REPO_URL + '/blob/main/data/publication-inventory.json">Open full inventory</a> · <a href="' + REPO_URL + '/blob/main/data/summary.json">Summary</a>');
-  const message = sections.join(String.fromCharCode(10));
-  await sendTelegram(message);
+
+  lines.push('', '<a href="' + REPO_URL + '/blob/main/data/publication-inventory.json">Full inventory</a> · <a href="' + REPO_URL + '/actions">Crawl history</a>');
+  await sendTelegram(lines.join('\n'));
   await writeNotificationState(current);
-  console.log('Telegram inventory notification sent. New=' + added.length + ', changed=' + changed.length + ', removed=' + removed.length + '.');
+  console.log('Crawl #' + RUN_NUMBER + ' status report sent. New=' + added.length + ', changed=' + changed.length + ', removed=' + removed.length + '.');
 }
 
 main().catch(error => { console.error(error?.stack || error); process.exitCode = 1; });
