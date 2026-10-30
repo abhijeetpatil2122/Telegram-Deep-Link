@@ -4,9 +4,8 @@ const STATE_PATH='data/rich-notification-state.json';
 const TOKEN=process.env.TELEGRAM_BOT_TOKEN;
 const CHAT_ID=process.env.TELEGRAM_CHAT_ID||'1314643983';
 const RUN_NUMBER=process.env.GITHUB_RUN_NUMBER||'unknown';
-const esc=v=>String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const stable=x=>JSON.stringify({template:x.template,category:x.category,group:x.group,placeholders:x.placeholders});
-function table(headers,rows){return{type:'table',is_bordered:true,is_striped:true,is_compact:true,cells:[headers.map(text=>({text,is_header:true})),...rows.map(row=>row.map(text=>({text:esc(text)})))]};}
+function table(headers,rows){return{type:'table',is_bordered:true,is_striped:true,is_compact:true,cells:[headers.map(text=>({text,is_header:true})),...rows.map(row=>row.map(text=>({text:String(text??'')})))]};}
 async function sendRich(blocks){const r=await fetch('https://api.telegram.org/bot'+TOKEN+'/sendRichMessage',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({chat_id:CHAT_ID,rich_message:{blocks}}),signal:AbortSignal.timeout(30000)});const j=await r.json();if(!r.ok||!j.ok)throw Error('Telegram Rich Message report failed: '+(j.description||r.status));}
 async function save(items){await writeFile(STATE_PATH,JSON.stringify({notifiedAt:new Date().toISOString(),inventory:items},null,2)+'\n','utf8');}
 async function main(){
