@@ -29,10 +29,10 @@ jobs:
         run: npm run check
       - name: Crawl official docs and Android source
         run: npm run crawl
-      - name: Notify Telegram channel about inventory changes
+      - name: Test inventory notification in admin private chat
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHANNEL_ID: ${{ vars.TELEGRAM_CHANNEL_ID }}
+          TELEGRAM_CHANNEL_ID: '1314643983'
         run: npm run notify
       - name: Commit updated inventory
         run: |
