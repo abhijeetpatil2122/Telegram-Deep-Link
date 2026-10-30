@@ -172,9 +172,20 @@ async function main() {
   if (markdown.length < 5000 || !/^\s*#/m.test(markdown)) throw new Error('Official documentation response is incomplete or not recognizable.');
 
   const parsed = parseDocumentation(markdown);
-  const expected = ['tg://settings', 'tg://settings/<path>', 'tg://resolve?domain=<username>&text=<draft_text>&profile'];
+  const expected = [
+    'tg://settings', 'tg://settings/<path>',
+    'tg://resolve?domain=<username>&text=<draft_text>&profile',
+    'tonsite://somesite.domain/path?query#hash'
+  ];
   const missing = expected.filter(value => !parsed.flat.some(item => item.template === value));
   if (missing.length) throw new Error('Parser integrity check failed; missing documented core formats: ' + missing.join(' | '));
+  const settings = parsed.groups.find(group => /settings links/i.test(group.category + ' ' + group.group));
+  if (!settings || settings.details.filter(item => /^(appearance|data|business|chat|privacy|notifications|devices|language|folders|advanced)(?:\/|$)/.test(item.value)).length < 20) {
+    throw new Error('Parser integrity check failed; the documented Settings path list appears incomplete.');
+  }
+  if (!parsed.groups.some(group => group.parameters.length > 0)) {
+    throw new Error('Parser integrity check failed; parameter definitions were not extracted.');
+  }
 
   const catalog = parsed.groups.filter(group => group.templates.length).map(group => ({
     id: id(group.category + '/' + group.group), category: group.category, group: group.group,
