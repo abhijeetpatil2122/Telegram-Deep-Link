@@ -29,13 +29,13 @@ jobs:
         run: npm run check
       - name: Crawl official Telegram deep-link documentation only
         run: npm run crawl
-      - name: Publish official documentation to admin private chat (one-time)
+      - name: Publish official documentation as Rich Messages to admin private chat
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: '1314643983'
           PUBLISH_FULL_INVENTORY: 'true'
         run: npm run publish
-      - name: Send numbered crawl report to admin private chat
+      - name: Send Rich Message crawl report to admin private chat
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: '1314643983'
