@@ -1,8 +1,8 @@
 {
   "name": "telegram-deep-link-crawler",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
-  "description": "Track and publish official Telegram deep-link documentation.",
+  "description": "Structured crawler and clean publisher for official Telegram deep-link documentation.",
   "type": "module",
   "engines": {
     "node": ">=20"
