@@ -5,116 +5,150 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DOC_URL = 'https://core.telegram.org/api/links';
-const USER_AGENT = 'Telegram-Deep-Link-Crawler/0.1 (+https://github.com/abhijeetpatil2122/Telegram-Deep-Link)';
-const hash = value => createHash('sha256').update(value).digest('hex');
-const idFor = value => createHash('sha1').update(value).digest('hex').slice(0, 12);
+const MD_URL = DOC_URL + '.md';
+const USER_AGENT = 'Telegram-Deep-Link-Crawler/1.0';
+const sha = value => createHash('sha256').update(value).digest('hex');
+const id = value => createHash('sha1').update(value).digest('hex').slice(0, 12);
 
 async function fetchText(url) {
   const response = await fetch(url, {
     headers: { 'user-agent': USER_AGENT, accept: 'text/markdown, text/plain, text/html, */*' },
     signal: AbortSignal.timeout(60000)
   });
-  if (!response.ok) throw new Error('Fetch failed (' + response.status + '): ' + url);
+  if (!response.ok) throw new Error('Official documentation fetch failed (' + response.status + '): ' + url);
   return { text: await response.text(), finalUrl: response.url || url, etag: response.headers.get('etag'), lastModified: response.headers.get('last-modified') };
 }
 
-function clean(value) {
-  return value.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&')
-    // Some rendered HTML pages contain escaped code wrappers inside examples.
-    .replace(/<\/?code>/gi, '')
-    .replace(/\\\x60/g, '\x60').replace(/\s+/g, ' ').trim()
-    .replace(/^[\x60'"“”]+|[\x60'"“”]+$/g, '');
-}
-
-function isLink(value) {
-  const v = clean(value);
-  return /(?:https?:\/\/)?(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)\//i.test(v)
-    || /\btg:(?:\/\/)?[a-z0-9_+.-]+/i.test(v)
-    || /\btonsite:\/\//i.test(v)
-    || /(?:^|\s)\w[\w.-]*\.ton(?:\/|\?|$)/i.test(v);
-}
-
-
-function decodeHtml(value) {
-  return value
-    .replace(/&nbsp;/gi, ' ')
-    .replace(/&lt;/gi, '<').replace(/&gt;/gi, '>')
-    .replace(/&amp;/gi, '&').replace(/&quot;/gi, '"')
-    .replace(/&#39;|&apos;/gi, "'")
+function decode(value) {
+  return value.replace(/&nbsp;/gi, ' ').replace(/&lt;/gi, '<').replace(/&gt;/gi, '>')
+    .replace(/&amp;/gi, '&').replace(/&quot;/gi, '"').replace(/&#39;|&apos;/gi, "'")
     .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
-    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)));
-}
-
-function stripCodeHtml(body) {
-  // The official page uses angle-bracket placeholders such as <username> inside
-  // code examples. Protect those before removing actual HTML tags.
-  const placeholders = 'username|bot_username|short_name|start_parameter|start_param|phone_number|channel|id|thread_id|media_timestamp|task_id|option_id|story_id|invite_hash|hash|slug|url|text|domain|phone|post|token|mode|path|query|server|port|secret|user|pass|name|color|hex_color1|hex_color2|hex_color3|hex_color4|top_color|bottom_color|intensity|rotation|purpose|star_count|unix|format|code|parameter|prefix|peer|appname|startapp|startattach|attach|choose';
-  const protectedBody = body.replace(new RegExp('<(' + placeholders + ')>', 'gi'), '&lt;$1&gt;');
-  // Keep entities encoded until the outer HTML-tag removal has finished.
-  return protectedBody.replace(/<[^>]+>/g, '');
+    .replace(/&#x([\da-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)));
 }
 
 function htmlToMarkdown(html) {
-  let value = html
-    .replace(/<!--[\s\S]*?-->/g, '')
-    .replace(/<(script|style|noscript|svg)\b[^>]*>[\s\S]*?<\/\1>/gi, ' ')
-    .replace(/<h([1-6])\b[^>]*>([\s\S]*?)<\/h\1>/gi, (_, level, body) =>
-      '\n' + '#'.repeat(Number(level)) + ' ' + decodeHtml(body.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()) + '\n')
-    .replace(/<pre\b[^>]*>([\s\S]*?)<\/pre>/gi, (_, body) =>
-      '\n\n' + String.fromCharCode(96).repeat(3) + '\n' + stripCodeHtml(body) + '\n' + String.fromCharCode(96).repeat(3) + '\n\n')
-    .replace(/<code\b[^>]*>([\s\S]*?)<\/code>/gi, (_, body) =>
-      String.fromCharCode(96) + stripCodeHtml(body) + String.fromCharCode(96))
-    .replace(/<br\s*\/?>/gi, '\n')
-    .replace(/<\/(p|div|li|tr|section|article|ul|ol|table)>/gi, '\n')
+  const protectedHtml = html
+    .replace(/<!--[^]*?-->/g, '')
+    .replace(/<(script|style|noscript|svg)\b[^>]*>[^]*?<\/\1>/gi, ' ')
+    .replace(/<h([1-6])\b[^>]*>([^]*?)<\/h\1>/gi, (_, n, body) => '\n' + '#'.repeat(+n) + ' ' + decode(body.replace(/<[^>]+>/g, ' ')).trim() + '\n')
+    .replace(/<pre\b[^>]*>([^]*?)<\/pre>/gi, (_, body) => '\n\n```\n' + decode(body.replace(/<[^>]+>/g, '')) + '\n```\n\n')
+    .replace(/<code\b[^>]*>([^]*?)<\/code>/gi, (_, body) => '`' + decode(body.replace(/<[^>]+>/g, '')) + '`')
+    .replace(/<br\s*\/?\s*>/gi, '\n')
+    .replace(/<\/?(?:td|th)\b[^>]*>/gi, ' | ')
+    .replace(/<tr\b[^>]*>/gi, '\n')
+    .replace(/<\/tr>/gi, '\n')
+    .replace(/<li\b[^>]*>/gi, '\n- ')
+    .replace(/<\/(?:p|div|li|tr|section|article|ul|ol|table)>/gi, '\n')
     .replace(/<[^>]+>/g, ' ');
-  return decodeHtml(value).replace(/[ \t]+/g, ' ').replace(/\n[ \t]+/g, '\n').replace(/\n{3,}/g, '\n\n').trim();
+  return decode(protectedHtml).replace(/[ \t]+/g, ' ').replace(/\n[ \t]+/g, '\n')
+    .replace(/\n{3,}/g, '\n\n').trim();
 }
 
-function parseMarkdown(markdown) {
+function cleanCode(value) {
+  return value.replace(/\\`/g, '`').replace(/\s+/g, ' ').trim().replace(/^[`'“”]+|[`'“”]+$/g, '');
+}
+function isDeepLink(value) {
+  return /(?:https?:\/\/)?(?:www\.)?(?:t\.me|telegram\.me|telegram\.dog)\//i.test(value)
+    || /\btg:(?:\/\/)?[a-z0-9_+.-]+/i.test(value)
+    || /\btonsite:\/\//i.test(value)
+    || /(?:^|\s)[\w.-]+\.ton(?:\/|\?|$)/i.test(value);
+}
+function placeholders(value) {
+  return [...new Set([...value.matchAll(/<([a-zA-Z][\w-]*)>/g)].map(x => x[1]))];
+}
+function parseTableRow(line) {
+  const cells = line.trim().replace(/^\|?|\|?$/g, '').split('|').map(x => x.trim());
+  if (cells.length < 2 || cells.every(x => /^:?-{2,}:?$/.test(x))) return null;
+  return cells;
+}
+
+function parseDocumentation(markdown) {
+  const groups = [];
+  let current = null, fence = false, fenceLines = [], fenceStart = 0;
+  const seen = new Set();
+  const ensureGroup = () => {
+    if (!current) current = { category: 'General', group: 'General', description: '', templates: [], parameters: [], details: [] };
+  };
+  const addTemplate = (raw, line, kind) => {
+    const template = cleanCode(raw);
+    if (!template || template.length > 1800 || !isDeepLink(template)) return;
+    const key = (current.category + '/' + current.group + '/' + template).toLowerCase();
+    if (seen.has(key)) return;
+    seen.add(key);
+    current.templates.push({ id: id(key), template, placeholders: placeholders(template), line, extraction: kind });
+  };
+  const finishGroup = () => {
+    if (!current) return;
+    current.templates = current.templates.filter(x => x.template);
+    if (current.templates.length || current.parameters.length || current.details.length || current.description) groups.push(current);
+    current = null;
+  };
+
   const lines = markdown.split(/\r?\n/);
-  const entries = new Map();
-  let section = 'Introduction', subsection = '', inFence = false, fence = [], fenceLine = 0;
-
-  function add(raw, line, extraction = 'inline-code') {
-    const template = clean(raw);
-    if (!template || template.length > 1200 || !isLink(template)) return;
-    const key = section + '\0' + template;
-    if (!entries.has(key)) entries.set(key, {
-      id: idFor(section + '\n' + template), template, section, subsection: subsection || null,
-      source: 'official_docs', sourceUrl: DOC_URL, line, extraction, reviewStatus: 'documented'
-    });
-  }
-
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    const heading = line.match(/^\s{0,3}(#{1,6})\s+(.+?)\s*#*\s*$/);
-    if (heading && !inFence) {
-      const level = heading[1].length, title = heading[2].replace(/[\x60*_]/g, '').trim();
-      if (level <= 2) { section = title; subsection = ''; } else subsection = title;
-    }
-    if (/^\s*(?:\x60{3}|~~~)/.test(line)) {
-      if (!inFence) { inFence = true; fence = []; fenceLine = i + 1; }
+    if (/^\s*```/.test(line)) {
+      if (!fence) { fence = true; fenceLines = []; fenceStart = i + 1; }
       else {
-        for (const item of fence) {
-          const candidate = item.trim().replace(/^[-*+]\s+/, '').replace(/^\d+\.\s+/, '').replace(/^\|\s*/, '').replace(/\s*\|.*$/, '').trim();
-          add(candidate, fenceLine, 'fenced-code');
-          for (const match of item.matchAll(/\x60([^\x60]+)\x60/g)) add(match[1], fenceLine, 'fenced-inline-code');
-        }
-        inFence = false;
+        ensureGroup();
+        for (const raw of fenceLines) addTemplate(raw.trim().replace(/^[-*+]\s+/, ''), fenceStart, 'fenced-code');
+        fence = false;
       }
       continue;
     }
-    if (inFence) { fence.push(line); continue; }
-    for (const match of line.matchAll(/\x60([^\x60]+)\x60/g)) add(match[1], i + 1);
-    if (/settings links/i.test(section) || /settings links/i.test(subsection)) {
-      const cells = line.split('|').map(x => x.trim()), path = clean(cells[1] || '');
-      if (cells.length > 1 && path && !/^[-:]+$/.test(path) && !/^path$/i.test(path)
-        && /^(?:[a-z][a-z0-9-]*)(?:\/[a-z0-9_-]+)*\/?$/i.test(path)) {
-        add('tg://settings/' + path.replace(/^\/+|\/+$/g, ''), i + 1, 'settings-table-path');
+    if (fence) { fenceLines.push(line); continue; }
+
+    const heading = line.match(/^\s*(#{1,6})\s+(.+?)\s*#*\s*$/);
+    if (heading) {
+      const level = heading[1].length;
+      if (level <= 2) {
+        finishGroup();
+        current = { category: heading[2].replace(/[`*_]/g, '').trim(), group: 'General', description: '', templates: [], parameters: [], details: [] };
+      } else {
+        ensureGroup();
+        finishGroup();
+        current = { category: groups.length ? groups[groups.length - 1].category : 'General', group: heading[2].replace(/[`*_]/g, '').trim(), description: '', templates: [], parameters: [], details: [] };
+      }
+      continue;
+    }
+    ensureGroup();
+
+    // Inline code links and code samples are documented formats too.
+    for (const match of line.matchAll(/`([^`]+)`/g)) addTemplate(match[1], i + 1, 'inline-code');
+
+    const cells = parseTableRow(line);
+    if (cells && /^(name|parameter)$/i.test((cells[0] || '').replace(/[`*_]/g, ''))) continue;
+    if (cells && cells.length >= 3 && !cells.every(x => /^:?-{2,}:?$/.test(x))) {
+      const normalized = cells.map(x => x.replace(/[`*_]/g, '').trim());
+      if (normalized[0] && normalized[1] && normalized[2]) {
+        current.parameters.push({ name: normalized[0], requirement: normalized[1], description: normalized.slice(2).join(' | ') });
       }
     }
+
+    const bullet = line.match(/^\s{0,8}[-*+]\s+(.+)$/);
+    if (bullet) {
+      const value = bullet[1].trim();
+      const code = value.match(/^`([^`]+)`(?:\s*[-–—:]\s*(.*))?$/);
+      if (code && !isDeepLink(code[1])) {
+        current.details.push({ value: code[1], description: (code[2] || '').trim() });
+      } else if (value && !isDeepLink(value)) {
+        current.details.push({ value: value.replace(/[`*_]/g, '').trim(), description: '' });
+      }
+    }
+
+    if (!current.description && line.trim() && !/^\s*(?:[-*+]|\||Parameters:|Syntax:|\*\*)/.test(line)
+      && !line.includes('`') && !/^\s*<|^\s*Name\s/.test(line)) {
+      current.description = line.trim().replace(/\s+/g, ' ').slice(0, 420);
+    }
   }
-  return [...entries.values()].sort((a, b) => a.section.localeCompare(b.section) || a.template.localeCompare(b.template));
+  finishGroup();
+
+  // Keep parent/child headings in source order and preserve every documented format.
+  const flat = groups.flatMap(group => group.templates.map(template => ({
+    ...template, category: group.category, group: group.group
+  })));
+  if (!flat.length) throw new Error('Parser found no deep-link formats in the official documentation.');
+  return { groups, flat };
 }
 
 async function writeJson(path, value) {
@@ -123,108 +157,49 @@ async function writeJson(path, value) {
   await writeFile(target, JSON.stringify(value, null, 2) + '\n', 'utf8');
 }
 
-function placeholders(template) {
-  return [...new Set([...template.matchAll(/<([^<>]+)>/g)].map(match => match[1]))];
-}
-
-function queryOptions(template) {
-  const query = template.split('?')[1] || '';
-  return query.split('&').filter(Boolean).map(part => {
-    const [name, ...rest] = part.split('=');
-    return { name, value: rest.join('=') || null };
-  });
-}
-
-function buildDocumentationCatalog(documented) {
-  const groups = new Map();
-  for (const item of documented) {
-    const key = (item.section || 'Telegram links') + ' / ' + (item.subsection || 'General');
-    if (!groups.has(key)) groups.set(key, {
-      id: idFor(key), category: item.section || 'Telegram links',
-      group: item.subsection || 'General', sourceUrl: DOC_URL, templates: []
-    });
-    groups.get(key).templates.push({
-      id: item.id, template: item.template, line: item.line,
-      placeholders: placeholders(item.template), options: queryOptions(item.template),
-      sourceUrl: item.sourceUrl
-    });
-  }
-  return [...groups.values()].sort((a,b) =>
-    a.category.localeCompare(b.category) || a.group.localeCompare(b.group)
-  );
-}
-
 async function main() {
-  console.log('Fetching official Telegram deep-link documentation:', DOC_URL);
-  const html = await fetchText(DOC_URL);
-  if (!/<(?:html|article|main|h[1-6])\b/i.test(html.text) || html.text.length < 1000) {
-    throw new Error('The official deep-link website did not return recognizable HTML.');
+  console.log('Fetching machine-readable official documentation:', MD_URL);
+  let fetched;
+  try { fetched = await fetchText(MD_URL); }
+  catch (error) {
+    console.warn('Markdown endpoint unavailable; falling back to the official HTML page:', error.message);
+    fetched = await fetchText(DOC_URL);
+    fetched.text = htmlToMarkdown(fetched.text);
   }
-  const docs = { ...html, text: htmlToMarkdown(html.text) };
-  if (!/^\s*#/m.test(docs.text) || docs.text.length < 1000) {
-    throw new Error('Could not extract usable deep-link documentation from the official website HTML.');
-  }
+  const markdown = fetched.text.replace(/^\uFEFF/, '');
+  if (markdown.length < 5000 || !/^\s*#/m.test(markdown)) throw new Error('Official documentation response is incomplete or not recognizable.');
 
-  const documented = parseMarkdown(docs.text);
-  const malformed = documented.filter(item =>
-    /<\/?code>/i.test(item.template)
-    || /(?:t\.me|telegram\.me|telegram\.dog)\/\s+(?:\?|\/|$)/i.test(item.template)
-    || /\btg:\s+\//i.test(item.template)
-  );
-  if (malformed.length) {
-    throw new Error('Malformed templates detected in official HTML extraction: ' +
-      malformed.slice(0, 5).map(item => item.template).join(' | ')
-    );
-  }
+  const parsed = parseDocumentation(markdown);
+  const expected = ['tg://settings', 'tg://settings/<path>', 'tg://resolve?domain=<username>&text=<draft_text>&profile'];
+  const missing = expected.filter(value => !parsed.flat.some(item => item.template === value));
+  if (missing.length) throw new Error('Parser integrity check failed; missing documented core formats: ' + missing.join(' | '));
 
-  const requiredTemplates = [
-    't.me/<username>?text=<draft_text>&profile',
-    'tg://resolve?domain=<username>&text=<draft_text>&profile',
-    't.me/<username>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>',
-    'tg://settings',
-    't.me/<username>?direct',
-    'tg://join?invite=<hash>'
-  ];
-  const missingTemplates = requiredTemplates.filter(template =>
-    !documented.some(item => item.template === template)
-  );
-  if (missingTemplates.length) {
-    throw new Error('Official HTML extraction is missing expected documented examples: ' +
-      missingTemplates.join(' | ')
-    );
-  }
-
-  const catalog = buildDocumentationCatalog(documented);
+  const catalog = parsed.groups.filter(group => group.templates.length).map(group => ({
+    id: id(group.category + '/' + group.group), category: group.category, group: group.group,
+    description: group.description, templates: group.templates, parameters: group.parameters,
+    details: group.details
+  }));
   const summary = {
     generatedAt: new Date().toISOString(),
-    source: { url: DOC_URL, finalUrl: docs.finalUrl, sha256: hash(docs.text), etag: docs.etag, lastModified: docs.lastModified },
+    source: { url: DOC_URL, fetchedUrl: fetched.finalUrl, sha256: sha(markdown), etag: fetched.etag, lastModified: fetched.lastModified },
     counts: {
-      documentedTemplates: documented.length,
-      documentationGroups: catalog.length,
-      categories: [...new Set(catalog.map(group => group.category))].length,
-      templatesWithPlaceholders: documented.filter(item => placeholders(item.template).length).length
-    },
-    note: 'This catalog contains only deep-link formats and paths explicitly extracted from the official Telegram documentation website. No Android source candidates or inferred undocumented routes are included.'
+      documentedTemplates: parsed.flat.length, documentationGroups: catalog.length,
+      categories: [...new Set(catalog.map(x => x.category))].length,
+      parameterDefinitions: catalog.reduce((n, x) => n + x.parameters.length, 0),
+      documentedOptions: catalog.reduce((n, x) => n + x.details.length, 0),
+      templatesWithPlaceholders: parsed.flat.filter(x => x.placeholders.length).length
+    }
   };
-
-  const publicationInventory = documented.map(item => ({
-    id: 'official:' + item.id,
-    kind: 'official-template',
-    template: item.template,
-    category: item.section,
-    group: item.subsection || null,
-    sourceUrl: item.sourceUrl,
-    line: item.line,
-    status: 'officially-documented',
-    placeholders: placeholders(item.template),
-    options: queryOptions(item.template)
+  const inventory = parsed.flat.map(item => ({
+    id: 'official:' + item.id, kind: 'official-template', template: item.template,
+    category: item.category, group: item.group, placeholders: item.placeholders,
+    status: 'officially-documented'
   }));
 
-  await writeJson('data/documented-links.json', documented);
+  await writeJson('data/documented-links.json', parsed.flat);
   await writeJson('data/documentation-catalog.json', catalog);
-  await writeJson('data/publication-inventory.json', publicationInventory);
+  await writeJson('data/publication-inventory.json', inventory);
   await writeJson('data/summary.json', summary);
   console.log(JSON.stringify(summary.counts, null, 2));
 }
-
 main().catch(error => { console.error(error?.stack || error); process.exitCode = 1; });
