@@ -65,9 +65,10 @@ function parseTableRow(line) {
 function parseDocumentation(markdown) {
   const groups = [];
   let current = null, fence = false, fenceLines = [], fenceStart = 0;
+  let activeCategory = 'General', activeGroup = 'General';
   const seen = new Set();
   const ensureGroup = () => {
-    if (!current) current = { category: 'General', group: 'General', description: '', templates: [], parameters: [], details: [] };
+    if (!current) current = { category: activeCategory, group: activeGroup, description: '', templates: [], parameters: [], details: [] };
   };
   const addTemplate = (raw, line, kind) => {
     const template = cleanCode(raw);
@@ -101,14 +102,15 @@ function parseDocumentation(markdown) {
     const heading = line.match(/^\s*(#{1,6})\s+(.+?)\s*#*\s*$/);
     if (heading) {
       const level = heading[1].length;
-      if (level <= 2) {
-        finishGroup();
-        current = { category: heading[2].replace(/[`*_]/g, '').trim(), group: 'General', description: '', templates: [], parameters: [], details: [] };
+      const title = heading[2].replace(/[`*_]/g, '').trim();
+      finishGroup();
+      if (level <= 3) {
+        activeCategory = title;
+        activeGroup = 'General';
       } else {
-        ensureGroup();
-        finishGroup();
-        current = { category: groups.length ? groups[groups.length - 1].category : 'General', group: heading[2].replace(/[`*_]/g, '').trim(), description: '', templates: [], parameters: [], details: [] };
+        activeGroup = title;
       }
+      current = { category: activeCategory, group: activeGroup, description: '', templates: [], parameters: [], details: [] };
       continue;
     }
     ensureGroup();
