@@ -1,11 +1,11 @@
 {
   "initializedAt": "2026-10-31T11:17:43.854Z",
-  "checkedAt": "2026-10-31T12:05:05.550Z",
+  "checkedAt": "2026-10-31T12:06:47.813Z",
   "source": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "282c5a8b8034ce3832fa9ad13d81924221c37351c99a18b059ba9f66342b038e",
+      "sha256": "47c32f07ff8b8f0293228f96ed29242b7f9c8d9674d24d2ed0af85b5660fa583",
       "etag": null,
       "lastModified": null
     },
@@ -2172,5 +2172,25 @@
     "chatId": 1314643983,
     "deliveredAt": "2026-10-31T12:04:30.581Z"
   },
-  "richCatalogueVersion": 2
+  "richCatalogueVersion": 2,
+  "readyCatalogueFamilies": [
+    "2b7ef5807bb419d3",
+    "24b580efd0769709",
+    "cde0fb0dec1400c5",
+    "ff9a6d2ad12ddba6",
+    "12d1ded4d69cc051",
+    "aa5af4084f3746bb",
+    "11836096bd42524c",
+    "c55104413654cd47",
+    "a3837d393f2a1bb2"
+  ],
+  "lastReadyCatalogueDelivery": {
+    "family": "Telegram Passport links",
+    "messageIds": [
+      652
+    ],
+    "chatId": 1314643983,
+    "deliveredAt": "2026-10-31T12:06:47.810Z"
+  },
+  "readyCatalogueVersion": 1
 }
