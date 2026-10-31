@@ -1,16 +1,12 @@
 {
-  "name": "telegram-deep-link-crawler",
-  "version": "0.4.0",
+  "name": "telegram-deep-link-watcher",
+  "version": "1.0.0",
   "private": true,
-  "description": "Structured official Telegram deep-link crawler with Rich Message publishing.",
   "type": "module",
-  "engines": {
-    "node": ">=20"
-  },
+  "engines": { "node": ">=20" },
   "scripts": {
-    "crawl": "node src/crawl.js",
-    "check": "node --check src/crawl.js && node --check src/notify.js && node --check src/publish.js",
-    "notify": "node src/notify.js",
-    "publish": "node src/publish.js"
+    "check": "node --check src/crawl.js && node --check src/main.js && node --check src/publish.js",
+    "crawl": "node --input-type=module -e \"import('./src/crawl.js').then(({ crawl }) => crawl())\"",
+    "watch": "node src/main.js"
   }
 }

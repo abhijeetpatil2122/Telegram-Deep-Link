@@ -1,63 +1,41 @@
-# Telegram Deep-Link Documentation
+# Telegram Deep Link Watcher
 
-A structured crawler and Rich Message publisher for Telegram's official deep-link reference.
+A small, reliable watcher for Telegram's official deep-link documentation.
 
-## Source
+## Sources
 
-The project reads only the official Telegram deep-link documentation:
-- https://core.telegram.org/api/links
-- Its machine-readable Markdown representation.
+- HTML: https://corefork.telegram.org/api/links
+- Markdown: https://corefork.telegram.org/api/links.md
 
-## Extraction
+Every run fetches both sources, extracts documented deep-link formats independently, and checks that their inventories substantially agree. A failed fetch, incomplete response, or source mismatch stops the run before publishing.
 
-The crawler preserves the documentation hierarchy and extracts:
-- Section and subsection headings
-- Deep-link formats and examples
-- Parameter names, required/optional status, types and descriptions
-- Enumerated values and supported paths
-- Inline documentation references and links
+## Behaviour
 
-No Android source scraping, inferred routes, or undocumented handlers are included.
+- The first successful run creates a baseline and does not flood the test chat with old entries.
+- Later runs publish only newly documented formats.
+- Existing formats are not reposted when unrelated documentation changes.
+- The state is updated after each successful Telegram delivery.
+- Failed runs leave undispatched entries available for the next run.
+- Telegram destination is configured in the workflow and currently points to the private test chat.
 
-## Rich Message publishing
+## GitHub Actions secrets
 
-Documentation is sent with Telegram Bot API `sendRichMessage` using structured `InputRichMessage.blocks`.
+- `TELEGRAM_BOT_TOKEN`: bot token with permission to send messages to the test chat.
 
-- Original documentation section title as the heading; no numbered post counters.
-- Introductory descriptions rendered as rich paragraphs.
-- Format and example links shown in a compact table.
-- Example URLs are displayed as their actual full URLs, not generic “Open example” labels.
-- Parameter definitions rendered in expandable tables.
-- Supported paths and enumerated values rendered in expandable lists.
-- Internal documentation links are normalized to canonical `https://core.telegram.org/...` URLs.
-- Telegram links are normalized to HTTPS where appropriate; `tg://` and TON schemes are preserved.
-- No source footer, repository footer, placeholder boilerplate, or generic publication summary.
+The test chat ID is configured as a workflow variable, not a secret. Change it only when deliberately switching to production.
 
-Long sections are split only when required by Telegram Rich Message limits. No format or parameter is intentionally truncated.
+## Local use
 
-## Crawl notifications
-
-Crawl reports are also sent using Rich Message blocks and tables. They summarize totals and list added, updated, and removed formats.
-
-## Destination
-
-All current tests target private chat `1314643983`. The publication workflow does not send to the channel until the private-chat output is approved.
-
-## Configuration
-
-Required GitHub Actions secret:
-- `TELEGRAM_BOT_TOKEN`
-
-The workflow uses the Bot API `sendRichMessage` method. The bot must have access to this method in its configured Bot API environment.
-
-## Local commands
+Requires Node.js 20+.
 
 ```sh
 npm install
 npm run check
-npm run crawl
-npm run publish
-npm run notify
+TELEGRAM_BOT_TOKEN=... TELEGRAM_CHAT_ID=1314643983 npm run watch
 ```
 
-Set `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, and `PUBLISH_FULL_INVENTORY=true` to test full publication.
+## Workflow
+
+GitHub Actions checks every 15 minutes and can also be started manually. It commits the verified catalogue and watcher state back to `main`.
+
+No undocumented links are inferred or scraped from third-party sources.
