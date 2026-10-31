@@ -1,10 +1,10 @@
 {
-  "fetchedAt": "2026-10-31T11:42:37.504Z",
+  "fetchedAt": "2026-10-31T11:43:34.332Z",
   "sources": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "54d6534a21ec699f57e8e0e1da5f1578c95b7a63816deae322fecbbdbe435899",
+      "sha256": "5d470b9c174be5d8daa383c362688940c5e9d4981ec39180638482bb0e33a99f",
       "etag": null,
       "lastModified": null
     },
@@ -1280,60 +1280,6 @@
   ],
   "families": [
     {
-      "id": "74611c1d6455b534",
-      "title": "Deep links",
-      "key": "deep",
-      "templates": [
-        "t.me/path?query",
-        "http://t.me/path?query",
-        "https://t.me/path?query",
-        "tg:path?query",
-        "tg://path?query",
-        "t.me/<username>/"
-      ],
-      "options": [
-        "t.me/path?query",
-        "http://t.me/path?query",
-        "https://t.me/path?query",
-        "tg:path?query",
-        "tg://path?query",
-        "addemoji",
-        "addlist",
-        "addstickers",
-        "addstyle",
-        "addtheme",
-        "auction",
-        "auth",
-        "boost",
-        "call",
-        "confirmphone",
-        "contact",
-        "giftcode",
-        "invoice",
-        "joinchat",
-        "login",
-        "m",
-        "nft",
-        "proxy",
-        "setlanguage",
-        "share",
-        "socks",
-        "web",
-        "a",
-        "k",
-        "z",
-        "query",
-        "username"
-      ],
-      "ready": [
-        "http://t.me/path?query",
-        "https://t.me/path?query",
-        "t.me/path?query",
-        "tg://path?query",
-        "tg:path?query"
-      ]
-    },
-    {
       "id": "63657dc62bb98f9e",
       "title": "Public username links",
       "key": "public username",
@@ -1601,8 +1547,7 @@
       "options": [
         "photo",
         "video",
-        "live",
-        "content_type"
+        "live"
       ],
       "ready": [
         "tg://post",
@@ -1752,7 +1697,10 @@
         "hex_color3",
         "hex_color4",
         "intensity",
-        "bg_color"
+        "bg_color",
+        "blur",
+        "motion",
+        "+"
       ],
       "ready": []
     },
@@ -1808,7 +1756,8 @@
         "startgroup",
         "admin",
         "domain",
-        "startchannel"
+        "startchannel",
+        "+"
       ],
       "ready": []
     },
@@ -2176,8 +2125,7 @@
         "my-profile/posts/all-stories",
         "my-profile/posts/add-album",
         "my-profile/gifts",
-        "my-profile/archived-posts",
-        "path"
+        "my-profile/archived-posts"
       ],
       "ready": [
         "tg://settings",
@@ -2560,7 +2508,6 @@
         "tg://contacts/<section>"
       ],
       "options": [
-        "section",
         "search",
         "sort",
         "new",
@@ -2789,7 +2736,12 @@
         "attach",
         "phone_number",
         "phone",
-        "choose"
+        "choose",
+        "users",
+        "bots",
+        "groups",
+        "channels",
+        "+"
       ],
       "ready": []
     },
@@ -2878,24 +2830,6 @@
         "format"
       ],
       "ready": []
-    },
-    {
-      "id": "60945d49535300be",
-      "title": "Unsupported links",
-      "key": "unsupported",
-      "templates": [
-        "tg://need_update_for_some_feature?test=a",
-        "tg:some_unsupported_feature?test=b"
-      ],
-      "options": [
-        "tg://need_update_for_some_feature?test=a",
-        "tg:some_unsupported_feature?test=b",
-        "test"
-      ],
-      "ready": [
-        "tg://need_update_for_some_feature?test=a",
-        "tg:some_unsupported_feature?test=b"
-      ]
     }
   ]
 }

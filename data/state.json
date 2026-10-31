@@ -1,11 +1,11 @@
 {
   "initializedAt": "2026-10-31T11:17:43.854Z",
-  "checkedAt": "2026-10-31T11:42:54.099Z",
+  "checkedAt": "2026-10-31T11:43:36.647Z",
   "source": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "54d6534a21ec699f57e8e0e1da5f1578c95b7a63816deae322fecbbdbe435899",
+      "sha256": "5d470b9c174be5d8daa383c362688940c5e9d4981ec39180638482bb0e33a99f",
       "etag": null,
       "lastModified": null
     },
@@ -759,58 +759,6 @@
     "deliveredAt": "2026-10-31T11:42:54.097Z"
   },
   "familySnapshots": {
-    "74611c1d6455b534": {
-      "title": "Deep links",
-      "templates": [
-        "http://t.me/path?query",
-        "https://t.me/path?query",
-        "t.me/<username>/",
-        "t.me/path?query",
-        "tg://path?query",
-        "tg:path?query"
-      ],
-      "options": [
-        "a",
-        "addemoji",
-        "addlist",
-        "addstickers",
-        "addstyle",
-        "addtheme",
-        "auction",
-        "auth",
-        "boost",
-        "call",
-        "confirmphone",
-        "contact",
-        "giftcode",
-        "http://t.me/path?query",
-        "https://t.me/path?query",
-        "invoice",
-        "joinchat",
-        "k",
-        "login",
-        "m",
-        "nft",
-        "proxy",
-        "query",
-        "setlanguage",
-        "share",
-        "socks",
-        "t.me/path?query",
-        "tg://path?query",
-        "tg:path?query",
-        "username",
-        "web",
-        "z"
-      ],
-      "ready": [
-        "http://t.me/path?query",
-        "https://t.me/path?query",
-        "t.me/path?query",
-        "tg://path?query",
-        "tg:path?query"
-      ]
-    },
     "63657dc62bb98f9e": {
       "title": "Public username links",
       "templates": [
@@ -1045,7 +993,6 @@
         "tg://post/<content_type>"
       ],
       "options": [
-        "content_type",
         "live",
         "photo",
         "video"
@@ -1171,7 +1118,9 @@
         "tg://bg?slug=<slug>&mode=<mode>"
       ],
       "options": [
+        "+",
         "bg_color",
+        "blur",
         "bottom_color",
         "color",
         "gradient",
@@ -1182,6 +1131,7 @@
         "hex_color4",
         "intensity",
         "mode",
+        "motion",
         "rotation",
         "slug",
         "top_color"
@@ -1213,6 +1163,7 @@
         "tg://resolve?domain=<bot_username>&startgroup=<parameter>&admin=<permissions>"
       ],
       "options": [
+        "+",
         "admin",
         "anonymous",
         "bot_username",
@@ -1484,7 +1435,6 @@
         "notifications/stories/vibrate",
         "notifications/web",
         "password",
-        "path",
         "phone_privacy",
         "power-saving",
         "power-saving/background",
@@ -1982,7 +1932,6 @@
         "manage",
         "new",
         "search",
-        "section",
         "sort"
       ],
       "ready": [
@@ -2173,15 +2122,20 @@
         "tg://resolve?phone=<phone_number>&attach=<bot_username>&startattach=<start_parameter>"
       ],
       "options": [
+        "+",
         "attach",
         "bot_username",
+        "bots",
+        "channels",
         "choose",
         "domain",
+        "groups",
         "phone",
         "phone_number",
         "start_parameter",
         "startattach",
-        "username"
+        "username",
+        "users"
       ],
       "ready": []
     },
@@ -2258,22 +2212,14 @@
         "unix"
       ],
       "ready": []
-    },
-    "60945d49535300be": {
-      "title": "Unsupported links",
-      "templates": [
-        "tg://need_update_for_some_feature?test=a",
-        "tg:some_unsupported_feature?test=b"
-      ],
-      "options": [
-        "test",
-        "tg://need_update_for_some_feature?test=a",
-        "tg:some_unsupported_feature?test=b"
-      ],
-      "ready": [
-        "tg://need_update_for_some_feature?test=a",
-        "tg:some_unsupported_feature?test=b"
-      ]
     }
+  },
+  "lastDelivery": {
+    "family": "Bot attachment or side menu links",
+    "messageIds": [
+      530
+    ],
+    "chatId": 1314643983,
+    "deliveredAt": "2026-10-31T11:43:36.646Z"
   }
 }
