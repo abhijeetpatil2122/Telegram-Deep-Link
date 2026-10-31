@@ -1,0 +1,741 @@
+{
+  "initializedAt": "2026-10-31T11:17:43.854Z",
+  "checkedAt": "2026-10-31T11:17:43.854Z",
+  "source": {
+    "html": {
+      "url": "https://corefork.telegram.org/api/links",
+      "finalUrl": "https://corefork.telegram.org/api/links",
+      "sha256": "ec91521cb053e73dbef332b04aed85132bc5c01183a5ff151d4411c61779239f",
+      "etag": null,
+      "lastModified": null
+    },
+    "markdown": {
+      "url": "https://corefork.telegram.org/api/links.md",
+      "finalUrl": "https://corefork.telegram.org/api/links.md",
+      "sha256": "cc6a6c87f58307ddd05b1237b945ffacc10afe00ef08505cdf3bfc8407e6c8a1",
+      "etag": null,
+      "lastModified": null
+    }
+  },
+  "inventory": [
+    {
+      "id": "eb7dc3a2b194facf",
+      "template": "getting-started.ton/path?query#hash"
+    },
+    {
+      "id": "c49f06e04d3060a0",
+      "template": "http://t.me/path?query"
+    },
+    {
+      "id": "aa100cd443934813",
+      "template": "https://t.me/oauth?startapp=<token>"
+    },
+    {
+      "id": "74d9504d85368edd",
+      "template": "https://t.me/path?query"
+    },
+    {
+      "id": "04a41128dbe27370",
+      "template": "t.me/+<hash>"
+    },
+    {
+      "id": "5dd7b8510a76f22a",
+      "template": "t.me/+<phone_number>?attach=<bot_username>"
+    },
+    {
+      "id": "696fc28370915deb",
+      "template": "t.me/+<phone_number>?attach=<bot_username>&startattach=<start_parameter>"
+    },
+    {
+      "id": "0cb10d48442d2bbe",
+      "template": "t.me/+<phone_number>?text=<draft_text>&profile"
+    },
+    {
+      "id": "4daed258de9ac4c9",
+      "template": "t.me/<bot_username>?game=<short_name>"
+    },
+    {
+      "id": "85a6394bf748e668",
+      "template": "t.me/<bot_username>?ref=<referrer>"
+    },
+    {
+      "id": "dd84efe0f9a64a85",
+      "template": "t.me/<bot_username>?start={prefix}<referrer>"
+    },
+    {
+      "id": "b95925a673c40f22",
+      "template": "t.me/<bot_username>?start=<parameter>"
+    },
+    {
+      "id": "2873c2edc136302f",
+      "template": "t.me/<bot_username>?startapp&mode=<mode>"
+    },
+    {
+      "id": "d16a4d667fa21f31",
+      "template": "t.me/<bot_username>?startapp=<start_parameter>&mode=<mode>"
+    },
+    {
+      "id": "d7fe1a778be93e81",
+      "template": "t.me/<bot_username>?startattach"
+    },
+    {
+      "id": "48d939afeb448ef2",
+      "template": "t.me/<bot_username>?startattach&choose=users+bots+groups+channels"
+    },
+    {
+      "id": "137a27bf1f5771e8",
+      "template": "t.me/<bot_username>?startattach=<start_parameter>"
+    },
+    {
+      "id": "936bae0b1b8e7c40",
+      "template": "t.me/<bot_username>?startattach=<start_parameter>&choose=users+bots+groups+channels"
+    },
+    {
+      "id": "5d528128f43850a2",
+      "template": "t.me/<bot_username>?startchannel&admin=<permissions>"
+    },
+    {
+      "id": "12c07bc1190c9ac9",
+      "template": "t.me/<bot_username>?startgroup&admin=<permissions>"
+    },
+    {
+      "id": "9e8ff7fa0d154a31",
+      "template": "t.me/<bot_username>?startgroup=<parameter>&admin=<permissions>"
+    },
+    {
+      "id": "08cefaeac37efeb2",
+      "template": "t.me/<bot_username>/<short_name>?startapp=<start_parameter>&mode=<mode>"
+    },
+    {
+      "id": "c08d622b71302872",
+      "template": "t.me/<username>?album=<album_id>"
+    },
+    {
+      "id": "74c6fdd36ce603b1",
+      "template": "t.me/<username>?attach=<bot_username>"
+    },
+    {
+      "id": "9b56a106a411e78e",
+      "template": "t.me/<username>?attach=<bot_username>&startattach=<start_parameter>"
+    },
+    {
+      "id": "2dde4e632fa9f167",
+      "template": "t.me/<username>?boost"
+    },
+    {
+      "id": "8a867f3125d96791",
+      "template": "t.me/<username>?collection=<collection_id>"
+    },
+    {
+      "id": "e5dc5d2e0da11688",
+      "template": "t.me/<username>?direct"
+    },
+    {
+      "id": "8e84f537aa37bbdf",
+      "template": "t.me/<username>?livestream"
+    },
+    {
+      "id": "69d01ad45efa6908",
+      "template": "t.me/<username>?livestream=<invite_hash>"
+    },
+    {
+      "id": "9883ae11c80259fa",
+      "template": "t.me/<username>?text=<draft_text>&profile"
+    },
+    {
+      "id": "c5fff412f5f426c2",
+      "template": "t.me/<username>?videochat"
+    },
+    {
+      "id": "368cbd6e45153a96",
+      "template": "t.me/<username>?videochat=<invite_hash>"
+    },
+    {
+      "id": "db58253adf65007a",
+      "template": "t.me/<username>?voicechat"
+    },
+    {
+      "id": "4395bc28a5b358eb",
+      "template": "t.me/<username>?voicechat=<invite_hash>"
+    },
+    {
+      "id": "b07eabff2871b692",
+      "template": "t.me/<username>/"
+    },
+    {
+      "id": "6746b96a15cb81ca",
+      "template": "t.me/<username>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>"
+    },
+    {
+      "id": "e195cce9dd35cba4",
+      "template": "t.me/<username>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>"
+    },
+    {
+      "id": "72b93d7a194f67b8",
+      "template": "t.me/<username>/a/<album_id>"
+    },
+    {
+      "id": "392a7822ff32c1a0",
+      "template": "t.me/<username>/c/<collection_id>"
+    },
+    {
+      "id": "fa2e1e6319029b7a",
+      "template": "t.me/<username>/s/<story_id>"
+    },
+    {
+      "id": "108b079633fdf97a",
+      "template": "t.me/<username>/s/live"
+    },
+    {
+      "id": "1232d320a00b0d68",
+      "template": "t.me/$<slug>"
+    },
+    {
+      "id": "3a3590bb5fd015bd",
+      "template": "t.me/addemoji/<slug>"
+    },
+    {
+      "id": "b79ad7b2f7b63927",
+      "template": "t.me/addlist/<slug>"
+    },
+    {
+      "id": "8f3e5479436ac528",
+      "template": "t.me/addstickers/<slug>"
+    },
+    {
+      "id": "c01f3e652d96b375",
+      "template": "t.me/addstyle/<slug>"
+    },
+    {
+      "id": "8b617730d270a405",
+      "template": "t.me/addtheme/<name>"
+    },
+    {
+      "id": "fbf7df36396e91f6",
+      "template": "t.me/auction/<slug>"
+    },
+    {
+      "id": "1a2c1c944f3998b3",
+      "template": "t.me/bg/<hex_color>"
+    },
+    {
+      "id": "c5e6a39f7479d37e",
+      "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>"
+    },
+    {
+      "id": "0354f85718a41ade",
+      "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>"
+    },
+    {
+      "id": "2c67afc1e54671cf",
+      "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<bg_color>&mode=<mode>"
+    },
+    {
+      "id": "7784e6810da1c6f4",
+      "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>"
+    },
+    {
+      "id": "addcde8f139ff1ad",
+      "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>"
+    },
+    {
+      "id": "4ef35fd14e105fd9",
+      "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>"
+    },
+    {
+      "id": "df267168d578b781",
+      "template": "t.me/bg/<slug>?mode=<mode>"
+    },
+    {
+      "id": "fc885f02c6a7722b",
+      "template": "t.me/bg/<top_color>-<bottom_color>?rotation=<rotation>"
+    },
+    {
+      "id": "dc99ad79b3fc1138",
+      "template": "t.me/boost?c=<id>"
+    },
+    {
+      "id": "fe2bbf465f070aa0",
+      "template": "t.me/boost/<username>"
+    },
+    {
+      "id": "ca24e754b49f659d",
+      "template": "t.me/c/<channel>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>"
+    },
+    {
+      "id": "0f760edb84522160",
+      "template": "t.me/c/<channel>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>"
+    },
+    {
+      "id": "e0f891ad66a4470d",
+      "template": "t.me/c/<id>?boost"
+    },
+    {
+      "id": "4d0c2f9b57562043",
+      "template": "t.me/call/<slug>"
+    },
+    {
+      "id": "4c44b51e13718889",
+      "template": "t.me/confirmphone?phone=<phone>&hash=<hash>"
+    },
+    {
+      "id": "0940a939e75f2956",
+      "template": "t.me/contact/<token>"
+    },
+    {
+      "id": "32d00ffa49fae1b6",
+      "template": "t.me/giftcode/<slug>"
+    },
+    {
+      "id": "60cec37c239b1e6e",
+      "template": "t.me/invoice/<slug>"
+    },
+    {
+      "id": "4f49c1576af56772",
+      "template": "t.me/joinchat/<hash>"
+    },
+    {
+      "id": "7f5662bbc8327d0c",
+      "template": "t.me/login/<code>"
+    },
+    {
+      "id": "2a821081bc40780a",
+      "template": "t.me/m/<slug>"
+    },
+    {
+      "id": "12874cb7841d0e95",
+      "template": "t.me/msg/url?url=<url>&text=<text>"
+    },
+    {
+      "id": "8e3ec832f2090c3c",
+      "template": "t.me/newbot/<manager_bot_username>?name=<suggested_bot_name>"
+    },
+    {
+      "id": "809cd47c37844fbb",
+      "template": "t.me/newbot/<manager_bot_username>/<suggested_bot_username>?name=<suggested_bot_name>"
+    },
+    {
+      "id": "5ea4063f4f5326fc",
+      "template": "t.me/nft/<slug>"
+    },
+    {
+      "id": "80b49f45cd8b6dfd",
+      "template": "t.me/path?query"
+    },
+    {
+      "id": "62cf223c246c01cd",
+      "template": "t.me/proxy?server=<server>&port=<port>&secret=<secret>"
+    },
+    {
+      "id": "adb4361843daa664",
+      "template": "t.me/setlanguage/<slug>"
+    },
+    {
+      "id": "9f5258bdffe674a1",
+      "template": "t.me/share?url=<url>&text=<text>"
+    },
+    {
+      "id": "f5c7b7eb140905c3",
+      "template": "t.me/share/url?url=<url>&text=<text>"
+    },
+    {
+      "id": "534487e58490237b",
+      "template": "t.me/share/url/?url=<url>&text=<text>"
+    },
+    {
+      "id": "3be1ca631fd2e12a",
+      "template": "t.me/socks?server=<server>&port=<port>&user=<user>&pass=<pass>"
+    },
+    {
+      "id": "8c74958e025a976b",
+      "template": "tg://addemoji?set=<slug>"
+    },
+    {
+      "id": "728ef371c47e3d95",
+      "template": "tg://addlist?slug=<slug>"
+    },
+    {
+      "id": "a3e3e16c30ebd1d5",
+      "template": "tg://addstickers?set=<slug>"
+    },
+    {
+      "id": "19829c795675ce28",
+      "template": "tg://addstyle?slug=<slug>"
+    },
+    {
+      "id": "6e1079623b02b8c5",
+      "template": "tg://addtheme?slug=<name>"
+    },
+    {
+      "id": "f45aff12a7fe4207",
+      "template": "tg://bg?color=<hex_color>"
+    },
+    {
+      "id": "a9d8d232b1aba85b",
+      "template": "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>"
+    },
+    {
+      "id": "9271a7feda7b6d96",
+      "template": "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>"
+    },
+    {
+      "id": "2d42475a07ac7157",
+      "template": "tg://bg?gradient=<top_color>-<bottom_color>&rotation=<rotation>"
+    },
+    {
+      "id": "b86014e6465ca768",
+      "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<bg_color>&mode=<mode>"
+    },
+    {
+      "id": "23b58d0ad21c6899",
+      "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>"
+    },
+    {
+      "id": "0f6f146243ba686d",
+      "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>"
+    },
+    {
+      "id": "4f51bf92c39a7e7d",
+      "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>"
+    },
+    {
+      "id": "72d485bdf8e42396",
+      "template": "tg://bg?slug=<slug>&mode=<mode>"
+    },
+    {
+      "id": "e0e0e17554c40d9e",
+      "template": "tg://boost?channel=<id>"
+    },
+    {
+      "id": "6cb4d2c0af3cf42f",
+      "template": "tg://boost?domain=<username>"
+    },
+    {
+      "id": "ccb867480b7e4a85",
+      "template": "tg://call?slug=<slug>"
+    },
+    {
+      "id": "4d52853abd41390d",
+      "template": "tg://chats/edit"
+    },
+    {
+      "id": "c14603a5711d0205",
+      "template": "tg://chats/emoji-status"
+    },
+    {
+      "id": "4dcb0d9988ddb89e",
+      "template": "tg://chats/search"
+    },
+    {
+      "id": "6595ad92507db0dc",
+      "template": "tg://confirmphone?phone=<phone>&hash=<hash>"
+    },
+    {
+      "id": "061f1873e7380c8b",
+      "template": "tg://contact?token=<token>"
+    },
+    {
+      "id": "be0fb4501b3599e9",
+      "template": "tg://contacts"
+    },
+    {
+      "id": "20544ec861b391e2",
+      "template": "tg://contacts/<section>"
+    },
+    {
+      "id": "e0ee21f95f9e9161",
+      "template": "tg://emoji?id=<id>"
+    },
+    {
+      "id": "af8dae2c651f1e57",
+      "template": "tg://giftcode?slug=<slug>"
+    },
+    {
+      "id": "3b699ce4007e5641",
+      "template": "tg://invoice?slug=<slug>"
+    },
+    {
+      "id": "b4c39ca36111c933",
+      "template": "tg://join?invite=<hash>"
+    },
+    {
+      "id": "b1aef9faac0ce9e7",
+      "template": "tg://login?code=<code>"
+    },
+    {
+      "id": "504a570aaae25f63",
+      "template": "tg://login?token=<base64encodedtoken>"
+    },
+    {
+      "id": "8cbe6cdb2a7abc6b",
+      "template": "tg://message?slug=<slug>"
+    },
+    {
+      "id": "3d8475c99b362a63",
+      "template": "tg://msg_url?url=<url>&text=<text>"
+    },
+    {
+      "id": "a1ef5fd8bc051a4c",
+      "template": "tg://need_update_for_some_feature?test=a"
+    },
+    {
+      "id": "6f095ba9529402fb",
+      "template": "tg://new"
+    },
+    {
+      "id": "28daabaf2cc252ed",
+      "template": "tg://new/channel"
+    },
+    {
+      "id": "2a98554e10a7e01f",
+      "template": "tg://new/group"
+    },
+    {
+      "id": "626ce019c2f2ba11",
+      "template": "tg://newbot?manager=<manager_bot_username>&username=<suggested_bot_username>&name=<suggested_bot_name>"
+    },
+    {
+      "id": "2aa5686c988a4000",
+      "template": "tg://nft?slug=<slug>"
+    },
+    {
+      "id": "f303208d0e3f2670",
+      "template": "tg://oauth?token=<token>"
+    },
+    {
+      "id": "4475c716aee0c79b",
+      "template": "tg://passport?params"
+    },
+    {
+      "id": "cd751494b2c01771",
+      "template": "tg://path?query"
+    },
+    {
+      "id": "1751a00fa02e68cd",
+      "template": "tg://post"
+    },
+    {
+      "id": "a1696e17f08f707a",
+      "template": "tg://post/<content_type>"
+    },
+    {
+      "id": "dc8184635262e3c7",
+      "template": "tg://premium_multigift?ref=<referrer>"
+    },
+    {
+      "id": "4fd55d4747c389cd",
+      "template": "tg://premium_offer?ref=<referrer>"
+    },
+    {
+      "id": "3fc567a88c1b6741",
+      "template": "tg://privatepost?channel=<channel>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>"
+    },
+    {
+      "id": "5bd99e748c54ffe1",
+      "template": "tg://proxy?server=<server>&port=<port>&secret=<secret>"
+    },
+    {
+      "id": "e69b278ec8480534",
+      "template": "tg://resolve?domain=<bot_username>&appname=<short_name>&startapp=<start_parameter>&mode=<mode>"
+    },
+    {
+      "id": "adac1a82642303ba",
+      "template": "tg://resolve?domain=<bot_username>&game=<short_name>"
+    },
+    {
+      "id": "92de10a77a03e660",
+      "template": "tg://resolve?domain=<bot_username>&ref=<referrer>"
+    },
+    {
+      "id": "76495f2f68105300",
+      "template": "tg://resolve?domain=<bot_username>&start={prefix}<referrer>"
+    },
+    {
+      "id": "525babd224ecc2b6",
+      "template": "tg://resolve?domain=<bot_username>&start=<parameter>"
+    },
+    {
+      "id": "23edccb78e409b3d",
+      "template": "tg://resolve?domain=<bot_username>&startapp&mode=<mode>"
+    },
+    {
+      "id": "19cba56e1e1a25db",
+      "template": "tg://resolve?domain=<bot_username>&startapp=<start_parameter>&mode=<mode>"
+    },
+    {
+      "id": "490658f46648766e",
+      "template": "tg://resolve?domain=<bot_username>&startattach"
+    },
+    {
+      "id": "c7fa9015fb84c8c5",
+      "template": "tg://resolve?domain=<bot_username>&startattach&choose=users+bots+groups+channels"
+    },
+    {
+      "id": "6919a41c8125627e",
+      "template": "tg://resolve?domain=<bot_username>&startattach=<start_parameter>"
+    },
+    {
+      "id": "60b36732d7e74f13",
+      "template": "tg://resolve?domain=<bot_username>&startattach=<start_parameter>&choose=users+bots+groups+channels"
+    },
+    {
+      "id": "6287fae0e63abbb4",
+      "template": "tg://resolve?domain=<bot_username>&startchannel&admin=<permissions>"
+    },
+    {
+      "id": "1457c9e19cd42020",
+      "template": "tg://resolve?domain=<bot_username>&startgroup&admin=<permissions>"
+    },
+    {
+      "id": "49a8874e579ad13b",
+      "template": "tg://resolve?domain=<bot_username>&startgroup=<parameter>&admin=<permissions>"
+    },
+    {
+      "id": "ac400acf021233a0",
+      "template": "tg://resolve?domain=<username>&album=<album_id>"
+    },
+    {
+      "id": "8d039cf8b44f612c",
+      "template": "tg://resolve?domain=<username>&attach=<bot_username>"
+    },
+    {
+      "id": "a5ba716556c4f634",
+      "template": "tg://resolve?domain=<username>&attach=<bot_username>&startattach=<start_parameter>"
+    },
+    {
+      "id": "ec4d83881da4c213",
+      "template": "tg://resolve?domain=<username>&collection=<collection_id>"
+    },
+    {
+      "id": "7ab8aa36d0b74bde",
+      "template": "tg://resolve?domain=<username>&direct"
+    },
+    {
+      "id": "6756d4b76b268556",
+      "template": "tg://resolve?domain=<username>&livestream"
+    },
+    {
+      "id": "a0e16f68eab98a1b",
+      "template": "tg://resolve?domain=<username>&livestream=<invite_hash>"
+    },
+    {
+      "id": "6dd4a357b2bc8677",
+      "template": "tg://resolve?domain=<username>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>"
+    },
+    {
+      "id": "7987d03a2e719e58",
+      "template": "tg://resolve?domain=<username>&story=<story_id>"
+    },
+    {
+      "id": "7bf59197598dd438",
+      "template": "tg://resolve?domain=<username>&story=live"
+    },
+    {
+      "id": "7e8d8818327ace29",
+      "template": "tg://resolve?domain=<username>&text=<draft_text>&profile"
+    },
+    {
+      "id": "bb64306381d348c6",
+      "template": "tg://resolve?domain=<username>&videochat"
+    },
+    {
+      "id": "547565f1a51e0167",
+      "template": "tg://resolve?domain=<username>&videochat=<invite_hash>"
+    },
+    {
+      "id": "c006e95f195caaaf",
+      "template": "tg://resolve?domain=<username>&voicechat"
+    },
+    {
+      "id": "670d5519025fa17e",
+      "template": "tg://resolve?domain=<username>&voicechat=<invite_hash>"
+    },
+    {
+      "id": "2ca0bbabfdd82d06",
+      "template": "tg://resolve?domain=oauth&startapp=<token>"
+    },
+    {
+      "id": "389dd26d940ef81a",
+      "template": "tg://resolve?domain=telegrampassport&params"
+    },
+    {
+      "id": "bac458253a5aaba9",
+      "template": "tg://resolve?phone=<phone_number>&attach=<bot_username>"
+    },
+    {
+      "id": "9c310cd6737b6dda",
+      "template": "tg://resolve?phone=<phone_number>&attach=<bot_username>&startattach=<start_parameter>"
+    },
+    {
+      "id": "9688eb4b8672ceb3",
+      "template": "tg://resolve?phone=<phone_number>&text=<draft_text>&profile"
+    },
+    {
+      "id": "62fff54ac600a1f7",
+      "template": "tg://setlanguage?lang=<slug>"
+    },
+    {
+      "id": "cb647f5e74084f61",
+      "template": "tg://settings"
+    },
+    {
+      "id": "ef3020c4f469a888",
+      "template": "tg://settings/<path>"
+    },
+    {
+      "id": "c9da88eb87d7f720",
+      "template": "tg://settings/stars"
+    },
+    {
+      "id": "a8ba7b72878d8d7a",
+      "template": "tg://settings/ton"
+    },
+    {
+      "id": "0d36caa7584ba290",
+      "template": "tg://socks?server=<server>&port=<port>&user=<user>&pass=<pass>"
+    },
+    {
+      "id": "c9ae3ba9344daf3b",
+      "template": "tg://stargift_auction?slug=<slug>"
+    },
+    {
+      "id": "3ab588e8b70a16a2",
+      "template": "tg://stars"
+    },
+    {
+      "id": "c19130d3bb6d4633",
+      "template": "tg://stars_topup?balance=<star_count>&purpose=<purpose>"
+    },
+    {
+      "id": "c8db60b66c61a65e",
+      "template": "tg://time?unix=<unix>&format=<format>"
+    },
+    {
+      "id": "deb58044959d045e",
+      "template": "tg://ton"
+    },
+    {
+      "id": "d5305e13fef56596",
+      "template": "tg://user?id=<id>"
+    },
+    {
+      "id": "7ba0a6d846616d0b",
+      "template": "tg:path?query"
+    },
+    {
+      "id": "1aa05d11334c57a6",
+      "template": "tg:some_unsupported_feature?test=b"
+    },
+    {
+      "id": "510676bc43cc0007",
+      "template": "tonsite://"
+    },
+    {
+      "id": "2b5c98a1fad6d3dd",
+      "template": "tonsite://somesite.domain/path?query#hash"
+    }
+  ],
+  "pending": [],
+  "posted": [],
+  "removedHistory": []
+}

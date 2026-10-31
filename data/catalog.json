@@ -1,0 +1,1281 @@
+{
+  "fetchedAt": "2026-10-31T11:17:43.851Z",
+  "sources": {
+    "html": {
+      "url": "https://corefork.telegram.org/api/links",
+      "finalUrl": "https://corefork.telegram.org/api/links",
+      "sha256": "ec91521cb053e73dbef332b04aed85132bc5c01183a5ff151d4411c61779239f",
+      "etag": null,
+      "lastModified": null
+    },
+    "markdown": {
+      "url": "https://corefork.telegram.org/api/links.md",
+      "finalUrl": "https://corefork.telegram.org/api/links.md",
+      "sha256": "cc6a6c87f58307ddd05b1237b945ffacc10afe00ef08505cdf3bfc8407e6c8a1",
+      "etag": null,
+      "lastModified": null
+    }
+  },
+  "verification": {
+    "htmlCount": 179,
+    "markdownCount": 179,
+    "commonCount": 179,
+    "overlap": 1
+  },
+  "total": 179,
+  "inventory": [
+    {
+      "id": "eb7dc3a2b194facf",
+      "template": "getting-started.ton/path?query#hash",
+      "category": "Deep links",
+      "section": "TON Sites",
+      "line": 73
+    },
+    {
+      "id": "c49f06e04d3060a0",
+      "template": "http://t.me/path?query",
+      "category": "Deep links",
+      "section": "General",
+      "line": 12
+    },
+    {
+      "id": "aa100cd443934813",
+      "template": "https://t.me/oauth?startapp=<token>",
+      "category": "Deep links",
+      "section": "OAuth links",
+      "line": 608
+    },
+    {
+      "id": "74d9504d85368edd",
+      "template": "https://t.me/path?query",
+      "category": "Deep links",
+      "section": "General",
+      "line": 13
+    },
+    {
+      "id": "04a41128dbe27370",
+      "template": "t.me/+<hash>",
+      "category": "Deep links",
+      "section": "Chat invite links",
+      "line": 197
+    },
+    {
+      "id": "5dd7b8510a76f22a",
+      "template": "t.me/+<phone_number>?attach=<bot_username>",
+      "category": "Deep links",
+      "section": "Open in specific chat",
+      "line": 1702
+    },
+    {
+      "id": "696fc28370915deb",
+      "template": "t.me/+<phone_number>?attach=<bot_username>&startattach=<start_parameter>",
+      "category": "Deep links",
+      "section": "Open in specific chat",
+      "line": 1702
+    },
+    {
+      "id": "0cb10d48442d2bbe",
+      "template": "t.me/+<phone_number>?text=<draft_text>&profile",
+      "category": "Deep links",
+      "section": "Phone number links",
+      "line": 169
+    },
+    {
+      "id": "4daed258de9ac4c9",
+      "template": "t.me/<bot_username>?game=<short_name>",
+      "category": "Deep links",
+      "section": "Game links",
+      "line": 984
+    },
+    {
+      "id": "85a6394bf748e668",
+      "template": "t.me/<bot_username>?ref=<referrer>",
+      "category": "Deep links",
+      "section": "Referral links",
+      "line": 1848
+    },
+    {
+      "id": "dd84efe0f9a64a85",
+      "template": "t.me/<bot_username>?start={prefix}<referrer>",
+      "category": "Deep links",
+      "section": "Referral links",
+      "line": 1848
+    },
+    {
+      "id": "b95925a673c40f22",
+      "template": "t.me/<bot_username>?start=<parameter>",
+      "category": "Deep links",
+      "section": "Bot links",
+      "line": 889
+    },
+    {
+      "id": "2873c2edc136302f",
+      "template": "t.me/<bot_username>?startapp&mode=<mode>",
+      "category": "Deep links",
+      "section": "Main Mini App links",
+      "line": 1610
+    },
+    {
+      "id": "d16a4d667fa21f31",
+      "template": "t.me/<bot_username>?startapp=<start_parameter>&mode=<mode>",
+      "category": "Deep links",
+      "section": "Main Mini App links",
+      "line": 1610
+    },
+    {
+      "id": "d7fe1a778be93e81",
+      "template": "t.me/<bot_username>?startattach",
+      "category": "Deep links",
+      "section": "Open in current chat",
+      "line": 1677
+    },
+    {
+      "id": "48d939afeb448ef2",
+      "template": "t.me/<bot_username>?startattach&choose=users+bots+groups+channels",
+      "category": "Deep links",
+      "section": "Open in any chat",
+      "line": 1734
+    },
+    {
+      "id": "137a27bf1f5771e8",
+      "template": "t.me/<bot_username>?startattach=<start_parameter>",
+      "category": "Deep links",
+      "section": "Open in current chat",
+      "line": 1677
+    },
+    {
+      "id": "936bae0b1b8e7c40",
+      "template": "t.me/<bot_username>?startattach=<start_parameter>&choose=users+bots+groups+channels",
+      "category": "Deep links",
+      "section": "Open in any chat",
+      "line": 1734
+    },
+    {
+      "id": "5d528128f43850a2",
+      "template": "t.me/<bot_username>?startchannel&admin=<permissions>",
+      "category": "Deep links",
+      "section": "Group/channel bot links",
+      "line": 940
+    },
+    {
+      "id": "12c07bc1190c9ac9",
+      "template": "t.me/<bot_username>?startgroup&admin=<permissions>",
+      "category": "Deep links",
+      "section": "Group/channel bot links",
+      "line": 929
+    },
+    {
+      "id": "9e8ff7fa0d154a31",
+      "template": "t.me/<bot_username>?startgroup=<parameter>&admin=<permissions>",
+      "category": "Deep links",
+      "section": "Group/channel bot links",
+      "line": 929
+    },
+    {
+      "id": "08cefaeac37efeb2",
+      "template": "t.me/<bot_username>/<short_name>?startapp=<start_parameter>&mode=<mode>",
+      "category": "Deep links",
+      "section": "Direct mini app links",
+      "line": 1640
+    },
+    {
+      "id": "c08d622b71302872",
+      "template": "t.me/<username>?album=<album_id>",
+      "category": "Deep links",
+      "section": "Story album links",
+      "line": 492
+    },
+    {
+      "id": "74c6fdd36ce603b1",
+      "template": "t.me/<username>?attach=<bot_username>",
+      "category": "Deep links",
+      "section": "Open in specific chat",
+      "line": 1702
+    },
+    {
+      "id": "9b56a106a411e78e",
+      "template": "t.me/<username>?attach=<bot_username>&startattach=<start_parameter>",
+      "category": "Deep links",
+      "section": "Open in specific chat",
+      "line": 1702
+    },
+    {
+      "id": "2dde4e632fa9f167",
+      "template": "t.me/<username>?boost",
+      "category": "Deep links",
+      "section": "Boost links",
+      "line": 569
+    },
+    {
+      "id": "8a867f3125d96791",
+      "template": "t.me/<username>?collection=<collection_id>",
+      "category": "Deep links",
+      "section": "Gift collection links",
+      "line": 1804
+    },
+    {
+      "id": "e5dc5d2e0da11688",
+      "template": "t.me/<username>?direct",
+      "category": "Deep links",
+      "section": "Monoforum links",
+      "line": 125
+    },
+    {
+      "id": "8e84f537aa37bbdf",
+      "template": "t.me/<username>?livestream",
+      "category": "Deep links",
+      "section": "Video chat/Livestream links",
+      "line": 362
+    },
+    {
+      "id": "69d01ad45efa6908",
+      "template": "t.me/<username>?livestream=<invite_hash>",
+      "category": "Deep links",
+      "section": "Video chat/Livestream links",
+      "line": 362
+    },
+    {
+      "id": "9883ae11c80259fa",
+      "template": "t.me/<username>?text=<draft_text>&profile",
+      "category": "Deep links",
+      "section": "Public username links",
+      "line": 95
+    },
+    {
+      "id": "c5fff412f5f426c2",
+      "template": "t.me/<username>?videochat",
+      "category": "Deep links",
+      "section": "Video chat/Livestream links",
+      "line": 362
+    },
+    {
+      "id": "368cbd6e45153a96",
+      "template": "t.me/<username>?videochat=<invite_hash>",
+      "category": "Deep links",
+      "section": "Video chat/Livestream links",
+      "line": 362
+    },
+    {
+      "id": "db58253adf65007a",
+      "template": "t.me/<username>?voicechat",
+      "category": "Deep links",
+      "section": "Video chat/Livestream links",
+      "line": 362
+    },
+    {
+      "id": "4395bc28a5b358eb",
+      "template": "t.me/<username>?voicechat=<invite_hash>",
+      "category": "Deep links",
+      "section": "Video chat/Livestream links",
+      "line": 362
+    },
+    {
+      "id": "b07eabff2871b692",
+      "template": "t.me/<username>/",
+      "category": "Deep links",
+      "section": "General",
+      "line": 55
+    },
+    {
+      "id": "6746b96a15cb81ca",
+      "template": "t.me/<username>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+      "category": "Deep links",
+      "section": "Message links",
+      "line": 243
+    },
+    {
+      "id": "e195cce9dd35cba4",
+      "template": "t.me/<username>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+      "category": "Deep links",
+      "section": "Message links",
+      "line": 243
+    },
+    {
+      "id": "72b93d7a194f67b8",
+      "template": "t.me/<username>/a/<album_id>",
+      "category": "Deep links",
+      "section": "Story album links",
+      "line": 492
+    },
+    {
+      "id": "392a7822ff32c1a0",
+      "template": "t.me/<username>/c/<collection_id>",
+      "category": "Deep links",
+      "section": "Gift collection links",
+      "line": 1804
+    },
+    {
+      "id": "fa2e1e6319029b7a",
+      "template": "t.me/<username>/s/<story_id>",
+      "category": "Deep links",
+      "section": "Story links",
+      "line": 449
+    },
+    {
+      "id": "108b079633fdf97a",
+      "template": "t.me/<username>/s/live",
+      "category": "Deep links",
+      "section": "Live story links",
+      "line": 471
+    },
+    {
+      "id": "1232d320a00b0d68",
+      "template": "t.me/$<slug>",
+      "category": "Deep links",
+      "section": "Invoice links",
+      "line": 1466
+    },
+    {
+      "id": "3a3590bb5fd015bd",
+      "template": "t.me/addemoji/<slug>",
+      "category": "Deep links",
+      "section": "Stickerset links",
+      "line": 408
+    },
+    {
+      "id": "b79ad7b2f7b63927",
+      "template": "t.me/addlist/<slug>",
+      "category": "Deep links",
+      "section": "Chat folder links",
+      "line": 222
+    },
+    {
+      "id": "8f3e5479436ac528",
+      "template": "t.me/addstickers/<slug>",
+      "category": "Deep links",
+      "section": "Stickerset links",
+      "line": 408
+    },
+    {
+      "id": "c01f3e652d96b375",
+      "template": "t.me/addstyle/<slug>",
+      "category": "Deep links",
+      "section": "AI compose tone links",
+      "line": 701
+    },
+    {
+      "id": "8b617730d270a405",
+      "template": "t.me/addtheme/<name>",
+      "category": "Deep links",
+      "section": "Theme links",
+      "line": 679
+    },
+    {
+      "id": "fbf7df36396e91f6",
+      "template": "t.me/auction/<slug>",
+      "category": "Deep links",
+      "section": "Auction links",
+      "line": 1825
+    },
+    {
+      "id": "1a2c1c944f3998b3",
+      "template": "t.me/bg/<hex_color>",
+      "category": "Deep links",
+      "section": "Solid fill wallpapers",
+      "line": 746
+    },
+    {
+      "id": "c5e6a39f7479d37e",
+      "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>",
+      "category": "Deep links",
+      "section": "Free-form gradient fill wallpapers",
+      "line": 789
+    },
+    {
+      "id": "0354f85718a41ade",
+      "template": "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
+      "category": "Deep links",
+      "section": "Free-form gradient fill wallpapers",
+      "line": 789
+    },
+    {
+      "id": "2c67afc1e54671cf",
+      "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
+      "category": "Deep links",
+      "section": "Solid pattern wallpapers",
+      "line": 813
+    },
+    {
+      "id": "7784e6810da1c6f4",
+      "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
+      "category": "Deep links",
+      "section": "Free-form gradient pattern wallpapers",
+      "line": 862
+    },
+    {
+      "id": "addcde8f139ff1ad",
+      "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
+      "category": "Deep links",
+      "section": "Free-form gradient pattern wallpapers",
+      "line": 862
+    },
+    {
+      "id": "4ef35fd14e105fd9",
+      "template": "t.me/bg/<slug>?intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
+      "category": "Deep links",
+      "section": "Gradient pattern wallpapers",
+      "line": 836
+    },
+    {
+      "id": "df267168d578b781",
+      "template": "t.me/bg/<slug>?mode=<mode>",
+      "category": "Deep links",
+      "section": "[Image wallpapers](/api/wallpapers.md#image-wallpapers)",
+      "line": 725
+    },
+    {
+      "id": "fc885f02c6a7722b",
+      "template": "t.me/bg/<top_color>-<bottom_color>?rotation=<rotation>",
+      "category": "Deep links",
+      "section": "Gradient fill wallpapers",
+      "line": 766
+    },
+    {
+      "id": "dc99ad79b3fc1138",
+      "template": "t.me/boost?c=<id>",
+      "category": "Deep links",
+      "section": "Boost links",
+      "line": 575
+    },
+    {
+      "id": "fe2bbf465f070aa0",
+      "template": "t.me/boost/<username>",
+      "category": "Deep links",
+      "section": "Boost links",
+      "line": 569
+    },
+    {
+      "id": "ca24e754b49f659d",
+      "template": "t.me/c/<channel>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+      "category": "Deep links",
+      "section": "Message links",
+      "line": 249
+    },
+    {
+      "id": "0f760edb84522160",
+      "template": "t.me/c/<channel>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+      "category": "Deep links",
+      "section": "Message links",
+      "line": 249
+    },
+    {
+      "id": "e0f891ad66a4470d",
+      "template": "t.me/c/<id>?boost",
+      "category": "Deep links",
+      "section": "Boost links",
+      "line": 575
+    },
+    {
+      "id": "4d0c2f9b57562043",
+      "template": "t.me/call/<slug>",
+      "category": "Deep links",
+      "section": "Conference links",
+      "line": 387
+    },
+    {
+      "id": "4c44b51e13718889",
+      "template": "t.me/confirmphone?phone=<phone>&hash=<hash>",
+      "category": "Deep links",
+      "section": "Phone confirmation links",
+      "line": 1517
+    },
+    {
+      "id": "0940a939e75f2956",
+      "template": "t.me/contact/<token>",
+      "category": "Deep links",
+      "section": "Temporary profile links",
+      "line": 149
+    },
+    {
+      "id": "32d00ffa49fae1b6",
+      "template": "t.me/giftcode/<slug>",
+      "category": "Deep links",
+      "section": "Premium giftcode links",
+      "line": 1575
+    },
+    {
+      "id": "60cec37c239b1e6e",
+      "template": "t.me/invoice/<slug>",
+      "category": "Deep links",
+      "section": "Invoice links",
+      "line": 1466
+    },
+    {
+      "id": "4f49c1576af56772",
+      "template": "t.me/joinchat/<hash>",
+      "category": "Deep links",
+      "section": "Chat invite links",
+      "line": 202
+    },
+    {
+      "id": "7f5662bbc8327d0c",
+      "template": "t.me/login/<code>",
+      "category": "Deep links",
+      "section": "Login code link",
+      "line": 1445
+    },
+    {
+      "id": "2a821081bc40780a",
+      "template": "t.me/m/<slug>",
+      "category": "Deep links",
+      "section": "Business chat links",
+      "line": 335
+    },
+    {
+      "id": "12874cb7841d0e95",
+      "template": "t.me/msg/url?url=<url>&text=<text>",
+      "category": "Deep links",
+      "section": "Share links",
+      "line": 305
+    },
+    {
+      "id": "8e3ec832f2090c3c",
+      "template": "t.me/newbot/<manager_bot_username>?name=<suggested_bot_name>",
+      "category": "Deep links",
+      "section": "Managed bot creation request links",
+      "line": 540
+    },
+    {
+      "id": "809cd47c37844fbb",
+      "template": "t.me/newbot/<manager_bot_username>/<suggested_bot_username>?name=<suggested_bot_name>",
+      "category": "Deep links",
+      "section": "Managed bot creation request links",
+      "line": 540
+    },
+    {
+      "id": "5ea4063f4f5326fc",
+      "template": "t.me/nft/<slug>",
+      "category": "Deep links",
+      "section": "Collectible gift link",
+      "line": 1782
+    },
+    {
+      "id": "80b49f45cd8b6dfd",
+      "template": "t.me/path?query",
+      "category": "Deep links",
+      "section": "General",
+      "line": 11
+    },
+    {
+      "id": "62cf223c246c01cd",
+      "template": "t.me/proxy?server=<server>&port=<port>&secret=<secret>",
+      "category": "Deep links",
+      "section": "MTProxy links",
+      "line": 634
+    },
+    {
+      "id": "adb4361843daa664",
+      "template": "t.me/setlanguage/<slug>",
+      "category": "Deep links",
+      "section": "Language pack links",
+      "line": 1486
+    },
+    {
+      "id": "9f5258bdffe674a1",
+      "template": "t.me/share?url=<url>&text=<text>",
+      "category": "Deep links",
+      "section": "Share links",
+      "line": 305
+    },
+    {
+      "id": "f5c7b7eb140905c3",
+      "template": "t.me/share/url?url=<url>&text=<text>",
+      "category": "Deep links",
+      "section": "Share links",
+      "line": 305
+    },
+    {
+      "id": "534487e58490237b",
+      "template": "t.me/share/url/?url=<url>&text=<text>",
+      "category": "Deep links",
+      "section": "Share links",
+      "line": 305
+    },
+    {
+      "id": "3be1ca631fd2e12a",
+      "template": "t.me/socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
+      "category": "Deep links",
+      "section": "SOCKS5 proxy links",
+      "line": 656
+    },
+    {
+      "id": "8c74958e025a976b",
+      "template": "tg://addemoji?set=<slug>",
+      "category": "Deep links",
+      "section": "Stickerset links",
+      "line": 414
+    },
+    {
+      "id": "728ef371c47e3d95",
+      "template": "tg://addlist?slug=<slug>",
+      "category": "Deep links",
+      "section": "Chat folder links",
+      "line": 227
+    },
+    {
+      "id": "a3e3e16c30ebd1d5",
+      "template": "tg://addstickers?set=<slug>",
+      "category": "Deep links",
+      "section": "Stickerset links",
+      "line": 414
+    },
+    {
+      "id": "19829c795675ce28",
+      "template": "tg://addstyle?slug=<slug>",
+      "category": "Deep links",
+      "section": "AI compose tone links",
+      "line": 706
+    },
+    {
+      "id": "6e1079623b02b8c5",
+      "template": "tg://addtheme?slug=<name>",
+      "category": "Deep links",
+      "section": "Theme links",
+      "line": 684
+    },
+    {
+      "id": "f45aff12a7fe4207",
+      "template": "tg://bg?color=<hex_color>",
+      "category": "Deep links",
+      "section": "Solid fill wallpapers",
+      "line": 751
+    },
+    {
+      "id": "a9d8d232b1aba85b",
+      "template": "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>",
+      "category": "Deep links",
+      "section": "Free-form gradient fill wallpapers",
+      "line": 795
+    },
+    {
+      "id": "9271a7feda7b6d96",
+      "template": "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
+      "category": "Deep links",
+      "section": "Free-form gradient fill wallpapers",
+      "line": 795
+    },
+    {
+      "id": "2d42475a07ac7157",
+      "template": "tg://bg?gradient=<top_color>-<bottom_color>&rotation=<rotation>",
+      "category": "Deep links",
+      "section": "Gradient fill wallpapers",
+      "line": 771
+    },
+    {
+      "id": "b86014e6465ca768",
+      "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
+      "category": "Deep links",
+      "section": "Solid pattern wallpapers",
+      "line": 818
+    },
+    {
+      "id": "23b58d0ad21c6899",
+      "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
+      "category": "Deep links",
+      "section": "Free-form gradient pattern wallpapers",
+      "line": 868
+    },
+    {
+      "id": "0f6f146243ba686d",
+      "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
+      "category": "Deep links",
+      "section": "Free-form gradient pattern wallpapers",
+      "line": 868
+    },
+    {
+      "id": "4f51bf92c39a7e7d",
+      "template": "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
+      "category": "Deep links",
+      "section": "Gradient pattern wallpapers",
+      "line": 841
+    },
+    {
+      "id": "72d485bdf8e42396",
+      "template": "tg://bg?slug=<slug>&mode=<mode>",
+      "category": "Deep links",
+      "section": "[Image wallpapers](/api/wallpapers.md#image-wallpapers)",
+      "line": 730
+    },
+    {
+      "id": "e0e0e17554c40d9e",
+      "template": "tg://boost?channel=<id>",
+      "category": "Deep links",
+      "section": "Boost links",
+      "line": 585
+    },
+    {
+      "id": "6cb4d2c0af3cf42f",
+      "template": "tg://boost?domain=<username>",
+      "category": "Deep links",
+      "section": "Boost links",
+      "line": 580
+    },
+    {
+      "id": "ccb867480b7e4a85",
+      "template": "tg://call?slug=<slug>",
+      "category": "Deep links",
+      "section": "Conference links",
+      "line": 392
+    },
+    {
+      "id": "4d52853abd41390d",
+      "template": "tg://chats/edit",
+      "category": "Deep links",
+      "section": "Chat list links",
+      "line": 1430
+    },
+    {
+      "id": "c14603a5711d0205",
+      "template": "tg://chats/emoji-status",
+      "category": "Deep links",
+      "section": "Chat list links",
+      "line": 1430
+    },
+    {
+      "id": "4dcb0d9988ddb89e",
+      "template": "tg://chats/search",
+      "category": "Deep links",
+      "section": "Chat list links",
+      "line": 1430
+    },
+    {
+      "id": "6595ad92507db0dc",
+      "template": "tg://confirmphone?phone=<phone>&hash=<hash>",
+      "category": "Deep links",
+      "section": "Phone confirmation links",
+      "line": 1522
+    },
+    {
+      "id": "061f1873e7380c8b",
+      "template": "tg://contact?token=<token>",
+      "category": "Deep links",
+      "section": "Temporary profile links",
+      "line": 154
+    },
+    {
+      "id": "be0fb4501b3599e9",
+      "template": "tg://contacts",
+      "category": "Deep links",
+      "section": "Contacts links",
+      "line": 1391
+    },
+    {
+      "id": "20544ec861b391e2",
+      "template": "tg://contacts/<section>",
+      "category": "Deep links",
+      "section": "Contacts links",
+      "line": 1391
+    },
+    {
+      "id": "e0ee21f95f9e9161",
+      "template": "tg://emoji?id=<id>",
+      "category": "Deep links",
+      "section": "Emoji links",
+      "line": 1887
+    },
+    {
+      "id": "af8dae2c651f1e57",
+      "template": "tg://giftcode?slug=<slug>",
+      "category": "Deep links",
+      "section": "Premium giftcode links",
+      "line": 1570
+    },
+    {
+      "id": "3b699ce4007e5641",
+      "template": "tg://invoice?slug=<slug>",
+      "category": "Deep links",
+      "section": "Invoice links",
+      "line": 1471
+    },
+    {
+      "id": "b4c39ca36111c933",
+      "template": "tg://join?invite=<hash>",
+      "category": "Deep links",
+      "section": "Chat invite links",
+      "line": 207
+    },
+    {
+      "id": "b1aef9faac0ce9e7",
+      "template": "tg://login?code=<code>",
+      "category": "Deep links",
+      "section": "Login code link",
+      "line": 1450
+    },
+    {
+      "id": "504a570aaae25f63",
+      "template": "tg://login?token=<base64encodedtoken>",
+      "category": "Deep links",
+      "section": "QR code login links",
+      "line": 1590
+    },
+    {
+      "id": "8cbe6cdb2a7abc6b",
+      "template": "tg://message?slug=<slug>",
+      "category": "Deep links",
+      "section": "Business chat links",
+      "line": 340
+    },
+    {
+      "id": "3d8475c99b362a63",
+      "template": "tg://msg_url?url=<url>&text=<text>",
+      "category": "Deep links",
+      "section": "Share links",
+      "line": 310
+    },
+    {
+      "id": "a1ef5fd8bc051a4c",
+      "template": "tg://need_update_for_some_feature?test=a",
+      "category": "Deep links",
+      "section": "Unsupported links",
+      "line": 1932
+    },
+    {
+      "id": "6f095ba9529402fb",
+      "template": "tg://new",
+      "category": "Deep links",
+      "section": "New chat links",
+      "line": 1413
+    },
+    {
+      "id": "28daabaf2cc252ed",
+      "template": "tg://new/channel",
+      "category": "Deep links",
+      "section": "New chat links",
+      "line": 1413
+    },
+    {
+      "id": "2a98554e10a7e01f",
+      "template": "tg://new/group",
+      "category": "Deep links",
+      "section": "New chat links",
+      "line": 1413
+    },
+    {
+      "id": "626ce019c2f2ba11",
+      "template": "tg://newbot?manager=<manager_bot_username>&username=<suggested_bot_username>&name=<suggested_bot_name>",
+      "category": "Deep links",
+      "section": "Managed bot creation request links",
+      "line": 545
+    },
+    {
+      "id": "2aa5686c988a4000",
+      "template": "tg://nft?slug=<slug>",
+      "category": "Deep links",
+      "section": "Collectible gift link",
+      "line": 1788
+    },
+    {
+      "id": "f303208d0e3f2670",
+      "template": "tg://oauth?token=<token>",
+      "category": "Deep links",
+      "section": "OAuth links",
+      "line": 615
+    },
+    {
+      "id": "4475c716aee0c79b",
+      "template": "tg://passport?params",
+      "category": "Deep links",
+      "section": "Telegram Passport links",
+      "line": 1507
+    },
+    {
+      "id": "cd751494b2c01771",
+      "template": "tg://path?query",
+      "category": "Deep links",
+      "section": "General",
+      "line": 19
+    },
+    {
+      "id": "1751a00fa02e68cd",
+      "template": "tg://post",
+      "category": "Deep links",
+      "section": "Post story links",
+      "line": 514
+    },
+    {
+      "id": "a1696e17f08f707a",
+      "template": "tg://post/<content_type>",
+      "category": "Deep links",
+      "section": "Post story links",
+      "line": 514
+    },
+    {
+      "id": "dc8184635262e3c7",
+      "template": "tg://premium_multigift?ref=<referrer>",
+      "category": "Deep links",
+      "section": "Premium multigift links",
+      "line": 1540
+    },
+    {
+      "id": "4fd55d4747c389cd",
+      "template": "tg://premium_offer?ref=<referrer>",
+      "category": "Deep links",
+      "section": "Premium referrer links",
+      "line": 1555
+    },
+    {
+      "id": "3fc567a88c1b6741",
+      "template": "tg://privatepost?channel=<channel>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+      "category": "Deep links",
+      "section": "Message links",
+      "line": 259
+    },
+    {
+      "id": "5bd99e748c54ffe1",
+      "template": "tg://proxy?server=<server>&port=<port>&secret=<secret>",
+      "category": "Deep links",
+      "section": "MTProxy links",
+      "line": 639
+    },
+    {
+      "id": "e69b278ec8480534",
+      "template": "tg://resolve?domain=<bot_username>&appname=<short_name>&startapp=<start_parameter>&mode=<mode>",
+      "category": "Deep links",
+      "section": "Direct mini app links",
+      "line": 1645
+    },
+    {
+      "id": "adac1a82642303ba",
+      "template": "tg://resolve?domain=<bot_username>&game=<short_name>",
+      "category": "Deep links",
+      "section": "Game links",
+      "line": 989
+    },
+    {
+      "id": "92de10a77a03e660",
+      "template": "tg://resolve?domain=<bot_username>&ref=<referrer>",
+      "category": "Deep links",
+      "section": "Referral links",
+      "line": 1854
+    },
+    {
+      "id": "76495f2f68105300",
+      "template": "tg://resolve?domain=<bot_username>&start={prefix}<referrer>",
+      "category": "Deep links",
+      "section": "Referral links",
+      "line": 1854
+    },
+    {
+      "id": "525babd224ecc2b6",
+      "template": "tg://resolve?domain=<bot_username>&start=<parameter>",
+      "category": "Deep links",
+      "section": "Bot links",
+      "line": 894
+    },
+    {
+      "id": "23edccb78e409b3d",
+      "template": "tg://resolve?domain=<bot_username>&startapp&mode=<mode>",
+      "category": "Deep links",
+      "section": "Main Mini App links",
+      "line": 1618
+    },
+    {
+      "id": "19cba56e1e1a25db",
+      "template": "tg://resolve?domain=<bot_username>&startapp=<start_parameter>&mode=<mode>",
+      "category": "Deep links",
+      "section": "Main Mini App links",
+      "line": 1618
+    },
+    {
+      "id": "490658f46648766e",
+      "template": "tg://resolve?domain=<bot_username>&startattach",
+      "category": "Deep links",
+      "section": "Open in current chat",
+      "line": 1683
+    },
+    {
+      "id": "c7fa9015fb84c8c5",
+      "template": "tg://resolve?domain=<bot_username>&startattach&choose=users+bots+groups+channels",
+      "category": "Deep links",
+      "section": "Open in any chat",
+      "line": 1740
+    },
+    {
+      "id": "6919a41c8125627e",
+      "template": "tg://resolve?domain=<bot_username>&startattach=<start_parameter>",
+      "category": "Deep links",
+      "section": "Open in current chat",
+      "line": 1683
+    },
+    {
+      "id": "60b36732d7e74f13",
+      "template": "tg://resolve?domain=<bot_username>&startattach=<start_parameter>&choose=users+bots+groups+channels",
+      "category": "Deep links",
+      "section": "Open in any chat",
+      "line": 1740
+    },
+    {
+      "id": "6287fae0e63abbb4",
+      "template": "tg://resolve?domain=<bot_username>&startchannel&admin=<permissions>",
+      "category": "Deep links",
+      "section": "Group/channel bot links",
+      "line": 945
+    },
+    {
+      "id": "1457c9e19cd42020",
+      "template": "tg://resolve?domain=<bot_username>&startgroup&admin=<permissions>",
+      "category": "Deep links",
+      "section": "Group/channel bot links",
+      "line": 935
+    },
+    {
+      "id": "49a8874e579ad13b",
+      "template": "tg://resolve?domain=<bot_username>&startgroup=<parameter>&admin=<permissions>",
+      "category": "Deep links",
+      "section": "Group/channel bot links",
+      "line": 935
+    },
+    {
+      "id": "ac400acf021233a0",
+      "template": "tg://resolve?domain=<username>&album=<album_id>",
+      "category": "Deep links",
+      "section": "Story album links",
+      "line": 497
+    },
+    {
+      "id": "8d039cf8b44f612c",
+      "template": "tg://resolve?domain=<username>&attach=<bot_username>",
+      "category": "Deep links",
+      "section": "Open in specific chat",
+      "line": 1710
+    },
+    {
+      "id": "a5ba716556c4f634",
+      "template": "tg://resolve?domain=<username>&attach=<bot_username>&startattach=<start_parameter>",
+      "category": "Deep links",
+      "section": "Open in specific chat",
+      "line": 1710
+    },
+    {
+      "id": "ec4d83881da4c213",
+      "template": "tg://resolve?domain=<username>&collection=<collection_id>",
+      "category": "Deep links",
+      "section": "Gift collection links",
+      "line": 1809
+    },
+    {
+      "id": "7ab8aa36d0b74bde",
+      "template": "tg://resolve?domain=<username>&direct",
+      "category": "Deep links",
+      "section": "Monoforum links",
+      "line": 130
+    },
+    {
+      "id": "6756d4b76b268556",
+      "template": "tg://resolve?domain=<username>&livestream",
+      "category": "Deep links",
+      "section": "Video chat/Livestream links",
+      "line": 372
+    },
+    {
+      "id": "a0e16f68eab98a1b",
+      "template": "tg://resolve?domain=<username>&livestream=<invite_hash>",
+      "category": "Deep links",
+      "section": "Video chat/Livestream links",
+      "line": 372
+    },
+    {
+      "id": "6dd4a357b2bc8677",
+      "template": "tg://resolve?domain=<username>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+      "category": "Deep links",
+      "section": "Message links",
+      "line": 254
+    },
+    {
+      "id": "7987d03a2e719e58",
+      "template": "tg://resolve?domain=<username>&story=<story_id>",
+      "category": "Deep links",
+      "section": "Story links",
+      "line": 454
+    },
+    {
+      "id": "7bf59197598dd438",
+      "template": "tg://resolve?domain=<username>&story=live",
+      "category": "Deep links",
+      "section": "Live story links",
+      "line": 476
+    },
+    {
+      "id": "7e8d8818327ace29",
+      "template": "tg://resolve?domain=<username>&text=<draft_text>&profile",
+      "category": "Deep links",
+      "section": "Public username links",
+      "line": 100
+    },
+    {
+      "id": "bb64306381d348c6",
+      "template": "tg://resolve?domain=<username>&videochat",
+      "category": "Deep links",
+      "section": "Video chat/Livestream links",
+      "line": 372
+    },
+    {
+      "id": "547565f1a51e0167",
+      "template": "tg://resolve?domain=<username>&videochat=<invite_hash>",
+      "category": "Deep links",
+      "section": "Video chat/Livestream links",
+      "line": 372
+    },
+    {
+      "id": "c006e95f195caaaf",
+      "template": "tg://resolve?domain=<username>&voicechat",
+      "category": "Deep links",
+      "section": "Video chat/Livestream links",
+      "line": 372
+    },
+    {
+      "id": "670d5519025fa17e",
+      "template": "tg://resolve?domain=<username>&voicechat=<invite_hash>",
+      "category": "Deep links",
+      "section": "Video chat/Livestream links",
+      "line": 372
+    },
+    {
+      "id": "2ca0bbabfdd82d06",
+      "template": "tg://resolve?domain=oauth&startapp=<token>",
+      "category": "Deep links",
+      "section": "OAuth links",
+      "line": 615
+    },
+    {
+      "id": "389dd26d940ef81a",
+      "template": "tg://resolve?domain=telegrampassport&params",
+      "category": "Deep links",
+      "section": "Telegram Passport links",
+      "line": 1507
+    },
+    {
+      "id": "bac458253a5aaba9",
+      "template": "tg://resolve?phone=<phone_number>&attach=<bot_username>",
+      "category": "Deep links",
+      "section": "Open in specific chat",
+      "line": 1710
+    },
+    {
+      "id": "9c310cd6737b6dda",
+      "template": "tg://resolve?phone=<phone_number>&attach=<bot_username>&startattach=<start_parameter>",
+      "category": "Deep links",
+      "section": "Open in specific chat",
+      "line": 1710
+    },
+    {
+      "id": "9688eb4b8672ceb3",
+      "template": "tg://resolve?phone=<phone_number>&text=<draft_text>&profile",
+      "category": "Deep links",
+      "section": "Phone number links",
+      "line": 174
+    },
+    {
+      "id": "62fff54ac600a1f7",
+      "template": "tg://setlanguage?lang=<slug>",
+      "category": "Deep links",
+      "section": "Language pack links",
+      "line": 1491
+    },
+    {
+      "id": "cb647f5e74084f61",
+      "template": "tg://settings",
+      "category": "Deep links",
+      "section": "Settings links",
+      "line": 1006
+    },
+    {
+      "id": "ef3020c4f469a888",
+      "template": "tg://settings/<path>",
+      "category": "Deep links",
+      "section": "Settings links",
+      "line": 1006
+    },
+    {
+      "id": "c9da88eb87d7f720",
+      "template": "tg://settings/stars",
+      "category": "Deep links",
+      "section": "My stars links",
+      "line": 1366
+    },
+    {
+      "id": "a8ba7b72878d8d7a",
+      "template": "tg://settings/ton",
+      "category": "Deep links",
+      "section": "My Grams links",
+      "line": 1376
+    },
+    {
+      "id": "0d36caa7584ba290",
+      "template": "tg://socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
+      "category": "Deep links",
+      "section": "SOCKS5 proxy links",
+      "line": 661
+    },
+    {
+      "id": "c9ae3ba9344daf3b",
+      "template": "tg://stargift_auction?slug=<slug>",
+      "category": "Deep links",
+      "section": "Auction links",
+      "line": 1830
+    },
+    {
+      "id": "3ab588e8b70a16a2",
+      "template": "tg://stars",
+      "category": "Deep links",
+      "section": "My stars links",
+      "line": 1371
+    },
+    {
+      "id": "c19130d3bb6d4633",
+      "template": "tg://stars_topup?balance=<star_count>&purpose=<purpose>",
+      "category": "Deep links",
+      "section": "Stars topup link",
+      "line": 1759
+    },
+    {
+      "id": "c8db60b66c61a65e",
+      "template": "tg://time?unix=<unix>&format=<format>",
+      "category": "Deep links",
+      "section": "Timestamp links",
+      "line": 1902
+    },
+    {
+      "id": "deb58044959d045e",
+      "template": "tg://ton",
+      "category": "Deep links",
+      "section": "My Grams links",
+      "line": 1381
+    },
+    {
+      "id": "d5305e13fef56596",
+      "template": "tg://user?id=<id>",
+      "category": "Deep links",
+      "section": "ID links",
+      "line": 1872
+    },
+    {
+      "id": "7ba0a6d846616d0b",
+      "template": "tg:path?query",
+      "category": "Deep links",
+      "section": "General",
+      "line": 18
+    },
+    {
+      "id": "1aa05d11334c57a6",
+      "template": "tg:some_unsupported_feature?test=b",
+      "category": "Deep links",
+      "section": "Unsupported links",
+      "line": 1933
+    },
+    {
+      "id": "510676bc43cc0007",
+      "template": "tonsite://",
+      "category": "Deep links",
+      "section": "TON Sites",
+      "line": 69
+    },
+    {
+      "id": "2b5c98a1fad6d3dd",
+      "template": "tonsite://somesite.domain/path?query#hash",
+      "category": "Deep links",
+      "section": "TON Sites",
+      "line": 67
+    }
+  ]
+}

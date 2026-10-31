@@ -1,0 +1,12 @@
+{
+  "fetchedAt": "2026-10-31T11:17:43.851Z",
+  "total": 179,
+  "verification": {
+    "htmlCount": 179,
+    "markdownCount": 179,
+    "commonCount": 179,
+    "overlap": 1
+  },
+  "htmlSha256": "ec91521cb053e73dbef332b04aed85132bc5c01183a5ff151d4411c61779239f",
+  "markdownSha256": "cc6a6c87f58307ddd05b1237b945ffacc10afe00ef08505cdf3bfc8407e6c8a1"
+}
