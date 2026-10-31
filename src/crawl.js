@@ -162,6 +162,7 @@ function parseFamilies(markdown) {
   for (const section of sections) {
     const title = section.title;
     const body = section.body.join('\n');
+    if (/^(deep links|unsupported links)$/i.test(title)) continue;
     if (!/links/i.test(title) && !/deep links/i.test(title)) continue;
     const key = title.toLowerCase().replace(/\s+links?$/i, '').trim();
     const templates = parseMarkdown('### ' + title + '\n' + body).map(x => x.template);
@@ -200,6 +201,15 @@ function parseFamilies(markdown) {
         if (!['tg', 'http', 'https'].includes(match[1].toLowerCase())) addOption(match[1]);
       }
     }
+    for (const match of body.matchAll(/combination of ([^\n.]+)/gi)) {
+      for (const value of match[1].matchAll(/\`([^\`]+)\`/g)) addOption(value[1]);
+    }
+    for (const match of body.matchAll(/(?:recognized|possible) values:\s*([^\n]+)/gi)) {
+      for (const value of match[1].matchAll(/\`([^\`]+)\`/g)) addOption(value[1]);
+    }
+    if (/^settings links$/i.test(title)) options.delete('path');
+    if (/^contacts links$/i.test(title)) options.delete('section');
+    if (/^post story links$/i.test(title)) options.delete('content_type');
     const allOptions = [...options];
     families.push({
       id: sha256(key).slice(0, 16),
