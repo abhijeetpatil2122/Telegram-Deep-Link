@@ -230,11 +230,11 @@ function parseFamilies(markdown) {
 
 
 function verifyFamilyOptions(htmlFamilies, markdownFamilies) {
-  const important = ['Settings links', 'Contacts links', 'Post story links'];
   const htmlByTitle = new Map(htmlFamilies.map(item => [item.title, item]));
   const mdByTitle = new Map(markdownFamilies.map(item => [item.title, item]));
   const checks = {};
-  for (const title of important) {
+  const titles = [...new Set([...htmlByTitle.keys(), ...mdByTitle.keys()])];
+  for (const title of titles) {
     const html = htmlByTitle.get(title);
     const md = mdByTitle.get(title);
     if (!html || !md) throw new Error('Family integrity check failed: missing ' + title + ' in HTML or Markdown.');
