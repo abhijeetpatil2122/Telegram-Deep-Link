@@ -1,11 +1,11 @@
 {
   "initializedAt": "2026-10-31T11:17:43.854Z",
-  "checkedAt": "2026-10-31T11:18:41.393Z",
+  "checkedAt": "2026-10-31T11:19:11.924Z",
   "source": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "a87706ac8d80c6f8072646d282a59515402f03f2eadfcba3877cee4db357d6b1",
+      "sha256": "e57eeb388cc4ea7bbddc884d05f99d61f16326a2eb4397d03d7e3633c168f0b0",
       "etag": null,
       "lastModified": null
     },
@@ -737,5 +737,10 @@
   ],
   "pending": [],
   "posted": [],
-  "removedHistory": []
+  "removedHistory": [],
+  "testMessage": {
+    "messageId": 481,
+    "chatId": 1314643983
+  },
+  "testMessageAt": "2026-10-31T11:19:11.923Z"
 }
