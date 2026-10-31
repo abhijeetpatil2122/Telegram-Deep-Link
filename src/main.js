@@ -92,6 +92,31 @@ async function main() {
     await saveState(state);
   }
 
+  // One-time supplement: keep each generated ready-to-use link beside its own documentation.
+  const readyCatalogueVersion = 1;
+  const readyDelivered = new Set(state.readyCatalogueFamilies || []);
+  if (state.readyCatalogueVersion !== readyCatalogueVersion) {
+    for (const family of families) {
+      if (!family.ready?.length || readyDelivered.has(family.id)) continue;
+      const sent = await sendFamily(family);
+      readyDelivered.add(family.id);
+      state = {
+        ...state,
+        readyCatalogueFamilies: [...readyDelivered],
+        lastReadyCatalogueDelivery: {
+          family: family.title,
+          messageIds: sent.map(message => message.message_id),
+          chatId: sent[0]?.chat?.id,
+          deliveredAt: new Date().toISOString()
+        }
+      };
+      await saveState(state);
+      console.log('Ready-to-use links delivered with documentation: ' + family.title + ' (' + sent.length + ' message(s)).');
+    }
+    state.readyCatalogueVersion = readyCatalogueVersion;
+    await saveState(state);
+  }
+
   // First private preview: representative families only. The public channel is never targeted here.
   const previewTitles = new Set(['Settings links', 'Contacts links', 'New chat links', 'Chat list links', 'Post story links']);
   const previewed = new Set(state.previewedFamilies || []);
