@@ -1,10 +1,10 @@
 {
-  "fetchedAt": "2026-10-31T11:41:28.662Z",
+  "fetchedAt": "2026-10-31T11:42:37.504Z",
   "sources": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "0ae77b7a44f7e47cdcabcce4db652d0a4d50994ee110bb0bfe9daaa4159b344d",
+      "sha256": "54d6534a21ec699f57e8e0e1da5f1578c95b7a63816deae322fecbbdbe435899",
       "etag": null,
       "lastModified": null
     },
@@ -1321,7 +1321,9 @@
         "web",
         "a",
         "k",
-        "z"
+        "z",
+        "query",
+        "username"
       ],
       "ready": [
         "http://t.me/path?query",
@@ -1339,7 +1341,13 @@
         "t.me/<username>?text=<draft_text>&profile",
         "tg://resolve?domain=<username>&text=<draft_text>&profile"
       ],
-      "options": [],
+      "options": [
+        "username",
+        "draft_text",
+        "text",
+        "profile",
+        "domain"
+      ],
       "ready": []
     },
     {
@@ -1350,7 +1358,11 @@
         "t.me/<username>?direct",
         "tg://resolve?domain=<username>&direct"
       ],
-      "options": [],
+      "options": [
+        "username",
+        "direct",
+        "domain"
+      ],
       "ready": []
     },
     {
@@ -1361,7 +1373,9 @@
         "t.me/contact/<token>",
         "tg://contact?token=<token>"
       ],
-      "options": [],
+      "options": [
+        "token"
+      ],
       "ready": []
     },
     {
@@ -1372,7 +1386,13 @@
         "t.me/+<phone_number>?text=<draft_text>&profile",
         "tg://resolve?phone=<phone_number>&text=<draft_text>&profile"
       ],
-      "options": [],
+      "options": [
+        "phone_number",
+        "draft_text",
+        "text",
+        "profile",
+        "phone"
+      ],
       "ready": []
     },
     {
@@ -1384,7 +1404,10 @@
         "t.me/joinchat/<hash>",
         "tg://join?invite=<hash>"
       ],
-      "options": [],
+      "options": [
+        "hash",
+        "invite"
+      ],
       "ready": []
     },
     {
@@ -1395,7 +1418,9 @@
         "t.me/addlist/<slug>",
         "tg://addlist?slug=<slug>"
       ],
-      "options": [],
+      "options": [
+        "slug"
+      ],
       "ready": []
     },
     {
@@ -1410,7 +1435,23 @@
         "tg://resolve?domain=<username>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
         "tg://privatepost?channel=<channel>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>"
       ],
-      "options": [],
+      "options": [
+        "username",
+        "id",
+        "thread_id",
+        "comment",
+        "media_timestamp",
+        "task_id",
+        "option_id",
+        "single",
+        "thread",
+        "t",
+        "task",
+        "option",
+        "channel",
+        "domain",
+        "post"
+      ],
       "ready": []
     },
     {
@@ -1424,7 +1465,10 @@
         "t.me/msg/url?url=<url>&text=<text>",
         "tg://msg_url?url=<url>&text=<text>"
       ],
-      "options": [],
+      "options": [
+        "url",
+        "text"
+      ],
       "ready": []
     },
     {
@@ -1435,7 +1479,9 @@
         "t.me/m/<slug>",
         "tg://message?slug=<slug>"
       ],
-      "options": [],
+      "options": [
+        "slug"
+      ],
       "ready": []
     },
     {
@@ -1456,7 +1502,14 @@
         "tg://resolve?domain=<username>&voicechat",
         "tg://resolve?domain=<username>&voicechat=<invite_hash>"
       ],
-      "options": [],
+      "options": [
+        "username",
+        "videochat",
+        "invite_hash",
+        "livestream",
+        "voicechat",
+        "domain"
+      ],
       "ready": []
     },
     {
@@ -1467,7 +1520,9 @@
         "t.me/call/<slug>",
         "tg://call?slug=<slug>"
       ],
-      "options": [],
+      "options": [
+        "slug"
+      ],
       "ready": []
     },
     {
@@ -1480,7 +1535,10 @@
         "tg://addstickers?set=<slug>",
         "tg://addemoji?set=<slug>"
       ],
-      "options": [],
+      "options": [
+        "slug",
+        "set"
+      ],
       "ready": []
     },
     {
@@ -1491,7 +1549,10 @@
         "t.me/addemoji/<slug>",
         "tg://addemoji?set=<slug>"
       ],
-      "options": [],
+      "options": [
+        "slug",
+        "set"
+      ],
       "ready": []
     },
     {
@@ -1504,7 +1565,12 @@
         "t.me/<username>/s/live",
         "tg://resolve?domain=<username>&story=live"
       ],
-      "options": [],
+      "options": [
+        "username",
+        "story_id",
+        "domain",
+        "story"
+      ],
       "ready": []
     },
     {
@@ -1516,7 +1582,12 @@
         "t.me/<username>/a/<album_id>",
         "tg://resolve?domain=<username>&album=<album_id>"
       ],
-      "options": [],
+      "options": [
+        "username",
+        "album_id",
+        "album",
+        "domain"
+      ],
       "ready": []
     },
     {
@@ -1530,7 +1601,8 @@
       "options": [
         "photo",
         "video",
-        "live"
+        "live",
+        "content_type"
       ],
       "ready": [
         "tg://post",
@@ -1548,7 +1620,14 @@
         "t.me/newbot/<manager_bot_username>?name=<suggested_bot_name>",
         "tg://newbot?manager=<manager_bot_username>&username=<suggested_bot_username>&name=<suggested_bot_name>"
       ],
-      "options": [],
+      "options": [
+        "manager_bot_username",
+        "suggested_bot_username",
+        "suggested_bot_name",
+        "name",
+        "manager",
+        "username"
+      ],
       "ready": []
     },
     {
@@ -1563,7 +1642,14 @@
         "tg://boost?domain=<username>",
         "tg://boost?channel=<id>"
       ],
-      "options": [],
+      "options": [
+        "username",
+        "boost",
+        "id",
+        "c",
+        "domain",
+        "channel"
+      ],
       "ready": []
     },
     {
@@ -1575,7 +1661,11 @@
         "tg://oauth?token=<token>",
         "tg://resolve?domain=oauth&startapp=<token>"
       ],
-      "options": [],
+      "options": [
+        "token",
+        "startapp",
+        "domain"
+      ],
       "ready": []
     },
     {
@@ -1588,7 +1678,13 @@
         "t.me/socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
         "tg://socks?server=<server>&port=<port>&user=<user>&pass=<pass>"
       ],
-      "options": [],
+      "options": [
+        "server",
+        "port",
+        "secret",
+        "user",
+        "pass"
+      ],
       "ready": []
     },
     {
@@ -1599,7 +1695,10 @@
         "t.me/addtheme/<name>",
         "tg://addtheme?slug=<name>"
       ],
-      "options": [],
+      "options": [
+        "name",
+        "slug"
+      ],
       "ready": []
     },
     {
@@ -1610,7 +1709,9 @@
         "t.me/addstyle/<slug>",
         "tg://addstyle?slug=<slug>"
       ],
-      "options": [],
+      "options": [
+        "slug"
+      ],
       "ready": []
     },
     {
@@ -1637,7 +1738,22 @@
         "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
         "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>"
       ],
-      "options": [],
+      "options": [
+        "slug",
+        "mode",
+        "hex_color",
+        "color",
+        "top_color",
+        "bottom_color",
+        "rotation",
+        "gradient",
+        "hex_color1",
+        "hex_color2",
+        "hex_color3",
+        "hex_color4",
+        "intensity",
+        "bg_color"
+      ],
       "ready": []
     },
     {
@@ -1648,7 +1764,12 @@
         "t.me/<bot_username>?start=<parameter>",
         "tg://resolve?domain=<bot_username>&start=<parameter>"
       ],
-      "options": [],
+      "options": [
+        "bot_username",
+        "parameter",
+        "start",
+        "domain"
+      ],
       "ready": []
     },
     {
@@ -1680,7 +1801,14 @@
         "edit_stories",
         "delete_stories",
         "manage_direct_messages",
-        "manage_tags"
+        "manage_tags",
+        "bot_username",
+        "parameter",
+        "permissions",
+        "startgroup",
+        "admin",
+        "domain",
+        "startchannel"
       ],
       "ready": []
     },
@@ -1692,7 +1820,12 @@
         "t.me/<bot_username>?game=<short_name>",
         "tg://resolve?domain=<bot_username>&game=<short_name>"
       ],
-      "options": [],
+      "options": [
+        "bot_username",
+        "short_name",
+        "game",
+        "domain"
+      ],
       "ready": []
     },
     {
@@ -2043,7 +2176,8 @@
         "my-profile/posts/all-stories",
         "my-profile/posts/add-album",
         "my-profile/gifts",
-        "my-profile/archived-posts"
+        "my-profile/archived-posts",
+        "path"
       ],
       "ready": [
         "tg://settings",
@@ -2484,7 +2618,9 @@
         "t.me/$<slug>",
         "tg://invoice?slug=<slug>"
       ],
-      "options": [],
+      "options": [
+        "slug"
+      ],
       "ready": []
     },
     {
@@ -2495,7 +2631,10 @@
         "t.me/setlanguage/<slug>",
         "tg://setlanguage?lang=<slug>"
       ],
-      "options": [],
+      "options": [
+        "slug",
+        "lang"
+      ],
       "ready": []
     },
     {
@@ -2506,7 +2645,10 @@
         "tg://passport?params",
         "tg://resolve?domain=telegrampassport&params"
       ],
-      "options": [],
+      "options": [
+        "params",
+        "domain"
+      ],
       "ready": [
         "tg://passport?params",
         "tg://resolve?domain=telegrampassport&params"
@@ -2520,7 +2662,10 @@
         "t.me/confirmphone?phone=<phone>&hash=<hash>",
         "tg://confirmphone?phone=<phone>&hash=<hash>"
       ],
-      "options": [],
+      "options": [
+        "phone",
+        "hash"
+      ],
       "ready": []
     },
     {
@@ -2530,7 +2675,10 @@
       "templates": [
         "tg://premium_multigift?ref=<referrer>"
       ],
-      "options": [],
+      "options": [
+        "referrer",
+        "ref"
+      ],
       "ready": []
     },
     {
@@ -2540,7 +2688,10 @@
       "templates": [
         "tg://premium_offer?ref=<referrer>"
       ],
-      "options": [],
+      "options": [
+        "referrer",
+        "ref"
+      ],
       "ready": []
     },
     {
@@ -2551,7 +2702,9 @@
         "tg://giftcode?slug=<slug>",
         "t.me/giftcode/<slug>"
       ],
-      "options": [],
+      "options": [
+        "slug"
+      ],
       "ready": []
     },
     {
@@ -2561,7 +2714,10 @@
       "templates": [
         "tg://login?token=<base64encodedtoken>"
       ],
-      "options": [],
+      "options": [
+        "base64encodedtoken",
+        "token"
+      ],
       "ready": []
     },
     {
@@ -2574,7 +2730,13 @@
         "tg://resolve?domain=<bot_username>&startapp&mode=<mode>",
         "tg://resolve?domain=<bot_username>&startapp=<start_parameter>&mode=<mode>"
       ],
-      "options": [],
+      "options": [
+        "bot_username",
+        "mode",
+        "startapp",
+        "start_parameter",
+        "domain"
+      ],
       "ready": []
     },
     {
@@ -2585,7 +2747,15 @@
         "t.me/<bot_username>/<short_name>?startapp=<start_parameter>&mode=<mode>",
         "tg://resolve?domain=<bot_username>&appname=<short_name>&startapp=<start_parameter>&mode=<mode>"
       ],
-      "options": [],
+      "options": [
+        "bot_username",
+        "short_name",
+        "start_parameter",
+        "mode",
+        "startapp",
+        "domain",
+        "appname"
+      ],
       "ready": []
     },
     {
@@ -2610,7 +2780,17 @@
         "tg://resolve?domain=<bot_username>&startattach&choose=users+bots+groups+channels",
         "tg://resolve?domain=<bot_username>&startattach=<start_parameter>&choose=users+bots+groups+channels"
       ],
-      "options": [],
+      "options": [
+        "bot_username",
+        "startattach",
+        "start_parameter",
+        "domain",
+        "username",
+        "attach",
+        "phone_number",
+        "phone",
+        "choose"
+      ],
       "ready": []
     },
     {
@@ -2622,7 +2802,12 @@
         "t.me/<username>/c/<collection_id>",
         "tg://resolve?domain=<username>&collection=<collection_id>"
       ],
-      "options": [],
+      "options": [
+        "username",
+        "collection_id",
+        "collection",
+        "domain"
+      ],
       "ready": []
     },
     {
@@ -2633,7 +2818,9 @@
         "t.me/auction/<slug>",
         "tg://stargift_auction?slug=<slug>"
       ],
-      "options": [],
+      "options": [
+        "slug"
+      ],
       "ready": []
     },
     {
@@ -2646,7 +2833,13 @@
         "tg://resolve?domain=<bot_username>&ref=<referrer>",
         "tg://resolve?domain=<bot_username>&start={prefix}<referrer>"
       ],
-      "options": [],
+      "options": [
+        "bot_username",
+        "referrer",
+        "ref",
+        "start",
+        "domain"
+      ],
       "ready": []
     },
     {
@@ -2656,7 +2849,9 @@
       "templates": [
         "tg://user?id=<id>"
       ],
-      "options": [],
+      "options": [
+        "id"
+      ],
       "ready": []
     },
     {
@@ -2666,7 +2861,9 @@
       "templates": [
         "tg://emoji?id=<id>"
       ],
-      "options": [],
+      "options": [
+        "id"
+      ],
       "ready": []
     },
     {
@@ -2676,7 +2873,10 @@
       "templates": [
         "tg://time?unix=<unix>&format=<format>"
       ],
-      "options": [],
+      "options": [
+        "unix",
+        "format"
+      ],
       "ready": []
     },
     {
@@ -2689,7 +2889,8 @@
       ],
       "options": [
         "tg://need_update_for_some_feature?test=a",
-        "tg:some_unsupported_feature?test=b"
+        "tg:some_unsupported_feature?test=b",
+        "test"
       ],
       "ready": [
         "tg://need_update_for_some_feature?test=a",

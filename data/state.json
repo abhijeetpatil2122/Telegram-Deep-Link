@@ -1,11 +1,11 @@
 {
   "initializedAt": "2026-10-31T11:17:43.854Z",
-  "checkedAt": "2026-10-31T11:41:28.676Z",
+  "checkedAt": "2026-10-31T11:42:54.099Z",
   "source": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "0ae77b7a44f7e47cdcabcce4db652d0a4d50994ee110bb0bfe9daaa4159b344d",
+      "sha256": "54d6534a21ec699f57e8e0e1da5f1578c95b7a63816deae322fecbbdbe435899",
       "etag": null,
       "lastModified": null
     },
@@ -742,5 +742,1538 @@
     "messageId": 481,
     "chatId": 1314643983
   },
-  "testMessageAt": "2026-10-31T11:19:11.923Z"
+  "testMessageAt": "2026-10-31T11:19:11.923Z",
+  "previewedFamilies": [
+    "24b580efd0769709",
+    "cde0fb0dec1400c5",
+    "aa5af4084f3746bb",
+    "11836096bd42524c",
+    "c55104413654cd47"
+  ],
+  "lastPrivatePreview": {
+    "family": "Chat list links",
+    "messageIds": [
+      527
+    ],
+    "chatId": 1314643983,
+    "deliveredAt": "2026-10-31T11:42:54.097Z"
+  },
+  "familySnapshots": {
+    "74611c1d6455b534": {
+      "title": "Deep links",
+      "templates": [
+        "http://t.me/path?query",
+        "https://t.me/path?query",
+        "t.me/<username>/",
+        "t.me/path?query",
+        "tg://path?query",
+        "tg:path?query"
+      ],
+      "options": [
+        "a",
+        "addemoji",
+        "addlist",
+        "addstickers",
+        "addstyle",
+        "addtheme",
+        "auction",
+        "auth",
+        "boost",
+        "call",
+        "confirmphone",
+        "contact",
+        "giftcode",
+        "http://t.me/path?query",
+        "https://t.me/path?query",
+        "invoice",
+        "joinchat",
+        "k",
+        "login",
+        "m",
+        "nft",
+        "proxy",
+        "query",
+        "setlanguage",
+        "share",
+        "socks",
+        "t.me/path?query",
+        "tg://path?query",
+        "tg:path?query",
+        "username",
+        "web",
+        "z"
+      ],
+      "ready": [
+        "http://t.me/path?query",
+        "https://t.me/path?query",
+        "t.me/path?query",
+        "tg://path?query",
+        "tg:path?query"
+      ]
+    },
+    "63657dc62bb98f9e": {
+      "title": "Public username links",
+      "templates": [
+        "t.me/<username>?text=<draft_text>&profile",
+        "tg://resolve?domain=<username>&text=<draft_text>&profile"
+      ],
+      "options": [
+        "domain",
+        "draft_text",
+        "profile",
+        "text",
+        "username"
+      ],
+      "ready": []
+    },
+    "5a813223f4b17694": {
+      "title": "Monoforum links",
+      "templates": [
+        "t.me/<username>?direct",
+        "tg://resolve?domain=<username>&direct"
+      ],
+      "options": [
+        "direct",
+        "domain",
+        "username"
+      ],
+      "ready": []
+    },
+    "0cc8bd184dbc8b62": {
+      "title": "Temporary profile links",
+      "templates": [
+        "t.me/contact/<token>",
+        "tg://contact?token=<token>"
+      ],
+      "options": [
+        "token"
+      ],
+      "ready": []
+    },
+    "3e7a939e96c40090": {
+      "title": "Phone number links",
+      "templates": [
+        "t.me/+<phone_number>?text=<draft_text>&profile",
+        "tg://resolve?phone=<phone_number>&text=<draft_text>&profile"
+      ],
+      "options": [
+        "draft_text",
+        "phone",
+        "phone_number",
+        "profile",
+        "text"
+      ],
+      "ready": []
+    },
+    "a2bbd670ee55995c": {
+      "title": "Chat invite links",
+      "templates": [
+        "t.me/+<hash>",
+        "t.me/joinchat/<hash>",
+        "tg://join?invite=<hash>"
+      ],
+      "options": [
+        "hash",
+        "invite"
+      ],
+      "ready": []
+    },
+    "ac1c39d109909b4b": {
+      "title": "Chat folder links",
+      "templates": [
+        "t.me/addlist/<slug>",
+        "tg://addlist?slug=<slug>"
+      ],
+      "options": [
+        "slug"
+      ],
+      "ready": []
+    },
+    "ab530a13e4591498": {
+      "title": "Message links",
+      "templates": [
+        "t.me/<username>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+        "t.me/<username>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+        "t.me/c/<channel>/<id>?single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+        "t.me/c/<channel>/<thread_id>/<id>?single&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+        "tg://privatepost?channel=<channel>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>",
+        "tg://resolve?domain=<username>&post=<id>&single&thread=<thread_id>&comment=<comment>&t=<media_timestamp>&task=<task_id>&option=<option_id>"
+      ],
+      "options": [
+        "channel",
+        "comment",
+        "domain",
+        "id",
+        "media_timestamp",
+        "option",
+        "option_id",
+        "post",
+        "single",
+        "t",
+        "task",
+        "task_id",
+        "thread",
+        "thread_id",
+        "username"
+      ],
+      "ready": []
+    },
+    "c3bc45ac352fe43f": {
+      "title": "Share links",
+      "templates": [
+        "t.me/msg/url?url=<url>&text=<text>",
+        "t.me/share/url/?url=<url>&text=<text>",
+        "t.me/share/url?url=<url>&text=<text>",
+        "t.me/share?url=<url>&text=<text>",
+        "tg://msg_url?url=<url>&text=<text>"
+      ],
+      "options": [
+        "text",
+        "url"
+      ],
+      "ready": []
+    },
+    "fcf6ae3e2a64c6ed": {
+      "title": "Business chat links",
+      "templates": [
+        "t.me/m/<slug>",
+        "tg://message?slug=<slug>"
+      ],
+      "options": [
+        "slug"
+      ],
+      "ready": []
+    },
+    "56f77ba547af7aa5": {
+      "title": "Video chat/Livestream links",
+      "templates": [
+        "t.me/<username>?livestream",
+        "t.me/<username>?livestream=<invite_hash>",
+        "t.me/<username>?videochat",
+        "t.me/<username>?videochat=<invite_hash>",
+        "t.me/<username>?voicechat",
+        "t.me/<username>?voicechat=<invite_hash>",
+        "tg://resolve?domain=<username>&livestream",
+        "tg://resolve?domain=<username>&livestream=<invite_hash>",
+        "tg://resolve?domain=<username>&videochat",
+        "tg://resolve?domain=<username>&videochat=<invite_hash>",
+        "tg://resolve?domain=<username>&voicechat",
+        "tg://resolve?domain=<username>&voicechat=<invite_hash>"
+      ],
+      "options": [
+        "domain",
+        "invite_hash",
+        "livestream",
+        "username",
+        "videochat",
+        "voicechat"
+      ],
+      "ready": []
+    },
+    "ea728840d371e1a5": {
+      "title": "Conference links",
+      "templates": [
+        "t.me/call/<slug>",
+        "tg://call?slug=<slug>"
+      ],
+      "options": [
+        "slug"
+      ],
+      "ready": []
+    },
+    "59c42fd15649937b": {
+      "title": "Stickerset links",
+      "templates": [
+        "t.me/addemoji/<slug>",
+        "t.me/addstickers/<slug>",
+        "tg://addemoji?set=<slug>",
+        "tg://addstickers?set=<slug>"
+      ],
+      "options": [
+        "set",
+        "slug"
+      ],
+      "ready": []
+    },
+    "e86d3bc3a1a4a670": {
+      "title": "Custom emoji stickerset links",
+      "templates": [
+        "t.me/addemoji/<slug>",
+        "tg://addemoji?set=<slug>"
+      ],
+      "options": [
+        "set",
+        "slug"
+      ],
+      "ready": []
+    },
+    "c478361e6869af25": {
+      "title": "Story links",
+      "templates": [
+        "t.me/<username>/s/<story_id>",
+        "t.me/<username>/s/live",
+        "tg://resolve?domain=<username>&story=<story_id>",
+        "tg://resolve?domain=<username>&story=live"
+      ],
+      "options": [
+        "domain",
+        "story",
+        "story_id",
+        "username"
+      ],
+      "ready": []
+    },
+    "cd1dd0868dc49e9f": {
+      "title": "Story album links",
+      "templates": [
+        "t.me/<username>/a/<album_id>",
+        "t.me/<username>?album=<album_id>",
+        "tg://resolve?domain=<username>&album=<album_id>"
+      ],
+      "options": [
+        "album",
+        "album_id",
+        "domain",
+        "username"
+      ],
+      "ready": []
+    },
+    "24b580efd0769709": {
+      "title": "Post story links",
+      "templates": [
+        "tg://post",
+        "tg://post/<content_type>"
+      ],
+      "options": [
+        "content_type",
+        "live",
+        "photo",
+        "video"
+      ],
+      "ready": [
+        "tg://post",
+        "tg://post/live",
+        "tg://post/photo",
+        "tg://post/video"
+      ]
+    },
+    "097f5a9023773650": {
+      "title": "Managed bot creation request links",
+      "templates": [
+        "t.me/newbot/<manager_bot_username>/<suggested_bot_username>?name=<suggested_bot_name>",
+        "t.me/newbot/<manager_bot_username>?name=<suggested_bot_name>",
+        "tg://newbot?manager=<manager_bot_username>&username=<suggested_bot_username>&name=<suggested_bot_name>"
+      ],
+      "options": [
+        "manager",
+        "manager_bot_username",
+        "name",
+        "suggested_bot_name",
+        "suggested_bot_username",
+        "username"
+      ],
+      "ready": []
+    },
+    "ca4264faf5970fc6": {
+      "title": "Boost links",
+      "templates": [
+        "t.me/<username>?boost",
+        "t.me/boost/<username>",
+        "t.me/boost?c=<id>",
+        "t.me/c/<id>?boost",
+        "tg://boost?channel=<id>",
+        "tg://boost?domain=<username>"
+      ],
+      "options": [
+        "boost",
+        "c",
+        "channel",
+        "domain",
+        "id",
+        "username"
+      ],
+      "ready": []
+    },
+    "6e306c515177ca5a": {
+      "title": "OAuth links",
+      "templates": [
+        "https://t.me/oauth?startapp=<token>",
+        "tg://oauth?token=<token>",
+        "tg://resolve?domain=oauth&startapp=<token>"
+      ],
+      "options": [
+        "domain",
+        "startapp",
+        "token"
+      ],
+      "ready": []
+    },
+    "1241936d4dd3aad6": {
+      "title": "Proxy links",
+      "templates": [
+        "t.me/proxy?server=<server>&port=<port>&secret=<secret>",
+        "t.me/socks?server=<server>&port=<port>&user=<user>&pass=<pass>",
+        "tg://proxy?server=<server>&port=<port>&secret=<secret>",
+        "tg://socks?server=<server>&port=<port>&user=<user>&pass=<pass>"
+      ],
+      "options": [
+        "pass",
+        "port",
+        "secret",
+        "server",
+        "user"
+      ],
+      "ready": []
+    },
+    "3cb8201e7ff1e777": {
+      "title": "Theme links",
+      "templates": [
+        "t.me/addtheme/<name>",
+        "tg://addtheme?slug=<name>"
+      ],
+      "options": [
+        "name",
+        "slug"
+      ],
+      "ready": []
+    },
+    "e87df287a7049a2f": {
+      "title": "AI compose tone links",
+      "templates": [
+        "t.me/addstyle/<slug>",
+        "tg://addstyle?slug=<slug>"
+      ],
+      "options": [
+        "slug"
+      ],
+      "ready": []
+    },
+    "124962dc269749b6": {
+      "title": "Wallpaper links",
+      "templates": [
+        "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>",
+        "t.me/bg/<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
+        "t.me/bg/<hex_color>",
+        "t.me/bg/<slug>?intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
+        "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
+        "t.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
+        "t.me/bg/<slug>?intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
+        "t.me/bg/<slug>?mode=<mode>",
+        "t.me/bg/<top_color>-<bottom_color>?rotation=<rotation>",
+        "tg://bg?color=<hex_color>",
+        "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>",
+        "tg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>",
+        "tg://bg?gradient=<top_color>-<bottom_color>&rotation=<rotation>",
+        "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<bg_color>&mode=<mode>",
+        "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>",
+        "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>",
+        "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
+        "tg://bg?slug=<slug>&mode=<mode>"
+      ],
+      "options": [
+        "bg_color",
+        "bottom_color",
+        "color",
+        "gradient",
+        "hex_color",
+        "hex_color1",
+        "hex_color2",
+        "hex_color3",
+        "hex_color4",
+        "intensity",
+        "mode",
+        "rotation",
+        "slug",
+        "top_color"
+      ],
+      "ready": []
+    },
+    "9d74932bdb6f21dc": {
+      "title": "Bot links",
+      "templates": [
+        "t.me/<bot_username>?start=<parameter>",
+        "tg://resolve?domain=<bot_username>&start=<parameter>"
+      ],
+      "options": [
+        "bot_username",
+        "domain",
+        "parameter",
+        "start"
+      ],
+      "ready": []
+    },
+    "70b6f28226ea3c89": {
+      "title": "Group/channel bot links",
+      "templates": [
+        "t.me/<bot_username>?startchannel&admin=<permissions>",
+        "t.me/<bot_username>?startgroup&admin=<permissions>",
+        "t.me/<bot_username>?startgroup=<parameter>&admin=<permissions>",
+        "tg://resolve?domain=<bot_username>&startchannel&admin=<permissions>",
+        "tg://resolve?domain=<bot_username>&startgroup&admin=<permissions>",
+        "tg://resolve?domain=<bot_username>&startgroup=<parameter>&admin=<permissions>"
+      ],
+      "options": [
+        "admin",
+        "anonymous",
+        "bot_username",
+        "change_info",
+        "delete_messages",
+        "delete_stories",
+        "domain",
+        "edit_messages",
+        "edit_stories",
+        "invite_users",
+        "manage_chat",
+        "manage_direct_messages",
+        "manage_tags",
+        "manage_topics",
+        "manage_video_chats",
+        "parameter",
+        "permissions",
+        "pin_messages",
+        "post_messages",
+        "post_stories",
+        "promote_members",
+        "restrict_members",
+        "startchannel",
+        "startgroup"
+      ],
+      "ready": []
+    },
+    "6ca5cab77e702c78": {
+      "title": "Game links",
+      "templates": [
+        "t.me/<bot_username>?game=<short_name>",
+        "tg://resolve?domain=<bot_username>&game=<short_name>"
+      ],
+      "options": [
+        "bot_username",
+        "domain",
+        "game",
+        "short_name"
+      ],
+      "ready": []
+    },
+    "cde0fb0dec1400c5": {
+      "title": "Settings links",
+      "templates": [
+        "tg://settings",
+        "tg://settings/<path>"
+      ],
+      "options": [
+        "appearance",
+        "appearance/animations",
+        "appearance/app-icon",
+        "appearance/auto-night-mode",
+        "appearance/message-corners",
+        "appearance/night-mode",
+        "appearance/stickers-and-emoji",
+        "appearance/stickers-and-emoji/archived",
+        "appearance/stickers-and-emoji/archived/edit",
+        "appearance/stickers-and-emoji/dynamic-order",
+        "appearance/stickers-and-emoji/edit",
+        "appearance/stickers-and-emoji/emoji",
+        "appearance/stickers-and-emoji/emoji/archived",
+        "appearance/stickers-and-emoji/emoji/archived/edit",
+        "appearance/stickers-and-emoji/emoji/edit",
+        "appearance/stickers-and-emoji/emoji/quick-reaction",
+        "appearance/stickers-and-emoji/emoji/quick-reaction/choose",
+        "appearance/stickers-and-emoji/emoji/show-more",
+        "appearance/stickers-and-emoji/emoji/suggest",
+        "appearance/stickers-and-emoji/large-emoji",
+        "appearance/stickers-and-emoji/suggest-by-emoji",
+        "appearance/stickers-and-emoji/trending",
+        "appearance/tap-for-next-media",
+        "appearance/text-size",
+        "appearance/text-size/use-system",
+        "appearance/themes",
+        "appearance/themes/create",
+        "appearance/themes/edit",
+        "appearance/wallpapers",
+        "appearance/wallpapers/choose-photo",
+        "appearance/wallpapers/edit",
+        "appearance/wallpapers/set",
+        "appearance/your-color/name",
+        "appearance/your-color/name/add-icons",
+        "appearance/your-color/name/use-gift",
+        "appearance/your-color/profile",
+        "appearance/your-color/profile/add-icons",
+        "appearance/your-color/profile/reset",
+        "appearance/your-color/profile/use-gift",
+        "ask-question",
+        "auto_delete",
+        "business",
+        "business/do-not-hide-ads",
+        "calls",
+        "calls/all",
+        "calls/edit",
+        "calls/missed",
+        "calls/show-tab",
+        "calls/start-call",
+        "change_number",
+        "chat/browser",
+        "chat/browser/clear-cache",
+        "chat/browser/clear-cookies",
+        "chat/browser/clear-history",
+        "chat/browser/clear-list",
+        "chat/browser/enable-browser",
+        "chat/browser/history",
+        "chat/browser/never-open",
+        "chat/browser/search",
+        "data",
+        "data/auto-download/mobile",
+        "data/auto-download/mobile/enable",
+        "data/auto-download/mobile/files",
+        "data/auto-download/mobile/photos",
+        "data/auto-download/mobile/stories",
+        "data/auto-download/mobile/usage",
+        "data/auto-download/mobile/videos",
+        "data/auto-download/reset",
+        "data/auto-download/roaming",
+        "data/auto-download/roaming/enable",
+        "data/auto-download/roaming/files",
+        "data/auto-download/roaming/photos",
+        "data/auto-download/roaming/stories",
+        "data/auto-download/roaming/usage",
+        "data/auto-download/roaming/videos",
+        "data/auto-download/wifi",
+        "data/auto-download/wifi/enable",
+        "data/auto-download/wifi/files",
+        "data/auto-download/wifi/photos",
+        "data/auto-download/wifi/stories",
+        "data/auto-download/wifi/usage",
+        "data/auto-download/wifi/videos",
+        "data/less-data-calls",
+        "data/open-links",
+        "data/pause-music",
+        "data/proxy",
+        "data/proxy/add-proxy",
+        "data/proxy/edit",
+        "data/proxy/share-list",
+        "data/proxy/use-for-calls",
+        "data/proxy/use-proxy",
+        "data/raise-to-listen",
+        "data/raise-to-speak",
+        "data/save-to-photos/channels",
+        "data/save-to-photos/channels/add-exception",
+        "data/save-to-photos/channels/delete-all",
+        "data/save-to-photos/channels/max-video-size",
+        "data/save-to-photos/chats",
+        "data/save-to-photos/chats/add-exception",
+        "data/save-to-photos/chats/delete-all",
+        "data/save-to-photos/chats/max-video-size",
+        "data/save-to-photos/groups",
+        "data/save-to-photos/groups/add-exception",
+        "data/save-to-photos/groups/delete-all",
+        "data/save-to-photos/groups/max-video-size",
+        "data/saved-edited-photos",
+        "data/share-sheet",
+        "data/share-sheet/reset",
+        "data/share-sheet/suggest-by",
+        "data/share-sheet/suggested-chats",
+        "data/show-18-content",
+        "data/storage",
+        "data/storage/auto-remove",
+        "data/storage/clear-cache",
+        "data/storage/edit",
+        "data/storage/max-cache",
+        "data/usage",
+        "data/usage/mobile",
+        "data/usage/reset",
+        "data/usage/roaming",
+        "data/usage/wifi",
+        "devices",
+        "devices/auto-terminate",
+        "devices/edit",
+        "devices/link-desktop",
+        "devices/terminate-sessions",
+        "edit",
+        "edit/add-account",
+        "edit/bio",
+        "edit/birthday",
+        "edit/change-number",
+        "edit/channel",
+        "edit/first-name",
+        "edit/last-name",
+        "edit/log-out",
+        "edit/set-photo",
+        "edit/username",
+        "edit/your-color",
+        "edit_profile",
+        "emoji-status",
+        "faq",
+        "features",
+        "folders",
+        "folders/add-recommended",
+        "folders/create",
+        "folders/edit",
+        "folders/show-tags",
+        "folders/tab-view",
+        "language",
+        "language/do-not-translate",
+        "language/show-button",
+        "language/translate-chats",
+        "login_email",
+        "my-profile",
+        "my-profile/archived-posts",
+        "my-profile/gifts",
+        "my-profile/posts",
+        "my-profile/posts/add-album",
+        "my-profile/posts/all-stories",
+        "notifications",
+        "notifications/accounts",
+        "notifications/channels",
+        "notifications/channels/add-exception",
+        "notifications/channels/delete-exceptions",
+        "notifications/channels/edit",
+        "notifications/channels/light-color",
+        "notifications/channels/preview",
+        "notifications/channels/priority",
+        "notifications/channels/show",
+        "notifications/channels/sound",
+        "notifications/channels/vibrate",
+        "notifications/count-unread-messages",
+        "notifications/groups",
+        "notifications/groups/add-exception",
+        "notifications/groups/delete-exceptions",
+        "notifications/groups/edit",
+        "notifications/groups/light-color",
+        "notifications/groups/preview",
+        "notifications/groups/priority",
+        "notifications/groups/show",
+        "notifications/groups/sound",
+        "notifications/groups/vibrate",
+        "notifications/in-app-popup",
+        "notifications/in-app-preview",
+        "notifications/in-app-sounds",
+        "notifications/in-app-vibrate",
+        "notifications/in-chat-sounds",
+        "notifications/include-channels",
+        "notifications/include-muted-chats",
+        "notifications/lock-screen-names",
+        "notifications/new-contacts",
+        "notifications/pinned-messages",
+        "notifications/private-chats",
+        "notifications/private-chats/add-exception",
+        "notifications/private-chats/delete-exceptions",
+        "notifications/private-chats/edit",
+        "notifications/private-chats/light-color",
+        "notifications/private-chats/preview",
+        "notifications/private-chats/priority",
+        "notifications/private-chats/show",
+        "notifications/private-chats/sound",
+        "notifications/private-chats/vibrate",
+        "notifications/reactions",
+        "notifications/reactions/light-color",
+        "notifications/reactions/messages",
+        "notifications/reactions/priority",
+        "notifications/reactions/show-sender",
+        "notifications/reactions/sound",
+        "notifications/reactions/stories",
+        "notifications/reactions/vibrate",
+        "notifications/reset",
+        "notifications/stories",
+        "notifications/stories/add-exception",
+        "notifications/stories/delete-exceptions",
+        "notifications/stories/important",
+        "notifications/stories/light-color",
+        "notifications/stories/new",
+        "notifications/stories/priority",
+        "notifications/stories/show-sender",
+        "notifications/stories/sound",
+        "notifications/stories/vibrate",
+        "notifications/web",
+        "password",
+        "path",
+        "phone_privacy",
+        "power-saving",
+        "power-saving/background",
+        "power-saving/call-animations",
+        "power-saving/effects",
+        "power-saving/emoji",
+        "power-saving/gifs",
+        "power-saving/particles",
+        "power-saving/preload",
+        "power-saving/stickers",
+        "power-saving/transitions",
+        "power-saving/videos",
+        "premium",
+        "privacy",
+        "privacy-policy",
+        "privacy/2sv",
+        "privacy/2sv/change",
+        "privacy/2sv/change-email",
+        "privacy/2sv/disable",
+        "privacy/active-websites",
+        "privacy/active-websites/disconnect-all",
+        "privacy/active-websites/edit",
+        "privacy/archive-and-mute",
+        "privacy/auto-delete",
+        "privacy/auto-delete/set-custom",
+        "privacy/bio",
+        "privacy/bio/always",
+        "privacy/bio/never",
+        "privacy/birthday",
+        "privacy/birthday/add",
+        "privacy/birthday/always",
+        "privacy/birthday/never",
+        "privacy/blocked",
+        "privacy/blocked/block-user",
+        "privacy/blocked/block-user/chats",
+        "privacy/blocked/block-user/contacts",
+        "privacy/blocked/edit",
+        "privacy/calls",
+        "privacy/calls/always",
+        "privacy/calls/ios-integration",
+        "privacy/calls/never",
+        "privacy/calls/p2p",
+        "privacy/calls/p2p/always",
+        "privacy/calls/p2p/never",
+        "privacy/data-settings",
+        "privacy/data-settings/bot-settings",
+        "privacy/data-settings/clear-payment-info",
+        "privacy/data-settings/delete-cloud-drafts",
+        "privacy/data-settings/delete-synced",
+        "privacy/data-settings/link-previews",
+        "privacy/data-settings/map-provider",
+        "privacy/data-settings/suggest-contacts",
+        "privacy/data-settings/sync-contacts",
+        "privacy/forwards",
+        "privacy/forwards/always",
+        "privacy/forwards/never",
+        "privacy/gifts",
+        "privacy/gifts/accepted-types",
+        "privacy/gifts/always",
+        "privacy/gifts/never",
+        "privacy/gifts/show-icon",
+        "privacy/invites",
+        "privacy/invites/always",
+        "privacy/invites/never",
+        "privacy/last-seen",
+        "privacy/last-seen/always",
+        "privacy/last-seen/hide-read-time",
+        "privacy/last-seen/never",
+        "privacy/login-email",
+        "privacy/messages",
+        "privacy/messages/exceptions",
+        "privacy/messages/set-price",
+        "privacy/passcode",
+        "privacy/passcode/auto-lock",
+        "privacy/passcode/change",
+        "privacy/passcode/disable",
+        "privacy/passcode/face-id",
+        "privacy/passcode/fingerprint",
+        "privacy/passkey",
+        "privacy/passkey/create",
+        "privacy/phone-number",
+        "privacy/phone-number/always",
+        "privacy/phone-number/never",
+        "privacy/profile-photos",
+        "privacy/profile-photos/always",
+        "privacy/profile-photos/never",
+        "privacy/profile-photos/remove-public",
+        "privacy/profile-photos/set-public",
+        "privacy/profile-photos/update-public",
+        "privacy/saved-music",
+        "privacy/saved-music/always",
+        "privacy/saved-music/never",
+        "privacy/self-destruct",
+        "privacy/voice",
+        "privacy/voice/always",
+        "privacy/voice/never",
+        "profile-color/name",
+        "profile-color/name/add-icons",
+        "profile-color/name/use-gift",
+        "profile-color/profile",
+        "profile-color/profile/add-icons",
+        "profile-color/profile/use-gift",
+        "profile-photo/use-emoji",
+        "qr-code",
+        "qr-code/scan",
+        "qr-code/share",
+        "saved-messages",
+        "search",
+        "send-gift",
+        "send-gift/self",
+        "stars",
+        "stars/earn",
+        "stars/gift",
+        "stars/stats",
+        "stars/top-up",
+        "themes",
+        "ton"
+      ],
+      "ready": [
+        "tg://settings",
+        "tg://settings/appearance",
+        "tg://settings/appearance/animations",
+        "tg://settings/appearance/app-icon",
+        "tg://settings/appearance/auto-night-mode",
+        "tg://settings/appearance/message-corners",
+        "tg://settings/appearance/night-mode",
+        "tg://settings/appearance/stickers-and-emoji",
+        "tg://settings/appearance/stickers-and-emoji/archived",
+        "tg://settings/appearance/stickers-and-emoji/archived/edit",
+        "tg://settings/appearance/stickers-and-emoji/dynamic-order",
+        "tg://settings/appearance/stickers-and-emoji/edit",
+        "tg://settings/appearance/stickers-and-emoji/emoji",
+        "tg://settings/appearance/stickers-and-emoji/emoji/archived",
+        "tg://settings/appearance/stickers-and-emoji/emoji/archived/edit",
+        "tg://settings/appearance/stickers-and-emoji/emoji/edit",
+        "tg://settings/appearance/stickers-and-emoji/emoji/quick-reaction",
+        "tg://settings/appearance/stickers-and-emoji/emoji/quick-reaction/choose",
+        "tg://settings/appearance/stickers-and-emoji/emoji/show-more",
+        "tg://settings/appearance/stickers-and-emoji/emoji/suggest",
+        "tg://settings/appearance/stickers-and-emoji/large-emoji",
+        "tg://settings/appearance/stickers-and-emoji/suggest-by-emoji",
+        "tg://settings/appearance/stickers-and-emoji/trending",
+        "tg://settings/appearance/tap-for-next-media",
+        "tg://settings/appearance/text-size",
+        "tg://settings/appearance/text-size/use-system",
+        "tg://settings/appearance/themes",
+        "tg://settings/appearance/themes/create",
+        "tg://settings/appearance/themes/edit",
+        "tg://settings/appearance/wallpapers",
+        "tg://settings/appearance/wallpapers/choose-photo",
+        "tg://settings/appearance/wallpapers/edit",
+        "tg://settings/appearance/wallpapers/set",
+        "tg://settings/appearance/your-color/name",
+        "tg://settings/appearance/your-color/name/add-icons",
+        "tg://settings/appearance/your-color/name/use-gift",
+        "tg://settings/appearance/your-color/profile",
+        "tg://settings/appearance/your-color/profile/add-icons",
+        "tg://settings/appearance/your-color/profile/reset",
+        "tg://settings/appearance/your-color/profile/use-gift",
+        "tg://settings/ask-question",
+        "tg://settings/auto_delete",
+        "tg://settings/business",
+        "tg://settings/business/do-not-hide-ads",
+        "tg://settings/calls",
+        "tg://settings/calls/all",
+        "tg://settings/calls/edit",
+        "tg://settings/calls/missed",
+        "tg://settings/calls/show-tab",
+        "tg://settings/calls/start-call",
+        "tg://settings/change_number",
+        "tg://settings/chat/browser",
+        "tg://settings/chat/browser/clear-cache",
+        "tg://settings/chat/browser/clear-cookies",
+        "tg://settings/chat/browser/clear-history",
+        "tg://settings/chat/browser/clear-list",
+        "tg://settings/chat/browser/enable-browser",
+        "tg://settings/chat/browser/history",
+        "tg://settings/chat/browser/never-open",
+        "tg://settings/chat/browser/search",
+        "tg://settings/data",
+        "tg://settings/data/auto-download/mobile",
+        "tg://settings/data/auto-download/mobile/enable",
+        "tg://settings/data/auto-download/mobile/files",
+        "tg://settings/data/auto-download/mobile/photos",
+        "tg://settings/data/auto-download/mobile/stories",
+        "tg://settings/data/auto-download/mobile/usage",
+        "tg://settings/data/auto-download/mobile/videos",
+        "tg://settings/data/auto-download/reset",
+        "tg://settings/data/auto-download/roaming",
+        "tg://settings/data/auto-download/roaming/enable",
+        "tg://settings/data/auto-download/roaming/files",
+        "tg://settings/data/auto-download/roaming/photos",
+        "tg://settings/data/auto-download/roaming/stories",
+        "tg://settings/data/auto-download/roaming/usage",
+        "tg://settings/data/auto-download/roaming/videos",
+        "tg://settings/data/auto-download/wifi",
+        "tg://settings/data/auto-download/wifi/enable",
+        "tg://settings/data/auto-download/wifi/files",
+        "tg://settings/data/auto-download/wifi/photos",
+        "tg://settings/data/auto-download/wifi/stories",
+        "tg://settings/data/auto-download/wifi/usage",
+        "tg://settings/data/auto-download/wifi/videos",
+        "tg://settings/data/less-data-calls",
+        "tg://settings/data/open-links",
+        "tg://settings/data/pause-music",
+        "tg://settings/data/proxy",
+        "tg://settings/data/proxy/add-proxy",
+        "tg://settings/data/proxy/edit",
+        "tg://settings/data/proxy/share-list",
+        "tg://settings/data/proxy/use-for-calls",
+        "tg://settings/data/proxy/use-proxy",
+        "tg://settings/data/raise-to-listen",
+        "tg://settings/data/raise-to-speak",
+        "tg://settings/data/save-to-photos/channels",
+        "tg://settings/data/save-to-photos/channels/add-exception",
+        "tg://settings/data/save-to-photos/channels/delete-all",
+        "tg://settings/data/save-to-photos/channels/max-video-size",
+        "tg://settings/data/save-to-photos/chats",
+        "tg://settings/data/save-to-photos/chats/add-exception",
+        "tg://settings/data/save-to-photos/chats/delete-all",
+        "tg://settings/data/save-to-photos/chats/max-video-size",
+        "tg://settings/data/save-to-photos/groups",
+        "tg://settings/data/save-to-photos/groups/add-exception",
+        "tg://settings/data/save-to-photos/groups/delete-all",
+        "tg://settings/data/save-to-photos/groups/max-video-size",
+        "tg://settings/data/saved-edited-photos",
+        "tg://settings/data/share-sheet",
+        "tg://settings/data/share-sheet/reset",
+        "tg://settings/data/share-sheet/suggest-by",
+        "tg://settings/data/share-sheet/suggested-chats",
+        "tg://settings/data/show-18-content",
+        "tg://settings/data/storage",
+        "tg://settings/data/storage/auto-remove",
+        "tg://settings/data/storage/clear-cache",
+        "tg://settings/data/storage/edit",
+        "tg://settings/data/storage/max-cache",
+        "tg://settings/data/usage",
+        "tg://settings/data/usage/mobile",
+        "tg://settings/data/usage/reset",
+        "tg://settings/data/usage/roaming",
+        "tg://settings/data/usage/wifi",
+        "tg://settings/devices",
+        "tg://settings/devices/auto-terminate",
+        "tg://settings/devices/edit",
+        "tg://settings/devices/link-desktop",
+        "tg://settings/devices/terminate-sessions",
+        "tg://settings/edit",
+        "tg://settings/edit/add-account",
+        "tg://settings/edit/bio",
+        "tg://settings/edit/birthday",
+        "tg://settings/edit/change-number",
+        "tg://settings/edit/channel",
+        "tg://settings/edit/first-name",
+        "tg://settings/edit/last-name",
+        "tg://settings/edit/log-out",
+        "tg://settings/edit/set-photo",
+        "tg://settings/edit/username",
+        "tg://settings/edit/your-color",
+        "tg://settings/edit_profile",
+        "tg://settings/emoji-status",
+        "tg://settings/faq",
+        "tg://settings/features",
+        "tg://settings/folders",
+        "tg://settings/folders/add-recommended",
+        "tg://settings/folders/create",
+        "tg://settings/folders/edit",
+        "tg://settings/folders/show-tags",
+        "tg://settings/folders/tab-view",
+        "tg://settings/language",
+        "tg://settings/language/do-not-translate",
+        "tg://settings/language/show-button",
+        "tg://settings/language/translate-chats",
+        "tg://settings/login_email",
+        "tg://settings/my-profile",
+        "tg://settings/my-profile/archived-posts",
+        "tg://settings/my-profile/gifts",
+        "tg://settings/my-profile/posts",
+        "tg://settings/my-profile/posts/add-album",
+        "tg://settings/my-profile/posts/all-stories",
+        "tg://settings/notifications",
+        "tg://settings/notifications/accounts",
+        "tg://settings/notifications/channels",
+        "tg://settings/notifications/channels/add-exception",
+        "tg://settings/notifications/channels/delete-exceptions",
+        "tg://settings/notifications/channels/edit",
+        "tg://settings/notifications/channels/light-color",
+        "tg://settings/notifications/channels/preview",
+        "tg://settings/notifications/channels/priority",
+        "tg://settings/notifications/channels/show",
+        "tg://settings/notifications/channels/sound",
+        "tg://settings/notifications/channels/vibrate",
+        "tg://settings/notifications/count-unread-messages",
+        "tg://settings/notifications/groups",
+        "tg://settings/notifications/groups/add-exception",
+        "tg://settings/notifications/groups/delete-exceptions",
+        "tg://settings/notifications/groups/edit",
+        "tg://settings/notifications/groups/light-color",
+        "tg://settings/notifications/groups/preview",
+        "tg://settings/notifications/groups/priority",
+        "tg://settings/notifications/groups/show",
+        "tg://settings/notifications/groups/sound",
+        "tg://settings/notifications/groups/vibrate",
+        "tg://settings/notifications/in-app-popup",
+        "tg://settings/notifications/in-app-preview",
+        "tg://settings/notifications/in-app-sounds",
+        "tg://settings/notifications/in-app-vibrate",
+        "tg://settings/notifications/in-chat-sounds",
+        "tg://settings/notifications/include-channels",
+        "tg://settings/notifications/include-muted-chats",
+        "tg://settings/notifications/lock-screen-names",
+        "tg://settings/notifications/new-contacts",
+        "tg://settings/notifications/pinned-messages",
+        "tg://settings/notifications/private-chats",
+        "tg://settings/notifications/private-chats/add-exception",
+        "tg://settings/notifications/private-chats/delete-exceptions",
+        "tg://settings/notifications/private-chats/edit",
+        "tg://settings/notifications/private-chats/light-color",
+        "tg://settings/notifications/private-chats/preview",
+        "tg://settings/notifications/private-chats/priority",
+        "tg://settings/notifications/private-chats/show",
+        "tg://settings/notifications/private-chats/sound",
+        "tg://settings/notifications/private-chats/vibrate",
+        "tg://settings/notifications/reactions",
+        "tg://settings/notifications/reactions/light-color",
+        "tg://settings/notifications/reactions/messages",
+        "tg://settings/notifications/reactions/priority",
+        "tg://settings/notifications/reactions/show-sender",
+        "tg://settings/notifications/reactions/sound",
+        "tg://settings/notifications/reactions/stories",
+        "tg://settings/notifications/reactions/vibrate",
+        "tg://settings/notifications/reset",
+        "tg://settings/notifications/stories",
+        "tg://settings/notifications/stories/add-exception",
+        "tg://settings/notifications/stories/delete-exceptions",
+        "tg://settings/notifications/stories/important",
+        "tg://settings/notifications/stories/light-color",
+        "tg://settings/notifications/stories/new",
+        "tg://settings/notifications/stories/priority",
+        "tg://settings/notifications/stories/show-sender",
+        "tg://settings/notifications/stories/sound",
+        "tg://settings/notifications/stories/vibrate",
+        "tg://settings/notifications/web",
+        "tg://settings/password",
+        "tg://settings/phone_privacy",
+        "tg://settings/power-saving",
+        "tg://settings/power-saving/background",
+        "tg://settings/power-saving/call-animations",
+        "tg://settings/power-saving/effects",
+        "tg://settings/power-saving/emoji",
+        "tg://settings/power-saving/gifs",
+        "tg://settings/power-saving/particles",
+        "tg://settings/power-saving/preload",
+        "tg://settings/power-saving/stickers",
+        "tg://settings/power-saving/transitions",
+        "tg://settings/power-saving/videos",
+        "tg://settings/premium",
+        "tg://settings/privacy",
+        "tg://settings/privacy-policy",
+        "tg://settings/privacy/2sv",
+        "tg://settings/privacy/2sv/change",
+        "tg://settings/privacy/2sv/change-email",
+        "tg://settings/privacy/2sv/disable",
+        "tg://settings/privacy/active-websites",
+        "tg://settings/privacy/active-websites/disconnect-all",
+        "tg://settings/privacy/active-websites/edit",
+        "tg://settings/privacy/archive-and-mute",
+        "tg://settings/privacy/auto-delete",
+        "tg://settings/privacy/auto-delete/set-custom",
+        "tg://settings/privacy/bio",
+        "tg://settings/privacy/bio/always",
+        "tg://settings/privacy/bio/never",
+        "tg://settings/privacy/birthday",
+        "tg://settings/privacy/birthday/add",
+        "tg://settings/privacy/birthday/always",
+        "tg://settings/privacy/birthday/never",
+        "tg://settings/privacy/blocked",
+        "tg://settings/privacy/blocked/block-user",
+        "tg://settings/privacy/blocked/block-user/chats",
+        "tg://settings/privacy/blocked/block-user/contacts",
+        "tg://settings/privacy/blocked/edit",
+        "tg://settings/privacy/calls",
+        "tg://settings/privacy/calls/always",
+        "tg://settings/privacy/calls/ios-integration",
+        "tg://settings/privacy/calls/never",
+        "tg://settings/privacy/calls/p2p",
+        "tg://settings/privacy/calls/p2p/always",
+        "tg://settings/privacy/calls/p2p/never",
+        "tg://settings/privacy/data-settings",
+        "tg://settings/privacy/data-settings/bot-settings",
+        "tg://settings/privacy/data-settings/clear-payment-info",
+        "tg://settings/privacy/data-settings/delete-cloud-drafts",
+        "tg://settings/privacy/data-settings/delete-synced",
+        "tg://settings/privacy/data-settings/link-previews",
+        "tg://settings/privacy/data-settings/map-provider",
+        "tg://settings/privacy/data-settings/suggest-contacts",
+        "tg://settings/privacy/data-settings/sync-contacts",
+        "tg://settings/privacy/forwards",
+        "tg://settings/privacy/forwards/always",
+        "tg://settings/privacy/forwards/never",
+        "tg://settings/privacy/gifts",
+        "tg://settings/privacy/gifts/accepted-types",
+        "tg://settings/privacy/gifts/always",
+        "tg://settings/privacy/gifts/never",
+        "tg://settings/privacy/gifts/show-icon",
+        "tg://settings/privacy/invites",
+        "tg://settings/privacy/invites/always",
+        "tg://settings/privacy/invites/never",
+        "tg://settings/privacy/last-seen",
+        "tg://settings/privacy/last-seen/always",
+        "tg://settings/privacy/last-seen/hide-read-time",
+        "tg://settings/privacy/last-seen/never",
+        "tg://settings/privacy/login-email",
+        "tg://settings/privacy/messages",
+        "tg://settings/privacy/messages/exceptions",
+        "tg://settings/privacy/messages/set-price",
+        "tg://settings/privacy/passcode",
+        "tg://settings/privacy/passcode/auto-lock",
+        "tg://settings/privacy/passcode/change",
+        "tg://settings/privacy/passcode/disable",
+        "tg://settings/privacy/passcode/face-id",
+        "tg://settings/privacy/passcode/fingerprint",
+        "tg://settings/privacy/passkey",
+        "tg://settings/privacy/passkey/create",
+        "tg://settings/privacy/phone-number",
+        "tg://settings/privacy/phone-number/always",
+        "tg://settings/privacy/phone-number/never",
+        "tg://settings/privacy/profile-photos",
+        "tg://settings/privacy/profile-photos/always",
+        "tg://settings/privacy/profile-photos/never",
+        "tg://settings/privacy/profile-photos/remove-public",
+        "tg://settings/privacy/profile-photos/set-public",
+        "tg://settings/privacy/profile-photos/update-public",
+        "tg://settings/privacy/saved-music",
+        "tg://settings/privacy/saved-music/always",
+        "tg://settings/privacy/saved-music/never",
+        "tg://settings/privacy/self-destruct",
+        "tg://settings/privacy/voice",
+        "tg://settings/privacy/voice/always",
+        "tg://settings/privacy/voice/never",
+        "tg://settings/profile-color/name",
+        "tg://settings/profile-color/name/add-icons",
+        "tg://settings/profile-color/name/use-gift",
+        "tg://settings/profile-color/profile",
+        "tg://settings/profile-color/profile/add-icons",
+        "tg://settings/profile-color/profile/use-gift",
+        "tg://settings/profile-photo/use-emoji",
+        "tg://settings/qr-code",
+        "tg://settings/qr-code/scan",
+        "tg://settings/qr-code/share",
+        "tg://settings/saved-messages",
+        "tg://settings/search",
+        "tg://settings/send-gift",
+        "tg://settings/send-gift/self",
+        "tg://settings/stars",
+        "tg://settings/stars/earn",
+        "tg://settings/stars/gift",
+        "tg://settings/stars/stats",
+        "tg://settings/stars/top-up",
+        "tg://settings/themes",
+        "tg://settings/ton"
+      ]
+    },
+    "ff9a6d2ad12ddba6": {
+      "title": "My stars links",
+      "templates": [
+        "tg://settings/stars",
+        "tg://stars"
+      ],
+      "options": [],
+      "ready": [
+        "tg://settings/stars",
+        "tg://stars"
+      ]
+    },
+    "12d1ded4d69cc051": {
+      "title": "My Grams links",
+      "templates": [
+        "tg://settings/ton",
+        "tg://ton"
+      ],
+      "options": [],
+      "ready": [
+        "tg://settings/ton",
+        "tg://ton"
+      ]
+    },
+    "aa5af4084f3746bb": {
+      "title": "Contacts links",
+      "templates": [
+        "tg://contacts",
+        "tg://contacts/<section>"
+      ],
+      "options": [
+        "invite",
+        "manage",
+        "new",
+        "search",
+        "section",
+        "sort"
+      ],
+      "ready": [
+        "tg://contacts",
+        "tg://contacts/invite",
+        "tg://contacts/manage",
+        "tg://contacts/new",
+        "tg://contacts/search",
+        "tg://contacts/section",
+        "tg://contacts/sort"
+      ]
+    },
+    "11836096bd42524c": {
+      "title": "New chat links",
+      "templates": [
+        "tg://new",
+        "tg://new/channel",
+        "tg://new/group"
+      ],
+      "options": [],
+      "ready": [
+        "tg://new",
+        "tg://new/channel",
+        "tg://new/group"
+      ]
+    },
+    "c55104413654cd47": {
+      "title": "Chat list links",
+      "templates": [
+        "tg://chats/edit",
+        "tg://chats/emoji-status",
+        "tg://chats/search"
+      ],
+      "options": [],
+      "ready": [
+        "tg://chats/edit",
+        "tg://chats/emoji-status",
+        "tg://chats/search"
+      ]
+    },
+    "52d6e3de4fa0dcc2": {
+      "title": "Invoice links",
+      "templates": [
+        "t.me/$<slug>",
+        "t.me/invoice/<slug>",
+        "tg://invoice?slug=<slug>"
+      ],
+      "options": [
+        "slug"
+      ],
+      "ready": []
+    },
+    "232de408a10742bc": {
+      "title": "Language pack links",
+      "templates": [
+        "t.me/setlanguage/<slug>",
+        "tg://setlanguage?lang=<slug>"
+      ],
+      "options": [
+        "lang",
+        "slug"
+      ],
+      "ready": []
+    },
+    "a3837d393f2a1bb2": {
+      "title": "Telegram Passport links",
+      "templates": [
+        "tg://passport?params",
+        "tg://resolve?domain=telegrampassport&params"
+      ],
+      "options": [
+        "domain",
+        "params"
+      ],
+      "ready": [
+        "tg://passport?params",
+        "tg://resolve?domain=telegrampassport&params"
+      ]
+    },
+    "12830d1442e4f15a": {
+      "title": "Phone confirmation links",
+      "templates": [
+        "t.me/confirmphone?phone=<phone>&hash=<hash>",
+        "tg://confirmphone?phone=<phone>&hash=<hash>"
+      ],
+      "options": [
+        "hash",
+        "phone"
+      ],
+      "ready": []
+    },
+    "5d6be87fec284462": {
+      "title": "Premium multigift links",
+      "templates": [
+        "tg://premium_multigift?ref=<referrer>"
+      ],
+      "options": [
+        "ref",
+        "referrer"
+      ],
+      "ready": []
+    },
+    "28e3ed5676c44f2d": {
+      "title": "Premium referrer links",
+      "templates": [
+        "tg://premium_offer?ref=<referrer>"
+      ],
+      "options": [
+        "ref",
+        "referrer"
+      ],
+      "ready": []
+    },
+    "255a3a314f5ac98e": {
+      "title": "Premium giftcode links",
+      "templates": [
+        "t.me/giftcode/<slug>",
+        "tg://giftcode?slug=<slug>"
+      ],
+      "options": [
+        "slug"
+      ],
+      "ready": []
+    },
+    "7768c094d5cdb0b0": {
+      "title": "QR code login links",
+      "templates": [
+        "tg://login?token=<base64encodedtoken>"
+      ],
+      "options": [
+        "base64encodedtoken",
+        "token"
+      ],
+      "ready": []
+    },
+    "6836b894c313b882": {
+      "title": "Main Mini App links",
+      "templates": [
+        "t.me/<bot_username>?startapp&mode=<mode>",
+        "t.me/<bot_username>?startapp=<start_parameter>&mode=<mode>",
+        "tg://resolve?domain=<bot_username>&startapp&mode=<mode>",
+        "tg://resolve?domain=<bot_username>&startapp=<start_parameter>&mode=<mode>"
+      ],
+      "options": [
+        "bot_username",
+        "domain",
+        "mode",
+        "start_parameter",
+        "startapp"
+      ],
+      "ready": []
+    },
+    "d334c8eb39e24662": {
+      "title": "Direct mini app links",
+      "templates": [
+        "t.me/<bot_username>/<short_name>?startapp=<start_parameter>&mode=<mode>",
+        "tg://resolve?domain=<bot_username>&appname=<short_name>&startapp=<start_parameter>&mode=<mode>"
+      ],
+      "options": [
+        "appname",
+        "bot_username",
+        "domain",
+        "mode",
+        "short_name",
+        "start_parameter",
+        "startapp"
+      ],
+      "ready": []
+    },
+    "84e5145a119c7263": {
+      "title": "Bot attachment or side menu links",
+      "templates": [
+        "t.me/+<phone_number>?attach=<bot_username>",
+        "t.me/+<phone_number>?attach=<bot_username>&startattach=<start_parameter>",
+        "t.me/<bot_username>?startattach",
+        "t.me/<bot_username>?startattach&choose=users+bots+groups+channels",
+        "t.me/<bot_username>?startattach=<start_parameter>",
+        "t.me/<bot_username>?startattach=<start_parameter>&choose=users+bots+groups+channels",
+        "t.me/<username>?attach=<bot_username>",
+        "t.me/<username>?attach=<bot_username>&startattach=<start_parameter>",
+        "tg://resolve?domain=<bot_username>&startattach",
+        "tg://resolve?domain=<bot_username>&startattach&choose=users+bots+groups+channels",
+        "tg://resolve?domain=<bot_username>&startattach=<start_parameter>",
+        "tg://resolve?domain=<bot_username>&startattach=<start_parameter>&choose=users+bots+groups+channels",
+        "tg://resolve?domain=<username>&attach=<bot_username>",
+        "tg://resolve?domain=<username>&attach=<bot_username>&startattach=<start_parameter>",
+        "tg://resolve?phone=<phone_number>&attach=<bot_username>",
+        "tg://resolve?phone=<phone_number>&attach=<bot_username>&startattach=<start_parameter>"
+      ],
+      "options": [
+        "attach",
+        "bot_username",
+        "choose",
+        "domain",
+        "phone",
+        "phone_number",
+        "start_parameter",
+        "startattach",
+        "username"
+      ],
+      "ready": []
+    },
+    "84b5f56368bf0c3f": {
+      "title": "Gift collection links",
+      "templates": [
+        "t.me/<username>/c/<collection_id>",
+        "t.me/<username>?collection=<collection_id>",
+        "tg://resolve?domain=<username>&collection=<collection_id>"
+      ],
+      "options": [
+        "collection",
+        "collection_id",
+        "domain",
+        "username"
+      ],
+      "ready": []
+    },
+    "95482ba25b7bf178": {
+      "title": "Auction links",
+      "templates": [
+        "t.me/auction/<slug>",
+        "tg://stargift_auction?slug=<slug>"
+      ],
+      "options": [
+        "slug"
+      ],
+      "ready": []
+    },
+    "44574c4ba2ea74ad": {
+      "title": "Referral links",
+      "templates": [
+        "t.me/<bot_username>?ref=<referrer>",
+        "t.me/<bot_username>?start={prefix}<referrer>",
+        "tg://resolve?domain=<bot_username>&ref=<referrer>",
+        "tg://resolve?domain=<bot_username>&start={prefix}<referrer>"
+      ],
+      "options": [
+        "bot_username",
+        "domain",
+        "ref",
+        "referrer",
+        "start"
+      ],
+      "ready": []
+    },
+    "a56145270ce6b3be": {
+      "title": "ID links",
+      "templates": [
+        "tg://user?id=<id>"
+      ],
+      "options": [
+        "id"
+      ],
+      "ready": []
+    },
+    "4030f0c0b99ba5e1": {
+      "title": "Emoji links",
+      "templates": [
+        "tg://emoji?id=<id>"
+      ],
+      "options": [
+        "id"
+      ],
+      "ready": []
+    },
+    "323748f86a762247": {
+      "title": "Timestamp links",
+      "templates": [
+        "tg://time?unix=<unix>&format=<format>"
+      ],
+      "options": [
+        "format",
+        "unix"
+      ],
+      "ready": []
+    },
+    "60945d49535300be": {
+      "title": "Unsupported links",
+      "templates": [
+        "tg://need_update_for_some_feature?test=a",
+        "tg:some_unsupported_feature?test=b"
+      ],
+      "options": [
+        "test",
+        "tg://need_update_for_some_feature?test=a",
+        "tg:some_unsupported_feature?test=b"
+      ],
+      "ready": [
+        "tg://need_update_for_some_feature?test=a",
+        "tg:some_unsupported_feature?test=b"
+      ]
+    }
+  }
 }
