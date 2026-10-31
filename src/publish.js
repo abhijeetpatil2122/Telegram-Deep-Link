@@ -1,98 +1,88 @@
 const API = 'https://api.telegram.org';
 const escapeHtml = value => String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-const EXAMPLES = {
-  username: 'telegram', domain: 'telegram', draft_text: 'Hello from Telegram',
-  phone_number: '1234567890', hash: 'AbCdEf123', slug: 'example',
-  id: '12345', channel: '1234567890', thread_id: '10', comment: '12346',
-  media_timestamp: '90', task_id: '1', option_id: 'YWJj', token: 'example-token',
-  server: 'proxy.example.com', port: '443', secret: 'example-secret',
-  user: 'demo', pass: 'password', name: 'Example', story_id: '123',
-  album_id: '42', manager_bot_username: 'managerbot',
-  suggested_bot_username: 'example_bot', suggested_bot_name: 'Example Bot',
-  url: 'https://example.com', text: 'Hello', mode: 'blur', path: 'appearance/themes',
-  color: 'blue', hex_color: 'FFFFFF', hex_color1: 'FF0000',
-  hex_color2: '00FF00', hex_color3: '0000FF', hex_color4: 'FFFFFF',
-  startapp: 'hello', startattach: 'hello', attach: 'example_bot'
-};
+function unique(values) { return [...new Set((values || []).filter(Boolean))]; }
 
-function exampleFor(template) {
-  return template.replace(/<([a-zA-Z][\w-]*)>/g, (_, name) => encodeURIComponent(EXAMPLES[name] ?? 'example'));
+function familyHeaders(family) {
+  const roots = new Set();
+  for (const template of family.templates || []) {
+    const match = template.match(/^tg:\/\/([a-z0-9_]+)/i);
+    if (match) { roots.add('tg:' + match[1]); roots.add('tg://' + match[1]); }
+  }
+  for (const link of family.ready || []) {
+    const match = link.match(/^tg:\/\/([a-z0-9_]+)/i);
+    if (match) { roots.add('tg:' + match[1]); roots.add('tg://' + match[1]); }
+  }
+  return [...roots];
 }
 
-function htmlFor(item) {
-  const example = exampleFor(item.template);
-  const exampleHref = /^(?:t\.me|telegram\.me|telegram\.dog)\//i.test(example) ? 'https://' + example : example;
-  const clickable = /^https?:\/\//i.test(exampleHref);
-  const description = item.description ? '\n\n' + escapeHtml(item.description) : '';
-  return [
-    '<b>New Telegram deep link</b>',
-    '',
-    '<b>Section:</b> ' + escapeHtml(item.category + (item.section && item.section !== 'General' ? ' · ' + item.section : '')),
-    '<b>Format:</b>',
-    '<code>' + escapeHtml(item.template) + '</code>',
-    '<b>Example:</b>',
-    clickable ? '<a href="' + escapeHtml(exampleHref) + '">' + escapeHtml(exampleHref) + '</a>' : '<code>' + escapeHtml(example) + '</code>',
-    description,
-    '',
-    '<a href="https://corefork.telegram.org/api/links">Official Telegram documentation</a>'
-  ].join('\n');
+function linkLine(link) {
+  const safe = escapeHtml(link);
+  return '<a href="' + safe + '">' + safe + '</a>';
 }
 
-export async function sendDiscovery(item) {
+function renderFamilyMessages(family) {
+  const headers = familyHeaders(family);
+  const options = unique(family.options);
+  const ready = unique(family.ready);
+  const optionChunks = [];
+  const readyChunks = [];
+  const chunkSize = 18;
+  for (let i = 0; i < options.length; i += chunkSize) optionChunks.push(options.slice(i, i + chunkSize));
+  for (let i = 0; i < ready.length; i += chunkSize) readyChunks.push(ready.slice(i, i + chunkSize));
+  const pages = Math.max(1, optionChunks.length, readyChunks.length);
+  const messages = [];
+  for (let i = 0; i < pages; i++) {
+    const lines = [];
+    if (headers.length) lines.push(...headers);
+    else if (family.templates?.length) lines.push(...family.templates.slice(0, 2));
+    const optionLines = optionChunks[i] || [];
+    const readyLines = readyChunks[i] || [];
+    if (options.length) lines.push('<blockquote expandable>Options:\n' + optionLines.map(escapeHtml).join('\n') + '</blockquote>');
+    if (ready.length) lines.push('<blockquote expandable>Ready to use:\n' + readyLines.map(linkLine).join('\n') + '</blockquote>');
+    const message = lines.join('\n\n');
+    if (message.length > 3900) throw new Error('Family message exceeds Telegram message size limit: ' + family.title);
+    messages.push(message);
+  }
+  return messages;
+}
+
+async function sendText(text) {
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
   if (!token) throw new Error('TELEGRAM_BOT_TOKEN is missing.');
   if (!chatId) throw new Error('TELEGRAM_CHAT_ID is missing.');
-
   const response = await fetch(API + '/bot' + token + '/sendMessage', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: chatId,
-      text: htmlFor(item),
-      parse_mode: 'HTML',
-      disable_web_page_preview: true
-    }),
+    body: JSON.stringify({ chat_id: chatId, text, parse_mode: 'HTML', disable_web_page_preview: true }),
     signal: AbortSignal.timeout(30000)
   });
   const payload = await response.json().catch(() => ({}));
-  if (!response.ok || !payload.ok) {
-    throw new Error('Telegram delivery failed: ' + (payload.description || response.status));
-  }
+  if (!response.ok || !payload.ok) throw new Error('Telegram delivery failed: ' + (payload.description || response.status));
   return payload.result;
 }
 
- 
-export async function sendTestMessage({ count, overlap }) {
-  const token = process.env.TELEGRAM_BOT_TOKEN;
-  const chatId = process.env.TELEGRAM_CHAT_ID;
-  if (!token) throw new Error('TELEGRAM_BOT_TOKEN is missing.');
-  if (!chatId) throw new Error('TELEGRAM_CHAT_ID is missing.');
+export async function sendFamily(family) {
+  const results = [];
+  for (const message of renderFamilyMessages(family)) {
+    results.push(await sendText(message));
+    await new Promise(resolve => setTimeout(resolve, 400));
+  }
+  return results;
+}
+
+export async function sendTestMessage({ count, overlap, familyCount }) {
   const text = [
     '<b>Telegram Deep Link Watcher</b>',
     '',
-    'Initial baseline completed successfully.',
-    '<b>Indexed formats:</b> ' + Number(count),
+    'Documentation crawl and integrity checks completed.',
+    '<b>Extracted templates:</b> ' + Number(count),
+    '<b>Link families:</b> ' + Number(familyCount || 0),
     '<b>HTML / Markdown agreement:</b> ' + Math.round(Number(overlap) * 100) + '%',
-    '<b>Monitoring:</b> every 15 minutes',
+    '<b>Destination:</b> Private test chat',
     '',
-    'This is a private test message. Existing formats were recorded as the baseline; no historical links were published.'
+    'This is a private test. No historical catalogue was published to the public channel.'
   ].join('\n');
-  const response = await fetch(API + '/bot' + token + '/sendMessage', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: chatId,
-      text,
-      parse_mode: 'HTML',
-      disable_web_page_preview: true
-    }),
-    signal: AbortSignal.timeout(30000)
-  });
-  const payload = await response.json().catch(() => ({}));
-  if (!response.ok || !payload.ok) {
-    throw new Error('Telegram test message failed: ' + (payload.description || response.status));
-  }
-  return payload.result;
+  return sendText(text);
 }
