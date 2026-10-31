@@ -18,7 +18,8 @@ function snapshot(family) {
     title: family.title,
     templates: [...(family.templates || [])].sort(),
     options: [...(family.options || [])].sort(),
-    ready: [...(family.ready || [])].sort()
+    ready: [...(family.ready || [])].sort(),
+    documentation: family.documentation || ''
   };
 }
 function difference(current, previous) {
@@ -61,6 +62,36 @@ async function main() {
     state.testMessage = { messageId: testMessage.message_id, chatId: testMessage.chat.id };
   }
 
+  // One-time complete Rich Message catalogue delivery to the private test chat.
+  // Persist after each family so an interrupted run resumes without repeating completed families.
+  const catalogueVersion = 2;
+  const deliveredFamilies = new Set(state.richCatalogueFamilies || []);
+  if (state.richCatalogueVersion !== catalogueVersion) {
+    for (const family of families) {
+      if (deliveredFamilies.has(family.id)) continue;
+      const sent = await sendFamily(family);
+      deliveredFamilies.add(family.id);
+      state = {
+        ...state,
+        richCatalogueFamilies: [...deliveredFamilies],
+        familySnapshots: {
+          ...(state.familySnapshots || {}),
+          [family.id]: snapshot(family)
+        },
+        lastRichCatalogueDelivery: {
+          family: family.title,
+          messageIds: sent.map(message => message.message_id),
+          chatId: sent[0]?.chat?.id,
+          deliveredAt: new Date().toISOString()
+        }
+      };
+      await saveState(state);
+      console.log('Complete Rich Message family delivered privately: ' + family.title + ' (' + sent.length + ' message(s)).');
+    }
+    state.richCatalogueVersion = catalogueVersion;
+    await saveState(state);
+  }
+
   // First private preview: representative families only. The public channel is never targeted here.
   const previewTitles = new Set(['Settings links', 'Contacts links', 'New chat links', 'Chat list links', 'Post story links']);
   const previewed = new Set(state.previewedFamilies || []);
@@ -96,14 +127,16 @@ async function main() {
     const newOptions = previous ? difference(current.options, previous.options) : current.options;
     const newReady = previous ? difference(current.ready, previous.ready) : current.ready;
     const newTemplates = previous ? difference(current.templates, previous.templates) : current.templates;
-    if (!newOptions.length && !newReady.length && !newTemplates.length) continue;
+    const documentationChanged = !previous || current.documentation !== previous.documentation;
+    if (!newOptions.length && !newReady.length && !newTemplates.length && !documentationChanged) continue;
 
     // Keep the family's URI header even when only a new option or ready link was added.
     const delta = {
       ...family,
       templates: current.templates,
       options: newOptions,
-      ready: newReady
+      ready: newReady,
+      documentation: current.documentation
     };
     const sent = await sendFamily(delta);
     state = {
