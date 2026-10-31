@@ -144,6 +144,69 @@ function verifyInventories(htmlLinks, markdownLinks) {
   return { htmlCount: htmlSet.size, markdownCount: mdSet.size, commonCount: common, overlap: Number(overlap.toFixed(4)) };
 }
 
+
+function parseFamilies(markdown) {
+  const lines = markdown.split(/\r?\n/);
+  const sections = [];
+  let current = null;
+  for (const line of lines) {
+    const heading = line.match(/^\s*#{1,6}\s+(.+?)\s*#*\s*$/);
+    if (heading && /^#{1,3}\s/.test(line)) {
+      if (current) sections.push(current);
+      current = { title: heading[1].replace(/[\`*_]/g, '').trim(), body: [] };
+    } else if (current) current.body.push(line);
+  }
+  if (current) sections.push(current);
+
+  const families = [];
+  for (const section of sections) {
+    const title = section.title;
+    const body = section.body.join('\n');
+    if (!/links/i.test(title) && !/deep links/i.test(title)) continue;
+    const key = title.toLowerCase().replace(/\s+links?$/i, '').trim();
+    const templates = parseMarkdown('### ' + title + '\n' + body).map(x => x.template);
+    const options = new Set();
+    const addOption = value => {
+      const v = value.trim().replace(/^[\`*_]+|[\`*_]+$/g, '');
+      if (v && v.length < 120 && !/[<>]/.test(v)) options.add(v);
+    };
+    if (/^settings links$/i.test(title)) {
+      for (const m of body.matchAll(/^\s*[-*+]\s+\`([^\`]+)\`/gm)) addOption(m[1]);
+    } else if (/^contacts links$/i.test(title)) {
+      for (const m of body.matchAll(/^\s*\|\s*\`([^|]+)\`\s*\|/gm)) addOption(m[1]);
+    } else if (/^post story links$/i.test(title)) {
+      for (const m of body.matchAll(/^\s*[-*+]\s+\`([^ \`]+)\`/gm)) addOption(m[1]);
+    } else {
+      for (const m of body.matchAll(/^\s*[-*+]\s+\`([^ \`]+)\`/gm)) addOption(m[1]);
+    }
+
+    const ready = new Set(templates.filter(x => !/<[^>]+>|\{prefix\}/.test(x)));
+    if (/^settings links$/i.test(title)) {
+      ready.add('tg://settings');
+      for (const path of options) ready.add('tg://settings/' + path);
+    }
+    if (/^contacts links$/i.test(title)) {
+      ready.add('tg://contacts');
+      for (const option of options) ready.add('tg://contacts/' + option);
+    }
+    if (/^post story links$/i.test(title)) {
+      ready.add('tg://post');
+      for (const option of options) ready.add('tg://post/' + option);
+    }
+    if (!templates.length && !ready.size) continue;
+    const allOptions = [...options];
+    families.push({
+      id: sha256(key).slice(0, 16),
+      title,
+      key,
+      templates: [...new Set(templates)],
+      options: allOptions,
+      ready: [...ready].sort()
+    });
+  }
+  return families;
+}
+
 async function saveJson(name, value) {
   await mkdir(DATA_DIR, { recursive: true });
   await writeFile(new URL(name, DATA_DIR), JSON.stringify(value, null, 2) + '\n', 'utf8');
@@ -171,7 +234,8 @@ export async function crawl() {
     },
     verification,
     total: inventory.length,
-    inventory
+    inventory,
+    families: parseFamilies(markdown.body)
   };
 
   await saveJson('catalog.json', result);
