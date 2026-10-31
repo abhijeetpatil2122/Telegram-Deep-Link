@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-31T11:45:05.161Z",
+  "fetchedAt": "2026-10-31T11:46:11.286Z",
   "total": 179,
   "verification": {
     "htmlCount": 179,
@@ -8,6 +8,266 @@
     "overlap": 1
   },
   "familyVerification": {
+    "Public username links": {
+      "htmlOptions": 5,
+      "markdownOptions": 5,
+      "commonOptions": 5,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Monoforum links": {
+      "htmlOptions": 3,
+      "markdownOptions": 3,
+      "commonOptions": 3,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Temporary profile links": {
+      "htmlOptions": 1,
+      "markdownOptions": 1,
+      "commonOptions": 1,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Phone number links": {
+      "htmlOptions": 5,
+      "markdownOptions": 5,
+      "commonOptions": 5,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Chat invite links": {
+      "htmlOptions": 2,
+      "markdownOptions": 2,
+      "commonOptions": 2,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Chat folder links": {
+      "htmlOptions": 1,
+      "markdownOptions": 1,
+      "commonOptions": 1,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Message links": {
+      "htmlOptions": 15,
+      "markdownOptions": 15,
+      "commonOptions": 15,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Share links": {
+      "htmlOptions": 2,
+      "markdownOptions": 2,
+      "commonOptions": 2,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Business chat links": {
+      "htmlOptions": 1,
+      "markdownOptions": 1,
+      "commonOptions": 1,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Video chat/Livestream links": {
+      "htmlOptions": 6,
+      "markdownOptions": 6,
+      "commonOptions": 6,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Conference links": {
+      "htmlOptions": 1,
+      "markdownOptions": 1,
+      "commonOptions": 1,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Stickerset links": {
+      "htmlOptions": 2,
+      "markdownOptions": 2,
+      "commonOptions": 2,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Custom emoji stickerset links": {
+      "htmlOptions": 2,
+      "markdownOptions": 2,
+      "commonOptions": 2,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Story links": {
+      "htmlOptions": 4,
+      "markdownOptions": 4,
+      "commonOptions": 4,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Story album links": {
+      "htmlOptions": 4,
+      "markdownOptions": 4,
+      "commonOptions": 4,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Post story links": {
+      "htmlOptions": 3,
+      "markdownOptions": 3,
+      "commonOptions": 3,
+      "optionOverlap": 1,
+      "htmlReady": 4,
+      "markdownReady": 4,
+      "commonReady": 4,
+      "readyOverlap": 1
+    },
+    "Managed bot creation request links": {
+      "htmlOptions": 6,
+      "markdownOptions": 6,
+      "commonOptions": 6,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Boost links": {
+      "htmlOptions": 6,
+      "markdownOptions": 6,
+      "commonOptions": 6,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "OAuth links": {
+      "htmlOptions": 3,
+      "markdownOptions": 3,
+      "commonOptions": 3,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Proxy links": {
+      "htmlOptions": 5,
+      "markdownOptions": 5,
+      "commonOptions": 5,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Theme links": {
+      "htmlOptions": 2,
+      "markdownOptions": 2,
+      "commonOptions": 2,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "AI compose tone links": {
+      "htmlOptions": 1,
+      "markdownOptions": 1,
+      "commonOptions": 1,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Wallpaper links": {
+      "htmlOptions": 16,
+      "markdownOptions": 16,
+      "commonOptions": 16,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Bot links": {
+      "htmlOptions": 4,
+      "markdownOptions": 4,
+      "commonOptions": 4,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Group/channel bot links": {
+      "htmlOptions": 24,
+      "markdownOptions": 24,
+      "commonOptions": 24,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Game links": {
+      "htmlOptions": 4,
+      "markdownOptions": 4,
+      "commonOptions": 4,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
     "Settings links": {
       "htmlOptions": 340,
       "markdownOptions": 340,
@@ -16,6 +276,26 @@
       "htmlReady": 341,
       "markdownReady": 341,
       "commonReady": 341,
+      "readyOverlap": 1
+    },
+    "My stars links": {
+      "htmlOptions": 0,
+      "markdownOptions": 0,
+      "commonOptions": 0,
+      "optionOverlap": 1,
+      "htmlReady": 2,
+      "markdownReady": 2,
+      "commonReady": 2,
+      "readyOverlap": 1
+    },
+    "My Grams links": {
+      "htmlOptions": 0,
+      "markdownOptions": 0,
+      "commonOptions": 0,
+      "optionOverlap": 1,
+      "htmlReady": 2,
+      "markdownReady": 2,
+      "commonReady": 2,
       "readyOverlap": 1
     },
     "Contacts links": {
@@ -28,17 +308,197 @@
       "commonReady": 6,
       "readyOverlap": 1
     },
-    "Post story links": {
-      "htmlOptions": 3,
-      "markdownOptions": 3,
-      "commonOptions": 3,
+    "New chat links": {
+      "htmlOptions": 0,
+      "markdownOptions": 0,
+      "commonOptions": 0,
       "optionOverlap": 1,
-      "htmlReady": 4,
-      "markdownReady": 4,
-      "commonReady": 4,
+      "htmlReady": 3,
+      "markdownReady": 3,
+      "commonReady": 3,
+      "readyOverlap": 1
+    },
+    "Chat list links": {
+      "htmlOptions": 0,
+      "markdownOptions": 0,
+      "commonOptions": 0,
+      "optionOverlap": 1,
+      "htmlReady": 3,
+      "markdownReady": 3,
+      "commonReady": 3,
+      "readyOverlap": 1
+    },
+    "Invoice links": {
+      "htmlOptions": 1,
+      "markdownOptions": 1,
+      "commonOptions": 1,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Language pack links": {
+      "htmlOptions": 2,
+      "markdownOptions": 2,
+      "commonOptions": 2,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Telegram Passport links": {
+      "htmlOptions": 2,
+      "markdownOptions": 2,
+      "commonOptions": 2,
+      "optionOverlap": 1,
+      "htmlReady": 2,
+      "markdownReady": 2,
+      "commonReady": 2,
+      "readyOverlap": 1
+    },
+    "Phone confirmation links": {
+      "htmlOptions": 2,
+      "markdownOptions": 2,
+      "commonOptions": 2,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Premium multigift links": {
+      "htmlOptions": 2,
+      "markdownOptions": 2,
+      "commonOptions": 2,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Premium referrer links": {
+      "htmlOptions": 2,
+      "markdownOptions": 2,
+      "commonOptions": 2,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Premium giftcode links": {
+      "htmlOptions": 1,
+      "markdownOptions": 1,
+      "commonOptions": 1,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "QR code login links": {
+      "htmlOptions": 2,
+      "markdownOptions": 2,
+      "commonOptions": 2,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Main Mini App links": {
+      "htmlOptions": 5,
+      "markdownOptions": 5,
+      "commonOptions": 5,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Direct mini app links": {
+      "htmlOptions": 7,
+      "markdownOptions": 7,
+      "commonOptions": 7,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Bot attachment or side menu links": {
+      "htmlOptions": 13,
+      "markdownOptions": 13,
+      "commonOptions": 13,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Gift collection links": {
+      "htmlOptions": 4,
+      "markdownOptions": 4,
+      "commonOptions": 4,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Auction links": {
+      "htmlOptions": 1,
+      "markdownOptions": 1,
+      "commonOptions": 1,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Referral links": {
+      "htmlOptions": 5,
+      "markdownOptions": 5,
+      "commonOptions": 5,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "ID links": {
+      "htmlOptions": 1,
+      "markdownOptions": 1,
+      "commonOptions": 1,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Emoji links": {
+      "htmlOptions": 1,
+      "markdownOptions": 1,
+      "commonOptions": 1,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
+      "readyOverlap": 1
+    },
+    "Timestamp links": {
+      "htmlOptions": 2,
+      "markdownOptions": 2,
+      "commonOptions": 2,
+      "optionOverlap": 1,
+      "htmlReady": 0,
+      "markdownReady": 0,
+      "commonReady": 0,
       "readyOverlap": 1
     }
   },
-  "htmlSha256": "c47a3a7ebe9387133bb31da359552b9dd2eaac01eef1a7a9a571d65af1cdafcd",
+  "htmlSha256": "a87ffbfe8850ef67842480e6604c95a9ec82781fc4f2bf7a384b87a25727a4da",
   "markdownSha256": "cc6a6c87f58307ddd05b1237b945ffacc10afe00ef08505cdf3bfc8407e6c8a1"
 }
