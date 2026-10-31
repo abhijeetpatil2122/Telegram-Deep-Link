@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-31T11:44:31.192Z",
+  "fetchedAt": "2026-10-31T11:45:05.161Z",
   "total": 179,
   "verification": {
     "htmlCount": 179,
@@ -7,6 +7,38 @@
     "commonCount": 179,
     "overlap": 1
   },
-  "htmlSha256": "0002ac990dbb57ba16a0caf4ca7aa156946ae9a975ba7ba3f8665a07e22a21fb",
+  "familyVerification": {
+    "Settings links": {
+      "htmlOptions": 340,
+      "markdownOptions": 340,
+      "commonOptions": 340,
+      "optionOverlap": 1,
+      "htmlReady": 341,
+      "markdownReady": 341,
+      "commonReady": 341,
+      "readyOverlap": 1
+    },
+    "Contacts links": {
+      "htmlOptions": 5,
+      "markdownOptions": 5,
+      "commonOptions": 5,
+      "optionOverlap": 1,
+      "htmlReady": 6,
+      "markdownReady": 6,
+      "commonReady": 6,
+      "readyOverlap": 1
+    },
+    "Post story links": {
+      "htmlOptions": 3,
+      "markdownOptions": 3,
+      "commonOptions": 3,
+      "optionOverlap": 1,
+      "htmlReady": 4,
+      "markdownReady": 4,
+      "commonReady": 4,
+      "readyOverlap": 1
+    }
+  },
+  "htmlSha256": "c47a3a7ebe9387133bb31da359552b9dd2eaac01eef1a7a9a571d65af1cdafcd",
   "markdownSha256": "cc6a6c87f58307ddd05b1237b945ffacc10afe00ef08505cdf3bfc8407e6c8a1"
 }
