@@ -194,6 +194,12 @@ function parseFamilies(markdown) {
       for (const option of options) ready.add('tg://post/' + option);
     }
     if (!templates.length && !ready.size) continue;
+    for (const template of templates) {
+      for (const match of template.matchAll(/<([^>]+)>/g)) addOption(match[1]);
+      for (const match of template.matchAll(/[?&]([a-z][a-z0-9_]*)(?==|&|$)/gi)) {
+        if (!['tg', 'http', 'https'].includes(match[1].toLowerCase())) addOption(match[1]);
+      }
+    }
     const allOptions = [...options];
     families.push({
       id: sha256(key).slice(0, 16),
