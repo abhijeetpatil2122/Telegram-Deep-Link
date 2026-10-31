@@ -29,6 +29,8 @@ function htmlToMarkdown(html) {
     .replace(/<code\b[^>]*>([^]*?)<\/code>/gi, (_, body) => '`' + body.replace(/<[^>]+>/g, '') + '`')
     .replace(/<br\s*\/?\s*>/gi, '\n')
     .replace(/<li\b[^>]*>/gi, '\n- ')
+    .replace(/<t[dh]\b[^>]*>/gi, ' | ')
+    .replace(/<\/t[dh]>/gi, ' | ')
     .replace(/<\/(p|div|li|tr|section|article|ul|ol|table)>/gi, '\n')
     .replace(/<[^>]+>/g, ' '))
     .replace(/[ \t]+/g, ' ')
@@ -226,6 +228,37 @@ function parseFamilies(markdown) {
   return families;
 }
 
+
+function verifyFamilyOptions(htmlFamilies, markdownFamilies) {
+  const important = ['Settings links', 'Contacts links', 'Post story links'];
+  const htmlByTitle = new Map(htmlFamilies.map(item => [item.title, item]));
+  const mdByTitle = new Map(markdownFamilies.map(item => [item.title, item]));
+  const checks = {};
+  for (const title of important) {
+    const html = htmlByTitle.get(title);
+    const md = mdByTitle.get(title);
+    if (!html || !md) throw new Error('Family integrity check failed: missing ' + title + ' in HTML or Markdown.');
+    const htmlOptions = new Set(html.options);
+    const mdOptions = new Set(md.options);
+    const htmlReady = new Set(html.ready);
+    const mdReady = new Set(md.ready);
+    const optionCommon = [...mdOptions].filter(x => htmlOptions.has(x)).length;
+    const readyCommon = [...mdReady].filter(x => htmlReady.has(x)).length;
+    const optionOverlap = optionCommon / Math.max(1, htmlOptions.size, mdOptions.size);
+    const readyOverlap = readyCommon / Math.max(1, htmlReady.size, mdReady.size);
+    checks[title] = {
+      htmlOptions: htmlOptions.size, markdownOptions: mdOptions.size,
+      commonOptions: optionCommon, optionOverlap: Number(optionOverlap.toFixed(4)),
+      htmlReady: htmlReady.size, markdownReady: mdReady.size,
+      commonReady: readyCommon, readyOverlap: Number(readyOverlap.toFixed(4))
+    };
+    if (optionOverlap < 0.98 || readyOverlap < 0.98) {
+      throw new Error('HTML/Markdown option inventory mismatch for ' + title + ': options ' + Math.round(optionOverlap * 100) + '%, ready links ' + Math.round(readyOverlap * 100) + '%. Refusing to publish.');
+    }
+  }
+  return checks;
+}
+
 async function saveJson(name, value) {
   await mkdir(DATA_DIR, { recursive: true });
   await writeFile(new URL(name, DATA_DIR), JSON.stringify(value, null, 2) + '\n', 'utf8');
@@ -238,6 +271,9 @@ export async function crawl() {
   const htmlLinks = parseMarkdown(htmlText);
   const markdownLinks = parseMarkdown(markdown.body);
   const verification = verifyInventories(htmlLinks, markdownLinks);
+  const htmlFamilies = parseFamilies(htmlText);
+  const markdownFamilies = parseFamilies(markdown.body);
+  const familyVerification = verifyFamilyOptions(htmlFamilies, markdownFamilies);
 
   // Markdown is the primary structured source. Keep HTML-only entries too after cross-checking.
   const byTemplate = new Map(markdownLinks.map(item => [item.template.toLowerCase(), item]));
@@ -252,9 +288,10 @@ export async function crawl() {
       markdown: { url: MARKDOWN_URL, finalUrl: markdown.finalUrl, sha256: sha256(markdown.body), etag: markdown.etag, lastModified: markdown.lastModified }
     },
     verification,
+    familyVerification,
     total: inventory.length,
     inventory,
-    families: parseFamilies(markdown.body)
+    families: markdownFamilies
   };
 
   await saveJson('catalog.json', result);
@@ -262,6 +299,7 @@ export async function crawl() {
     fetchedAt: result.fetchedAt,
     total: result.total,
     verification,
+    familyVerification,
     htmlSha256: result.sources.html.sha256,
     markdownSha256: result.sources.markdown.sha256
   });
