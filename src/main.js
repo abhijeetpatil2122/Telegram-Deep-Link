@@ -1,6 +1,6 @@
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { crawl } from './crawl.js';
-import { sendDiscovery } from './publish.js';
+import { sendDiscovery, sendTestMessage } from './publish.js';
 
 const DATA = new URL('../data/', import.meta.url);
 const STATE_FILE = new URL('state.json', DATA);
@@ -20,6 +20,10 @@ async function main() {
   let state = await readState();
 
   if (!state) {
+    const testMessage = await sendTestMessage({
+      count: result.total,
+      overlap: result.verification.overlap
+    });
     await saveState({
       initializedAt: new Date().toISOString(),
       checkedAt: new Date().toISOString(),
@@ -27,9 +31,10 @@ async function main() {
       inventory: result.inventory.map(item => ({ id: item.id, template: item.template })),
       pending: [],
       posted: [],
-      removedHistory: []
+      removedHistory: [],
+      testMessage: { messageId: testMessage.message_id, chatId: testMessage.chat.id }
     });
-    console.log('Initial baseline saved (' + result.total + ' formats). No historical posts sent.');
+    console.log('Initial baseline saved (' + result.total + ' formats); private-chat test message delivered.');
     return;
   }
 

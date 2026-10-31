@@ -62,3 +62,37 @@ export async function sendDiscovery(item) {
   }
   return payload.result;
 }
+
+ 
+export async function sendTestMessage({ count, overlap }) {
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
+  if (!token) throw new Error('TELEGRAM_BOT_TOKEN is missing.');
+  if (!chatId) throw new Error('TELEGRAM_CHAT_ID is missing.');
+  const text = [
+    '<b>Telegram Deep Link Watcher</b>',
+    '',
+    'Initial baseline completed successfully.',
+    '<b>Indexed formats:</b> ' + Number(count),
+    '<b>HTML / Markdown agreement:</b> ' + Math.round(Number(overlap) * 100) + '%',
+    '<b>Monitoring:</b> every 15 minutes',
+    '',
+    'This is a private test message. Existing formats were recorded as the baseline; no historical links were published.'
+  ].join('\n');
+  const response = await fetch(API + '/bot' + token + '/sendMessage', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({
+      chat_id: chatId,
+      text,
+      parse_mode: 'HTML',
+      disable_web_page_preview: true
+    }),
+    signal: AbortSignal.timeout(30000)
+  });
+  const payload = await response.json().catch(() => ({}));
+  if (!response.ok || !payload.ok) {
+    throw new Error('Telegram test message failed: ' + (payload.description || response.status));
+  }
+  return payload.result;
+}
