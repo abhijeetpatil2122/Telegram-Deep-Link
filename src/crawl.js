@@ -244,8 +244,8 @@ function verifyFamilyOptions(htmlFamilies, markdownFamilies) {
     const mdReady = new Set(md.ready);
     const optionCommon = [...mdOptions].filter(x => htmlOptions.has(x)).length;
     const readyCommon = [...mdReady].filter(x => htmlReady.has(x)).length;
-    const optionOverlap = optionCommon / Math.max(1, htmlOptions.size, mdOptions.size);
-    const readyOverlap = readyCommon / Math.max(1, htmlReady.size, mdReady.size);
+    const optionOverlap = Math.max(htmlOptions.size, mdOptions.size) === 0 ? 1 : optionCommon / Math.max(htmlOptions.size, mdOptions.size);
+    const readyOverlap = Math.max(htmlReady.size, mdReady.size) === 0 ? 1 : readyCommon / Math.max(htmlReady.size, mdReady.size);
     checks[title] = {
       htmlOptions: htmlOptions.size, markdownOptions: mdOptions.size,
       commonOptions: optionCommon, optionOverlap: Number(optionOverlap.toFixed(4)),
