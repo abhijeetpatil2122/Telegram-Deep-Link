@@ -165,7 +165,7 @@ function parseFamilies(markdown) {
     const title = section.title;
     const body = section.body.join('\n');
     if (/^(deep links|unsupported links)$/i.test(title)) continue;
-    if (!/links/i.test(title) && !/deep links/i.test(title)) continue;
+    if (!/\blinks?\b/i.test(title) && !/^ton sites$/i.test(title)) continue;
     const key = title.toLowerCase().replace(/\s+links?$/i, '').trim();
     const templates = parseMarkdown('### ' + title + '\n' + body).map(x => x.template);
     const options = new Set();
@@ -179,25 +179,10 @@ function parseFamilies(markdown) {
       for (const m of body.matchAll(/^\s*\|\s*\`([^|]+)\`\s*\|/gm)) addOption(m[1]);
     } else if (/^post story links$/i.test(title)) {
       for (const m of body.matchAll(/^\s*[-*+]\s+\`([^ \`]+)\`/gm)) addOption(m[1]);
-    } else {
-      for (const m of body.matchAll(/^\s*[-*+]\s+\`([^ \`]+)\`/gm)) addOption(m[1]);
+    } else if (/^group\/channel bot links$/i.test(title)) {
+      for (const m of body.matchAll(/^\s*[-*+]\s+\`([a-z][a-z0-9_]*)\`\s+-/gim)) addOption(m[1]);
     }
 
-    if (/^settings links$/i.test(title)) options.delete('path');
-    if (/^contacts links$/i.test(title)) options.delete('section');
-    if (/^post story links$/i.test(title)) options.delete('content_type');
-    for (const template of templates) {
-      for (const match of template.matchAll(/<([^>]+)>/g)) addOption(match[1]);
-      for (const match of template.matchAll(/[?&]([a-z][a-z0-9_]*)(?==|&|$)/gi)) {
-        if (!['tg', 'http', 'https'].includes(match[1].toLowerCase())) addOption(match[1]);
-      }
-    }
-    for (const match of body.matchAll(/combination of ([^\n.]+)/gi)) {
-      for (const value of match[1].matchAll(/\`([^\`]+)\`/g)) addOption(value[1]);
-    }
-    for (const match of body.matchAll(/(?:recognized|possible) values:\s*([^\n]+)/gi)) {
-      for (const value of match[1].matchAll(/\`([^\`]+)\`/g)) addOption(value[1]);
-    }
     if (/^settings links$/i.test(title)) options.delete('path');
     if (/^contacts links$/i.test(title)) options.delete('section');
     if (/^post story links$/i.test(title)) options.delete('content_type');
@@ -222,7 +207,8 @@ function parseFamilies(markdown) {
       key,
       templates: [...new Set(templates)],
       options: allOptions,
-      ready: [...ready].sort()
+      ready: [...ready].sort(),
+      documentation: body.trim()
     });
   }
   return families;
