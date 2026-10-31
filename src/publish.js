@@ -106,7 +106,7 @@ export async function sendFamily(family) {
       console.warn('Rich Messages unavailable; using ordered text chunks.');
       results.push(...await sendPlain(message));
     }
-    await new Promise(resolve => setTimeout(resolve, 400));
+    await new Promise(resolve => setTimeout(resolve, 1200));
   }
   return results;
 }
