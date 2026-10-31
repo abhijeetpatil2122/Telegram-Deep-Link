@@ -10,7 +10,11 @@ function familyMarkdown(family, part, total) {
   const fallback = (family.templates || []).length
     ? '\n\n## Documented syntax\n\n' + fence + 'text\n' + unique(family.templates).join('\n') + '\n' + fence
     : '';
-  return [heading, '', body || fallback, '', '---',
+  const ready = unique(family.ready);
+  const readyBlock = ready.length
+    ? '\n\n<details>\n<summary>Ready-to-use links (' + ready.length + ')</summary>\n\n' + ready.map(link => '- ' + link).join('\n') + '\n\n</details>'
+    : '';
+  return [heading, '', body || fallback, readyBlock, '', '---',
     '*Source: [Telegram official deep-link documentation](https://core.telegram.org/api/links)*'
   ].join('\n');
 }
