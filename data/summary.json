@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-31T11:44:03.515Z",
+  "fetchedAt": "2026-10-31T11:44:31.192Z",
   "total": 179,
   "verification": {
     "htmlCount": 179,
@@ -7,6 +7,6 @@
     "commonCount": 179,
     "overlap": 1
   },
-  "htmlSha256": "b4b8d7c2b2d32dc241c440572c21a7672cf424af487c2b4f9252ab2024d54b95",
+  "htmlSha256": "0002ac990dbb57ba16a0caf4ca7aa156946ae9a975ba7ba3f8665a07e22a21fb",
   "markdownSha256": "cc6a6c87f58307ddd05b1237b945ffacc10afe00ef08505cdf3bfc8407e6c8a1"
 }

@@ -1,10 +1,10 @@
 {
-  "fetchedAt": "2026-10-31T11:44:03.515Z",
+  "fetchedAt": "2026-10-31T11:44:31.192Z",
   "sources": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "b4b8d7c2b2d32dc241c440572c21a7672cf424af487c2b4f9252ab2024d54b95",
+      "sha256": "0002ac990dbb57ba16a0caf4ca7aa156946ae9a975ba7ba3f8665a07e22a21fb",
       "etag": null,
       "lastModified": null
     },
@@ -1547,8 +1547,7 @@
       "options": [
         "photo",
         "video",
-        "live",
-        "content_type"
+        "live"
       ],
       "ready": [
         "tg://post",
@@ -2124,8 +2123,7 @@
         "my-profile/posts/all-stories",
         "my-profile/posts/add-album",
         "my-profile/gifts",
-        "my-profile/archived-posts",
-        "path"
+        "my-profile/archived-posts"
       ],
       "ready": [
         "tg://settings",
@@ -2512,8 +2510,7 @@
         "sort",
         "new",
         "invite",
-        "manage",
-        "section"
+        "manage"
       ],
       "ready": [
         "tg://contacts",
