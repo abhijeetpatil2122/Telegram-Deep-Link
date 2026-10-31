@@ -1,11 +1,9 @@
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
-import { createHash } from 'node:crypto';
 import { crawl } from './crawl.js';
 import { sendFamily, sendTestMessage } from './publish.js';
 
 const DATA = new URL('../data/', import.meta.url);
 const STATE_FILE = new URL('state.json', DATA);
-const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 async function readState() {
   try { return JSON.parse(await readFile(STATE_FILE, 'utf8')); }
@@ -85,20 +83,28 @@ async function main() {
   }
 
   const oldSnapshots = state.familySnapshots || {};
+  const hasFamilyBaseline = Object.keys(oldSnapshots).length > 0;
   const nextSnapshots = {};
   for (const family of families) {
     const current = snapshot(family);
     nextSnapshots[family.id] = current;
     const previous = oldSnapshots[family.id];
-    if (!previous) continue; // Existing documentation becomes baseline; never mass-post historical links.
 
+    // On the first structured run, establish a baseline instead of posting the existing catalogue.
+    if (!previous && !hasFamilyBaseline) continue;
+
+    const newOptions = previous ? difference(current.options, previous.options) : current.options;
+    const newReady = previous ? difference(current.ready, previous.ready) : current.ready;
+    const newTemplates = previous ? difference(current.templates, previous.templates) : current.templates;
+    if (!newOptions.length && !newReady.length && !newTemplates.length) continue;
+
+    // Keep the family's URI header even when only a new option or ready link was added.
     const delta = {
       ...family,
-      options: difference(current.options, previous.options),
-      ready: difference(current.ready, previous.ready),
-      templates: difference(current.templates, previous.templates)
+      templates: current.templates,
+      options: newOptions,
+      ready: newReady
     };
-    if (!delta.options.length && !delta.ready.length && !delta.templates.length) continue;
     const sent = await sendFamily(delta);
     state = {
       ...state,
