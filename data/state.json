@@ -1,11 +1,11 @@
 {
   "initializedAt": "2026-10-31T11:17:43.854Z",
-  "checkedAt": "2026-10-31T11:43:36.647Z",
+  "checkedAt": "2026-10-31T11:44:05.798Z",
   "source": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "5d470b9c174be5d8daa383c362688940c5e9d4981ec39180638482bb0e33a99f",
+      "sha256": "b4b8d7c2b2d32dc241c440572c21a7672cf424af487c2b4f9252ab2024d54b95",
       "etag": null,
       "lastModified": null
     },
@@ -993,6 +993,7 @@
         "tg://post/<content_type>"
       ],
       "options": [
+        "content_type",
         "live",
         "photo",
         "video"
@@ -1118,7 +1119,6 @@
         "tg://bg?slug=<slug>&mode=<mode>"
       ],
       "options": [
-        "+",
         "bg_color",
         "blur",
         "bottom_color",
@@ -1163,7 +1163,6 @@
         "tg://resolve?domain=<bot_username>&startgroup=<parameter>&admin=<permissions>"
       ],
       "options": [
-        "+",
         "admin",
         "anonymous",
         "bot_username",
@@ -1435,6 +1434,7 @@
         "notifications/stories/vibrate",
         "notifications/web",
         "password",
+        "path",
         "phone_privacy",
         "power-saving",
         "power-saving/background",
@@ -1932,6 +1932,7 @@
         "manage",
         "new",
         "search",
+        "section",
         "sort"
       ],
       "ready": [
@@ -1940,7 +1941,6 @@
         "tg://contacts/manage",
         "tg://contacts/new",
         "tg://contacts/search",
-        "tg://contacts/section",
         "tg://contacts/sort"
       ]
     },
@@ -2122,7 +2122,6 @@
         "tg://resolve?phone=<phone_number>&attach=<bot_username>&startattach=<start_parameter>"
       ],
       "options": [
-        "+",
         "attach",
         "bot_username",
         "bots",
@@ -2215,11 +2214,11 @@
     }
   },
   "lastDelivery": {
-    "family": "Bot attachment or side menu links",
+    "family": "Contacts links",
     "messageIds": [
-      530
+      533
     ],
     "chatId": 1314643983,
-    "deliveredAt": "2026-10-31T11:43:36.646Z"
+    "deliveredAt": "2026-10-31T11:44:05.796Z"
   }
 }
