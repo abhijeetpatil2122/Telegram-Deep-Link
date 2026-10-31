@@ -38,6 +38,20 @@ async function main() {
     return;
   }
 
+  if (!state.testMessage) {
+    const testMessage = await sendTestMessage({
+      count: result.total,
+      overlap: result.verification.overlap
+    });
+    state = {
+      ...state,
+      testMessage: { messageId: testMessage.message_id, chatId: testMessage.chat.id },
+      testMessageAt: new Date().toISOString()
+    };
+    await saveState(state);
+    console.log('Private-chat delivery test succeeded (message ' + testMessage.message_id + ').');
+  }
+
   const current = result.inventory.map(item => ({ id: item.id, template: item.template }));
   const known = new Set(state.inventory.map(item => item.id));
   const alreadyPosted = new Set(state.posted || []);
