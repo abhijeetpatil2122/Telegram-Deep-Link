@@ -169,7 +169,7 @@ function parseFamilies(markdown) {
     const options = new Set();
     const addOption = value => {
       const v = value.trim().replace(/^[\`*_]+|[\`*_]+$/g, '');
-      if (v && v.length < 120 && !/[<>]/.test(v)) options.add(v);
+      if (v && v !== '+' && v !== '-' && v.length < 120 && !/[<>]/.test(v)) options.add(v);
     };
     if (/^settings links$/i.test(title)) {
       for (const m of body.matchAll(/^\s*[-*+]\s+\`([^\`]+)\`/gm)) addOption(m[1]);
@@ -181,6 +181,9 @@ function parseFamilies(markdown) {
       for (const m of body.matchAll(/^\s*[-*+]\s+\`([^ \`]+)\`/gm)) addOption(m[1]);
     }
 
+    if (/^settings links$/i.test(title)) options.delete('path');
+    if (/^contacts links$/i.test(title)) options.delete('section');
+    if (/^post story links$/i.test(title)) options.delete('content_type');
     const ready = new Set(templates.filter(x => !/<[^>]+>|\{prefix\}/.test(x)));
     if (/^settings links$/i.test(title)) {
       ready.add('tg://settings');
@@ -207,9 +210,6 @@ function parseFamilies(markdown) {
     for (const match of body.matchAll(/(?:recognized|possible) values:\s*([^\n]+)/gi)) {
       for (const value of match[1].matchAll(/\`([^\`]+)\`/g)) addOption(value[1]);
     }
-    if (/^settings links$/i.test(title)) options.delete('path');
-    if (/^contacts links$/i.test(title)) options.delete('section');
-    if (/^post story links$/i.test(title)) options.delete('content_type');
     const allOptions = [...options];
     families.push({
       id: sha256(key).slice(0, 16),
