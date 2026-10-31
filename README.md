@@ -7,14 +7,17 @@ A small, reliable watcher for Telegram's official deep-link documentation.
 - HTML: https://corefork.telegram.org/api/links
 - Markdown: https://corefork.telegram.org/api/links.md
 
-Every run fetches both sources, extracts documented deep-link formats independently, and checks that their inventories substantially agree. A failed fetch, incomplete response, or source mismatch stops the run before publishing.
+Every run fetches both sources, extracts documented deep-link formats independently, and checks that their inventories substantially agree. A failed fetch, incomplete response, or source mismatch stops the run before publishing. Link families and their structured options are also cross-checked between HTML and Markdown before delivery.
 
 ## Behaviour
 
 - The first successful run creates a baseline and does not flood the test chat with old entries.
-- Later runs publish only newly documented formats.
+- The initial full catalogue is delivered once, grouped by documentation family using Telegram Rich Messages.
+- Each family message preserves its complete official description, syntax, parameter table, and lists.
+- Rich messages are kept below 30,000 characters; oversized families are split in source order with the family heading repeated.
+- Later runs publish only newly documented formats or changed family documentation.
 - Existing formats are not reposted when unrelated documentation changes.
-- The state is updated after each successful Telegram delivery.
+- The state is updated after each successful Telegram delivery so interrupted catalogue delivery resumes without repeating completed families.
 - Failed runs leave undispatched entries available for the next run.
 - Telegram destination is configured in the workflow and currently points to the private test chat.
 
