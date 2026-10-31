@@ -1,6 +1,10 @@
 name: Telegram Deep Link Watcher
 
 on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/**'
   workflow_dispatch:
   schedule:
     - cron: '*/15 * * * *'
