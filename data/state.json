@@ -1,11 +1,11 @@
 {
   "initializedAt": "2026-10-31T11:17:43.854Z",
-  "checkedAt": "2026-11-01T04:36:55.012Z",
+  "checkedAt": "2026-11-01T04:37:39.326Z",
   "source": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "96347b644aea193eac4702438dc6894e1ab373bde75dfe8dfbc1f02395b99362",
+      "sha256": "6b6291cbb8a75dad606937abfd4c0f47826eb83d7bbeca52a32a8e8911ce7307",
       "etag": null,
       "lastModified": null
     },
@@ -1056,7 +1056,10 @@
         "tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>",
         "tg://bg?slug=<slug>&mode=<mode>"
       ],
-      "options": [],
+      "options": [
+        "blur",
+        "motion"
+      ],
       "ready": [],
       "documentation": "Used to share and install chat backgrounds (wallpapers): see [here for more info on the various wallpaper and fill types&nbsp;&raquo;](/api/wallpapers.md).  \n\n#### [Image wallpapers](/api/wallpapers.md#image-wallpapers)\n\nUsed for [image-based wallpapers&nbsp;&raquo;](/api/wallpapers.md#image-wallpapers).  \n\n`t.me` syntax:\n```\nt.me/bg/<slug>?mode=<mode>\n```\n\n`tg:` syntax:\n```\ntg://bg?slug=<slug>&mode=<mode>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `slug` | Required | Wallpaper slug used to obtain the image file using [account.getWallPaper](/method/account.getWallPaper.md). |\n| `mode` | Optional | A combination of `blur` and `motion` (joined by `+`) to enable blurring and/or parallax motion as specified in the [docs&nbsp;&raquo;](/api/wallpapers.md#image-wallpapers). |\n\n#### Solid fill wallpapers\n\nUsed for [fill wallpapers&nbsp;&raquo;](/api/wallpapers.md#fill-wallpapers) with a [solid fill&nbsp;&raquo;](/api/wallpapers.md#solid-fill).  \n\n`t.me` syntax:\n```\nt.me/bg/<hex_color>\n```\n\n`tg:` syntax:\n```\ntg://bg?color=<hex_color>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `hex_color` | Required | Fill color in hex RGB format. |\n\n#### Gradient fill wallpapers\n\nUsed for [fill wallpapers&nbsp;&raquo;](/api/wallpapers.md#fill-wallpapers) with a [gradient fill&nbsp;&raquo;](/api/wallpapers.md#gradient-fill).  \n\n`t.me` syntax:\n```\nt.me/bg/<top_color>-<bottom_color>?rotation=<rotation>\n```\n\n`tg:` syntax:\n```\ntg://bg?gradient=<top_color>-<bottom_color>&rotation=<rotation>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `top_color` | Required | Top gradient color in hex RGB format. |\n| `bottom_color` | Required | Bottom gradient color in hex RGB format. |\n| `rotation` | Optional | Clockwise rotation angle of the gradient, in degrees; 0-359. Must be always divisible by 45, default to 0 if not set.  |\n\n#### Free-form gradient fill wallpapers\n\nUsed for [fill wallpapers&nbsp;&raquo;](/api/wallpapers.md#fill-wallpapers) with a [free-form gradient fill&nbsp;&raquo;](/api/wallpapers.md#freeform-gradient-fill).  \n\n`t.me` syntax:\n```\nt.me/bg/<hex_color1>~<hex_color2>~<hex_color3>\nt.me/bg/<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>\n```\n\n`tg:` syntax:\n```\ntg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>\ntg://bg?gradient=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `hex_color1` | Required | First gradient color in hex RGB format. |\n| `hex_color2` | Required | Second gradient color in hex RGB format. |\n| `hex_color3` | Required | Third gradient color in hex RGB format. |\n| `hex_color4` | Optional | Fourth gradient color in hex RGB format. |\n\n#### Solid pattern wallpapers\n\nUsed for [pattern wallpapers&nbsp;&raquo;](/api/wallpapers.md#pattern-wallpapers) with a [solid fill&nbsp;&raquo;](/api/wallpapers.md#solid-fill).  \n\n`t.me` syntax:\n```\nt.me/bg/<slug>?intensity=<intensity>&bg_color=<bg_color>&mode=<mode>\n```\n\n`tg:` syntax:\n```\ntg://bg?slug=<slug>&intensity=<intensity>&bg_color=<bg_color>&mode=<mode>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `slug` | Required | Wallpaper slug used to obtain the pattern file using [account.getWallPaper](/method/account.getWallPaper.md). |\n| `intensity` | Required | A value ranging from -100 to 100, used to combine the pattern with the fill [as specified in the docs](/api/wallpapers.md#pattern-wallpapers). |\n| `bg_color` | Required | Fill color in hex RGB format. |\n| `mode` | Optional | `motion` to enable parallax motion as specified in the [docs](/api/wallpapers.md#image-wallpapers). |\n\n#### Gradient pattern wallpapers\n\nUsed for [pattern wallpapers&nbsp;&raquo;](/api/wallpapers.md#pattern-wallpapers) with a [gradient fill&nbsp;&raquo;](/api/wallpapers.md#gradient-fill).  \n\n`t.me` syntax:\n```\nt.me/bg/<slug>?intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>\n```\n\n`tg:` syntax:\n```\ntg://bg?slug=<slug>&intensity=<intensity>&bg_color=<top_color>-<bottom_color>&rotation=<rotation>&mode=<mode>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `slug` | Required | Wallpaper slug used to obtain the pattern file using [account.getWallPaper](/method/account.getWallPaper.md). |\n| `intensity` | Required | A value ranging from -100 to 100, used to combine the pattern with the fill [as specified in the docs](/api/wallpapers.md#pattern-wallpapers). |\n| `top_color` | Required | Top gradient color in hex RGB format. |\n| `bottom_color` | Required | Bottom gradient color in hex RGB format. |\n| `rotation` | Optional | Clockwise rotation angle of the gradient, in degrees; 0-359. Must be always divisible by 45, default to 0 if not set. |\n| `mode` | Optional | `motion` to enable parallax motion as specified in the [docs](/api/wallpapers.md#image-wallpapers). |\n\n#### Free-form gradient pattern wallpapers\n\nUsed for [pattern wallpapers&nbsp;&raquo;](/api/wallpapers.md#pattern-wallpapers) with a [free-form gradient fill&nbsp;&raquo;](/api/wallpapers.md#freeform-gradient-fill).  \n\n`t.me` syntax:\n```\nt.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>\nt.me/bg/<slug>?intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>\n```\n\n`tg:` syntax:\n```\ntg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>&mode=<mode>\ntg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<hex_color3>~<hex_color4>&mode=<mode>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `slug` | Required | Wallpaper slug used to obtain the pattern file using [account.getWallPaper](/method/account.getWallPaper.md). |\n| `intensity` | Required | A value ranging from -100 to 100, used to combine the pattern with the fill [as specified in the docs](/api/wallpapers.md#pattern-wallpapers). |\n| `hex_color1` | Required | First gradient color in hex RGB format. |\n| `hex_color2` | Required | Second gradient color in hex RGB format. |\n| `hex_color3` | Required | Third gradient color in hex RGB format. |\n| `hex_color4` | Optional | Fourth gradient color in hex RGB format. |\n| `mode` | Optional | `motion` to enable parallax motion as specified in the [docs](/api/wallpapers.md#image-wallpapers). |"
     },
@@ -2102,12 +2105,12 @@
     }
   },
   "lastDelivery": {
-    "family": "Collectible gift link",
+    "family": "Wallpaper links",
     "messageIds": [
-      537
+      653
     ],
     "chatId": 1314643983,
-    "deliveredAt": "2026-10-31T12:01:41.326Z"
+    "deliveredAt": "2026-11-01T04:37:39.324Z"
   },
   "richCatalogueFamilies": [
     "2b7ef5807bb419d3",

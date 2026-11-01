@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-01T04:36:55.007Z",
+  "fetchedAt": "2026-11-01T04:37:36.972Z",
   "total": 179,
   "verification": {
     "htmlCount": 179,
@@ -239,9 +239,9 @@
       "readyOverlap": 1
     },
     "Wallpaper links": {
-      "htmlOptions": 0,
-      "markdownOptions": 0,
-      "commonOptions": 0,
+      "htmlOptions": 2,
+      "markdownOptions": 2,
+      "commonOptions": 2,
       "optionOverlap": 1,
       "htmlReady": 0,
       "markdownReady": 0,
@@ -539,6 +539,6 @@
       "readyOverlap": 1
     }
   },
-  "htmlSha256": "96347b644aea193eac4702438dc6894e1ab373bde75dfe8dfbc1f02395b99362",
+  "htmlSha256": "6b6291cbb8a75dad606937abfd4c0f47826eb83d7bbeca52a32a8e8911ce7307",
   "markdownSha256": "cc6a6c87f58307ddd05b1237b945ffacc10afe00ef08505cdf3bfc8407e6c8a1"
 }
