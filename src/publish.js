@@ -15,7 +15,7 @@ function escapeHtml(value) {
     .replaceAll('"', '&quot;');
 }
 function renderTemplate(value) {
-  return escapeHtml(value).replace(/&lt;([^&]+)&gt;/g, '<code>&lt;$1&gt;</code>');
+  return escapeHtml(value);
 }
 function cleanParameterDescription(value) {
   return String(value || '')
@@ -32,39 +32,20 @@ function familyHtml(family) {
   const parameters = (family.parameters || []).filter(item => item && item.name);
   const blocks = [];
 
-  // Telegram documents both tg:path and tg://path URI forms.
-  const displayTemplates = [];
-  for (const template of templates) {
-    if (/^tg:\/\//i.test(template)) {
-      const shortForm = template.replace(/^tg:\/\//i, 'tg:');
-      if (!templates.includes(shortForm) && !displayTemplates.includes(shortForm)) displayTemplates.push(shortForm);
-    }
-    displayTemplates.push(template);
-  }
-
-  if (displayTemplates.length) blocks.push(displayTemplates.map(renderTemplate).join('<br>'));
-  if (options.length) {
-    blocks.push('<blockquote expandable>Options:<br>' +
-      options.map(escapeHtml).join('<br>') + '</blockquote>');
-  }
-  if (ready.length) {
-    blocks.push('<blockquote expandable>Ready to use:<br>' +
-      ready.map(renderTemplate).join('<br>') + '</blockquote>');
-  }
+  if (templates.length) blocks.push(templates.map(renderTemplate).join('<br>'));
+  if (options.length) blocks.push('<blockquote expandable>Options:<br>' + options.map(escapeHtml).join('<br>') + '</blockquote>');
+  if (ready.length) blocks.push('<blockquote expandable>Ready to use:<br>' + ready.map(renderTemplate).join('<br>') + '</blockquote>');
   if (parameters.length) {
     const rows = parameters.map(item =>
-      '<tr><td><code>' + escapeHtml(item.name) + '</code></td><td>' +
+      '<tr><td>' + escapeHtml(item.name) + '</td><td>' +
       escapeHtml(cleanParameterDescription(item.requirement || '').toLowerCase()) +
       '</td><td>' + escapeHtml(cleanParameterDescription(item.description)) + '</td></tr>'
     );
-    blocks.push(
-      '<table><tr><th>Name</th><th>Optional</th><th>Description</th></tr>' +
-      rows.join('') + '</table>'
-    );
+    const table = '<table><tr><th>Name</th><th>Optional</th><th>Description</th></tr>' + rows.join('') + '</table>';
+    blocks.push('<blockquote expandable>' + table + '</blockquote>');
   }
-
   blocks.push('<hr>', '@TDeepLink');
-  return blocks.join('<br>');
+  return blocks.join('');
 }
 function splitRichContent(family) {
   const full = familyHtml(family);
