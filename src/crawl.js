@@ -197,24 +197,38 @@ function parseFamilies(markdown) {
       templates.unshift('tg:new');
     }
 
-    // Extract concise parameter metadata from the official documentation table.
+    // Read the official Name | Optional | Description Markdown tables.
     const parameters = [];
-    for (const match of body.matchAll(/^\s*\|\s*`([^`]+)`\s*\|\s*([^|]+)\|\s*([^|\n]+)\s*\|/gm)) {
-      const name = match[1].trim();
-      const requirement = match[2].trim().replace(/\s+/g, ' ');
-      const description = match[3].replace(/\\\s*$/, '')
-        .replace(/\[([^\]]+)\]\((?:[^()]|\([^)]*\))*\)/g, '$1')
-        .replace(/[*`]/g, '').replace(/&nbsp;|&raquo;|&#187;/gi, ' ')
-        .replace(/\s+/g, ' ').trim();
-      const conciseDescription = description.split(/:\s+if provided\b/i)[0].trim();
-      const values = [];
-      if (name === 'mode') {
-        for (const value of description.matchAll(/equal to `([^`]+)`/g)) values.push(value[1]);
-        if (/^main mini app links$/i.test(title)) {
-          for (const value of body.matchAll(/equal to `([^`]+)`/g)) if (!values.includes(value[1])) values.push(value[1]);
-        }
-      }
-      parameters.push({ name, requirement, description: conciseDescription, values });
+    const seenParameters = new Set();
+    for (const line of body.split(/\\r?\\n/)) {
+      const cells = line.trim().replace(/^\\|/, '').replace(/\\|$/, '').split('|').map(cell => cell.trim());
+      if (cells.length < 3 || !/^\`[^\`]+\`$/.test(cells[0])) continue;
+      const name = cells[0].slice(1, -1).trim();
+      const requirement = cells[1].replace(/[*\`]/g, '').replace(/\\s+/g, ' ').trim();
+      let description = cells.slice(2).join(' | ')
+        .replace(/\\\\\\s*$/, '')
+        .replace(/\\[([^\\]]+)\\]\\((?:[^()]|\\([^)]*\\))*\\)/g, '$1')
+        .replace(/<[^>]*>/g, ' ')
+        .replace(/&nbsp;|&raquo;|&#187;|&#160;/gi, ' ')
+        .replace(/&amp;/gi, '&')
+        .replace(/&lt;/gi, '<')
+        .replace(/&gt;/gi, '>')
+        .replace(/[*\`]/g, '')
+        .replace(/\\s+/g, ' ').trim();
+
+      // Keep the useful definition, not long client-implementation instructions.
+      description = description
+        .replace(/\\s+(?:if provided|if set|before insertion|note that)\\b.*$/i, '')
+        .replace(/\\s+possible values:.*$/i, '')
+        .replace(/\\s+any other non-empty value.*$/i, '')
+        .trim();
+      const sentenceEnd = description.search(/(?<=[.!?])\\s+[A-Z]/);
+      if (sentenceEnd >= 0) description = description.slice(0, sentenceEnd + 1);
+
+      const signature = JSON.stringify([name, requirement, description]);
+      if (seenParameters.has(signature)) continue;
+      seenParameters.add(signature);
+      parameters.push({ name, requirement, description, values: [] });
     }
 
     const ready = new Set(templates.filter(x => x !== 'tg:new' && !/<[^>]+>|\{prefix\}/.test(x)));
