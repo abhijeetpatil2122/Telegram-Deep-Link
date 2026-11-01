@@ -65,7 +65,7 @@ async function main() {
 
   // One-time complete Rich Message catalogue delivery to the private test chat.
   // Persist after each family so an interrupted run resumes without repeating completed families.
-  const catalogueVersion = 15;
+  const catalogueVersion = 16;
   if (state.richCatalogueVersion !== catalogueVersion) {
     // Start a fresh full delivery, then persist the target version before sending.
     // This also lets an interrupted run resume from the families already delivered.
