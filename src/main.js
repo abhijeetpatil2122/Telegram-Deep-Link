@@ -65,7 +65,7 @@ async function main() {
 
   // One-time complete Rich Message catalogue delivery to the private test chat.
   // Persist after each family so an interrupted run resumes without repeating completed families.
-  const catalogueVersion = 9;
+  const catalogueVersion = 10;
   if (state.richCatalogueVersion !== catalogueVersion) {
     // Start a fresh full delivery, then persist the target version before sending.
     // This also lets an interrupted run resume from the families already delivered.
@@ -97,52 +97,6 @@ async function main() {
     }
     state.richCatalogueVersion = catalogueVersion;
     await saveState(state);
-  }
-
-  // One-time supplement: keep each generated ready-to-use link beside its own documentation.
-  const readyCatalogueVersion = 1;
-  const readyDelivered = new Set(state.readyCatalogueFamilies || []);
-  if (state.readyCatalogueVersion !== readyCatalogueVersion) {
-    for (const family of families) {
-      if (!family.ready?.length || readyDelivered.has(family.id)) continue;
-      const sent = await sendFamily(family);
-      readyDelivered.add(family.id);
-      state = {
-        ...state,
-        readyCatalogueFamilies: [...readyDelivered],
-        lastReadyCatalogueDelivery: {
-          family: family.title,
-          messageIds: sent.map(message => message.message_id),
-          chatId: sent[0]?.chat?.id,
-          deliveredAt: new Date().toISOString()
-        }
-      };
-      await saveState(state);
-      console.log('Ready-to-use links delivered with documentation: ' + family.title + ' (' + sent.length + ' message(s)).');
-    }
-    state.readyCatalogueVersion = readyCatalogueVersion;
-    await saveState(state);
-  }
-
-  // First private preview: representative families only. The public channel is never targeted here.
-  const previewTitles = new Set(['Settings links', 'Contacts links', 'New chat links', 'Chat list links', 'Post story links']);
-  const previewed = new Set(state.previewedFamilies || []);
-  for (const family of families) {
-    if (!previewTitles.has(family.title) || previewed.has(family.id)) continue;
-    const sent = await sendFamily(family);
-    previewed.add(family.id);
-    state = {
-      ...state,
-      previewedFamilies: [...previewed],
-      lastPrivatePreview: {
-        family: family.title,
-        messageIds: sent.map(message => message.message_id),
-        chatId: sent[0]?.chat?.id,
-        deliveredAt: new Date().toISOString()
-      }
-    };
-    await saveState(state);
-    console.log('Private preview delivered: ' + family.title + ' (' + sent.length + ' message(s)).');
   }
 
   const oldSnapshots = state.familySnapshots || {};
