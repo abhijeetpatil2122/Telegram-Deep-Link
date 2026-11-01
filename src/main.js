@@ -156,7 +156,7 @@ async function main() {
     source: result.sources,
     inventory: result.inventory.map(item => ({ id: item.id, template: item.template })),
     familySnapshots: nextSnapshots,
-    previewedFamilies: [...previewed],
+    previewedFamilies: state.previewedFamilies || [],
     removedHistory
   };
   await saveState(state);
