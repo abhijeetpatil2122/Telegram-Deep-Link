@@ -11,6 +11,7 @@ const sha256 = value => createHash('sha256').update(value).digest('hex');
 function decodeEntities(value) {
   return value
     .replace(/&nbsp;/gi, ' ')
+    .replace(/&raquo;|&#187;/gi, '')
     .replace(/&lt;/gi, '<')
     .replace(/&gt;/gi, '>')
     .replace(/&amp;/gi, '&')
@@ -203,7 +204,9 @@ function parseFamilies(markdown) {
       const requirement = match[2].trim().replace(/\s+/g, ' ');
       const description = match[3].replace(/\\\s*$/, '')
         .replace(/\[([^\]]+)\]\((?:[^()]|\([^)]*\))*\)/g, '$1')
-        .replace(/[*`]/g, '').replace(/\s+/g, ' ').trim();
+        .replace(/[*`]/g, '').replace(/&nbsp;|&raquo;|&#187;/gi, ' ')
+        .replace(/\s+/g, ' ').trim();
+      const conciseDescription = description.split(/:\s+if provided\b/i)[0].trim();
       const values = [];
       if (name === 'mode') {
         for (const value of description.matchAll(/equal to `([^`]+)`/g)) values.push(value[1]);
@@ -211,7 +214,7 @@ function parseFamilies(markdown) {
           for (const value of body.matchAll(/equal to `([^`]+)`/g)) if (!values.includes(value[1])) values.push(value[1]);
         }
       }
-      parameters.push({ name, requirement, description, values });
+      parameters.push({ name, requirement, description: conciseDescription, values });
     }
 
     const ready = new Set(templates.filter(x => x !== 'tg:new' && !/<[^>]+>|\{prefix\}/.test(x)));
