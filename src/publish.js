@@ -36,27 +36,17 @@ function familyHtml(family) {
   const ready = unique(family.ready).filter(template => !templates.includes(template));
   const parameters = (family.parameters || []).filter(item => item && item.name);
   const blocks = [];
-  const familyTitle = String(family.title || '').trim().toLowerCase();
-  const isPostStoryFamily = familyTitle === 'post story links';
-  const title = String(family.title || '').replace(/\s+links?$/i, '').trim();
+  const title = String(family.title || '').replace(/\\s+links?$/i, '').trim();
 
   if (title) blocks.push('<h3>' + escapeHtml(title) + '</h3>');
-  // Use a real block list for every family's link formats, not loose line breaks.
+  // Use the same native Rich Message lists for every family.
   if (templates.length) blocks.push(renderList(templates));
 
   if (options.length) {
-    if (isPostStoryFamily) {
-      blocks.push('<details><summary>Options</summary>' + renderList(options, true) + '</details>');
-    } else {
-      blocks.push('<blockquote expandable>Options:<br>' + options.map(escapeHtml).join('<br>') + '</blockquote>');
-    }
+    blocks.push('<blockquote expandable>Options:\\n' + renderList(options, true) + '</blockquote>');
   }
   if (ready.length) {
-    if (isPostStoryFamily) {
-      blocks.push('<details><summary>Ready to use</summary>' + renderList(ready) + '</details>');
-    } else {
-      blocks.push('<blockquote expandable>Ready to use:<br>' + ready.map(renderTemplate).join('<br>') + '</blockquote>');
-    }
+    blocks.push('<blockquote expandable>Ready to use:\\n' + renderList(ready) + '</blockquote>');
   }
   if (parameters.length) {
     const rows = parameters.map(item =>
