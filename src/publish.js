@@ -14,6 +14,9 @@ function escapeHtml(value) {
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;');
 }
+function renderTemplate(value) {
+  return escapeHtml(value).replace(/&lt;([^&]+)&gt;/g, '<code>&lt;$1&gt;</code>');
+}
 function familyHtml(family) {
   const templates = unique(family.templates);
   const options = unique(family.options);
@@ -21,23 +24,38 @@ function familyHtml(family) {
   const parameters = (family.parameters || []).filter(item => item && item.name);
   const blocks = [];
 
-  if (templates.length) blocks.push(templates.map(escapeHtml).join('<br>'));
+  // Keep the compact tg:path spelling beside its canonical tg://path form
+  // for direct-path links. Resolve links already have their own t.me form.
+  const displayTemplates = [];
+  for (const template of templates) {
+    if (/^tg:\/\/(?!resolve\?)([a-z0-9_+.-]+(?:\/[^?]*)?)(?:\?.*)?$/i.test(template)) {
+      const shortForm = template.replace(/^tg:\/\//i, 'tg:');
+      if (!templates.includes(shortForm) && !displayTemplates.includes(shortForm)) displayTemplates.push(shortForm);
+    }
+    displayTemplates.push(template);
+  }
+
+  if (displayTemplates.length) blocks.push(displayTemplates.map(renderTemplate).join('<br>'));
   if (options.length) {
     blocks.push('<blockquote expandable>Options:<br>' +
       options.map(escapeHtml).join('<br>') + '</blockquote>');
   }
   if (ready.length) {
     blocks.push('<blockquote expandable>Ready to use:<br>' +
-      ready.map(escapeHtml).join('<br>') + '</blockquote>');
+      ready.map(renderTemplate).join('<br>') + '</blockquote>');
   }
-  if (parameters.length && !ready.length) {
+  if (parameters.length) {
     const rows = parameters.map(item => {
-      const values = item.values?.length ? ' (values: ' + item.values.join(', ') + ')' : '';
-      const requirement = item.requirement ? ' — ' + item.requirement.toLowerCase() : '';
-      const description = item.description ? ': ' + item.description : '';
-      return escapeHtml(item.name + requirement + values + description);
+      const requirement = (item.requirement || '').toLowerCase();
+      const description = (item.description || '')
+        .replace(/&nbsp;|&raquo;|&#187;/gi, ' ')
+        .replace(/\s+/g, ' ')
+        .replace(/\s+([.,;:])/g, '$1')
+        .trim();
+      return '<tr><td><code>' + escapeHtml(item.name) + '</code></td><td>' +
+        escapeHtml(requirement) + '</td><td>' + escapeHtml(description) + '</td></tr>';
     });
-    blocks.push('<blockquote expandable>Parameters:<br>' + rows.join('<br>') + '</blockquote>');
+    blocks.push('<table>' + rows.join('') + '</table>');
   }
 
   blocks.push('<hr>', '@TDeepLink');
