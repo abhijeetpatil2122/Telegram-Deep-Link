@@ -14,21 +14,30 @@ function escapeHtml(value) {
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;');
 }
-function familyHtml(family, part = 1, total = 1) {
+function familyHtml(family) {
   const templates = unique(family.templates);
   const options = unique(family.options);
   const ready = unique(family.ready);
-  const lines = [];
+  const blocks = [];
 
-  if (templates.length) lines.push(templates.map(escapeHtml).join('<br>'));
+  // Keep every deep-link template as plain, literal text on its own line.
+  if (templates.length) blocks.push(templates.map(escapeHtml).join('<br>'));
 
-  const expandable = [];
-  if (options.length) expandable.push('Options:<br>' + options.map(escapeHtml).join('<br>'));
-  if (ready.length) expandable.push('Ready to use:<br>' + ready.map(escapeHtml).join('<br>'));
-  if (expandable.length) lines.push('<blockquote expandable>' + expandable.join('<br><br>') + '</blockquote>');
+  // Options and ready-to-use links are separate expandable blockquotes.
+  if (options.length) {
+    blocks.push('<blockquote expandable>Options:<br>' +
+      options.map(escapeHtml).join('<br>') +
+      '</blockquote>');
+  }
+  if (ready.length) {
+    blocks.push('<blockquote expandable>Ready to use:<br>' +
+      ready.map(escapeHtml).join('<br>') +
+      '</blockquote>');
+  }
 
-  lines.push('<hr>', '@TDeepLink');
-  return lines.join('<br><br>');
+  blocks.push('<hr>', '@TDeepLink');
+  // No extra <br> separators around block elements: avoid artificial blank gaps.
+  return blocks.join('');
 }
 function splitRichContent(family) {
   const full = familyHtml(family);
