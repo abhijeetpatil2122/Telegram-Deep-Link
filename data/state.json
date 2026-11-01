@@ -1,11 +1,11 @@
 {
   "initializedAt": "2026-10-31T11:17:43.854Z",
-  "checkedAt": "2026-11-01T12:33:31.649Z",
+  "checkedAt": "2026-11-01T12:35:08.203Z",
   "source": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "2508caaa8906b251a6d1ad7915f3349160341fae629e5a9eed84cbb9f10912e9",
+      "sha256": "07d7f6fb2e1c3ccafaedcb4dc0ef2221d4abac81441ff072e60ecfa73d7a432c",
       "etag": null,
       "lastModified": null
     },
@@ -2374,12 +2374,12 @@
   "lastRichCatalogueDelivery": {
     "family": "Timestamp links",
     "messageIds": [
-      1253
+      1306
     ],
     "chatId": 1314643983,
-    "deliveredAt": "2026-11-01T12:30:46.873Z"
+    "deliveredAt": "2026-11-01T12:35:08.200Z"
   },
-  "richCatalogueVersion": 13,
+  "richCatalogueVersion": 14,
   "readyCatalogueFamilies": [
     "2b7ef5807bb419d3",
     "24b580efd0769709",
