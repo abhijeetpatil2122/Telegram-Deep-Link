@@ -158,10 +158,10 @@ async function main() {
     // Keep the family's URI header even when only a new option or ready link was added.
     const delta = {
       ...family,
-      templates: current.templates,
+      templates: newTemplates,
       options: newOptions,
       ready: newReady,
-      documentation: current.documentation
+      documentation: documentationChanged ? current.documentation : ''
     };
     const sent = await sendFamily(delta);
     state = {
