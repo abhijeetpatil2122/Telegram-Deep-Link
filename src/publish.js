@@ -26,7 +26,7 @@ function cleanParameterDescription(value) {
     .trim();
 }
 function familyHtml(family) {
-  const templates = unique(family.templates);
+  const templates = unique(family.templates).filter(template => !/^tg:(?!\\/\\/)/i.test(template));
   const options = unique(family.options);
   const ready = unique(family.ready);
   const parameters = (family.parameters || []).filter(item => item && item.name);
