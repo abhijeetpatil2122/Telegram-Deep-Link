@@ -1,52 +1,64 @@
 const API = 'https://api.telegram.org';
 const RICH_LIMIT = 30000;
 const TEXT_LIMIT = 3900;
-const fence = String.fromCharCode(96, 96, 96);
-function unique(values) { return [...new Set((values || []).filter(Boolean))]; }
-function countCharacters(value) { return Array.from(value).length; }
-function familyMarkdown(family, part, total) {
+const TICK = String.fromCharCode(96);
+
+function unique(values) {
+  return [...new Set((values || []).filter(Boolean))];
+}
+function countCharacters(value) {
+  return Array.from(value).length;
+}
+function renderList(values, { links = false } = {}) {
+  return unique(values).map(value => {
+    const text = String(value);
+    const parameterized = /<[^>]+>|\{[^}]+\}|\$[a-z_]+/i.test(text);
+    return '- ' + (links && !parameterized ? text : TICK + text.replaceAll(TICK, '') + TICK);
+  }).join('\n');
+}
+function familyMarkdown(family, part = 1, total = 1) {
   const heading = '# ' + family.title + (total > 1 ? ' — Part ' + part + '/' + total : '');
-  const body = family.documentation || '';
-  const fallback = (family.templates || []).length
-    ? '\n\n## Documented syntax\n\n' + fence + 'text\n' + unique(family.templates).join('\n') + '\n' + fence
-    : '';
+  const sections = [];
+  const templates = unique(family.templates);
+  const options = unique(family.options);
   const ready = unique(family.ready);
-  const readyBlock = ready.length
-    ? '\n\n<details>\n<summary>Ready-to-use links (' + ready.length + ')</summary>\n\n' + ready.map(link => '- ' + link).join('\n') + '\n\n</details>'
-    : '';
-  return [heading, '', body || fallback, readyBlock, '', '---',
-    '*Source: [Telegram official deep-link documentation](https://core.telegram.org/api/links)*'
-  ].join('\n');
+
+  if (templates.length) sections.push('**Links**\n' + renderList(templates));
+  if (options.length) sections.push('**Options**\n' + renderList(options));
+  if (ready.length) {
+    const list = renderList(ready, { links: true });
+    sections.push(ready.length > 30
+      ? '<details>\n<summary>Ready-to-use links (' + ready.length + ')</summary>\n\n' + list + '\n\n</details>'
+      : '**Ready to use**\n' + list);
+  }
+
+  const source = '[Telegram official documentation](https://core.telegram.org/api/links)';
+  return [heading, '', sections.join('\n\n'), '', '—', source].filter(Boolean).join('\n');
 }
 function splitRichContent(family) {
-  const paragraphs = (family.documentation || '').split(/\n\s*\n/);
+  const full = familyMarkdown(family);
+  if (countCharacters(full) <= RICH_LIMIT) return [full];
+
+  const groups = [
+    ['Links', unique(family.templates), 'templates'],
+    ['Options', unique(family.options), 'options'],
+    ['Ready to use', unique(family.ready), 'ready']
+  ].filter(([, values]) => values.length);
   const chunks = [];
-  let current = '';
-  for (const paragraph of paragraphs) {
-    const candidate = current ? current + '\n\n' + paragraph : paragraph;
-    if (countCharacters(familyMarkdown({ ...family, documentation: candidate }, 1, 1)) <= RICH_LIMIT) {
-      current = candidate;
-      continue;
+  let current = { templates: [], options: [], ready: [] };
+  for (const [, values, property] of groups) {
+    for (const value of values) {
+      current[property].push(value);
+      if (countCharacters(familyMarkdown({ ...family, ...current })) > RICH_LIMIT) {
+        current[property].pop();
+        if (Object.values(current).some(list => list.length)) chunks.push(current);
+        current = { templates: [], options: [], ready: [] };
+        current[property].push(value);
+      }
     }
-    if (current) chunks.push(current);
-    if (countCharacters(familyMarkdown({ ...family, documentation: paragraph }, 1, 1)) <= RICH_LIMIT) {
-      current = paragraph;
-      continue;
-    }
-    let fragment = '';
-    for (const line of paragraph.split('\n')) {
-      const next = fragment ? fragment + '\n' + line : line;
-      if (countCharacters(familyMarkdown({ ...family, documentation: next }, 1, 1)) > RICH_LIMIT) {
-        if (fragment) chunks.push(fragment);
-        fragment = line;
-      } else fragment = next;
-    }
-    current = fragment;
   }
-  if (current || !chunks.length) chunks.push(current);
-  return chunks.map((documentation, index) => familyMarkdown(
-    { ...family, documentation }, index + 1, chunks.length
-  ));
+  if (Object.values(current).some(list => list.length)) chunks.push(current);
+  return chunks.map((chunk, index) => familyMarkdown({ ...family, ...chunk }, index + 1, chunks.length));
 }
 function splitPlainText(value, limit = TEXT_LIMIT) {
   const chunks = [];
@@ -118,9 +130,9 @@ export async function sendTestMessage({ count, overlap, familyCount }) {
   const markdown = [
     '# Telegram Deep Link Watcher', '',
     'Documentation crawl and integrity checks completed.', '',
-    '**Extracted templates:** ' + Number(count),
+    '**Extracted links:** ' + Number(count),
     '**Link families:** ' + Number(familyCount || 0),
-    '**HTML / Markdown agreement:** ' + Math.round(Number(overlap) * 100) + '%',
+    '**HTML / Markdown match:** ' + Math.round(Number(overlap) * 100) + '%',
     '**Destination:** Private test chat', '',
     'This is a private test. No public channel has been targeted.'
   ].join('\n');
