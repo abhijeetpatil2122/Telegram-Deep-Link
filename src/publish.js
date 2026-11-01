@@ -2,33 +2,36 @@ const API = 'https://api.telegram.org';
 const RICH_LIMIT = 30000;
 
 function unique(values) {
-  return [...new Set((values || []).filter(Boolean))];
+  return [...new Set((values || []).filter(Boolean).map(value => String(value)))];
 }
 function countCharacters(value) {
   return Array.from(value).length;
 }
-function familyMarkdown(family, part = 1, total = 1) {
-  const heading = '# ' + family.title + (total > 1 ? ' — Part ' + part + '/' + total : '');
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;');
+}
+function familyHtml(family, part = 1, total = 1) {
   const templates = unique(family.templates);
   const options = unique(family.options);
   const ready = unique(family.ready);
+  const lines = [];
 
-  const lines = [heading, ''];
-  if (templates.length) lines.push(templates.join('\n'));
+  if (templates.length) lines.push(templates.map(escapeHtml).join('<br>'));
 
   const expandable = [];
-  if (options.length) expandable.push('Options:\n' + options.join('\n'));
-  if (ready.length) expandable.push('Ready to use:\n' + ready.join('\n'));
-  if (expandable.length) {
-    if (templates.length) lines.push('');
-    lines.push('<blockquote expandable>' + expandable.join('\n\n') + '</blockquote>');
-  }
+  if (options.length) expandable.push('Options:<br>' + options.map(escapeHtml).join('<br>'));
+  if (ready.length) expandable.push('Ready to use:<br>' + ready.map(escapeHtml).join('<br>'));
+  if (expandable.length) lines.push('<blockquote expandable>' + expandable.join('<br><br>') + '</blockquote>');
 
-  lines.push('', '---', '@TDeepLink');
-  return lines.join('\n');
+  lines.push('<hr>', '@TDeepLink');
+  return lines.join('<br><br>');
 }
 function splitRichContent(family) {
-  const full = familyMarkdown(family);
+  const full = familyHtml(family);
   if (countCharacters(full) <= RICH_LIMIT) return [full];
 
   const groups = [
@@ -41,7 +44,7 @@ function splitRichContent(family) {
   for (const [property, values] of groups) {
     for (const value of values) {
       current[property].push(value);
-      if (countCharacters(familyMarkdown({ ...family, ...current })) > RICH_LIMIT) {
+      if (countCharacters(familyHtml({ ...family, ...current })) > RICH_LIMIT) {
         current[property].pop();
         if (Object.values(current).some(list => list.length)) chunks.push(current);
         current = { templates: [], options: [], ready: [] };
@@ -50,7 +53,7 @@ function splitRichContent(family) {
     }
   }
   if (Object.values(current).some(list => list.length)) chunks.push(current);
-  return chunks.map((chunk, index) => familyMarkdown({ ...family, ...chunk }, index + 1, chunks.length));
+  return chunks.map(chunk => familyHtml({ ...family, ...chunk }));
 }
 async function request(method, payload) {
   const token = process.env.TELEGRAM_BOT_TOKEN;
@@ -70,10 +73,10 @@ async function request(method, payload) {
   }
   return result.result;
 }
-async function sendRich(text) {
+async function sendRich(html) {
   return request('sendRichMessage', {
     chat_id: process.env.TELEGRAM_CHAT_ID,
-    rich_message: { markdown: text }
+    rich_message: { html }
   });
 }
 export async function sendFamily(family) {
@@ -86,14 +89,14 @@ export async function sendFamily(family) {
   return results;
 }
 export async function sendTestMessage({ count, overlap, familyCount }) {
-  const markdown = [
-    '# Telegram Deep Link Watcher', '',
-    'Documentation crawl and integrity checks completed.', '',
-    '**Extracted links:** ' + Number(count),
-    '**Link families:** ' + Number(familyCount || 0),
-    '**HTML / Markdown match:** ' + Math.round(Number(overlap) * 100) + '%',
-    '**Destination:** Private test chat', '',
+  const html = [
+    'Telegram Deep Link Watcher',
+    'Documentation crawl and integrity checks completed.',
+    'Extracted links: ' + Number(count),
+    'Link families: ' + Number(familyCount || 0),
+    'HTML / Markdown match: ' + Math.round(Number(overlap) * 100) + '%',
+    'Destination: Private test chat',
     'This is a private test. No public channel has been targeted.'
-  ].join('\n');
-  return sendRich(markdown);
+  ].map(escapeHtml).join('<br>');
+  return sendRich(html);
 }
