@@ -214,7 +214,7 @@ function parseFamilies(markdown) {
       parameters.push({ name, requirement, description, values });
     }
 
-    const ready = new Set(templates.filter(x => !/<[^>]+>|\{prefix\}/.test(x)));
+    const ready = new Set(templates.filter(x => x !== 'tg:new' && !/<[^>]+>|\{prefix\}/.test(x)));
     if (/^settings links$/i.test(title)) {
       ready.add('tg://settings');
       for (const path of options) ready.add('tg://settings/' + path);
