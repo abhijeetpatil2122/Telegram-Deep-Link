@@ -1,10 +1,10 @@
 {
-  "fetchedAt": "2026-11-01T05:33:12.539Z",
+  "fetchedAt": "2026-11-01T05:40:36.785Z",
   "sources": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "44ed673174e3b9f927db6ba47605479e046418500becfd90d4641fc9f1f29fbe",
+      "sha256": "0f0e9794b13dcf716ac9e7df307f4fb518169e7474b16747b144cd7aa6c1cd01",
       "etag": null,
       "lastModified": null
     },
@@ -1846,6 +1846,12 @@
           "values": []
         },
         {
+          "name": "draft_text",
+          "requirement": "Optional",
+          "description": "UTF-8 text to pre-enter into the text input bar, if the user can write in the chat.",
+          "values": []
+        },
+        {
           "name": "profile",
           "requirement": "Optional",
           "description": "If set, clicking on this link should open the destination peer's profile page, not the chat view.",
@@ -1915,6 +1921,12 @@
           "name": "phone_number",
           "requirement": "Required",
           "description": "Phone number to resolve using contacts.resolvePhone",
+          "values": []
+        },
+        {
+          "name": "draft_text",
+          "requirement": "Optional",
+          "description": "UTF-8 text to pre-enter into the text input bar, if the user can write in the chat.",
           "values": []
         },
         {
@@ -2003,7 +2015,7 @@
         {
           "name": "single",
           "requirement": "Optional",
-          "description": "For albums/grouped media, if set indicates that this is a link to a specific media in the album; otherwise, it is a link to the entire album.",
+          "description": "For albums/grouped media,",
           "values": []
         },
         {
@@ -2019,15 +2031,21 @@
           "values": []
         },
         {
+          "name": "media_timestamp",
+          "requirement": "Optional",
+          "description": "Timestamp at which to start playing the media file present in the body or in the webpage preview of the message, in the following formats:",
+          "values": []
+        },
+        {
           "name": "task_id",
           "requirement": "Optional",
-          "description": "Positive integer ID of a specific task to highlight, when the linked message contains a checklist , corresponding to a todoItem.id. Invalid (non-positive or non-numeric) values should be treated as an error.",
+          "description": "Positive integer ID of a specific task to highlight, when the linked message contains a checklist , corresponding to a todoItem.id.",
           "values": []
         },
         {
           "name": "option_id",
           "requirement": "Optional",
-          "description": "base64url-encoded identifier of a specific poll option to highlight, when the linked message contains a poll, corresponding to a pollAnswer.option. The decoded value must be valid UTF-8, otherwise it should be ignored.",
+          "description": "base64url-encoded identifier of a specific poll option to highlight, when the linked message contains a poll, corresponding to a pollAnswer.option.",
           "values": []
         }
       ],
@@ -2194,6 +2212,12 @@
           "values": []
         },
         {
+          "name": "story_id",
+          "requirement": "Required",
+          "description": "ID of the Telegram Story to be fetched and viewed as described here .",
+          "values": []
+        },
+        {
           "name": "username",
           "requirement": "Required",
           "description": "Username of the user or channel that posted the live story.",
@@ -2243,7 +2267,14 @@
         "video",
         "live"
       ],
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "content_type",
+          "requirement": "Optional",
+          "description": "Type of story content to compose; if absent, the composer is opened without pre-selecting a content type.",
+          "values": []
+        }
+      ],
       "ready": [
         "tg://post",
         "tg://post/live",
@@ -2262,7 +2293,26 @@
         "tg://newbot?manager=<manager_bot_username>&username=<suggested_bot_username>&name=<suggested_bot_name>"
       ],
       "options": [],
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "manager_bot_username",
+          "requirement": "Required",
+          "description": "Username of the manager bot, passed to bots.createBot.manager_id.",
+          "values": []
+        },
+        {
+          "name": "suggested_bot_username",
+          "requirement": "Optional",
+          "description": "Suggested username for the managed bot that will be created, passed to bots.createBot.username.",
+          "values": []
+        },
+        {
+          "name": "suggested_bot_name",
+          "requirement": "Optional",
+          "description": "Suggested name for the managed bot that will be created, passed to bots.createBot.name.",
+          "values": []
+        }
+      ],
       "ready": [],
       "documentation": "Used to request creation of a new [managed bot &raquo;](/api/bots/managed-bots.md).  \n\nHandle this link by starting the [managed bot creation flow &raquo;](/api/bots/managed-bots.md#creating-a-managed-bot), additionally setting the `via_deeplink` flag when finally invoking [bots.createBot](/method/bots.createBot.md).  \n\n`t.me` syntax:\n```\nt.me/newbot/<manager_bot_username>/<suggested_bot_username>?name=<suggested_bot_name>\nt.me/newbot/<manager_bot_username>?name=<suggested_bot_name>\n```\n\n`tg:` syntax:\n```\ntg://newbot?manager=<manager_bot_username>&username=<suggested_bot_username>&name=<suggested_bot_name>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `manager_bot_username` | Required | Username of the manager bot, passed to [bots.createBot](/method/bots.createBot.md).`manager_id`. \\\nBefore using this value, resolve it and make sure that it's associated to a manager bot (i.e. the resolved [user](/constructor/user.md) must have the `bot_can_manage_bots` flag set). |\n| `suggested_bot_username` | Optional | Suggested username for the managed bot that will be created, passed to [bots.createBot](/method/bots.createBot.md).`username`. \\\nIf non-empty, and the passed value does **not** end in `bot`, append `bot` to the value before recommending it to the user. \\\nCan be empty, in which case the user must choose a username before invoking [bots.createBot](/method/bots.createBot.md). |\n| `suggested_bot_name` | Optional | Suggested name for the managed bot that will be created, passed to [bots.createBot](/method/bots.createBot.md).`name`. \\\nCan be empty, in which case the user must choose a name before invoking [bots.createBot](/method/bots.createBot.md). |"
     },
@@ -2477,7 +2527,7 @@
         {
           "name": "rotation",
           "requirement": "Optional",
-          "description": "Clockwise rotation angle of the gradient, in degrees; 0-359. Must be always divisible by 45, default to 0 if not set.",
+          "description": "Clockwise rotation angle of the gradient, in degrees; 0-359.",
           "values": []
         },
         {
@@ -2527,84 +2577,6 @@
           "requirement": "Optional",
           "description": "motion to enable parallax motion as specified in the docs.",
           "values": []
-        },
-        {
-          "name": "slug",
-          "requirement": "Required",
-          "description": "Wallpaper slug used to obtain the pattern file using account.getWallPaper.",
-          "values": []
-        },
-        {
-          "name": "intensity",
-          "requirement": "Required",
-          "description": "A value ranging from -100 to 100, used to combine the pattern with the fill as specified in the docs.",
-          "values": []
-        },
-        {
-          "name": "top_color",
-          "requirement": "Required",
-          "description": "Top gradient color in hex RGB format.",
-          "values": []
-        },
-        {
-          "name": "bottom_color",
-          "requirement": "Required",
-          "description": "Bottom gradient color in hex RGB format.",
-          "values": []
-        },
-        {
-          "name": "rotation",
-          "requirement": "Optional",
-          "description": "Clockwise rotation angle of the gradient, in degrees; 0-359. Must be always divisible by 45, default to 0 if not set.",
-          "values": []
-        },
-        {
-          "name": "mode",
-          "requirement": "Optional",
-          "description": "motion to enable parallax motion as specified in the docs.",
-          "values": []
-        },
-        {
-          "name": "slug",
-          "requirement": "Required",
-          "description": "Wallpaper slug used to obtain the pattern file using account.getWallPaper.",
-          "values": []
-        },
-        {
-          "name": "intensity",
-          "requirement": "Required",
-          "description": "A value ranging from -100 to 100, used to combine the pattern with the fill as specified in the docs.",
-          "values": []
-        },
-        {
-          "name": "hex_color1",
-          "requirement": "Required",
-          "description": "First gradient color in hex RGB format.",
-          "values": []
-        },
-        {
-          "name": "hex_color2",
-          "requirement": "Required",
-          "description": "Second gradient color in hex RGB format.",
-          "values": []
-        },
-        {
-          "name": "hex_color3",
-          "requirement": "Required",
-          "description": "Third gradient color in hex RGB format.",
-          "values": []
-        },
-        {
-          "name": "hex_color4",
-          "requirement": "Optional",
-          "description": "Fourth gradient color in hex RGB format.",
-          "values": []
-        },
-        {
-          "name": "mode",
-          "requirement": "Optional",
-          "description": "motion to enable parallax motion as specified in the docs.",
-          "values": []
         }
       ],
       "ready": [],
@@ -2629,7 +2601,7 @@
         {
           "name": "parameter",
           "requirement": "Optional",
-          "description": "Start parameter, up to 64 base64url characters",
+          "description": "Start parameter, up to 64 base64url characters:",
           "values": []
         }
       ],
@@ -2677,7 +2649,13 @@
         {
           "name": "parameter",
           "requirement": "Optional for group links, absent in channel links",
-          "description": "Start parameter, only for group links, up to 64 base64url characters",
+          "description": "Start parameter, only for group links, up to 64 base64url characters:",
+          "values": []
+        },
+        {
+          "name": "admin",
+          "requirement": "Optional for group links, required for channel links",
+          "description": "A combination of the following identifiers separated by +, each corresponding to the appropriate flag in the chatAdminRights constructor:",
           "values": []
         }
       ],
@@ -3064,7 +3042,7 @@
         {
           "name": "path",
           "requirement": "Optional",
-          "description": "Slash-separated identifier of the settings page or subsection to open; if absent, the top-level settings page is opened. Must be one of the values listed above.",
+          "description": "Slash-separated identifier of the settings page or subsection to open; if absent, the top-level settings page is opened.",
           "values": []
         }
       ],
@@ -3662,7 +3640,7 @@
         {
           "name": "slug",
           "requirement": "Optional",
-          "description": "Gift code slug to be passed to payments.checkGiftCode to obtain further info, and eventually to payments.applyGiftCode to apply it. See the giveaways documentation for more info.",
+          "description": "Gift code slug to be passed to payments.checkGiftCode to obtain further info, and eventually to payments.applyGiftCode to apply it.",
           "values": []
         }
       ],
@@ -3711,6 +3689,12 @@
           "requirement": "Optional",
           "description": "If provided, should be passed to messages.requestMainWebView.start_param",
           "values": []
+        },
+        {
+          "name": "mode",
+          "requirement": "Optional",
+          "description": "If equal to compact, the messages.requestMainWebView.compact flag must be set.",
+          "values": []
         }
       ],
       "ready": [],
@@ -3742,6 +3726,12 @@
           "name": "startapp",
           "requirement": "Optional",
           "description": "start_param to pass to messages.requestAppWebView",
+          "values": []
+        },
+        {
+          "name": "mode",
+          "requirement": "Optional",
+          "description": "If equal to compact, the messages.requestAppWebView.compact flag must be set.",
           "values": []
         }
       ],
@@ -3803,24 +3793,6 @@
           "values": []
         },
         {
-          "name": "start_parameter",
-          "requirement": "Optional",
-          "description": "If provided, should be passed to messages.requestWebView.start_param",
-          "values": []
-        },
-        {
-          "name": "bot_username",
-          "requirement": "Required",
-          "description": "Username of the bot that owns the attachment/side menu",
-          "values": []
-        },
-        {
-          "name": "start_parameter",
-          "requirement": "Optional",
-          "description": "If provided, should be passed to messages.requestWebView.start_param",
-          "values": []
-        },
-        {
           "name": "choose",
           "requirement": "Optional",
           "description": "A combination of users, bots, groups, channels separated by +: indicates the dialog types to show in the dialog selection popup: must be intersected with the dialog types contained in the attachMenuBot.peer_types field before use.",
@@ -3838,7 +3810,20 @@
         "tg://stars_topup?balance=<star_count>&purpose=<purpose>"
       ],
       "options": [],
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "star_count",
+          "requirement": "Required",
+          "description": "Indicates the number of required stars to execute an action (integer, must be clamped between 1 and 1000000000000).",
+          "values": []
+        },
+        {
+          "name": "purpose",
+          "requirement": "Optional",
+          "description": "Contains a string indicating the reason why the topup is required, that must be shown on the topup page (if activated),",
+          "values": []
+        }
+      ],
       "ready": [],
       "documentation": "Used to ensure that the user has at least N [Telegram Stars](/api/stars.md) on their balance.  \nIf not, this link must bring the user to the [Telegram Star topup page](/api/stars.md#buying-or-gifting-stars).  \n\n`tg:` syntax:\n\n```\ntg://stars_topup?balance=<star_count>&purpose=<purpose>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `star_count` | Required | Indicates the number of required stars to execute an action (integer, must be clamped between 1 and 1000000000000). \\\nIf the current balance is higher than or equal to this value, instead of bringing up the topup form, a simple toast should be displayed, indicating that the user already has enough stars to complete the operation: this toast should also contain a \"Buy anyway\" button that must bring up the star topup form unconditionally. |\n| `purpose` | Optional | Contains a string indicating the reason why the topup is required, that must be shown on the topup page (if activated), possible values: <!-- start_table topup -->\\\n\\\n- `subs` - Buy **Stars** to keep your channel subscriptions.\\\n- `subadvance12` - Buy **Stars** to keep your subscriptions active for the next 12 months.\\\n\\\n<!-- end_table topup --> |"
     },
