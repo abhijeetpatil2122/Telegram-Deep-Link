@@ -43,12 +43,12 @@ function familyHtml(family) {
   if (templates.length) blocks.push(renderList(templates));
 
   if (options.length) {
-    const optionLines = options.map((value, index) => (index + 1) + '. ' + escapeHtml(value)).join('\n');
-    blocks.push('<blockquote expandable>Options:\n' + optionLines + '</blockquote>');
+    const optionLines = options.map((value, index) => (index + 1) + '. ' + escapeHtml(value)).join('<br>');
+    blocks.push('<blockquote expandable>Options:<br>' + optionLines + '</blockquote>');
   }
   if (ready.length) {
-    const readyLines = ready.map(value => '• ' + escapeHtml(value)).join('\n');
-    blocks.push('<blockquote expandable>Ready to use:\n' + readyLines + '</blockquote>');
+    const readyLines = ready.map(value => '• ' + escapeHtml(value)).join('<br>');
+    blocks.push('<blockquote expandable>Ready to use:<br>' + readyLines + '</blockquote>');
   }
   if (parameters.length) {
     const rows = parameters.map(item =>
