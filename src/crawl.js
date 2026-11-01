@@ -200,30 +200,31 @@ function parseFamilies(markdown) {
     // Read the official Name | Optional | Description Markdown tables.
     const parameters = [];
     const seenParameters = new Set();
-    for (const line of body.split(/\\r?\\n/)) {
-      const cells = line.trim().replace(/^\\|/, '').replace(/\\|$/, '').split('|').map(cell => cell.trim());
-      if (cells.length < 3 || !/^\`[^\`]+\`$/.test(cells[0])) continue;
+    for (const line of body.split(/\r?\n/)) {
+      const cells = line.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(cell => cell.trim());
+      const tick = String.fromCharCode(96);
+      if (cells.length < 3 || !cells[0].startsWith(tick) || !cells[0].endsWith(tick)) continue;
       const name = cells[0].slice(1, -1).trim();
-      const requirement = cells[1].replace(/[*\`]/g, '').replace(/\\s+/g, ' ').trim();
+      const requirement = cells[1].replace(/[*]/g, '').split(tick).join('').replace(/\s+/g, ' ').trim();
       let description = cells.slice(2).join(' | ')
-        .replace(/\\\\\\s*$/, '')
-        .replace(/\\[([^\\]]+)\\]\\((?:[^()]|\\([^)]*\\))*\\)/g, '$1')
+        .replace(/\\\s*$/, '')
+        .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
         .replace(/<[^>]*>/g, ' ')
         .replace(/&nbsp;|&raquo;|&#187;|&#160;/gi, ' ')
         .replace(/&amp;/gi, '&')
         .replace(/&lt;/gi, '<')
         .replace(/&gt;/gi, '>')
-        .replace(/[*\`]/g, '')
-        .replace(/\\s+/g, ' ').trim();
+        .split(tick).join('')
+        .replace(/\s+/g, ' ').trim();
 
-      // Keep the useful definition, not long client-implementation instructions.
+      // Keep the useful definition, not lengthy client implementation instructions.
       description = description
-        .replace(/\\s+(?:if provided|if set|before insertion|note that)\\b.*$/i, '')
-        .replace(/\\s+possible values:.*$/i, '')
-        .replace(/\\s+any other non-empty value.*$/i, '')
+        .replace(/\s+(?:if provided|if set|before insertion|note that)\b.*$/i, '')
+        .replace(/\s+possible values:.*$/i, '')
+        .replace(/\s+any other non-empty value.*$/i, '')
         .trim();
-      const sentenceEnd = description.search(/(?<=[.!?])\\s+[A-Z]/);
-      if (sentenceEnd >= 0) description = description.slice(0, sentenceEnd + 1);
+      const firstSentence = description.match(/^.*?[.!?](?=\s+[A-Z]|\s*$)/);
+      if (firstSentence) description = firstSentence[0].trim();
 
       const signature = JSON.stringify([name, requirement, description]);
       if (seenParameters.has(signature)) continue;
