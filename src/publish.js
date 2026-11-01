@@ -19,10 +19,10 @@ function renderTemplate(value) {
 }
 function cleanParameterDescription(value) {
   return String(value || '')
-    .replace(/&nbsp;|&raquo;|&#187;/gi, ' ')
-    .replace(/\\u00a0/g, ' ')
-    .replace(/\\s+/g, ' ')
-    .replace(/\\s+([.,;:])/g, '$1')
+    .replace(/&nbsp;|&raquo;|&#187;|&#160;/gi, ' ')
+    .replace(/\u00a0/g, ' ')
+    .replace(/\s+/g, ' ')
+    .replace(/\s+([.,;:])/g, '$1')
     .trim();
 }
 function familyHtml(family) {
