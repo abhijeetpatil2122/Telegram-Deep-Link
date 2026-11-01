@@ -1,11 +1,11 @@
 {
   "initializedAt": "2026-10-31T11:17:43.854Z",
-  "checkedAt": "2026-11-01T04:37:39.326Z",
+  "checkedAt": "2026-11-01T04:40:52.552Z",
   "source": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "6b6291cbb8a75dad606937abfd4c0f47826eb83d7bbeca52a32a8e8911ce7307",
+      "sha256": "18e38a7305e61d4be490639697ddd1e5e14564429cc28bb3448b3ab902c74dac",
       "etag": null,
       "lastModified": null
     },
@@ -2175,7 +2175,7 @@
     "chatId": 1314643983,
     "deliveredAt": "2026-10-31T12:04:30.581Z"
   },
-  "richCatalogueVersion": 2,
+  "richCatalogueVersion": 3,
   "readyCatalogueFamilies": [
     "2b7ef5807bb419d3",
     "24b580efd0769709",
