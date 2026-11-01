@@ -1,11 +1,11 @@
 {
   "initializedAt": "2026-10-31T11:17:43.854Z",
-  "checkedAt": "2026-11-01T05:07:43.245Z",
+  "checkedAt": "2026-11-01T05:15:35.746Z",
   "source": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "7bef8cfd15006329353470b7f834bac4b9d25772204d7c7dbd769613fb91c8bb",
+      "sha256": "a5502997645e37d4dd6298e2323eb125f7b2c310a3f85efa7f4bff69217c064f",
       "etag": null,
       "lastModified": null
     },
@@ -1862,13 +1862,15 @@
       "templates": [
         "tg://new",
         "tg://new/channel",
-        "tg://new/group"
+        "tg://new/group",
+        "tg:new"
       ],
       "options": [],
       "ready": [
         "tg://new",
         "tg://new/channel",
-        "tg://new/group"
+        "tg://new/group",
+        "tg:new"
       ],
       "documentation": "Used to bring the user to the chat creation flow.  \n\n`tg:` syntax:\n```\ntg://new\ntg://new/channel\ntg://new/group\n```\n\n| Link | Description |\n| --- | --- |\n| `tg://new` | Start creating a new private chat (i.e. pick a contact to message). |\n| `tg://new/channel` | Start creating a new channel. |\n| `tg://new/group` | Start creating a new group. |"
     },
@@ -2105,12 +2107,12 @@
     }
   },
   "lastDelivery": {
-    "family": "Wallpaper links",
+    "family": "New chat links",
     "messageIds": [
-      653
+      866
     ],
     "chatId": 1314643983,
-    "deliveredAt": "2026-11-01T04:37:39.324Z"
+    "deliveredAt": "2026-11-01T05:15:35.744Z"
   },
   "richCatalogueFamilies": [
     "2b7ef5807bb419d3",

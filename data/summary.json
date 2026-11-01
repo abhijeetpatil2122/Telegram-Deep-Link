@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-01T05:06:21.043Z",
+  "fetchedAt": "2026-11-01T05:15:33.881Z",
   "total": 179,
   "verification": {
     "htmlCount": 179,
@@ -323,9 +323,9 @@
       "markdownOptions": 0,
       "commonOptions": 0,
       "optionOverlap": 1,
-      "htmlReady": 3,
-      "markdownReady": 3,
-      "commonReady": 3,
+      "htmlReady": 4,
+      "markdownReady": 4,
+      "commonReady": 4,
       "readyOverlap": 1
     },
     "Chat list links": {
@@ -539,6 +539,6 @@
       "readyOverlap": 1
     }
   },
-  "htmlSha256": "7bef8cfd15006329353470b7f834bac4b9d25772204d7c7dbd769613fb91c8bb",
+  "htmlSha256": "a5502997645e37d4dd6298e2323eb125f7b2c310a3f85efa7f4bff69217c064f",
   "markdownSha256": "cc6a6c87f58307ddd05b1237b945ffacc10afe00ef08505cdf3bfc8407e6c8a1"
 }
