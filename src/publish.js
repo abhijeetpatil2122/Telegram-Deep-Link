@@ -28,10 +28,13 @@ function cleanParameterDescription(value) {
 function familyHtml(family) {
   const templates = unique(family.templates).filter(template => !template.startsWith('tg:') || template.startsWith('tg://'));
   const options = unique(family.options);
-  const ready = unique(family.ready);
+  // Ready-to-use entries already listed as the main link formats should not be repeated.
+  const ready = unique(family.ready).filter(template => !templates.includes(template));
   const parameters = (family.parameters || []).filter(item => item && item.name);
   const blocks = [];
+  const title = String(family.title || '').replace(/\\s+links?$/i, '').trim();
 
+  if (title) blocks.push('<h3>' + escapeHtml(title) + '</h3>');
   if (templates.length) blocks.push(templates.map(renderTemplate).join('<br>'));
   if (options.length) blocks.push('<blockquote expandable>Options:<br>' + options.map(escapeHtml).join('<br>') + '</blockquote>');
   if (ready.length) blocks.push('<blockquote expandable>Ready to use:<br>' + ready.map(renderTemplate).join('<br>') + '</blockquote>');
@@ -42,7 +45,7 @@ function familyHtml(family) {
       '</td><td>' + escapeHtml(cleanParameterDescription(item.description)) + '</td></tr>'
     );
     const table = '<table><tr><th>Name</th><th>Optional</th><th>Description</th></tr>' + rows.join('') + '</table>';
-    blocks.push('<blockquote expandable>' + table + '</blockquote>');
+    blocks.push('<details><summary>Parameters</summary>' + table + '</details>');
   }
   blocks.push('<hr>', '@TDeepLink');
   return blocks.join('');
