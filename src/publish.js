@@ -37,14 +37,27 @@ function familyHtml(family) {
   const parameters = (family.parameters || []).filter(item => item && item.name);
   const blocks = [];
   const familyTitle = String(family.title || '').trim().toLowerCase();
-  const isBoostFamily = familyTitle === 'boost links';
   const isPostStoryFamily = familyTitle === 'post story links';
-  const title = String(family.title || '').replace(/\\s+links?$/i, '').trim();
+  const title = String(family.title || '').replace(/\s+links?$/i, '').trim();
 
   if (title) blocks.push('<h3>' + escapeHtml(title) + '</h3>');
-  if (templates.length) blocks.push(isBoostFamily ? renderList(templates) : templates.map(renderTemplate).join('<br>'));
-  if (options.length) blocks.push(isPostStoryFamily ? 'Options:' + renderList(options, true) : '<blockquote expandable>Options:<br>' + options.map(escapeHtml).join('<br>') + '</blockquote>');
-  if (ready.length) blocks.push(isPostStoryFamily ? 'Ready to use:' + renderList(ready) : '<blockquote expandable>Ready to use:<br>' + ready.map(renderTemplate).join('<br>') + '</blockquote>');
+  // Use a real block list for every family's link formats, not loose line breaks.
+  if (templates.length) blocks.push(renderList(templates));
+
+  if (options.length) {
+    if (isPostStoryFamily) {
+      blocks.push('<details><summary>Options</summary>' + renderList(options, true) + '</details>');
+    } else {
+      blocks.push('<blockquote expandable>Options:<br>' + options.map(escapeHtml).join('<br>') + '</blockquote>');
+    }
+  }
+  if (ready.length) {
+    if (isPostStoryFamily) {
+      blocks.push('<details><summary>Ready to use</summary>' + renderList(ready) + '</details>');
+    } else {
+      blocks.push('<blockquote expandable>Ready to use:<br>' + ready.map(renderTemplate).join('<br>') + '</blockquote>');
+    }
+  }
   if (parameters.length) {
     const rows = parameters.map(item =>
       '<tr><td>' + escapeHtml(item.name) + '</td><td>' +
@@ -54,8 +67,8 @@ function familyHtml(family) {
     const table = '<table><tr><th>Name</th><th>Optional</th><th>Description</th></tr>' + rows.join('') + '</table>';
     blocks.push('<details><summary>Parameters</summary>' + table + '</details>');
   }
-  blocks.push('<hr>', '@TDeepLink');
-  return blocks.join('');
+  blocks.push('<hr>', '<footer>@TDeepLink</footer>');
+  return blocks.join('\n');
 }
 function splitRichContent(family) {
   const full = familyHtml(family);
