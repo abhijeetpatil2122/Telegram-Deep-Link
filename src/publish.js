@@ -17,6 +17,14 @@ function escapeHtml(value) {
 function renderTemplate(value) {
   return escapeHtml(value).replace(/&lt;([^&]+)&gt;/g, '<code>&lt;$1&gt;</code>');
 }
+function cleanParameterDescription(value) {
+  return String(value || '')
+    .replace(/&nbsp;|&raquo;|&#187;/gi, ' ')
+    .replace(/\\u00a0/g, ' ')
+    .replace(/\\s+/g, ' ')
+    .replace(/\\s+([.,;:])/g, '$1')
+    .trim();
+}
 function familyHtml(family) {
   const templates = unique(family.templates);
   const options = unique(family.options);
@@ -24,11 +32,10 @@ function familyHtml(family) {
   const parameters = (family.parameters || []).filter(item => item && item.name);
   const blocks = [];
 
-  // Keep the compact tg:path spelling beside its canonical tg://path form
-  // for direct-path links. Resolve links already have their own t.me form.
+  // Telegram documents both tg:path and tg://path URI forms.
   const displayTemplates = [];
   for (const template of templates) {
-    if (/^tg:\/\/(?!resolve\?)([a-z0-9_+.-]+(?:\/[^?]*)?)(?:\?.*)?$/i.test(template)) {
+    if (/^tg:\/\//i.test(template)) {
       const shortForm = template.replace(/^tg:\/\//i, 'tg:');
       if (!templates.includes(shortForm) && !displayTemplates.includes(shortForm)) displayTemplates.push(shortForm);
     }
@@ -45,21 +52,19 @@ function familyHtml(family) {
       ready.map(renderTemplate).join('<br>') + '</blockquote>');
   }
   if (parameters.length) {
-    const rows = parameters.map(item => {
-      const requirement = (item.requirement || '').toLowerCase();
-      const description = (item.description || '')
-        .replace(/&nbsp;|&raquo;|&#187;/gi, ' ')
-        .replace(/\s+/g, ' ')
-        .replace(/\s+([.,;:])/g, '$1')
-        .trim();
-      return '<tr><td><code>' + escapeHtml(item.name) + '</code></td><td>' +
-        escapeHtml(requirement) + '</td><td>' + escapeHtml(description) + '</td></tr>';
-    });
-    blocks.push('<table>' + rows.join('') + '</table>');
+    const rows = parameters.map(item =>
+      '<tr><td><code>' + escapeHtml(item.name) + '</code></td><td>' +
+      escapeHtml(cleanParameterDescription(item.requirement || '').toLowerCase()) +
+      '</td><td>' + escapeHtml(cleanParameterDescription(item.description)) + '</td></tr>'
+    );
+    blocks.push(
+      '<table><tr><th>Name</th><th>Optional</th><th>Description</th></tr>' +
+      rows.join('') + '</table>'
+    );
   }
 
   blocks.push('<hr>', '@TDeepLink');
-  return blocks.join('');
+  return blocks.join('<br>');
 }
 function splitRichContent(family) {
   const full = familyHtml(family);
