@@ -1,11 +1,11 @@
 {
   "initializedAt": "2026-10-31T11:17:43.854Z",
-  "checkedAt": "2026-11-01T12:02:29.504Z",
+  "checkedAt": "2026-11-01T12:11:21.730Z",
   "source": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "7afc5e75874a8976fd074c8ff7e910e1099bd35a8c0bb3d04998628bc71d0e4e",
+      "sha256": "d074b71bdaf9db25c60ce75c9fc15f5246b9057cb68943b3490bb1a226c5db0e",
       "etag": null,
       "lastModified": null
     },
@@ -2372,14 +2372,14 @@
     "323748f86a762247"
   ],
   "lastRichCatalogueDelivery": {
-    "family": "Full catalogue v10 sent; state checkpoint repaired",
+    "family": "Timestamp links",
     "messageIds": [
-      972
+      1147
     ],
     "chatId": 1314643983,
-    "deliveredAt": "2026-11-01T05:39:25.466Z"
+    "deliveredAt": "2026-11-01T12:11:21.726Z"
   },
-  "richCatalogueVersion": 10,
+  "richCatalogueVersion": 11,
   "readyCatalogueFamilies": [
     "2b7ef5807bb419d3",
     "24b580efd0769709",
