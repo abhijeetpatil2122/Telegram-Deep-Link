@@ -153,7 +153,8 @@ async function main() {
     const newReady = previous ? difference(current.ready, previous.ready) : current.ready;
     const newTemplates = previous ? difference(current.templates, previous.templates) : current.templates;
     const documentationChanged = !previous || current.documentation !== previous.documentation;
-    if (!newOptions.length && !newReady.length && !newTemplates.length && !documentationChanged) continue;
+    // Documentation-only edits do not create a link notification.
+    if (!newOptions.length && !newReady.length && !newTemplates.length) continue;
 
     // Keep the family's URI header even when only a new option or ready link was added.
     const delta = {
