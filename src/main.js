@@ -64,7 +64,7 @@ async function main() {
 
   // One-time complete Rich Message catalogue delivery to the private test chat.
   // Persist after each family so an interrupted run resumes without repeating completed families.
-  const catalogueVersion = 2;
+  const catalogueVersion = 3;
   const deliveredFamilies = new Set(state.richCatalogueFamilies || []);
   if (state.richCatalogueVersion !== catalogueVersion) {
     for (const family of families) {
