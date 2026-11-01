@@ -2,7 +2,7 @@ const API = 'https://api.telegram.org';
 const RICH_LIMIT = 30000;
 
 function unique(values) {
-  return [...new Set((values || []).filter(Boolean).map(value => String(value)))];
+  return [...new Set((values || []).filter(Boolean))];
 }
 function countCharacters(value) {
   return Array.from(value).length;
@@ -18,45 +18,49 @@ function familyHtml(family) {
   const templates = unique(family.templates);
   const options = unique(family.options);
   const ready = unique(family.ready);
+  const parameters = (family.parameters || []).filter(item => item && item.name);
   const blocks = [];
 
-  // Keep every deep-link template as plain, literal text on its own line.
   if (templates.length) blocks.push(templates.map(escapeHtml).join('<br>'));
-
-  // Options and ready-to-use links are separate expandable blockquotes.
   if (options.length) {
     blocks.push('<blockquote expandable>Options:<br>' +
-      options.map(escapeHtml).join('<br>') +
-      '</blockquote>');
+      options.map(escapeHtml).join('<br>') + '</blockquote>');
   }
   if (ready.length) {
     blocks.push('<blockquote expandable>Ready to use:<br>' +
-      ready.map(escapeHtml).join('<br>') +
-      '</blockquote>');
+      ready.map(escapeHtml).join('<br>') + '</blockquote>');
+  }
+  if (parameters.length && !ready.length) {
+    const rows = parameters.map(item => {
+      const values = item.values?.length ? ' (values: ' + item.values.join(', ') + ')' : '';
+      const requirement = item.requirement ? ' — ' + item.requirement.toLowerCase() : '';
+      const description = item.description ? ': ' + item.description : '';
+      return escapeHtml(item.name + requirement + values + description);
+    });
+    blocks.push('<blockquote expandable>Parameters:<br>' + rows.join('<br>') + '</blockquote>');
   }
 
   blocks.push('<hr>', '@TDeepLink');
-  // No extra <br> separators around block elements: avoid artificial blank gaps.
   return blocks.join('');
 }
 function splitRichContent(family) {
   const full = familyHtml(family);
   if (countCharacters(full) <= RICH_LIMIT) return [full];
-
   const groups = [
     ['templates', unique(family.templates)],
     ['options', unique(family.options)],
-    ['ready', unique(family.ready)]
+    ['ready', unique(family.ready)],
+    ['parameters', family.parameters || []]
   ].filter(([, values]) => values.length);
   const chunks = [];
-  let current = { templates: [], options: [], ready: [] };
+  let current = { templates: [], options: [], ready: [], parameters: [] };
   for (const [property, values] of groups) {
     for (const value of values) {
       current[property].push(value);
       if (countCharacters(familyHtml({ ...family, ...current })) > RICH_LIMIT) {
         current[property].pop();
         if (Object.values(current).some(list => list.length)) chunks.push(current);
-        current = { templates: [], options: [], ready: [] };
+        current = { templates: [], options: [], ready: [], parameters: [] };
         current[property].push(value);
       }
     }
