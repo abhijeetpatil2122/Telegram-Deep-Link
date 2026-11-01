@@ -1,11 +1,11 @@
 {
   "initializedAt": "2026-10-31T11:17:43.854Z",
-  "checkedAt": "2026-11-01T05:18:40.093Z",
+  "checkedAt": "2026-11-01T05:33:02.635Z",
   "source": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "b5e0448f128e9214270166805f4ae5e51792aad4c720787787557853496890f9",
+      "sha256": "18f5511d7d9c7e9c1351bb7e929e60ef8e41eb80a69a551d6cd2fd955b9b85fe",
       "etag": null,
       "lastModified": null
     },
@@ -785,7 +785,7 @@
       "ready": [],
       "parameters": [
         "{\"name\":\"profile\",\"requirement\":\"Optional\",\"description\":\"If set, clicking on this link should open the destination peer's profile page, not the chat view.\",\"values\":[]}",
-        "{\"name\":\"username\",\"requirement\":\"Required\",\"description\":\"Username to check or import&nbsp;&raquo;\",\"values\":[]}"
+        "{\"name\":\"username\",\"requirement\":\"Required\",\"description\":\"Username to check or import\",\"values\":[]}"
       ],
       "documentation": "Used to link to public users, groups and channels, see [here for more info on how to handle them&nbsp;&raquo;](/api/invites.md#public-usernames).  \n\n`t.me` syntax:\n```\nt.me/<username>?text=<draft_text>&profile\n```\n\n`tg:` syntax:\n```\ntg://resolve?domain=<username>&text=<draft_text>&profile\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `username` | Required | Username to [check or import&nbsp;&raquo;](/api/invites.md#public-usernames) |\n| `draft_text` | Optional | UTF-8 text to pre-enter into the text input bar, if the user can write in the chat. \\\nBefore insertion: \\\n- Validate that the text is valid UTF-8. \\\n- If the text starts with a `@`, prepend a whitespace to it (to avoid triggering an [inline query](/api/bots/inline.md)). \\\n- Trim the text to [message_length_max](/constructor/config.md) UTF-8 codepoints. |\n| `profile` | Optional | If set, clicking on this link should open the destination peer's profile page, not the chat view. |\n\nNote that [message links](#message-links) and [monoforum links](#monoforum-links) have the same or similar syntax, with extra parameters."
     },
@@ -840,7 +840,7 @@
       "options": [],
       "ready": [],
       "parameters": [
-        "{\"name\":\"hash\",\"requirement\":\"Required\",\"description\":\"Invite hash to check or import&nbsp;&raquo;\",\"values\":[]}"
+        "{\"name\":\"hash\",\"requirement\":\"Required\",\"description\":\"Invite hash to check or import\",\"values\":[]}"
       ],
       "documentation": "Used to invite users to private groups and channels, see [here for more info on how to generate such links&nbsp;&raquo;](/api/invites.md#invite-links).  \n\n`t.me` syntax:\n```\nt.me/+<hash>\n```\n\n`t.me` syntax (legacy):\n```\nt.me/joinchat/<hash>\n```\n\n`tg:` syntax:\n```\ntg://join?invite=<hash>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `hash` | Required | Invite hash to [check or import&nbsp;&raquo;](/api/invites.md#invite-links) |"
     },
@@ -853,7 +853,7 @@
       "options": [],
       "ready": [],
       "parameters": [
-        "{\"name\":\"slug\",\"requirement\":\"Required\",\"description\":\"Invite slug to check or import&nbsp;&raquo;\",\"values\":[]}"
+        "{\"name\":\"slug\",\"requirement\":\"Required\",\"description\":\"Invite slug to check or import\",\"values\":[]}"
       ],
       "documentation": "Used to invite users to private groups and channels, see [here for more info on how to generate such links&nbsp;&raquo;](/api/folders.md#shared-folders).  \n\n`t.me` syntax:\n```\nt.me/addlist/<slug>\n```\n\n`tg:` syntax:\n```\ntg://addlist?slug=<slug>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `slug` | Required | Invite slug to [check or import&nbsp;&raquo;](/api/folders.md#shared-folders) |"
     },
@@ -873,9 +873,9 @@
         "{\"name\":\"channel\",\"requirement\":\"Required if private link\",\"description\":\"Channel or supergroup ID.\",\"values\":[]}",
         "{\"name\":\"comment\",\"requirement\":\"Optional\",\"description\":\"For channel comments, username will contain the channel username, id will contain the message ID of the channel message that started the comment section and this field will contain the message ID of the comment in the discussion group.\",\"values\":[]}",
         "{\"name\":\"id\",\"requirement\":\"Required\",\"description\":\"Message ID.\",\"values\":[]}",
-        "{\"name\":\"option_id\",\"requirement\":\"Optional\",\"description\":\"base64url-encoded identifier of a specific poll&nbsp;&raquo; option to highlight, when the linked message contains a poll, corresponding to a pollAnswer.option. The decoded value must be valid UTF-8, otherwise it should be ignored.\",\"values\":[]}",
+        "{\"name\":\"option_id\",\"requirement\":\"Optional\",\"description\":\"base64url-encoded identifier of a specific poll option to highlight, when the linked message contains a poll, corresponding to a pollAnswer.option. The decoded value must be valid UTF-8, otherwise it should be ignored.\",\"values\":[]}",
         "{\"name\":\"single\",\"requirement\":\"Optional\",\"description\":\"For albums/grouped media, if set indicates that this is a link to a specific media in the album; otherwise, it is a link to the entire album.\",\"values\":[]}",
-        "{\"name\":\"task_id\",\"requirement\":\"Optional\",\"description\":\"Positive integer ID of a specific task to highlight, when the linked message contains a checklist&nbsp;&raquo;, corresponding to a todoItem.id. Invalid (non-positive or non-numeric) values should be treated as an error.\",\"values\":[]}",
+        "{\"name\":\"task_id\",\"requirement\":\"Optional\",\"description\":\"Positive integer ID of a specific task to highlight, when the linked message contains a checklist , corresponding to a todoItem.id. Invalid (non-positive or non-numeric) values should be treated as an error.\",\"values\":[]}",
         "{\"name\":\"thread_id\",\"requirement\":\"Optional\",\"description\":\"For message threads, contains the thread ID.\",\"values\":[]}",
         "{\"name\":\"username\",\"requirement\":\"Required if public link\",\"description\":\"Dialog username.\",\"values\":[]}"
       ],
@@ -1001,7 +1001,7 @@
       "options": [],
       "ready": [],
       "parameters": [
-        "{\"name\":\"album_id\",\"requirement\":\"Required\",\"description\":\"Integer ID of the story album &raquo;, from storyAlbum.album_id.\",\"values\":[]}",
+        "{\"name\":\"album_id\",\"requirement\":\"Required\",\"description\":\"Integer ID of the story album , from storyAlbum.album_id.\",\"values\":[]}",
         "{\"name\":\"username\",\"requirement\":\"Required\",\"description\":\"Username of the peer that owns the collection.\",\"values\":[]}"
       ],
       "documentation": "Identifies a [story album &raquo;](/api/stories.md#story-albums) on a peer's profile: use [stories.getAlbumStories](/method/stories.getAlbumStories.md) to fetch stories within the specified album.  \n\n`t.me` syntax:\n```\nt.me/<username>?album=<album_id>\nt.me/<username>/a/<album_id>\n```\n\n`tg:` syntax:\n```\ntg://resolve?domain=<username>&album=<album_id>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `username` | Required | Username of the peer that owns the collection. |\n| `album_id` | Required | Integer ID of the [story album &raquo;](/api/stories.md#story-albums), from [storyAlbum](/constructor/storyAlbum.md).`album_id`. |"
@@ -1084,7 +1084,7 @@
         "{\"name\":\"pass\",\"requirement\":\"Optional\",\"description\":\"Proxy server password\",\"values\":[]}",
         "{\"name\":\"port\",\"requirement\":\"Required\",\"description\":\"MTProxy server port\",\"values\":[]}",
         "{\"name\":\"port\",\"requirement\":\"Required\",\"description\":\"Proxy server port\",\"values\":[]}",
-        "{\"name\":\"secret\",\"requirement\":\"Required\",\"description\":\"MTProxy secret&nbsp;&raquo;\",\"values\":[]}",
+        "{\"name\":\"secret\",\"requirement\":\"Required\",\"description\":\"MTProxy secret\",\"values\":[]}",
         "{\"name\":\"server\",\"requirement\":\"Required\",\"description\":\"MTProxy server IP address or host\",\"values\":[]}",
         "{\"name\":\"server\",\"requirement\":\"Required\",\"description\":\"Proxy server IP address or host\",\"values\":[]}",
         "{\"name\":\"user\",\"requirement\":\"Optional\",\"description\":\"Proxy server username\",\"values\":[]}"
@@ -1100,7 +1100,7 @@
       "options": [],
       "ready": [],
       "parameters": [
-        "{\"name\":\"name\",\"requirement\":\"Required\",\"description\":\"Theme short name used when installing themes&nbsp;&raquo;\",\"values\":[]}"
+        "{\"name\":\"name\",\"requirement\":\"Required\",\"description\":\"Theme short name used when installing themes\",\"values\":[]}"
       ],
       "documentation": "Used to [install themes&nbsp;&raquo;](/api/themes.md#installing-themes).\n\n`t.me` syntax:\n```\nt.me/addtheme/<name>\n```\n\n`tg:` syntax:\n```\ntg://addtheme?slug=<name>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `name` | Required | Theme short name used when [installing themes&nbsp;&raquo;](/api/themes.md#installing-themes) |"
     },
@@ -1113,7 +1113,7 @@
       "options": [],
       "ready": [],
       "parameters": [
-        "{\"name\":\"slug\",\"requirement\":\"Required\",\"description\":\"Unique AI composer tone&nbsp;&raquo; slug, as found in aiComposeTone.slug.\",\"values\":[]}"
+        "{\"name\":\"slug\",\"requirement\":\"Required\",\"description\":\"Unique AI composer tone slug, as found in aiComposeTone.slug.\",\"values\":[]}"
       ],
       "documentation": "Used to share and install a custom [AI composer tone&nbsp;&raquo;](/api/ai.md#ai-compose-tones).\n\nHandle this link by resolving the slug with [aicompose.getTone](/method/aicompose.getTone.md), passing an [inputAiComposeToneSlug](/constructor/inputAiComposeToneSlug.md) with the `slug`, then show a preview of the returned [aiComposeTone](/constructor/aiComposeTone.md) that lets the user install it with [aicompose.saveTone](/method/aicompose.saveTone.md).  \n\n`t.me` syntax:\n```\nt.me/addstyle/<slug>\n```\n\n`tg:` syntax:\n```\ntg://addstyle?slug=<slug>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `slug` | Required | Unique [AI composer tone&nbsp;&raquo;](/api/ai.md#ai-compose-tones) slug, as found in [aiComposeTone](/constructor/aiComposeTone.md).`slug`. |"
     },
@@ -1160,7 +1160,7 @@
         "{\"name\":\"intensity\",\"requirement\":\"Required\",\"description\":\"A value ranging from -100 to 100, used to combine the pattern with the fill as specified in the docs.\",\"values\":[]}",
         "{\"name\":\"intensity\",\"requirement\":\"Required\",\"description\":\"A value ranging from -100 to 100, used to combine the pattern with the fill as specified in the docs.\",\"values\":[]}",
         "{\"name\":\"intensity\",\"requirement\":\"Required\",\"description\":\"A value ranging from -100 to 100, used to combine the pattern with the fill as specified in the docs.\",\"values\":[]}",
-        "{\"name\":\"mode\",\"requirement\":\"Optional\",\"description\":\"A combination of blur and motion (joined by +) to enable blurring and/or parallax motion as specified in the docs&nbsp;&raquo;.\",\"values\":[]}",
+        "{\"name\":\"mode\",\"requirement\":\"Optional\",\"description\":\"A combination of blur and motion (joined by +) to enable blurring and/or parallax motion as specified in the docs .\",\"values\":[]}",
         "{\"name\":\"mode\",\"requirement\":\"Optional\",\"description\":\"motion to enable parallax motion as specified in the docs.\",\"values\":[]}",
         "{\"name\":\"mode\",\"requirement\":\"Optional\",\"description\":\"motion to enable parallax motion as specified in the docs.\",\"values\":[]}",
         "{\"name\":\"mode\",\"requirement\":\"Optional\",\"description\":\"motion to enable parallax motion as specified in the docs.\",\"values\":[]}",
@@ -1185,7 +1185,7 @@
       "ready": [],
       "parameters": [
         "{\"name\":\"bot_username\",\"requirement\":\"Required\",\"description\":\"Bot username\",\"values\":[]}",
-        "{\"name\":\"parameter\",\"requirement\":\"Optional\",\"description\":\"Start parameter, up to 64 base64url characters: if provided and the bot_username is indeed a bot, the text input bar should be replaced with a Start button (even if the user has already started the bot) that should invoke messages.startBot with the appropriate parameter once clicked. Note that if the bot_username is equal to the premium_bot_username configuration value&nbsp;&raquo;, clicking on this link should immediately invoke messages.startBot with the appropriate parameter.\",\"values\":[]}"
+        "{\"name\":\"parameter\",\"requirement\":\"Optional\",\"description\":\"Start parameter, up to 64 base64url characters\",\"values\":[]}"
       ],
       "documentation": "Used to link to bots.\n\n`t.me` syntax:\n```\nt.me/<bot_username>?start=<parameter>\n```\n\n`tg:` syntax:\n```\ntg://resolve?domain=<bot_username>&start=<parameter>\n```\n\nNote that [referral links have a similar syntax, with a mandatory prefix in `parameter`](#referral-links).\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `bot_username` | Required | Bot username |\n| `parameter` | Optional | Start parameter, up to 64 base64url characters: if provided and the `bot_username` is indeed a bot, the text input bar should be replaced with a `Start` button (even if the user has already started the bot) that should invoke [messages.startBot](/method/messages.startBot.md) with the appropriate `parameter` once clicked. Note that if the `bot_username` is equal to the [`premium_bot_username` configuration value&nbsp;&raquo;](/api/config.md#premium-bot-username), clicking on this link should immediately invoke [messages.startBot](/method/messages.startBot.md) with the appropriate `parameter`.  |"
     },
@@ -1221,7 +1221,7 @@
       "ready": [],
       "parameters": [
         "{\"name\":\"bot_username\",\"requirement\":\"Required\",\"description\":\"Bot username\",\"values\":[]}",
-        "{\"name\":\"parameter\",\"requirement\":\"Optional for group links, absent in channel links\",\"description\":\"Start parameter, only for group links, up to 64 base64url characters: if provided and the bot_username is indeed a bot, messages.startBot with the appropriate parameter should be invoked after adding the bot to the group.\",\"values\":[]}"
+        "{\"name\":\"parameter\",\"requirement\":\"Optional for group links, absent in channel links\",\"description\":\"Start parameter, only for group links, up to 64 base64url characters\",\"values\":[]}"
       ],
       "documentation": "Used to add bots to groups or channels.  \nFirst of all, check that the `<bot_username>` indeed links to a bot.  \nThen, for group links:\n* If the `admin` parameter is not provided:\n  * Bring up a dialog selection of groups where the user can add members\n  * Add the bot to the group\n  * If a `parameter` is provided, invoke [messages.startBot](/method/messages.startBot.md) with the appropriate `parameter`\n* If the `admin` parameter is provided:\n  * Bring up a dialog selection of groups where the user can add/edit admins\n  * If the bot is already an admin of the group, combine existing admin rights with the admin rights in `admin`\n  * Add the bot as admin/modify admin permissions to the new rights\n  * If a `parameter` is provided, invoke [messages.startBot](/method/messages.startBot.md) with the appropriate `parameter`\n\nFor channel links:\n  * Bring up a dialog selection of channels where the user can add/edit admins\n  * If the bot is already an admin of the channel, combine existing admin rights with the admin rights in `admin`\n  * Add the bot as admin/modify admin permissions to the new rights\n\n`t.me` syntax (groups):\n```\nt.me/<bot_username>?startgroup=<parameter>&admin=<permissions>\nt.me/<bot_username>?startgroup&admin=<permissions>\n```\n\n`tg:` syntax (groups):\n```\ntg://resolve?domain=<bot_username>&startgroup=<parameter>&admin=<permissions>\ntg://resolve?domain=<bot_username>&startgroup&admin=<permissions>\n```\n\n`t.me` syntax (channels):\n```\nt.me/<bot_username>?startchannel&admin=<permissions>\n```\n\n`tg:` syntax (channels):\n```\ntg://resolve?domain=<bot_username>&startchannel&admin=<permissions>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `bot_username` | Required | Bot username |\n| `parameter` | Optional for group links, absent in channel links | Start parameter, only for group links, up to 64 base64url characters: if provided and the `bot_username` is indeed a bot, [messages.startBot](/method/messages.startBot.md) with the appropriate `parameter` should be invoked after adding the bot to the group.  |\n| `admin` | Optional for group links, required for channel links | A combination of the following identifiers separated by `+`, each corresponding to the appropriate flag in the [chatAdminRights&nbsp;&raquo;](/constructor/chatAdminRights.md) constructor: \\\n- `change_info` - [chatAdminRights.change_info](/constructor/chatAdminRights.md) \\\n- `post_messages` - [chatAdminRights.post_messages](/constructor/chatAdminRights.md) \\\n- `edit_messages` - [chatAdminRights.edit_messages](/constructor/chatAdminRights.md) \\\n- `delete_messages` - [chatAdminRights.delete_messages](/constructor/chatAdminRights.md) \\\n- `restrict_members` - [chatAdminRights.ban_users](/constructor/chatAdminRights.md) \\\n- `invite_users` - [chatAdminRights.invite_users](/constructor/chatAdminRights.md) \\\n- `pin_messages` - [chatAdminRights.pin_messages](/constructor/chatAdminRights.md) \\\n- `manage_topics` - [chatAdminRights.manage_topics](/constructor/chatAdminRights.md) \\\n- `promote_members` - [chatAdminRights.add_admins](/constructor/chatAdminRights.md) \\\n- `manage_video_chats` - [chatAdminRights.manage_call](/constructor/chatAdminRights.md) \\\n- `anonymous` - [chatAdminRights.anonymous](/constructor/chatAdminRights.md) \\\n- `manage_chat` - [chatAdminRights.other](/constructor/chatAdminRights.md) \\\n- `post_stories` - [chatAdminRights.post_stories](/constructor/chatAdminRights.md) \\\n- `edit_stories` - [chatAdminRights.edit_stories](/constructor/chatAdminRights.md) \\\n- `delete_stories` - [chatAdminRights.delete_stories](/constructor/chatAdminRights.md) \\\n- `manage_direct_messages` - [chatAdminRights.manage_direct_messages](/constructor/chatAdminRights.md) \\\n- `manage_tags` - [chatAdminRights.manage_ranks](/constructor/chatAdminRights.md) |"
     },
@@ -2043,7 +2043,7 @@
       "options": [],
       "ready": [],
       "parameters": [
-        "{\"name\":\"slug\",\"requirement\":\"Required\",\"description\":\"The invoice slug to be used during payment&nbsp;&raquo;.\",\"values\":[]}"
+        "{\"name\":\"slug\",\"requirement\":\"Required\",\"description\":\"The invoice slug to be used during payment .\",\"values\":[]}"
       ],
       "documentation": "Used to initiate [payment of an invoice&nbsp;&raquo;](/api/payments.md), generated using [payments.exportedInvoice](/constructor/payments.exportedInvoice.md).  \n\n`t.me` syntax:\n```\nt.me/invoice/<slug>\nt.me/$<slug>\n```\n\n`tg:` syntax:\n```\ntg://invoice?slug=<slug>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `slug` | Required | The invoice slug to be used [during payment&nbsp;&raquo;](/api/payments.md). |"
     },
@@ -2083,7 +2083,7 @@
       "options": [],
       "ready": [],
       "parameters": [
-        "{\"name\":\"hash\",\"requirement\":\"Required\",\"description\":\"Confirmation hash to handle as described here&nbsp;&raquo;\",\"values\":[]}",
+        "{\"name\":\"hash\",\"requirement\":\"Required\",\"description\":\"Confirmation hash to handle as described here\",\"values\":[]}",
         "{\"name\":\"phone\",\"requirement\":\"Required\",\"description\":\"Phone number\",\"values\":[]}"
       ],
       "documentation": "Different from [login code links](#login-code-link).  \nThese links are used to confirm ownership of the phone number, to prevent account deletion: see [the account deletion docs for more info on how to handle them&nbsp;&raquo;](/api/account-deletion.md).\n\n`t.me` syntax:\n```\nt.me/confirmphone?phone=<phone>&hash=<hash>\n```\n\n`tg:` syntax:\n```\ntg://confirmphone?phone=<phone>&hash=<hash>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `phone` | Required | Phone number |\n| `hash` | Required | Confirmation hash to handle [as described here&nbsp;&raquo;](/api/account-deletion.md) |"
@@ -2148,7 +2148,7 @@
       "options": [],
       "ready": [],
       "parameters": [
-        "{\"name\":\"bot_username\",\"requirement\":\"Required\",\"description\":\"Username of the bot that owns the main mini app&nbsp;&raquo;\",\"values\":[]}",
+        "{\"name\":\"bot_username\",\"requirement\":\"Required\",\"description\":\"Username of the bot that owns the main mini app\",\"values\":[]}",
         "{\"name\":\"start_parameter\",\"requirement\":\"Optional\",\"description\":\"If provided, should be passed to messages.requestMainWebView.start_param\",\"values\":[]}"
       ],
       "documentation": "Used to open [Main Mini Apps&nbsp;&raquo;](/api/bots/webapps.md#main-mini-apps).  \n\nIf the specified bot **does not** have a configured Main Mini App (i.e. the [user](/constructor/user.md).`bot_has_main_app` flag will **not** be set), fall back to the behavior of [username links&nbsp;&raquo;](#public-username-links).  \n\nThe main mini app should be opened using [messages.requestMainWebView](/method/messages.requestMainWebView.md).  \n\n`t.me` syntax:\n```\nt.me/<bot_username>?startapp&mode=<mode>\nt.me/<bot_username>?startapp=<start_parameter>&mode=<mode>\n```\n\nNote that [Direct Mini App links](#direct-mini-app-links) have a similar syntax, with an additional `short_name` parameter to identify a specific Mini App owned by the bot.  \n\n`tg:` syntax:\n```\ntg://resolve?domain=<bot_username>&startapp&mode=<mode>\ntg://resolve?domain=<bot_username>&startapp=<start_parameter>&mode=<mode>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `bot_username` | Required | Username of the bot that owns the [main mini app&nbsp;&raquo;](/api/bots/webapps.md#main-mini-apps) |\n| `start_parameter` | Optional | If provided, should be passed to [messages.requestMainWebView](/method/messages.requestMainWebView.md).`start_param` |\n| `mode` | Optional | If equal to `compact`, the [messages.requestMainWebView](/method/messages.requestMainWebView.md).`compact` flag must be set. \\\nIf equal to `fullscreen`, the [messages.requestMainWebView](/method/messages.requestMainWebView.md).`fullscreen` flag must be set. |"
@@ -2236,7 +2236,7 @@
       "options": [],
       "ready": [],
       "parameters": [
-        "{\"name\":\"collection_id\",\"requirement\":\"Required\",\"description\":\"Integer ID of the star gift collection &raquo;, from starGiftCollection.collection_id.\",\"values\":[]}",
+        "{\"name\":\"collection_id\",\"requirement\":\"Required\",\"description\":\"Integer ID of the star gift collection , from starGiftCollection.collection_id.\",\"values\":[]}",
         "{\"name\":\"username\",\"requirement\":\"Required\",\"description\":\"Username of the peer that owns the collection.\",\"values\":[]}"
       ],
       "documentation": "Identifies a [star gift collection &raquo;](/api/gifts.md#gift-collections) on a peer's profile: use [payments.getSavedStarGifts](/method/payments.getSavedStarGifts.md) with the `collection_id` flag set to fetch gifts within a collection.  \n\n`t.me` syntax:\n```\nt.me/<username>?collection=<collection_id>\nt.me/<username>/c/<collection_id>\n```\n\n`tg:` syntax:\n```\ntg://resolve?domain=<username>&collection=<collection_id>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `username` | Required | Username of the peer that owns the collection. |\n| `collection_id` | Required | Integer ID of the [star gift collection &raquo;](/api/gifts.md#gift-collections), from [starGiftCollection](/constructor/starGiftCollection.md).`collection_id`. |"
@@ -2302,19 +2302,19 @@
       "options": [],
       "ready": [],
       "parameters": [
-        "{\"name\":\"format\",\"requirement\":\"Optional\",\"description\":\"Format string indicating how the date should be displayed, see here &raquo; for more info.\",\"values\":[]}",
+        "{\"name\":\"format\",\"requirement\":\"Optional\",\"description\":\"Format string indicating how the date should be displayed, see here for more info.\",\"values\":[]}",
         "{\"name\":\"unix\",\"requirement\":\"Required\",\"description\":\"Positive Unix timestamp (in seconds) of the date to display.\",\"values\":[]}"
       ],
       "documentation": "Timestamp links are merely an abstraction offered by the [bot API](/bots/api.md) to simplify construction of [messageEntityFormattedDate](/constructor/inputMessageEntityMentionName.md), and should be ignored by normal clients.  \n\n`tg:` syntax:\n```\ntg://time?unix=<unix>&format=<format>\n```\n\nParameters:\n\n| Name | Optional | Description |\n| --- | :---: | --- |\n| `unix` | Required | Positive Unix timestamp (in seconds) of the date to display. |\n| `format` | Optional | Format string indicating how the date should be displayed, see [here &raquo;](/api/entities.md#date-entities) for more info. |"
     }
   },
   "lastDelivery": {
-    "family": "New chat links",
+    "family": "Timestamp links",
     "messageIds": [
-      866
+      988
     ],
     "chatId": 1314643983,
-    "deliveredAt": "2026-11-01T05:15:35.744Z"
+    "deliveredAt": "2026-11-01T05:33:02.633Z"
   },
   "richCatalogueFamilies": [
     "2b7ef5807bb419d3",

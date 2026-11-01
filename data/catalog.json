@@ -1,10 +1,10 @@
 {
-  "fetchedAt": "2026-11-01T05:17:18.785Z",
+  "fetchedAt": "2026-11-01T05:32:37.571Z",
   "sources": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "b5e0448f128e9214270166805f4ae5e51792aad4c720787787557853496890f9",
+      "sha256": "18f5511d7d9c7e9c1351bb7e929e60ef8e41eb80a69a551d6cd2fd955b9b85fe",
       "etag": null,
       "lastModified": null
     },
@@ -1842,7 +1842,7 @@
         {
           "name": "username",
           "requirement": "Required",
-          "description": "Username to check or import&nbsp;&raquo;",
+          "description": "Username to check or import",
           "values": []
         },
         {
@@ -1941,7 +1941,7 @@
         {
           "name": "hash",
           "requirement": "Required",
-          "description": "Invite hash to check or import&nbsp;&raquo;",
+          "description": "Invite hash to check or import",
           "values": []
         }
       ],
@@ -1961,7 +1961,7 @@
         {
           "name": "slug",
           "requirement": "Required",
-          "description": "Invite slug to check or import&nbsp;&raquo;",
+          "description": "Invite slug to check or import",
           "values": []
         }
       ],
@@ -2021,13 +2021,13 @@
         {
           "name": "task_id",
           "requirement": "Optional",
-          "description": "Positive integer ID of a specific task to highlight, when the linked message contains a checklist&nbsp;&raquo;, corresponding to a todoItem.id. Invalid (non-positive or non-numeric) values should be treated as an error.",
+          "description": "Positive integer ID of a specific task to highlight, when the linked message contains a checklist , corresponding to a todoItem.id. Invalid (non-positive or non-numeric) values should be treated as an error.",
           "values": []
         },
         {
           "name": "option_id",
           "requirement": "Optional",
-          "description": "base64url-encoded identifier of a specific poll&nbsp;&raquo; option to highlight, when the linked message contains a poll, corresponding to a pollAnswer.option. The decoded value must be valid UTF-8, otherwise it should be ignored.",
+          "description": "base64url-encoded identifier of a specific poll option to highlight, when the linked message contains a poll, corresponding to a pollAnswer.option. The decoded value must be valid UTF-8, otherwise it should be ignored.",
           "values": []
         }
       ],
@@ -2223,7 +2223,7 @@
         {
           "name": "album_id",
           "requirement": "Required",
-          "description": "Integer ID of the story album &raquo;, from storyAlbum.album_id.",
+          "description": "Integer ID of the story album , from storyAlbum.album_id.",
           "values": []
         }
       ],
@@ -2344,7 +2344,7 @@
         {
           "name": "secret",
           "requirement": "Required",
-          "description": "MTProxy secret&nbsp;&raquo;",
+          "description": "MTProxy secret",
           "values": []
         },
         {
@@ -2388,7 +2388,7 @@
         {
           "name": "name",
           "requirement": "Required",
-          "description": "Theme short name used when installing themes&nbsp;&raquo;",
+          "description": "Theme short name used when installing themes",
           "values": []
         }
       ],
@@ -2408,7 +2408,7 @@
         {
           "name": "slug",
           "requirement": "Required",
-          "description": "Unique AI composer tone&nbsp;&raquo; slug, as found in aiComposeTone.slug.",
+          "description": "Unique AI composer tone slug, as found in aiComposeTone.slug.",
           "values": []
         }
       ],
@@ -2453,7 +2453,7 @@
         {
           "name": "mode",
           "requirement": "Optional",
-          "description": "A combination of blur and motion (joined by +) to enable blurring and/or parallax motion as specified in the docs&nbsp;&raquo;.",
+          "description": "A combination of blur and motion (joined by +) to enable blurring and/or parallax motion as specified in the docs .",
           "values": []
         },
         {
@@ -2629,7 +2629,7 @@
         {
           "name": "parameter",
           "requirement": "Optional",
-          "description": "Start parameter, up to 64 base64url characters: if provided and the bot_username is indeed a bot, the text input bar should be replaced with a Start button (even if the user has already started the bot) that should invoke messages.startBot with the appropriate parameter once clicked. Note that if the bot_username is equal to the premium_bot_username configuration value&nbsp;&raquo;, clicking on this link should immediately invoke messages.startBot with the appropriate parameter.",
+          "description": "Start parameter, up to 64 base64url characters",
           "values": []
         }
       ],
@@ -2677,7 +2677,7 @@
         {
           "name": "parameter",
           "requirement": "Optional for group links, absent in channel links",
-          "description": "Start parameter, only for group links, up to 64 base64url characters: if provided and the bot_username is indeed a bot, messages.startBot with the appropriate parameter should be invoked after adding the bot to the group.",
+          "description": "Start parameter, only for group links, up to 64 base64url characters",
           "values": []
         }
       ],
@@ -3542,7 +3542,7 @@
         {
           "name": "slug",
           "requirement": "Required",
-          "description": "The invoice slug to be used during payment&nbsp;&raquo;.",
+          "description": "The invoice slug to be used during payment .",
           "values": []
         }
       ],
@@ -3604,7 +3604,7 @@
         {
           "name": "hash",
           "requirement": "Required",
-          "description": "Confirmation hash to handle as described here&nbsp;&raquo;",
+          "description": "Confirmation hash to handle as described here",
           "values": []
         }
       ],
@@ -3703,7 +3703,7 @@
         {
           "name": "bot_username",
           "requirement": "Required",
-          "description": "Username of the bot that owns the main mini app&nbsp;&raquo;",
+          "description": "Username of the bot that owns the main mini app",
           "values": []
         },
         {
@@ -3882,7 +3882,7 @@
         {
           "name": "collection_id",
           "requirement": "Required",
-          "description": "Integer ID of the star gift collection &raquo;, from starGiftCollection.collection_id.",
+          "description": "Integer ID of the star gift collection , from starGiftCollection.collection_id.",
           "values": []
         }
       ],
@@ -3993,7 +3993,7 @@
         {
           "name": "format",
           "requirement": "Optional",
-          "description": "Format string indicating how the date should be displayed, see here &raquo; for more info.",
+          "description": "Format string indicating how the date should be displayed, see here for more info.",
           "values": []
         }
       ],
