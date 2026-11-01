@@ -36,17 +36,17 @@ function familyHtml(family) {
   const ready = unique(family.ready).filter(template => !templates.includes(template));
   const parameters = (family.parameters || []).filter(item => item && item.name);
   const blocks = [];
-  const title = String(family.title || '').replace(/\\s+links?$/i, '').trim();
+  const title = String(family.title || '').replace(/\s+links?$/i, '').trim();
 
   if (title) blocks.push('<h3>' + escapeHtml(title) + '</h3>');
   // Use the same native Rich Message lists for every family.
   if (templates.length) blocks.push(renderList(templates));
 
   if (options.length) {
-    blocks.push('<blockquote expandable>Options:\\n' + renderList(options, true) + '</blockquote>');
+    blocks.push('<blockquote expandable>Options:\n' + renderList(options, true) + '</blockquote>');
   }
   if (ready.length) {
-    blocks.push('<blockquote expandable>Ready to use:\\n' + renderList(ready) + '</blockquote>');
+    blocks.push('<blockquote expandable>Ready to use:\n' + renderList(ready) + '</blockquote>');
   }
   if (parameters.length) {
     const rows = parameters.map(item =>
