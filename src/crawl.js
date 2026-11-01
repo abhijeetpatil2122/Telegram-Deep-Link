@@ -190,6 +190,30 @@ function parseFamilies(markdown) {
     if (/^settings links$/i.test(title)) options.delete('path');
     if (/^contacts links$/i.test(title)) options.delete('section');
     if (/^post story links$/i.test(title)) options.delete('content_type');
+    // Preserve the historical short-form alias alongside the documented tg:// forms.
+    // Telegram's general URI grammar accepts tg:path as well as tg://path.
+    if (/^new chat links$/i.test(title) && templates.includes('tg://new')) {
+      templates.unshift('tg:new');
+    }
+
+    // Extract concise parameter metadata from the official documentation table.
+    const parameters = [];
+    for (const match of body.matchAll(/^\s*\|\s*`([^`]+)`\s*\|\s*([^|]+)\|\s*([^|\n]+)\s*\|/gm)) {
+      const name = match[1].trim();
+      const requirement = match[2].trim().replace(/\s+/g, ' ');
+      const description = match[3].replace(/\\\s*$/, '')
+        .replace(/\[([^\]]+)\]\((?:[^()]|\([^)]*\))*\)/g, '$1')
+        .replace(/[*`]/g, '').replace(/\s+/g, ' ').trim();
+      const values = [];
+      if (name === 'mode') {
+        for (const value of description.matchAll(/equal to `([^`]+)`/g)) values.push(value[1]);
+        if (/^main mini app links$/i.test(title)) {
+          for (const value of body.matchAll(/equal to `([^`]+)`/g)) if (!values.includes(value[1])) values.push(value[1]);
+        }
+      }
+      parameters.push({ name, requirement, description, values });
+    }
+
     const ready = new Set(templates.filter(x => !/<[^>]+>|\{prefix\}/.test(x)));
     if (/^settings links$/i.test(title)) {
       ready.add('tg://settings');
@@ -211,6 +235,7 @@ function parseFamilies(markdown) {
       key,
       templates: [...new Set(templates)],
       options: allOptions,
+      parameters,
       ready: [...ready].sort(),
       documentation: body.trim()
     });
