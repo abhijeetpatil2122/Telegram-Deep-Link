@@ -17,6 +17,10 @@ function escapeHtml(value) {
 function renderTemplate(value) {
   return escapeHtml(value);
 }
+function renderList(values, ordered = false) {
+  const tag = ordered ? 'ol' : 'ul';
+  return '<' + tag + '>' + values.map(value => '<li>' + escapeHtml(value) + '</li>').join('') + '</' + tag + '>';
+}
 function cleanParameterDescription(value) {
   return String(value || '')
     .replace(/&nbsp;|&raquo;|&#187;|&#160;/gi, ' ')
@@ -32,12 +36,15 @@ function familyHtml(family) {
   const ready = unique(family.ready).filter(template => !templates.includes(template));
   const parameters = (family.parameters || []).filter(item => item && item.name);
   const blocks = [];
+  const familyTitle = String(family.title || '').trim().toLowerCase();
+  const isBoostFamily = familyTitle === 'boost links';
+  const isPostStoryFamily = familyTitle === 'post story links';
   const title = String(family.title || '').replace(/\\s+links?$/i, '').trim();
 
   if (title) blocks.push('<h3>' + escapeHtml(title) + '</h3>');
-  if (templates.length) blocks.push(templates.map(renderTemplate).join('<br>'));
-  if (options.length) blocks.push('<blockquote expandable>Options:<br>' + options.map(escapeHtml).join('<br>') + '</blockquote>');
-  if (ready.length) blocks.push('<blockquote expandable>Ready to use:<br>' + ready.map(renderTemplate).join('<br>') + '</blockquote>');
+  if (templates.length) blocks.push(isBoostFamily ? renderList(templates) : templates.map(renderTemplate).join('<br>'));
+  if (options.length) blocks.push(isPostStoryFamily ? 'Options:' + renderList(options, true) : '<blockquote expandable>Options:<br>' + options.map(escapeHtml).join('<br>') + '</blockquote>');
+  if (ready.length) blocks.push(isPostStoryFamily ? 'Ready to use:' + renderList(ready) : '<blockquote expandable>Ready to use:<br>' + ready.map(renderTemplate).join('<br>') + '</blockquote>');
   if (parameters.length) {
     const rows = parameters.map(item =>
       '<tr><td>' + escapeHtml(item.name) + '</td><td>' +
