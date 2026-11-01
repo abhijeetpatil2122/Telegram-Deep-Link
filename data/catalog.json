@@ -1,10 +1,10 @@
 {
-  "fetchedAt": "2026-11-01T05:15:46.362Z",
+  "fetchedAt": "2026-11-01T05:17:18.785Z",
   "sources": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "3c8cea270274a60d0a8bf363eb522112234b4eb47f22d7bd7551833b053562be",
+      "sha256": "b5e0448f128e9214270166805f4ae5e51792aad4c720787787557853496890f9",
       "etag": null,
       "lastModified": null
     },
@@ -338,9 +338,9 @@
       "markdownOptions": 0,
       "commonOptions": 0,
       "optionOverlap": 1,
-      "htmlReady": 4,
-      "markdownReady": 4,
-      "commonReady": 4,
+      "htmlReady": 3,
+      "markdownReady": 3,
+      "commonReady": 3,
       "readyOverlap": 1
     },
     "Chat list links": {
@@ -3486,8 +3486,7 @@
       "ready": [
         "tg://new",
         "tg://new/channel",
-        "tg://new/group",
-        "tg:new"
+        "tg://new/group"
       ],
       "documentation": "Used to bring the user to the chat creation flow.  \n\n`tg:` syntax:\n```\ntg://new\ntg://new/channel\ntg://new/group\n```\n\n| Link | Description |\n| --- | --- |\n| `tg://new` | Start creating a new private chat (i.e. pick a contact to message). |\n| `tg://new/channel` | Start creating a new channel. |\n| `tg://new/group` | Start creating a new group. |"
     },
