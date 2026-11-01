@@ -181,6 +181,10 @@ function parseFamilies(markdown) {
       for (const m of body.matchAll(/^\s*[-*+]\s+\`([^ \`]+)\`/gm)) addOption(m[1]);
     } else if (/^group\/channel bot links$/i.test(title)) {
       for (const m of body.matchAll(/^\s*[-*+]\s+\`([a-z][a-z0-9_]*)\`\s+-/gim)) addOption(m[1]);
+    } else if (/^wallpaper links$/i.test(title)) {
+      // The mode parameter explicitly accepts these two values; do not treat arbitrary parameter names as options.
+      if (/\`blur\`/.test(body)) addOption('blur');
+      if (/\`motion\`/.test(body)) addOption('motion');
     }
 
     if (/^settings links$/i.test(title)) options.delete('path');
