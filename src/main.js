@@ -19,6 +19,7 @@ function snapshot(family) {
     templates: [...(family.templates || [])].sort(),
     options: [...(family.options || [])].sort(),
     ready: [...(family.ready || [])].sort(),
+    parameters: (family.parameters || []).map(item => JSON.stringify(item)).sort(),
     documentation: family.documentation || ''
   };
 }
@@ -64,7 +65,7 @@ async function main() {
 
   // One-time complete Rich Message catalogue delivery to the private test chat.
   // Persist after each family so an interrupted run resumes without repeating completed families.
-  const catalogueVersion = 8;
+  const catalogueVersion = 9;
   if (state.richCatalogueVersion !== catalogueVersion) {
     // Start a fresh full delivery, then persist the target version before sending.
     // This also lets an interrupted run resume from the families already delivered.
@@ -157,10 +158,11 @@ async function main() {
 
     const newOptions = previous ? difference(current.options, previous.options) : current.options;
     const newReady = previous ? difference(current.ready, previous.ready) : current.ready;
+    const newParameters = previous ? difference(current.parameters, previous.parameters).map(value => JSON.parse(value)) : (family.parameters || []);
     const newTemplates = previous ? difference(current.templates, previous.templates) : current.templates;
     const documentationChanged = !previous || current.documentation !== previous.documentation;
     // Documentation-only edits do not create a link notification.
-    if (!newOptions.length && !newReady.length && !newTemplates.length) continue;
+    if (!newOptions.length && !newReady.length && !newTemplates.length && !newParameters.length) continue;
 
     // Keep the family's URI header even when only a new option or ready link was added.
     const delta = {
@@ -168,6 +170,7 @@ async function main() {
       templates: newTemplates,
       options: newOptions,
       ready: newReady,
+      parameters: newParameters,
       documentation: documentationChanged ? current.documentation : ''
     };
     const sent = await sendFamily(delta);
