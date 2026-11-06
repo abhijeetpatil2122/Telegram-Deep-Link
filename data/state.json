@@ -1,11 +1,11 @@
 {
   "initializedAt": "2026-10-31T11:17:43.854Z",
-  "checkedAt": "2026-11-05T22:23:58.484Z",
+  "checkedAt": "2026-11-06T02:45:47.950Z",
   "source": {
     "html": {
       "url": "https://corefork.telegram.org/api/links",
       "finalUrl": "https://corefork.telegram.org/api/links",
-      "sha256": "65704348b98d9a6c044503692d0582a0cbf427ac0e93a8e263e5f35a925c111f",
+      "sha256": "5d470b9c174be5d8daa383c362688940c5e9d4981ec39180638482bb0e33a99f",
       "etag": null,
       "lastModified": null
     },
