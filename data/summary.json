@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-14T09:30:26.519Z",
+  "fetchedAt": "2026-11-14T16:08:19.425Z",
   "total": 179,
   "verification": {
     "htmlCount": 179,
@@ -539,6 +539,6 @@
       "readyOverlap": 1
     }
   },
-  "htmlSha256": "db4ddfcfbbca038a288b8e6e2d2cfcd34aa759f5f034115f930c4a10699925ec",
+  "htmlSha256": "fb31bd228f591bf4afc2a4eae85bdbd9fd14115ce4f262668d9b7928ef72416a",
   "markdownSha256": "cc6a6c87f58307ddd05b1237b945ffacc10afe00ef08505cdf3bfc8407e6c8a1"
 }
